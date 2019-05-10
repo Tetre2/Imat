@@ -41,12 +41,12 @@ public class ShoppingItem extends AnchorPane {
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
-        setFields();
-        addEventListeners();
+        //setFields();
+        //addEventListeners();
     }
 
     private FXMLLoader initFXML() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("components/ShoppingItem/ShoppingItem.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/components/ShoppingItem/shoppingItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         return fxmlLoader;

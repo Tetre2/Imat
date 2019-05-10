@@ -1,3 +1,4 @@
+import javafx.scene.image.Image;
 import se.chalmers.cse.dat216.project.*;
 
 import java.util.ArrayList;
@@ -21,9 +22,9 @@ public class IMat {
 
 
 
-    /*public Image getImage(Product p){
+    public Image getImage(Product p){
         return dataHandler.getFXImage(p);
-    }*/
+    }
 
     public void addFavorite(Product p){
         dataHandler.addFavorite(p);
