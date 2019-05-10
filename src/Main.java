@@ -17,7 +17,6 @@ public class Main extends Application {
 
 
         IMat iMat = new IMat();
-
     }
 
 
