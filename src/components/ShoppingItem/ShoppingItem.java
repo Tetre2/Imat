@@ -46,7 +46,7 @@ public class ShoppingItem extends AnchorPane {
     }
 
     private FXMLLoader initFXML() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("recipesearch/recipe_listitem.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("components/ShoppingItem/ShoppingItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         return fxmlLoader;
