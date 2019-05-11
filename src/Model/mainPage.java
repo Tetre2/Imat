@@ -1,13 +1,14 @@
-import components.ShoppingItem.ShoppingItem;
+package Model;
+
+import Model.components.ShoppingItem.ShoppingItem;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.shape.Rectangle;
 
 import java.io.IOException;
 
-public class mainPageController extends AnchorPane{
+public class mainPage extends AnchorPane{
 
 
     @FXML
@@ -15,30 +16,22 @@ public class mainPageController extends AnchorPane{
     @FXML
     AnchorPane LeftNavBar;
 
+    private IMat iMat;
 
 
-    public mainPageController(IMat iMat){
+    public mainPage(){
+        iMat = IMat.getInstance();
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
-        for (int i = 0; i < iMat.getProducts().size(); i++) {
 
-            ShoppingItem shoppingItem = new ShoppingItem();
+        for (int i = 0; i < iMat.getProducts().size(); i++) {
+            ShoppingItem shoppingItem = new ShoppingItem(iMat.getProducts().get(i));
 
             grid.setConstraints(shoppingItem, i%4, i/4);
             grid.getChildren().add(shoppingItem);
 
-
-
         }
-
-
-        /*ShoppingItem shoppingItem = new ShoppingItem();
-
-        grid.setConstraints(shoppingItem, 0, 0);
-        grid.getChildren().add(shoppingItem);*/
-
-        //LeftNavBar.getChildren().add(new ShoppingItem());//Rectangle(10,10,100,100));
 
     }
 

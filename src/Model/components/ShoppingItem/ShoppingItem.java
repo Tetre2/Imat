@@ -1,7 +1,6 @@
-package components.ShoppingItem;
+package Model.components.ShoppingItem;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import Model.IMat;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -9,15 +8,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
+import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
 
@@ -36,8 +33,17 @@ public class ShoppingItem extends AnchorPane {
     private boolean isFavorite = false;
     private boolean isAddedToCart = false;
 
+    public ShoppingItem(Product p){
+        this();
 
-    public ShoppingItem(){
+        name.setText(p.getName());
+        price.setText(p.getPrice() + "");
+        unit.setText(p.getUnit());
+        image.setImage(IMat.getInstance().getImage(p));
+    }
+
+
+    private ShoppingItem(){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
@@ -46,7 +52,7 @@ public class ShoppingItem extends AnchorPane {
     }
 
     private FXMLLoader initFXML() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/components/ShoppingItem/shoppingItem.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Model/components/ShoppingItem/shoppingItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         return fxmlLoader;
@@ -80,15 +86,15 @@ public class ShoppingItem extends AnchorPane {
     }
 
     private void onStarButtonPressed() {
-        updaetStarButtonUI();
+        updateStarButtonUI();
         isFavorite = !isFavorite;
 
         // TODO: add favorite logic
     }
 
-    private void updaetStarButtonUI() {
-        String iconPathFavorite = "RecipeSearch/resources/star-checked.png";
-        String iconPathNoFavorite = "RecipeSearch/resources/star-unchecked.png";
+    private void updateStarButtonUI() {
+        String iconPathFavorite = "Model.resources/star-checked.png";
+        String iconPathNoFavorite = "Model.resources/star-unchecked.png";
         Image icon;
 
         if (isFavorite) {
@@ -99,4 +105,6 @@ public class ShoppingItem extends AnchorPane {
 
         starImageview.setImage(icon);
     }
+
+
 }

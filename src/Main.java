@@ -1,15 +1,12 @@
+import Model.mainPage;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import static javafx.application.Application.launch;
 
 public class Main extends Application {
-
-    private static IMat iMat;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -18,8 +15,7 @@ public class Main extends Application {
 
         Group g = new Group();
         Scene scene = new Scene(g);
-        iMat = new IMat();
-        g.getChildren().add(new mainPageController(iMat));
+        g.getChildren().add(new mainPage());
 
 
         primaryStage.setScene(scene);

@@ -1,3 +1,5 @@
+package Model;
+
 import javafx.scene.image.Image;
 import se.chalmers.cse.dat216.project.*;
 
@@ -7,17 +9,30 @@ import java.util.List;
 public class IMat {
 
     private IMatDataHandler dataHandler;
+    private static IMat instance = null;
+
+
+    public static IMat getInstance() {
+        if (instance == null) {
+            instance = new IMat();
+            instance.init();
+        }
+
+        return instance;
+    }
 
 
     public IMat() {
-            dataHandler = IMatDataHandler.getInstance();
+    }
+
+    private void init(){
+        dataHandler = IMatDataHandler.getInstance();
         ArrayList arr = new ArrayList();
         for (Product p: getProducts()) {
             arr.add(p);
         }
 
         System.out.println(arr.size());
-
     }
 
 
