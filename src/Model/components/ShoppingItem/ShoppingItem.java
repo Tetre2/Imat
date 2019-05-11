@@ -32,24 +32,35 @@ public class ShoppingItem extends AnchorPane {
 
     private boolean isFavorite = false;
     private boolean isAddedToCart = false;
+    private Product product;
 
     public ShoppingItem(Product p){
-        this();
-
-        name.setText(p.getName());
-        price.setText(p.getPrice() + "");
-        unit.setText(p.getUnit());
-        image.setImage(IMat.getInstance().getImage(p));
-    }
-
-
-    private ShoppingItem(){
+        this.product = p;
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
         //setFields();
         //addEventListeners();
+
+        name.setText(product.getName());
+        price.setText(product.getPrice() + "");
+        unit.setText(product.getUnit());
+        image.setImage(IMat.getInstance().getImage(product));
+
+        if(isFavorited()){
+            isFavorite = true;
+        }
+        updateStarButtonUI();
+
+        //TODO Se till att "addedtoCart" funktionen värkligen funkar som det är tänkt
+        if(addedToCart()){
+            isAddedToCart = true;
+        }
+
+
     }
+
+
 
     private FXMLLoader initFXML() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Model/components/ShoppingItem/shoppingItem.fxml"));
@@ -87,10 +98,18 @@ public class ShoppingItem extends AnchorPane {
 
     @FXML
     private void onStarButtonPressed() {
+
+        if(isFavorite){
+            IMat.getInstance().getFavorites().remove(product);
+            System.out.println("Removed " + product.getName() + " From Favorites");
+            isFavorite = false;
+        }else {
+            IMat.getInstance().addFavorite(product);
+            System.out.println("Added " + product.getName() + " To Favorites");
+            isFavorite = true;
+        }
+
         updateStarButtonUI();
-        isFavorite = !isFavorite;
-        System.out.println("kjgldfk");
-        // TODO: add favorite logic
     }
 
     private void updateStarButtonUI() {
@@ -99,13 +118,20 @@ public class ShoppingItem extends AnchorPane {
         Image icon;
 
         if (isFavorite) {
-            icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPathNoFavorite));
-        } else {
             icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPathFavorite));
+        } else {
+            icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPathNoFavorite));
         }
 
         starImageview.setImage(icon);
     }
 
+    private boolean isFavorited(){
+        return IMat.getInstance().getFavorites().contains(product);
+    }
+
+    private boolean addedToCart(){
+        return IMat.getInstance().getShoppingCart().getItems().contains(product);
+    }
 
 }
