@@ -32,7 +32,7 @@ public class IMat {
             arr.add(p);
         }
 
-        System.out.println(arr.size());
+        System.out.println("Products loaded: " + arr.size());
     }
 
 

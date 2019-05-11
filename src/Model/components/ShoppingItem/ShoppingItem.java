@@ -101,6 +101,8 @@ public class ShoppingItem extends AnchorPane {
 
         // TODO: add backend logic
         IMat.getInstance().getShoppingCart().addProduct(product);
+        System.out.println("Total cost: " + IMat.getInstance().getShoppingCart().getTotal());
+        System.out.println("Antal Varor: " + IMat.getInstance().getShoppingCart().getItems().size());
 
         // TODO: ge visuell feedback att den lagts till
         showPlusMinus();
