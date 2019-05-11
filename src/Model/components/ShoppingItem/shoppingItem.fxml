@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<fx:root id="recipeRootAnchorPane" fx:id="rootPane" maxHeight="285.0" prefHeight="285.0" prefWidth="207.0" styleClass="anchor-container" stylesheets="@ShoppingItem.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root id="recipeRootAnchorPane" fx:id="rootPane" maxHeight="285.0" prefHeight="285.0" prefWidth="207.0" styleClass="anchor-container" stylesheets="@ShoppingItem.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="-2.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="277.0" prefWidth="209.0" styleClass="container">
          <children>
@@ -88,7 +88,7 @@
             </Button>
          </children>
       </VBox>
-      <Button fx:id="starButton" mnemonicParsing="false" prefHeight="35.0" prefWidth="37.0" styleClass="btn-nostyle">
+      <Button fx:id="starButton" mnemonicParsing="false" onMouseClicked="#onStarButtonPressed" prefHeight="35.0" prefWidth="37.0" styleClass="btn-nostyle">
          <graphic>
             <ImageView fx:id="starImageview" fitHeight="35.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" styleClass="btn-nostyle" translateX="5.0" translateY="5.0">
                <image>

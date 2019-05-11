@@ -85,16 +85,17 @@ public class ShoppingItem extends AnchorPane {
         // TODO: ge visuell feedback att den lagts till
     }
 
+    @FXML
     private void onStarButtonPressed() {
         updateStarButtonUI();
         isFavorite = !isFavorite;
-
+        System.out.println("kjgldfk");
         // TODO: add favorite logic
     }
 
     private void updateStarButtonUI() {
-        String iconPathFavorite = "Model.resources/star-checked.png";
-        String iconPathNoFavorite = "Model.resources/star-unchecked.png";
+        String iconPathFavorite = "Model/resources/star-checked.png";
+        String iconPathNoFavorite = "Model/resources/star-unchecked.png";
         Image icon;
 
         if (isFavorite) {
