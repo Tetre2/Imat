@@ -40,12 +40,14 @@ public class ShoppingItem extends AnchorPane {
         tryToLoadFXML(fxmlLoader);
 
         //setFields();
-        //addEventListeners();
+        addEventListeners();
 
         name.setText(product.getName());
         price.setText(product.getPrice() + "");
         unit.setText(product.getUnit());
         image.setImage(IMat.getInstance().getImage(product));
+
+        starButton.setVisible(false);
 
         if(isFavorited()){
             isFavorite = true;
@@ -83,9 +85,14 @@ public class ShoppingItem extends AnchorPane {
     private void addEventListeners() {
         starButton.setOnAction(e -> onStarButtonPressed());
         addToCartButton.setOnAction(e -> onAddToCartButtonPressed());
+
         rootPane.addEventFilter(MouseEvent.MOUSE_ENTERED, e -> {
-            // TODO: only show star on hover. Kinda optional.
+            starButton.setVisible(true);
         });
+        rootPane.addEventFilter(MouseEvent.MOUSE_EXITED, e -> {
+            starButton.setVisible(false);
+        });
+
     }
 
     private void onAddToCartButtonPressed() {
@@ -93,8 +100,18 @@ public class ShoppingItem extends AnchorPane {
         rootPane.setBackground(new Background(new BackgroundFill(Color.LIGHTGRAY, CornerRadii.EMPTY, Insets.EMPTY)));
 
         // TODO: add backend logic
+        IMat.getInstance().getShoppingCart().addProduct(product);
+
         // TODO: ge visuell feedback att den lagts till
+        showPlusMinus();
     }
+
+
+    private void showPlusMinus(){
+
+    }
+
+
 
     @FXML
     private void onStarButtonPressed() {

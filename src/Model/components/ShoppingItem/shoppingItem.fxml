@@ -77,7 +77,7 @@
                   </Label>
                </children>
             </HBox>
-            <Button fx:id="addToCart" mnemonicParsing="false" prefHeight="37.0" prefWidth="189.0" text="Lägg i kundvagn">
+            <Button fx:id="addToCartButton" mnemonicParsing="false" prefHeight="37.0" prefWidth="189.0" text="Lägg i kundvagn">
                <VBox.margin>
                   <Insets top="6.0" />
                </VBox.margin>
@@ -88,7 +88,7 @@
             </Button>
          </children>
       </VBox>
-      <Button fx:id="starButton" mnemonicParsing="false" onMouseClicked="#onStarButtonPressed" prefHeight="35.0" prefWidth="37.0" styleClass="btn-nostyle">
+      <Button fx:id="starButton" mnemonicParsing="false" prefHeight="35.0" prefWidth="37.0" styleClass="btn-nostyle">
          <graphic>
             <ImageView fx:id="starImageview" fitHeight="35.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" styleClass="btn-nostyle" translateX="5.0" translateY="5.0">
                <image>
