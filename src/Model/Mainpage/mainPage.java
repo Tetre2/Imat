@@ -1,5 +1,6 @@
-package Model;
+package Model.Mainpage;
 
+import Model.IMat;
 import Model.components.LeftSidebar.LeftSidebar;
 import Model.components.Navbar.Navbar;
 import Model.components.RightSidebar.RightSidebar;

@@ -207,7 +207,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
     }
 
     private void removeFromShoppingCart(){
-        isAddedToCart = false;
+        isAddedToCart = false;          //TODO: @Joel du har en annan färg än vit som "default" men jag kan inte hitta den.
         rootPane.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
         IMat.getInstance().getShoppingCart().removeItem(item);
         hidePlusMinus();
@@ -216,7 +216,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
             if(item.getAmount() == 0){
-                isAddedToCart = false;
+                isAddedToCart = false;   //TODO: @Joel du har en annan färg än vit som "default" men jag kan inte hitta den.
                 rootPane.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
                 hidePlusMinus();
             }
