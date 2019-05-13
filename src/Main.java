@@ -1,5 +1,6 @@
+import Model.Checkout.Checkout;
 import Model.IMat;
-import Model.Mainpage.mainPage;
+import Model.Mainpage.MainPage;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -8,17 +9,22 @@ import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 public class Main extends Application {
 
+    private MainPage mainPage;
+    private Checkout checkout;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
 
         IMatDataHandler.getInstance().reset();
+        primaryStage.setTitle("IMat");
 
-        //Parent root = FXMLLoader.load(getClass().getResource("mainPage.fxml"));
-        primaryStage.setTitle("Hello World");
+        mainPage = new MainPage();
+        checkout = new Checkout();
+
 
         Group g = new Group();
         Scene scene = new Scene(g);
-        g.getChildren().add(new mainPage());
+        g.getChildren().add(mainPage);
 
 
         primaryStage.setScene(scene);
@@ -29,6 +35,11 @@ public class Main extends Application {
         System.out.println("here");
 
     }
+
+
+
+
+
 
     @Override
     public void stop(){

@@ -12,7 +12,7 @@ import javafx.scene.layout.GridPane;
 
 import java.io.IOException;
 
-public class mainPage extends AnchorPane{
+public class MainPage extends AnchorPane{
 
 
     @FXML
@@ -27,7 +27,7 @@ public class mainPage extends AnchorPane{
     private IMat iMat;
 
 
-    public mainPage(){
+    public MainPage(){
         iMat = IMat.getInstance();
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);

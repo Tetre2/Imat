@@ -34,9 +34,6 @@ public class RightSidebar extends AnchorPane implements ShoppingCartListener {
         addEventListeners();
         updateShoppingCart();
 
-
-
-
     }
 
 
