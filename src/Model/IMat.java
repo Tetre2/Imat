@@ -85,6 +85,13 @@ public class IMat {
         return dataHandler.getUser();
     }
 
+    public void removeFavorite(Product p){
+        dataHandler.removeFavorite(p);
+    }
+
+    public void removeShopingCartItem(ShoppingItem sp){
+        dataHandler.getShoppingCart().removeItem(sp);
+    }
 
     public boolean hasImage(Product p){
         return dataHandler.hasImage(p);

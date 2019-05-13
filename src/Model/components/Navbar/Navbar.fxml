@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.Region?>
 
 
-<AnchorPane minWidth="1440.0" prefHeight="80.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Model.components.Navbar.Navbar">
+<fx:root minWidth="1440.0" prefHeight="80.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" type="javafx.scene.layout.AnchorPane">
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1440.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
@@ -66,4 +66,4 @@
       <URL value="@Navbar.css" />
       <URL value="@../../../styles.css" />
    </stylesheets>
-</AnchorPane>
+</fx:root>

@@ -5,6 +5,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -12,7 +13,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<fx:root id="recipeRootAnchorPane" fx:id="rootPane" maxHeight="285.0" prefHeight="285.0" prefWidth="207.0" styleClass="anchor-container" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root id="recipeRootAnchorPane" fx:id="rootPane" maxHeight="285.0" prefHeight="285.0" prefWidth="200.0" styleClass="anchor-container" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="-2.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="277.0" prefWidth="209.0" styleClass="container">
          <children>
@@ -98,6 +99,29 @@
             </ImageView>
          </graphic>
       </Button>
+      <AnchorPane fx:id="picker" layoutX="-3.0" layoutY="233.0" prefHeight="52.0" prefWidth="210.0" style="-fx-background-color: red;">
+         <children>
+            <Button layoutX="12.0" layoutY="2.0" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/MattiasFörslag/-.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="145.0" layoutY="2.0" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/MattiasFörslag/+.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextField layoutX="73.0" layoutY="14.0" prefHeight="25.0" prefWidth="68.0" />
+         </children>
+      </AnchorPane>
    </children>
    <stylesheets>
       <URL value="@ShoppingItem.css" />

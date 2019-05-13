@@ -30,6 +30,10 @@ public class ShoppingItem extends AnchorPane {
     @FXML ImageView starImageview;
     @FXML Button starButton;
 
+    @FXML Button minusButton;
+    @FXML Button plusButton;
+    @FXML AnchorPane picker;
+
     private boolean isFavorite = false;
     private boolean isAddedToCart = false;
     private Product product;
@@ -48,6 +52,7 @@ public class ShoppingItem extends AnchorPane {
         image.setImage(IMat.getInstance().getImage(product));
 
         starButton.setVisible(false);
+        picker.setVisible(false);
 
         if(isFavorited()){
             isFavorite = true;
@@ -85,6 +90,8 @@ public class ShoppingItem extends AnchorPane {
     private void addEventListeners() {
         starButton.setOnAction(e -> onStarButtonPressed());
         addToCartButton.setOnAction(e -> onAddToCartButtonPressed());
+        plusButton.setOnAction(e -> onPlusButtonPressed());
+        minusButton.setOnAction(e -> onMinusButtonPressed());
 
         rootPane.addEventFilter(MouseEvent.MOUSE_ENTERED, e -> {
             starButton.setVisible(true);
@@ -110,12 +117,18 @@ public class ShoppingItem extends AnchorPane {
 
 
     private void showPlusMinus(){
+        picker.setVisible(true);
+    }
+
+    private void onPlusButtonPressed(){
+
+    }
+
+    private void onMinusButtonPressed(){
 
     }
 
 
-
-    @FXML
     private void onStarButtonPressed() {
 
         if(isFavorite){

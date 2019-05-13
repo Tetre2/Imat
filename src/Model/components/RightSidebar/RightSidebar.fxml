@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxWidth="400.0" minHeight="700.0" prefHeight="720.0" prefWidth="409.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Model.components.RightSidebar.RightSidebar">
+<fx:root maxWidth="400.0" minHeight="700.0" prefHeight="720.0" prefWidth="409.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" type="javafx.scene.layout.AnchorPane">
    <children>
       <VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="400.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
@@ -64,4 +64,4 @@
       <URL value="@RightSidebar.css" />
       <URL value="@../../../styles.css" />
    </stylesheets>
-</AnchorPane>
+</fx:root>
