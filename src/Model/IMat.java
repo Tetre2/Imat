@@ -22,7 +22,7 @@ public class IMat {
     }
 
 
-    public IMat() {
+    private IMat() {
     }
 
     private void init(){

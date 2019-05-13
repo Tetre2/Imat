@@ -43,7 +43,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label prefHeight="35.0" prefWidth="261.0" text="23,99 kr">
+                        <Label fx:id="amaunt" prefHeight="35.0" prefWidth="261.0" text="23,99 kr">
                            <styleClass>
                               <String fx:value="text" />
                               <String fx:value="text-lg" />
@@ -54,7 +54,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="37.0" prefWidth="392.0" styleClass="btn-primary" text="Gå Till Kassan">
+                  <Button fx:id="pay" alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="37.0" prefWidth="392.0" styleClass="btn-primary" text="Gå Till Kassan">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
