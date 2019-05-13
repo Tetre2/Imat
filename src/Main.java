@@ -9,11 +9,16 @@ import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 public class Main extends Application {
 
+    private Stage window;
+
     private MainPage mainPage;
     private Checkout checkout;
 
+
     @Override
     public void start(Stage primaryStage) throws Exception{
+
+        window = primaryStage;
 
         IMatDataHandler.getInstance().reset();
         primaryStage.setTitle("IMat");
@@ -21,22 +26,25 @@ public class Main extends Application {
         mainPage = new MainPage();
         checkout = new Checkout();
 
+        setSceneToMainPage();
+        window.show();
 
-        Group g = new Group();
-        Scene scene = new Scene(g);
-        g.getChildren().add(mainPage);
-
-
-        primaryStage.setScene(scene);
-        primaryStage.show();
-
-
-
-        System.out.println("here");
 
     }
 
+    public void setSceneToCheckout(){
+        Group group = new Group();
+        group.getChildren().add(checkout);
+        Scene scene = new Scene(group);
+        window.setScene(scene);
+    }
 
+    public void setSceneToMainPage(){
+        Group group = new Group();
+        group.getChildren().add(mainPage);
+        Scene scene = new Scene(group);
+        window.setScene(scene);
+    }
 
 
 
