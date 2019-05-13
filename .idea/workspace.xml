@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0ea7e109-9fe2-4f60-91c0-e5d2dd7afc5f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebarItem/RightSidebarItem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebarItem/RightSidebarItem.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebarItem/RightSidebarItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebarItem/RightSidebarItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -74,44 +76,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebarItem/RightSidebarItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="70" column="89" selection-start-line="70" selection-start-column="89" selection-end-line="70" selection-end-column="89" />
-              <folding>
-                <element signature="e#1364#1365#0" expanded="true" />
-                <element signature="e#1430#1431#0" expanded="true" />
-                <element signature="e#1716#1717#0" expanded="true" />
-                <element signature="e#1793#1794#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="69" column="76" selection-start-line="69" selection-start-column="76" selection-end-line="69" selection-end-column="76" />
+            <state relative-caret-position="96">
+              <caret line="60" column="39" lean-forward="true" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1811#1812#0" expanded="true" />
+                <element signature="e#1867#1868#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebarItem/RightSidebarItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
+              <folding>
+                <element signature="e#1364#1365#0" expanded="true" />
+                <element signature="e#1430#1431#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-720">
-              <caret line="54" column="61" lean-forward="true" selection-start-line="54" selection-start-column="61" selection-end-line="54" selection-end-column="61" />
+            <state relative-caret-position="385">
+              <caret line="218" column="16" selection-start-line="218" selection-start-column="16" selection-end-line="218" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#initFXML#0;class#ShoppingItem#0" />
                 <element signature="method#tryToLoadFXML#0;class#ShoppingItem#0" />
                 <element signature="method#setFields#0;class#ShoppingItem#0" />
                 <element signature="method#addEventListeners#0;class#ShoppingItem#0" />
-                <element signature="method#onAddToCartButtonPressed#0;class#ShoppingItem#0" />
                 <element signature="method#onStarButtonPressed#0;class#ShoppingItem#0" />
                 <element signature="method#updateStarButtonUI#0;class#ShoppingItem#0" />
               </folding>
@@ -172,10 +173,10 @@
         <option value="$PROJECT_DIR$/src/Model/components/Navbar/Navbar.fxml" />
         <option value="$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebarItem/RightSidebarItem.fxml" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java" />
         <option value="$PROJECT_DIR$/src/Model/IMat.java" />
-        <option value="$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebarItem/RightSidebarItem.java" />
         <option value="$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebar.java" />
+        <option value="$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebarItem/RightSidebarItem.java" />
+        <option value="$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java" />
       </list>
     </option>
   </component>
@@ -384,14 +385,28 @@
       <option name="project" value="LOCAL" />
       <updated>1557755577031</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Total kostnan syns nu">
+      <created>1557755787536</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1557755787536</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Om man tar bor ett item från listan försvinner den gråa pliancyn">
+      <created>1557756519432</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1557756519432</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27132195" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2707889" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -418,6 +433,34 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27132195" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
@@ -430,7 +473,9 @@
     <MESSAGE value="Lägga till varor med plus funkar men att ta bort med minus funkar inte" />
     <MESSAGE value="Varor kan tas bort ifrån varukorgen och de syn när man lägger till dem" />
     <MESSAGE value="Item i kundvagnen har rätt bild och namn" />
-    <option name="LAST_COMMIT_MESSAGE" value="Item i kundvagnen har rätt bild och namn" />
+    <MESSAGE value="Total kostnan syns nu" />
+    <MESSAGE value="Om man tar bor ett item från listan försvinner den gråa pliancyn" />
+    <option name="LAST_COMMIT_MESSAGE" value="Om man tar bor ett item från listan försvinner den gråa pliancyn" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
@@ -696,42 +741,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-720">
-          <caret line="54" column="61" lean-forward="true" selection-start-line="54" selection-start-column="61" selection-end-line="54" selection-end-column="61" />
+        <state relative-caret-position="96">
+          <caret line="60" column="39" lean-forward="true" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#initFXML#0;class#ShoppingItem#0" />
-            <element signature="method#tryToLoadFXML#0;class#ShoppingItem#0" />
-            <element signature="method#setFields#0;class#ShoppingItem#0" />
-            <element signature="method#addEventListeners#0;class#ShoppingItem#0" />
-            <element signature="method#onAddToCartButtonPressed#0;class#ShoppingItem#0" />
-            <element signature="method#onStarButtonPressed#0;class#ShoppingItem#0" />
-            <element signature="method#updateStarButtonUI#0;class#ShoppingItem#0" />
+            <element signature="e#1811#1812#0" expanded="true" />
+            <element signature="e#1867#1868#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebarItem/RightSidebarItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="70" column="89" selection-start-line="70" selection-start-column="89" selection-end-line="70" selection-end-column="89" />
+        <state relative-caret-position="459">
+          <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
           <folding>
             <element signature="e#1364#1365#0" expanded="true" />
             <element signature="e#1430#1431#0" expanded="true" />
-            <element signature="e#1716#1717#0" expanded="true" />
-            <element signature="e#1793#1794#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebar.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="69" column="76" selection-start-line="69" selection-start-column="76" selection-end-line="69" selection-end-column="76" />
+        <state relative-caret-position="385">
+          <caret line="218" column="16" selection-start-line="218" selection-start-column="16" selection-end-line="218" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#initFXML#0;class#ShoppingItem#0" />
+            <element signature="method#tryToLoadFXML#0;class#ShoppingItem#0" />
+            <element signature="method#setFields#0;class#ShoppingItem#0" />
+            <element signature="method#addEventListeners#0;class#ShoppingItem#0" />
+            <element signature="method#onStarButtonPressed#0;class#ShoppingItem#0" />
+            <element signature="method#updateStarButtonUI#0;class#ShoppingItem#0" />
           </folding>
         </state>
       </provider>

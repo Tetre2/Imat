@@ -14,11 +14,13 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
+import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingCartListener;
 
 import java.io.IOException;
 
-public class ShoppingItem extends AnchorPane {
+public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
     @FXML AnchorPane rootPane;
     @FXML ImageView image;
     @FXML Label name;
@@ -45,6 +47,8 @@ public class ShoppingItem extends AnchorPane {
 
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
+
+        IMat.getInstance().getShoppingCart().addShoppingCartListener(this);
 
         //setFields();
         addEventListeners();
@@ -209,4 +213,14 @@ public class ShoppingItem extends AnchorPane {
         hidePlusMinus();
     }
 
+    @Override
+    public void shoppingCartChanged(CartEvent cartEvent) {
+            if(item.getAmount() == 0){
+                isAddedToCart = false;
+                rootPane.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
+                hidePlusMinus();
+            }
+
+
+    }
 }

@@ -12,6 +12,7 @@
 
 <fx:root maxWidth="380.0" minHeight="50.0" prefWidth="600.0" style="-fx-border-width: 2; -fx-border-color: #ebebeb;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <Label fx:id="test" layoutX="261.0" layoutY="13.0" text="Label" />
       <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
          <children>
             <ImageView fx:id="image" fitHeight="150.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">

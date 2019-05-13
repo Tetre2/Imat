@@ -22,8 +22,12 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
     private ImageView image;
     @FXML
     private Label name;
-    @FXML//kanske sätta till double
-    private Spinner<Integer> amount;
+    @FXML
+    private Label test;
+
+    //kanske sätta till double
+    @FXML
+    private Spinner amount;
     @FXML
     private Button close;
 
@@ -33,6 +37,7 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
+       test.setText(shoppingItem.getAmount() + "");
 
         addEventListeners();
 
@@ -62,6 +67,7 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
     }
 
     public void onClosePressed(){
+        shoppingItem.setAmount(0);
         IMat.getInstance().getShoppingCart().removeItem(shoppingItem);
     }
 
