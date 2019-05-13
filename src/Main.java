@@ -4,11 +4,15 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+
+        IMatDataHandler.getInstance().reset();
+
         //Parent root = FXMLLoader.load(getClass().getResource("mainPage.fxml"));
         primaryStage.setTitle("Hello World");
 
@@ -19,6 +23,8 @@ public class Main extends Application {
 
         primaryStage.setScene(scene);
         primaryStage.show();
+
+
 
         System.out.println("here");
 

@@ -55,7 +55,7 @@ public class ShoppingItem extends AnchorPane {
         image.setImage(IMat.getInstance().getImage(product));
 
         starButton.setVisible(false);
-        picker.setVisible(false);
+        hidePlusMinus();
 
         if(isFavorited()){
             isFavorite = true;
@@ -110,8 +110,8 @@ public class ShoppingItem extends AnchorPane {
         rootPane.setBackground(new Background(new BackgroundFill(Color.LIGHTGRAY, CornerRadii.EMPTY, Insets.EMPTY)));
 
         // TODO: add backend logic
-        //lite cheeky men det funkar bra så här
-        onPlusButtonPressed();
+        addToShoppingCart();
+        shopingDebugg();
 
         // TODO: ge visuell feedback att den lagts till
         showPlusMinus();
@@ -122,18 +122,22 @@ public class ShoppingItem extends AnchorPane {
         picker.setVisible(true);
     }
 
+    private void hidePlusMinus(){
+        picker.setVisible(false);
+    }
+
     private void onPlusButtonPressed(){
-        addToShoppingCart();
         item.setAmount(item.getAmount()+1);
+
+        updateShopingCartItem();
+
         shopingDebugg();
     }
 
     private void onMinusButtonPressed(){
         item.setAmount(item.getAmount()-1);
 
-        if(item.getAmount() == 0){
-            removeFromShoppingCart();
-        }
+        updateShopingCartItem();
 
         shopingDebugg();
     }
@@ -141,6 +145,7 @@ public class ShoppingItem extends AnchorPane {
     private void shopingDebugg(){
         System.out.println("Total cost: " + IMat.getInstance().getShoppingCart().getTotal());
         System.out.println("Antal Varor: " + IMat.getInstance().getShoppingCart().getItems().size());
+        //System.out.println(IMat.getInstance().getShoppingCart().getItems().get(0).getAmount());
     }
 
     private void onStarButtonPressed() {
@@ -181,11 +186,25 @@ public class ShoppingItem extends AnchorPane {
     }
 
     private void addToShoppingCart(){
-        IMat.getInstance().getShoppingCart().addProduct(product, item.getAmount());
+        IMat.getInstance().getShoppingCart().addItem(item);
+        isAddedToCart = true;
+    }
+
+    private void updateShopingCartItem(){
+
+        if(item.getAmount() == 0){
+            removeFromShoppingCart();
+        }
+
+        IMat.getInstance().getShoppingCart().removeItem(item);
+        IMat.getInstance().getShoppingCart().addItem(item);
+
     }
 
     private void removeFromShoppingCart(){
+        isAddedToCart = false;
         IMat.getInstance().getShoppingCart().removeItem(item);
+        hidePlusMinus();
     }
 
 }

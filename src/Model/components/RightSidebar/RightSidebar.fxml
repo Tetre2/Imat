@@ -5,14 +5,14 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<fx:root maxWidth="400.0" minHeight="700.0" prefHeight="720.0" prefWidth="409.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" type="javafx.scene.layout.AnchorPane">
+<fx:root maxWidth="400.0" minHeight="700.0" prefHeight="720.0" prefWidth="409.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="400.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
@@ -25,7 +25,11 @@
                   <Insets top="30.0" />
                </VBox.margin>
             </Label>
-            <Region prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            <ScrollPane prefHeight="559.0" prefWidth="380.0">
+               <content>
+                  <FlowPane fx:id="inventory" maxWidth="365.0" prefHeight="548.0" prefWidth="365.0" />
+               </content>
+            </ScrollPane>
             <VBox prefHeight="99.0" prefWidth="380.0">
                <children>
                   <HBox prefHeight="18.0" prefWidth="400.0">

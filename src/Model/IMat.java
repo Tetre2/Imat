@@ -93,7 +93,7 @@ public class IMat {
         dataHandler.getShoppingCart().removeItem(sp);
     }
 
-    public List<ShoppingItem> getShoppingItem(){
+    public List<ShoppingItem> getShoppingCartItems(){
         return dataHandler.getShoppingCart().getItems();
     }
 
