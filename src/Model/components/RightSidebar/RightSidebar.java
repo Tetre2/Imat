@@ -31,6 +31,7 @@ public class RightSidebar extends AnchorPane implements ShoppingCartListener {
 
         IMat.getInstance().getShoppingCart().addShoppingCartListener(this);
 
+        addEventListeners();
         updateShoppingCart();
 
 
@@ -63,6 +64,13 @@ public class RightSidebar extends AnchorPane implements ShoppingCartListener {
         }
     }
 
+    private void addEventListeners() {
+        pay.setOnAction(e -> onPayPressed());
+    }
+
+    private void onPayPressed(){
+
+    }
 
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {

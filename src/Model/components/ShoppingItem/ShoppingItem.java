@@ -106,7 +106,6 @@ public class ShoppingItem extends AnchorPane {
     }
 
     private void onAddToCartButtonPressed() {
-        isAddedToCart = true;
         rootPane.setBackground(new Background(new BackgroundFill(Color.LIGHTGRAY, CornerRadii.EMPTY, Insets.EMPTY)));
 
         // TODO: add backend logic
@@ -186,6 +185,7 @@ public class ShoppingItem extends AnchorPane {
     }
 
     private void addToShoppingCart(){
+        item.setAmount(1);
         IMat.getInstance().getShoppingCart().addItem(item);
         isAddedToCart = true;
     }
@@ -194,15 +194,17 @@ public class ShoppingItem extends AnchorPane {
 
         if(item.getAmount() == 0){
             removeFromShoppingCart();
-        }
+        }else {
 
-        IMat.getInstance().getShoppingCart().removeItem(item);
-        IMat.getInstance().getShoppingCart().addItem(item);
+            IMat.getInstance().getShoppingCart().removeItem(item);
+            IMat.getInstance().getShoppingCart().addItem(item);
+        }
 
     }
 
     private void removeFromShoppingCart(){
         isAddedToCart = false;
+        rootPane.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
         IMat.getInstance().getShoppingCart().removeItem(item);
         hidePlusMinus();
     }

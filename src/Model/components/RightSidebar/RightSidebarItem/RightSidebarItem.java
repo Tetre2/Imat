@@ -68,6 +68,7 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
 
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
+
         //amount.getValueFactory().setValue( (int) shoppingItem.getAmount()); funkar inte
     }
 }
