@@ -37,9 +37,12 @@ public class ShoppingItem extends AnchorPane {
     private boolean isFavorite = false;
     private boolean isAddedToCart = false;
     private Product product;
+    private se.chalmers.cse.dat216.project.ShoppingItem item;
 
     public ShoppingItem(Product p){
         this.product = p;
+        item = new se.chalmers.cse.dat216.project.ShoppingItem(p);
+
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
@@ -60,7 +63,7 @@ public class ShoppingItem extends AnchorPane {
         updateStarButtonUI();
 
         //TODO Se till att "addedtoCart" funktionen värkligen funkar som det är tänkt
-        if(addedToCart()){
+        if(isAddedToCart()){
             isAddedToCart = true;
         }
 
@@ -107,9 +110,8 @@ public class ShoppingItem extends AnchorPane {
         rootPane.setBackground(new Background(new BackgroundFill(Color.LIGHTGRAY, CornerRadii.EMPTY, Insets.EMPTY)));
 
         // TODO: add backend logic
-        IMat.getInstance().getShoppingCart().addProduct(product);
-        System.out.println("Total cost: " + IMat.getInstance().getShoppingCart().getTotal());
-        System.out.println("Antal Varor: " + IMat.getInstance().getShoppingCart().getItems().size());
+        //lite cheeky men det funkar bra så här
+        onPlusButtonPressed();
 
         // TODO: ge visuell feedback att den lagts till
         showPlusMinus();
@@ -121,13 +123,25 @@ public class ShoppingItem extends AnchorPane {
     }
 
     private void onPlusButtonPressed(){
-
+        addToShoppingCart();
+        item.setAmount(item.getAmount()+1);
+        shopingDebugg();
     }
 
     private void onMinusButtonPressed(){
+        item.setAmount(item.getAmount()-1);
 
+        if(item.getAmount() == 0){
+            removeFromShoppingCart();
+        }
+
+        shopingDebugg();
     }
 
+    private void shopingDebugg(){
+        System.out.println("Total cost: " + IMat.getInstance().getShoppingCart().getTotal());
+        System.out.println("Antal Varor: " + IMat.getInstance().getShoppingCart().getItems().size());
+    }
 
     private void onStarButtonPressed() {
 
@@ -162,8 +176,16 @@ public class ShoppingItem extends AnchorPane {
         return IMat.getInstance().getFavorites().contains(product);
     }
 
-    private boolean addedToCart(){
+    private boolean isAddedToCart(){
         return IMat.getInstance().getShoppingCart().getItems().contains(product);
+    }
+
+    private void addToShoppingCart(){
+        IMat.getInstance().getShoppingCart().addProduct(product, item.getAmount());
+    }
+
+    private void removeFromShoppingCart(){
+        IMat.getInstance().getShoppingCart().removeItem(item);
     }
 
 }

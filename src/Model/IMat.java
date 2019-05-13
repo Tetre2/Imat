@@ -93,6 +93,10 @@ public class IMat {
         dataHandler.getShoppingCart().removeItem(sp);
     }
 
+    public List<ShoppingItem> getShoppingItem(){
+        return dataHandler.getShoppingCart().getItems();
+    }
+
     public boolean hasImage(Product p){
         return dataHandler.hasImage(p);
     }

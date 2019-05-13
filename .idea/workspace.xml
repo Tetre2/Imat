@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ea7e109-9fe2-4f60-91c0-e5d2dd7afc5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Model/resources/MattiasFörslag/+.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/resources/MattiasFörslag/-.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/resources/MattiasFörslag/README" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/IMat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/IMat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/Navbar/Navbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Navbar/Navbar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/Navbar/Navbar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Navbar/Navbar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/Picker/Picker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Picker/Picker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/components/ShoppingItem/shoppingItem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/ShoppingItem/shoppingItem.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/mainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/mainPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/mainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/mainPage.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,31 +40,33 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="123" selection-start-line="123" selection-end-line="123" />
+            <state relative-caret-position="334">
+              <caret line="183" column="81" selection-start-line="183" selection-start-column="81" selection-end-line="183" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3346#3347#0" expanded="true" />
                 <element signature="e#3381#3382#0" expanded="true" />
+                <element signature="e#4913#4914#0" expanded="true" />
+                <element signature="e#4993#4994#0" expanded="true" />
+                <element signature="e#5472#5473#0" expanded="true" />
+                <element signature="e#5541#5542#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/IMat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="93" column="5" lean-forward="true" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+            <state relative-caret-position="331">
+              <caret line="95" column="30" selection-start-line="95" selection-start-column="30" selection-end-line="95" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#756#757#0" expanded="true" />
                 <element signature="e#804#805#0" expanded="true" />
-                <element signature="e#1923#1924#0" expanded="true" />
-                <element signature="e#1983#1984#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,8 +75,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/lib/projectbackend.jar!/se/chalmers/cse/dat216/project/ShoppingCart.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="21" />
+            <state relative-caret-position="51">
+              <caret line="29" column="55" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/projectbackend.jar!/se/chalmers/cse/dat216/project/ShoppingItem.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -136,6 +134,7 @@
       <find>addpr</find>
       <find>remov</find>
       <find>rem</find>
+      <find>get</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -173,8 +172,8 @@
         <option value="$PROJECT_DIR$/src/Model/resources/MattiasFörslag/README" />
         <option value="$PROJECT_DIR$/src/Model/mainPage.java" />
         <option value="$PROJECT_DIR$/src/Model/components/Navbar/Navbar.fxml" />
-        <option value="$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java" />
         <option value="$PROJECT_DIR$/src/Model/IMat.java" />
+        <option value="$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java" />
       </list>
     </option>
   </component>
@@ -352,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557596358922</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implementerat rightBar och TopBar">
+      <created>1557747041457</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1557747041457</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -394,7 +400,8 @@
     <MESSAGE value="Alla produkter har rätt bild, pris och unit." />
     <MESSAGE value="SatrMarking funkar men är inte implementerat så att det sparas" />
     <MESSAGE value="Stjärnan syns nu bara om man hovrar över Itemet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Stjärnan syns nu bara om man hovrar över Itemet" />
+    <MESSAGE value="Implementerat rightBar och TopBar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementerat rightBar och TopBar" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
@@ -616,15 +623,22 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/IMat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        <state relative-caret-position="331">
+          <caret line="95" column="30" selection-start-line="95" selection-start-column="30" selection-end-line="95" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3346#3347#0" expanded="true" />
-            <element signature="e#3381#3382#0" expanded="true" />
+            <element signature="e#756#757#0" expanded="true" />
+            <element signature="e#804#805#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/projectbackend.jar!/se/chalmers/cse/dat216/project/ShoppingItem.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -637,21 +651,23 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/projectbackend.jar!/se/chalmers/cse/dat216/project/ShoppingCart.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="21" />
+        <state relative-caret-position="51">
+          <caret line="29" column="55" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/IMat.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="93" column="5" lean-forward="true" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+        <state relative-caret-position="334">
+          <caret line="183" column="81" selection-start-line="183" selection-start-column="81" selection-end-line="183" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#756#757#0" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
-            <element signature="e#1923#1924#0" expanded="true" />
-            <element signature="e#1983#1984#0" expanded="true" />
+            <element signature="e#3346#3347#0" expanded="true" />
+            <element signature="e#3381#3382#0" expanded="true" />
+            <element signature="e#4913#4914#0" expanded="true" />
+            <element signature="e#4993#4994#0" expanded="true" />
+            <element signature="e#5472#5473#0" expanded="true" />
+            <element signature="e#5541#5542#0" expanded="true" />
           </folding>
         </state>
       </provider>
