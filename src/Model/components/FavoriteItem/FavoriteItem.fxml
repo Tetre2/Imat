@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane prefHeight="60.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Model.components.FavoriteItem.FavoriteItem">
+   <stylesheets>
+      <URL value="@FavoriteItem.css" />
+      <URL value="@../../../styles.css" />
+   </stylesheets>
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <Button mnemonicParsing="false" styleClass="btn-nostyle">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/star-checked.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" styleClass="btn-nostyle">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/product_8.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label prefHeight="17.0" prefWidth="261.0" text="Mörkt Bröd">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-md" />
+               </styleClass>
+            </Label>
+            <Label alignment="CENTER" prefHeight="27.0" prefWidth="63.0" text="32,99">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-md" />
+               </styleClass>
+            </Label>
+            <Pane prefHeight="50.0" prefWidth="174.0" />
+            <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="146.0" styleClass="btn-primary" text="Lägg i Varukorg" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
