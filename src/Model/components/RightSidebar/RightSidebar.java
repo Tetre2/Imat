@@ -66,7 +66,7 @@ public class RightSidebar extends AnchorPane implements ShoppingCartListener {
     }
 
     private void onPayPressed(){
-
+       IMat.getInstance().setSceneToCheckout();
     }
 
     @Override

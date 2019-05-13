@@ -23,6 +23,7 @@ public class IMat {
 
 
     private IMat() {
+
     }
 
     private void init(){
@@ -33,9 +34,18 @@ public class IMat {
         }
 
         System.out.println("Products loaded: " + arr.size());
+
+
     }
 
 
+    public void setSceneToMainPage(){
+        Main.setSceneToMainPage();
+    }
+
+    public void setSceneToCheckout(){
+        Main.setSceneToCheckout();
+    }
 
     public Image getImage(Product p){
         return dataHandler.getFXImage(p);

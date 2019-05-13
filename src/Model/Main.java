@@ -1,5 +1,6 @@
+package Model;
+
 import Model.Checkout.Checkout;
-import Model.IMat;
 import Model.Mainpage.MainPage;
 import javafx.application.Application;
 import javafx.scene.Group;
@@ -9,10 +10,10 @@ import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 public class Main extends Application {
 
-    private Stage window;
+    private static Stage window;
 
-    private MainPage mainPage;
-    private Checkout checkout;
+    private static MainPage mainPage;
+    private static Checkout checkout;
 
 
     @Override
@@ -21,7 +22,7 @@ public class Main extends Application {
         window = primaryStage;
 
         IMatDataHandler.getInstance().reset();
-        primaryStage.setTitle("IMat");
+        primaryStage.setTitle("Model.IMat");
 
         mainPage = new MainPage();
         checkout = new Checkout();
@@ -32,14 +33,14 @@ public class Main extends Application {
 
     }
 
-    public void setSceneToCheckout(){
+    public static void setSceneToCheckout(){
         Group group = new Group();
         group.getChildren().add(checkout);
         Scene scene = new Scene(group);
         window.setScene(scene);
     }
 
-    public void setSceneToMainPage(){
+    public static void setSceneToMainPage(){
         Group group = new Group();
         group.getChildren().add(mainPage);
         Scene scene = new Scene(group);

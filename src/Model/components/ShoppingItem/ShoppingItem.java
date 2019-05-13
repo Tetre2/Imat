@@ -148,7 +148,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
     private void shopingDebugg(){
         System.out.println("Total cost: " + IMat.getInstance().getShoppingCart().getTotal());
         System.out.println("Antal Varor: " + IMat.getInstance().getShoppingCart().getItems().size());
-        //System.out.println(IMat.getInstance().getShoppingCart().getItems().get(0).getAmount());
+        //System.out.println(Model.IMat.getInstance().getShoppingCart().getItems().get(0).getAmount());
     }
 
     private void onStarButtonPressed() {
