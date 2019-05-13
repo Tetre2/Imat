@@ -1,0 +1,9 @@
+.minus {
+    -fx-border-radius: 8;
+    -fx-background-color: #F25757;
+}
+
+.plus {
+    -fx-border-radius: 8;
+    -fx-background-color: #4CD04C;
+}

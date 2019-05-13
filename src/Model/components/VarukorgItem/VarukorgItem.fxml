@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane minWidth="1020.0" prefHeight="60.0" prefWidth="600.0" styleClass="container" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Model.components.VarukorgItem.VarukorgItem">
+   <stylesheets>
+      <URL value="@VarukorgItem.css" />
+      <URL value="@../../../styles.css" />
+   </stylesheets>
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/product_8.jpg" />
+               </image>
+            </ImageView>
+            <Label prefHeight="20.0" prefWidth="450.0" text="Grovt Bröd">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-sm" />
+               </styleClass>
+            </Label>
+            <Label alignment="CENTER" prefHeight="20.0" prefWidth="95.0" text="32,99">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-sm" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </Label>
+            <Pane prefHeight="200.0" prefWidth="200.0" />
+            <Label alignment="CENTER" prefHeight="20.0" prefWidth="87.0" text="32,99">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-sm" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets left="20.0" right="15.0" />
+               </HBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" styleClass="btn-nostyle">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/icon_close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -15,6 +15,10 @@
     -fx-background-color: #387368;
 }
 
+.bold {
+    -fx-font-weight: bold;
+}
+
 .text {
     -fx-font-family: "Avenir Book";
 }
