@@ -26,7 +26,7 @@ public class ShoppingCheckout extends AnchorPane {
         List<ShoppingItem> products = IMat.getInstance().getShoppingCart().getItems();
         for (int i = 0; i < products.size(); i++) {
             Product p = products.get(i).getProduct();
-            VarukorgItem varukorgItem = new VarukorgItem(p.getName(), Double.toString(p.getPrice()));
+            VarukorgItem varukorgItem = new VarukorgItem(p);
             gridPane.add(varukorgItem, 0, i + 1);
         }
 
