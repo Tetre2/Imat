@@ -1,23 +1,14 @@
-package Model.components.Navbar;
+package Model.MinaSidor;
 
-import Model.Main;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+
 import java.io.IOException;
 
-public class Navbar extends AnchorPane {
-
-    @FXML
-    private Button hjalp;
-    @FXML
-    private Button kvitton;
-    @FXML
-    private Button minaSidor;
+public class MinaSidor extends AnchorPane {
 
 
-    public Navbar(){
+    public MinaSidor(){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
@@ -25,17 +16,12 @@ public class Navbar extends AnchorPane {
 
     }
 
-
     private void addEventListeners(){
-
-        hjalp.setOnAction(e -> Main.setSceneToHjalp());
-        kvitton.setOnAction(e -> Main.setSceneToHistorik());
-        minaSidor.setOnAction(e -> Main.setSceneToMinaSidor());
 
     }
 
     private FXMLLoader initFXML() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Navbar.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MinaSidor.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         return fxmlLoader;
@@ -48,6 +34,5 @@ public class Navbar extends AnchorPane {
             throw new RuntimeException(exception);
         }
     }
-
 
 }

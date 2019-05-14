@@ -1,8 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da968de8-1f33-4e70-a520-c4bec187c01d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Model/components/TitledSection/TitledSection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/TitledSection/TitledSection.fxml" afterDir="false" />
+    <list default="true" id="6cd358f5-6fda-49f8-beab-828ff754699c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Model/Historik/Historik.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Historik/Historik.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Hjalp/Hjalp.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Hjalp/Hjalp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/MinaSidor/MinaSidor.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/MinaSidor/MinaSidor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Checkout/Checkout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Checkout/Checkout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Mainpage/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Mainpage/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Mainpage/mainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Mainpage/mainPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Testing/Testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Testing/Testing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/Navbar/Navbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Navbar/Navbar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/Navbar/Navbar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Navbar/Navbar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/Picker/Picker.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Picker/Picker.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/Picker/Picker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Picker/Picker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebarItem/RightSidebarItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebarItem/RightSidebarItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/ShoppingCheckout/ShoppingCheckout.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/ShoppingCheckout/ShoppingCheckout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Checkout/ShoppingCheckout/ShoppingCheckout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/ShoppingCheckout/ShoppingCheckout.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/ShoppingCheckout/ShoppingCheckout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Checkout/ShoppingCheckout/ShoppingCheckout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/ShoppingCheckout/ShoppingCheckoutDetails/ShoppingCheckoutDetails.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/ShoppingCheckout/ShoppingCheckoutDetails/ShoppingCheckoutDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Checkout/ShoppingCheckout/ShoppingCheckoutDetails/ShoppingCheckoutDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/ShoppingCheckout/ShoppingCheckoutDetails/ShoppingCheckoutDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/ShoppingCheckout/ShoppingCheckoutDetails/ShoppingCheckoutDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Checkout/ShoppingCheckout/ShoppingCheckoutDetails/ShoppingCheckoutDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/ShoppingItem/shoppingItem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/ShoppingItem/shoppingItem.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/VarukorgItem/VarukorgItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Checkout/VarukorgItem/VarukorgItem.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/VarukorgItem/VarukorgItem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Checkout/VarukorgItem/VarukorgItem.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/VarukorgItem/VarukorgItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Checkout/VarukorgItem/VarukorgItem.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +57,7 @@
         <counts>
           <entry key="class" value="2" />
           <entry key="css" value="1" />
-          <entry key="fxml" value="25" />
+          <entry key="fxml" value="26" />
           <entry key="gitignore" value="1" />
           <entry key="java" value="30" />
         </counts>
@@ -38,7 +68,7 @@
           <entry key="CSS" value="1" />
           <entry key="JAVA" value="30" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="XML" value="25" />
+          <entry key="XML" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -62,29 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Checkout/Checkout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="42" column="35" lean-forward="true" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingCheckout/ShoppingCheckout.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingCheckout/ShoppingCheckoutDetails/ShoppingCheckoutDetails.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="374">
+              <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -92,13 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/components/TitledSection/TitledSection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="30" column="33" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#579#580#0" expanded="true" />
-                <element signature="e#638#639#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -107,39 +111,35 @@
         <entry file="file://$PROJECT_DIR$/src/Model/components/TitledSection/TitledSection.fxml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="434">
-              <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+              <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="111" column="51" selection-start-line="111" selection-start-column="51" selection-end-line="111" selection-end-column="51" />
+            <state relative-caret-position="420">
+              <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingCheckout/ShoppingCheckout.fxml">
+        <entry file="file://$PROJECT_DIR$/src/Model/Checkout/VarukorgItem/VarukorgItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="52" column="26" lean-forward="true" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/components/VarukorgItem/VarukorgItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -148,16 +148,16 @@
         <entry file="file://$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebarItem/RightSidebarItem.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="561">
-              <caret line="45" lean-forward="true" selection-start-line="44" selection-start-column="23" selection-end-line="45" />
+              <caret line="45" selection-start-line="44" selection-start-column="23" selection-end-line="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/components/VarukorgItem/VarukorgItem.fxml">
+        <entry file="file://$PROJECT_DIR$/src/Model/Checkout/VarukorgItem/VarukorgItem.fxml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="230">
-              <caret line="64" column="24" lean-forward="true" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+              <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -283,47 +283,6 @@
               <item name="Imat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="RightSidebar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Imat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="RightSidebar" type="462c0819:PsiDirectoryNode" />
-              <item name="RightSidebarItem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Imat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="ShoppingCheckout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Imat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="TitledSection" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Imat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="VarukorgItem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Imat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
               <item name="Mainpage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -418,7 +377,7 @@
     <frame x="-7" y="-7" width="1842" height="1002" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25504485" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25504485" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -427,7 +386,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31609195" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31609195" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -558,7 +517,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingCheckout/ShoppingCheckoutDetails/ShoppingCheckoutDetails.fxml">
+    <entry file="file://$PROJECT_DIR$/src/Model/Checkout/ShoppingCheckout/ShoppingCheckoutDetails/ShoppingCheckoutDetails.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1167">
           <caret line="73" column="15" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="15" />
@@ -605,8 +564,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="51" column="34" lean-forward="true" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+        <state relative-caret-position="391">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
     </entry>
@@ -626,36 +585,33 @@
     <entry file="file://$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebarItem/RightSidebarItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
-          <caret line="45" lean-forward="true" selection-start-line="44" selection-start-column="23" selection-end-line="45" />
+          <caret line="45" selection-start-line="44" selection-start-column="23" selection-end-line="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/VarukorgItem/VarukorgItem.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/Checkout/VarukorgItem/VarukorgItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/VarukorgItem/VarukorgItem.fxml">
+    <entry file="file://$PROJECT_DIR$/src/Model/Checkout/VarukorgItem/VarukorgItem.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
-          <caret line="64" column="24" lean-forward="true" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+          <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Checkout/Checkout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="42" column="35" lean-forward="true" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
+        <state relative-caret-position="374">
+          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingCheckout/ShoppingCheckout.fxml">
+    <entry file="file://$PROJECT_DIR$/src/Model/Checkout/ShoppingCheckout/ShoppingCheckout.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="655">
           <caret line="52" column="26" lean-forward="true" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
@@ -663,14 +619,14 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingCheckout/ShoppingCheckout.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/Checkout/ShoppingCheckout/ShoppingCheckout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingCheckout/ShoppingCheckoutDetails/ShoppingCheckoutDetails.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/Checkout/ShoppingCheckout/ShoppingCheckoutDetails/ShoppingCheckoutDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
@@ -682,28 +638,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/components/TitledSection/TitledSection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="30" column="33" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#638#639#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/components/TitledSection/TitledSection.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
-          <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/components/FavoriteItem/FavoriteItem.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-37" />
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="111" column="51" selection-start-line="111" selection-start-column="51" selection-end-line="111" selection-end-column="51" />
+        <state relative-caret-position="420">
+          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
         </state>
       </provider>
     </entry>

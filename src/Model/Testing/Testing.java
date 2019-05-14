@@ -4,8 +4,11 @@ import Model.IMat;
 import Model.components.LeftSidebar.LeftSidebar;
 import Model.components.Navbar.Navbar;
 import Model.components.RightSidebar.RightSidebar;
+import Model.components.ShoppingItem.ShoppingItem;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 
 import java.io.IOException;
 
@@ -15,6 +18,7 @@ public class Testing extends AnchorPane {
     public Testing(){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
+
 
     }
 

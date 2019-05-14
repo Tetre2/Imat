@@ -1,4 +1,4 @@
-package Model.components.VarukorgItem;
+package Model.Checkout.VarukorgItem;
 
 import Model.IMat;
 import javafx.fxml.FXML;
@@ -28,7 +28,7 @@ public class VarukorgItem extends AnchorPane {
     }
 
     private FXMLLoader initFXML() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Model/components/VarukorgItem/VarukorgItem.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Model/Checkout/VarukorgItem/VarukorgItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         return fxmlLoader;

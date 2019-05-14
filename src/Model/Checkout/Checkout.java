@@ -1,16 +1,12 @@
 package Model.Checkout;
 
-import Model.IMat;
 import Model.components.Navbar.Navbar;
-import Model.components.ShoppingCheckout.ShoppingCheckout;
+import Model.Checkout.ShoppingCheckout.ShoppingCheckout;
 import Model.components.TitledSection.TitledSection;
-import Model.components.VarukorgItem.VarukorgItem;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.VBox;
-import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
 
