@@ -1,0 +1,12 @@
+/*** LeftSideBar ***/
+.anchor-container-normal {
+    -fx-background-color: #EBEBEB;
+}
+
+.container {
+    -fx-padding: 4;
+}
+
+.image {
+
+}

@@ -1,0 +1,16 @@
+/*** CategoryItem ***/
+.anchor-container-normal {
+    -fx-border-style: solid;
+}
+.anchor-container-focused {
+    -fx-border-style: solid;
+    -fx-background-color: green;
+}
+
+
+.anchor-container-normal:hover{
+    -fx-background-color: #000000;
+}
+
+
+

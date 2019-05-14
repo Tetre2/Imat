@@ -1,19 +1,94 @@
 package Model.components.Picker;
 
+import Model.IMat;
+import Model.Main;
+import javafx.event.EventHandler;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import se.chalmers.cse.dat216.project.CartEvent;
+import se.chalmers.cse.dat216.project.ShoppingCartListener;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 
-public class Picker extends AnchorPane {
+public class Picker extends AnchorPane implements ShoppingCartListener {
 
-    public Picker(){
+    private ShoppingItem shoppingItem;
+    @FXML
+    private Button minus;
+    @FXML
+    private Button plus;
+    @FXML
+    private TextField amount;
+
+    public Picker(ShoppingItem shoppingItem){
+        this.shoppingItem = shoppingItem;
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
-
-
+        IMat.getInstance().getShoppingCart().addShoppingCartListener(this);
+        addEventListeners();
 
     }
+
+    private void addEventListeners() {
+        plus.setOnAction(e -> onPlusButtonPressed());
+        minus.setOnAction(e -> onMinusButtonPressed());
+
+        amount.focusedProperty().addListener((obs, wasFocused, isNowFocused) -> {
+            if(wasFocused){
+                int i = (int) shoppingItem.getAmount();
+                try {
+                    i = Integer.parseInt(amount.getText());
+                    shoppingItem.setAmount(i);
+                    amount.setPromptText(i+"");
+                    amount.setText("");
+                    IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+                }catch (Exception e){
+                    System.out.println( i + " is not defined");
+                    amount.setText("");
+                }
+            }
+        });
+
+        amount.setOnKeyPressed(ke -> {
+            if (ke.getCode().equals(KeyCode.ENTER)) {
+                int i = (int) shoppingItem.getAmount();
+                try {
+                    i = Integer.parseInt(amount.getText());
+                    shoppingItem.setAmount(i);
+                    IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+                }catch (Exception e){
+                    System.out.println( i + " is not defined");
+                    amount.setText("");
+            }
+        }});
+
+    }
+
+    private void onPlusButtonPressed(){
+        shoppingItem.setAmount(shoppingItem.getAmount()+1);
+        IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+        shopingDebugg();
+    }
+
+    private void onMinusButtonPressed(){
+        shoppingItem.setAmount(shoppingItem.getAmount()-1);
+        IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+        shopingDebugg();
+    }
+
+    private void shopingDebugg(){
+        System.out.println("Total cost: " + IMat.getInstance().getShoppingCart().getTotal());
+        System.out.println("Antal Varor: " + IMat.getInstance().getShoppingCart().getItems().size());
+        //System.out.println(Model.IMat.getInstance().getShoppingCart().getItems().get(0).getAmount());
+    }
+
 
     private FXMLLoader initFXML() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Picker.fxml"));
@@ -31,4 +106,8 @@ public class Picker extends AnchorPane {
     }
 
 
+    @Override
+    public void shoppingCartChanged(CartEvent cartEvent) {
+        amount.setPromptText((int) shoppingItem.getAmount() +"");
+    }
 }

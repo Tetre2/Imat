@@ -5,7 +5,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -99,29 +98,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <AnchorPane fx:id="picker" layoutX="-3.0" layoutY="233.0" prefHeight="52.0" prefWidth="210.0" style="-fx-background-color: red;">
-         <children>
-            <Button fx:id="minusButton" layoutX="12.0" layoutY="2.0" mnemonicParsing="false">
-               <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../resources/MattiasFörslag/-.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button fx:id="plusButton" layoutX="145.0" layoutY="2.0" mnemonicParsing="false">
-               <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../resources/MattiasFörslag/+.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <TextField layoutX="73.0" layoutY="14.0" prefHeight="25.0" prefWidth="68.0" />
-         </children>
-      </AnchorPane>
+      <AnchorPane fx:id="pickerPane" layoutX="-3.0" layoutY="233.0" prefHeight="52.0" prefWidth="210.0" style="-fx-background-color: red;" />
    </children>
    <stylesheets>
       <URL value="@ShoppingItem.css" />

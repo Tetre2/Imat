@@ -1,11 +1,13 @@
 package Model.components.ShoppingItem;
 
 import Model.IMat;
+import Model.components.Picker.Picker;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -32,23 +34,27 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
     @FXML ImageView starImageview;
     @FXML Button starButton;
 
-    @FXML Button minusButton;
-    @FXML Button plusButton;
-    @FXML AnchorPane picker;
+    @FXML AnchorPane pickerPane;
 
     private boolean isFavorite = false;
     private boolean isAddedToCart = false;
     private Product product;
     private se.chalmers.cse.dat216.project.ShoppingItem item;
+    private Picker picker;
 
     public ShoppingItem(Product p){
         this.product = p;
         item = new se.chalmers.cse.dat216.project.ShoppingItem(p);
+        picker = new Picker(item);
 
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
+        //Lägg grafisk kod under det här!
 
         IMat.getInstance().getShoppingCart().addShoppingCartListener(this);
+
+
+        pickerPane.getChildren().add(picker);
 
         //setFields();
         addEventListeners();
@@ -74,8 +80,6 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
     }
 
-
-
     private FXMLLoader initFXML() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Model/components/ShoppingItem/shoppingItem.fxml"));
         fxmlLoader.setRoot(this);
@@ -97,8 +101,6 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
     private void addEventListeners() {
         starButton.setOnAction(e -> onStarButtonPressed());
         addToCartButton.setOnAction(e -> onAddToCartButtonPressed());
-        plusButton.setOnAction(e -> onPlusButtonPressed());
-        minusButton.setOnAction(e -> onMinusButtonPressed());
 
         rootPane.addEventFilter(MouseEvent.MOUSE_ENTERED, e -> {
             starButton.setVisible(true);
@@ -120,29 +122,12 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
         showPlusMinus();
     }
 
-
     private void showPlusMinus(){
-        picker.setVisible(true);
+        pickerPane.setVisible(true);
     }
 
     private void hidePlusMinus(){
-        picker.setVisible(false);
-    }
-
-    private void onPlusButtonPressed(){
-        item.setAmount(item.getAmount()+1);
-
-        updateShopingCartItem();
-
-        shopingDebugg();
-    }
-
-    private void onMinusButtonPressed(){
-        item.setAmount(item.getAmount()-1);
-
-        updateShopingCartItem();
-
-        shopingDebugg();
+        pickerPane.setVisible(false);
     }
 
     private void shopingDebugg(){
@@ -152,7 +137,6 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
     }
 
     private void onStarButtonPressed() {
-
         if(isFavorite){
             IMat.getInstance().getFavorites().remove(product);
             System.out.println("Removed " + product.getName() + " From Favorites");
@@ -194,18 +178,6 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
         isAddedToCart = true;
     }
 
-    private void updateShopingCartItem(){
-
-        if(item.getAmount() == 0){
-            removeFromShoppingCart();
-        }else {
-
-            IMat.getInstance().getShoppingCart().removeItem(item);
-            IMat.getInstance().getShoppingCart().addItem(item);
-        }
-
-    }
-
     private void removeFromShoppingCart(){
         isAddedToCart = false;          //TODO: @Joel du har en annan färg än vit som "default" men jag kan inte hitta den.
         rootPane.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
@@ -215,12 +187,13 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
-            if(item.getAmount() == 0){
-                isAddedToCart = false;   //TODO: @Joel du har en annan färg än vit som "default" men jag kan inte hitta den.
-                rootPane.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
-                hidePlusMinus();
-            }
 
+        if(item.getAmount() == 0 && pickerPane.isVisible()){
+            pickerPane.setVisible(false);
+            if(IMat.getInstance().getShoppingCartItems().contains(item)){
+                removeFromShoppingCart();
+            }
+        }
 
     }
 }
