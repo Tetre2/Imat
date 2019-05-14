@@ -1,5 +1,6 @@
 package Model.components.ShoppingCheckout.ShoppingCheckoutDetails;
 
+import Model.IMat;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -15,6 +16,11 @@ public class ShoppingCheckoutDetails extends AnchorPane {
     public ShoppingCheckoutDetails() {
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
+
+        Double foodPrice = IMat.getInstance().getShoppingCart().getTotal();
+        transportPriceLabel.setText("50.0");
+        foodPriceLabel.setText(Double.toString(foodPrice));
+        totalPriceLabel.setText(Double.toString(foodPrice + 50.0));
     }
 
     private FXMLLoader initFXML() {
