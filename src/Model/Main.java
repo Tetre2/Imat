@@ -2,6 +2,7 @@ package Model;
 
 import Model.Checkout.Checkout;
 import Model.Mainpage.MainPage;
+import Model.Testing.Testing;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -14,6 +15,7 @@ public class Main extends Application {
 
     private static MainPage mainPage;
     private static Checkout checkout;
+    private static Testing testing;
 
 
     @Override
@@ -22,10 +24,11 @@ public class Main extends Application {
         window = primaryStage;
 
         IMatDataHandler.getInstance().reset();
-        primaryStage.setTitle("Model.IMat");
+        primaryStage.setTitle("IMat");
 
         mainPage = new MainPage();
         checkout = new Checkout();
+        testing = new Testing();
 
         setSceneToMainPage();
         window.show();
@@ -36,6 +39,13 @@ public class Main extends Application {
     public static void setSceneToCheckout(){
         Group group = new Group();
         group.getChildren().add(checkout);
+        Scene scene = new Scene(group);
+        window.setScene(scene);
+    }
+
+    public static void setSceneToTesting(){
+        Group group = new Group();
+        group.getChildren().add(testing);
         Scene scene = new Scene(group);
         window.setScene(scene);
     }

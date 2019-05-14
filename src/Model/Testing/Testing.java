@@ -1,35 +1,25 @@
-package Model.components.LeftSidebar;
+package Model.Testing;
 
-import Model.Main;
-import javafx.fxml.FXML;
+import Model.IMat;
+import Model.components.LeftSidebar.LeftSidebar;
+import Model.components.Navbar.Navbar;
+import Model.components.RightSidebar.RightSidebar;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class LeftSidebar extends AnchorPane  {
+public class Testing extends AnchorPane {
 
-    @FXML
-    private Button testingButton;
 
-    public LeftSidebar(){
+    public Testing(){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
-
-        addEventListeners();
-
-
-    }
-
-
-    private void addEventListeners() {
-        testingButton.setOnAction(e -> Main.setSceneToTesting());
 
     }
 
     private FXMLLoader initFXML() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LeftSidebar.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Testing.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         return fxmlLoader;
