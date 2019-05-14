@@ -53,23 +53,7 @@ public class MainPage extends AnchorPane{
         Navbar navbar = new Navbar();
         topNavBar.getChildren().add(navbar);
 
-
-
-
     }
-
-
-
-
-
-    private void testEvent(MainCategory mainCategory){
-        System.out.println("category: " + mainCategory.toString() + " was clicked");
-        updateGrid(mainCategory);
-        setMainCategoryFocused(mainCategory);
-    }
-
-
-
 
 
     private FXMLLoader initFXML() {
@@ -87,13 +71,18 @@ public class MainPage extends AnchorPane{
         }
     }
 
-
     private void addCategoriesToLeftSideBar(LeftSidebar leftSidebar){
         for(MainCategory category : MainCategory.values()){
             CategoryItem categoryItem = new CategoryItem(category);
             categoryItem.setOnMouseClicked(event -> testEvent(category));
             leftSidebar.addCategory(categoryItem);
         }
+    }
+
+    private void testEvent(MainCategory mainCategory){
+        System.out.println("category: " + mainCategory.toString() + " was clicked");
+        updateGrid(mainCategory);
+        setMainCategoryFocused(mainCategory);
     }
 
     private void setMainCategoryFocused(MainCategory selectedCategory){
@@ -117,9 +106,12 @@ public class MainPage extends AnchorPane{
     private Map<MainCategory, List<ShoppingItem>> cachedShoppingItems = new HashMap<>();
 
     private List<ShoppingItem> getShoppingItems(MainCategory mainCategory){
+
         List<ShoppingItem> shoppingItems = new ArrayList<>();
+
         if(cachedShoppingItems.containsKey(mainCategory)){          // Reuse shopping items that has already been generated.
             shoppingItems = cachedShoppingItems.get(mainCategory);
+
         }else{                                                      // Generate shopping items and store them in our Map as cache.
             for (int i = 0; i < mainCategory.getProducts().size(); i++) {
                 ShoppingItem shoppingItem = new ShoppingItem(mainCategory.getProducts().get(i));
@@ -129,6 +121,8 @@ public class MainPage extends AnchorPane{
         }
         return shoppingItems;
     }
+
+
     public void updateGrid(MainCategory mainCategory){
 
         //Clear current grid of shoppingitems
