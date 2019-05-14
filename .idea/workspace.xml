@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="418bc066-173f-44f2-8995-de2b2ea45bed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Model/Testing/Testing.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Testing/Testing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Mainpage/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Mainpage/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Testing/Testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Testing/Testing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/Picker/Picker.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Picker/Picker.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/Picker/Picker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Picker/Picker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/ShoppingItem/shoppingItem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/ShoppingItem/shoppingItem.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,20 +18,75 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Mainpage/MainPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+            <state relative-caret-position="119">
+              <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="27" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="206" column="41" selection-start-line="206" selection-start-column="41" selection-end-line="206" selection-end-column="41" />
+              <folding>
+                <element signature="method#ShoppingItem#0;class#ShoppingItem#0" />
+                <element signature="e#1958#2000#1" />
+                <element signature="e#2145#2190#1" />
+                <element signature="method#initFXML#0;class#ShoppingItem#0" />
+                <element signature="method#tryToLoadFXML#0;class#ShoppingItem#0" />
+                <element signature="e#2538#2580#0" />
+                <element signature="e#2611#2673#0" />
+                <element signature="method#setFields#0;class#ShoppingItem#0" />
+                <element signature="method#addEventListeners#0;class#ShoppingItem#0" />
+                <element signature="e#3069#3126#0" />
+                <element signature="e#3186#3244#0" />
+                <element signature="method#onAddToCartButtonPressed#0;class#ShoppingItem#0" />
+                <element signature="n#!!block;n#showPlusMinus#0;n#ShoppingItem#0" />
+                <element signature="n#!!block;n#hidePlusMinus#0;n#ShoppingItem#0" />
+                <element signature="method#shopingDebugg#0;class#ShoppingItem#0" />
+                <element signature="method#onStarButtonPressed#0;class#ShoppingItem#0" />
+                <element signature="e#4456#4646#1" />
+                <element signature="e#4651#4826#1" />
+                <element signature="method#updateStarButtonUI#0;class#ShoppingItem#0" />
+                <element signature="e#5094#5202#1" />
+                <element signature="e#5208#5318#1" />
+                <element signature="n#!!block;n#isFavorited#0;n#ShoppingItem#0" />
+                <element signature="n#!!block;n#isAddedToCart#1;n#ShoppingItem#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebar.java">
+        <entry file="file://$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebarItem/RightSidebarItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+            <state>
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/components/Picker/Picker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-51">
+              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,33 +103,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Testing/Testing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-94">
-              <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+            <state relative-caret-position="17">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Mainpage/mainPage.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="59" lean-forward="true" selection-end-line="26" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingItem/shoppingItem.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
-              <caret line="101" column="119" selection-start-line="101" selection-start-column="111" selection-end-line="101" selection-end-column="119" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
     </leaf>
@@ -110,12 +143,14 @@
         <option value="$PROJECT_DIR$/src/IMat.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/mainPageController.java" />
-        <option value="$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java" />
         <option value="$PROJECT_DIR$/src/Model/Testing/Testing.fxml" />
-        <option value="$PROJECT_DIR$/src/Model/Testing/Testing.java" />
         <option value="$PROJECT_DIR$/src/Model/Main.java" />
         <option value="$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebar.java" />
         <option value="$PROJECT_DIR$/src/Model/Mainpage/MainPage.java" />
+        <option value="$PROJECT_DIR$/src/Model/components/Picker/Picker.fxml" />
+        <option value="$PROJECT_DIR$/src/Model/Testing/Testing.java" />
+        <option value="$PROJECT_DIR$/src/Model/components/Picker/Picker.java" />
+        <option value="$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java" />
       </list>
     </option>
   </component>
@@ -143,6 +178,17 @@
             <path>
               <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
               <item name="Imat" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Imat" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="projectbackend.jar" type="ab9368bb:PsiFileNode" />
+            </path>
+            <path>
+              <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Imat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -164,7 +210,31 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="LeftSidebar" type="462c0819:PsiDirectoryNode" />
+              <item name="Picker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Imat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="RightSidebar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Imat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="RightSidebar" type="462c0819:PsiDirectoryNode" />
+              <item name="RightSidebarItem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Imat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="Mainpage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
@@ -184,7 +254,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557821768432" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557825453517" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -252,18 +322,26 @@
       <option name="presentableId" value="Default" />
       <updated>1557469553605</updated>
       <workItem from="1557492801541" duration="3336000" />
-      <workItem from="1557820212895" duration="1513000" />
+      <workItem from="1557820212895" duration="5218000" />
     </task>
+    <task id="LOCAL-00001" summary="Testing Sida implementerad">
+      <created>1557821791411</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1557821791412</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7160000" />
+    <option name="totallyTimeSpent" value="10865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17449665" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17449665" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -272,7 +350,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27086383" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27086383" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -297,6 +375,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Testing Sida implementerad" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing Sida implementerad" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/components/ShoppingItem/ShoppingItem/hej.css" />
@@ -350,28 +432,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingItem/shoppingItem.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="101" column="119" selection-start-line="101" selection-start-column="111" selection-end-line="101" selection-end-column="119" />
+        <state relative-caret-position="238">
+          <caret line="14" column="173" selection-start-line="14" selection-start-column="143" selection-end-line="14" selection-end-column="173" />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Testing/Testing.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/components/Picker/Picker.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-94">
-          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="12" column="158" selection-start-line="12" selection-start-column="158" selection-end-line="12" selection-end-column="158" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Mainpage/MainPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="27" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/components/TitledSection/TitledSection.fxml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Testing/Testing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="102" column="62" selection-start-line="102" selection-start-column="62" selection-end-line="102" selection-end-column="62" />
+        <state relative-caret-position="17">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -382,17 +483,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebar.java">
+    <entry file="jar://$PROJECT_DIR$/lib/projectbackend.jar!/se/chalmers/cse/dat216/project/ShoppingCart.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        <state relative-caret-position="576">
+          <caret line="75" column="34" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Mainpage/MainPage.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/components/Picker/Picker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+        <state relative-caret-position="-51">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebarItem/RightSidebarItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="206" column="41" selection-start-line="206" selection-start-column="41" selection-end-line="206" selection-end-column="41" />
+          <folding>
+            <element signature="method#ShoppingItem#0;class#ShoppingItem#0" />
+            <element signature="e#1958#2000#1" />
+            <element signature="e#2145#2190#1" />
+            <element signature="method#initFXML#0;class#ShoppingItem#0" />
+            <element signature="method#tryToLoadFXML#0;class#ShoppingItem#0" />
+            <element signature="e#2538#2580#0" />
+            <element signature="e#2611#2673#0" />
+            <element signature="method#setFields#0;class#ShoppingItem#0" />
+            <element signature="method#addEventListeners#0;class#ShoppingItem#0" />
+            <element signature="e#3069#3126#0" />
+            <element signature="e#3186#3244#0" />
+            <element signature="method#onAddToCartButtonPressed#0;class#ShoppingItem#0" />
+            <element signature="n#!!block;n#showPlusMinus#0;n#ShoppingItem#0" />
+            <element signature="n#!!block;n#hidePlusMinus#0;n#ShoppingItem#0" />
+            <element signature="method#shopingDebugg#0;class#ShoppingItem#0" />
+            <element signature="method#onStarButtonPressed#0;class#ShoppingItem#0" />
+            <element signature="e#4456#4646#1" />
+            <element signature="e#4651#4826#1" />
+            <element signature="method#updateStarButtonUI#0;class#ShoppingItem#0" />
+            <element signature="e#5094#5202#1" />
+            <element signature="e#5208#5318#1" />
+            <element signature="n#!!block;n#isFavorited#0;n#ShoppingItem#0" />
+            <element signature="n#!!block;n#isAddedToCart#1;n#ShoppingItem#0" />
+          </folding>
         </state>
       </provider>
     </entry>
