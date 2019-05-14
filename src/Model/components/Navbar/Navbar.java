@@ -4,11 +4,15 @@ import Model.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 
 public class Navbar extends AnchorPane {
 
+    @FXML
+    Hyperlink iMatLabel;
     @FXML
     private Button hjalp;
     @FXML
@@ -22,16 +26,18 @@ public class Navbar extends AnchorPane {
         tryToLoadFXML(fxmlLoader);
 
         addEventListeners();
-
     }
 
+    @FXML
+    private void onIMatPressed() {
+        Main.setSceneToMainPage();
+    }
 
     private void addEventListeners(){
 
         hjalp.setOnAction(e -> Main.setSceneToHjalp());
         kvitton.setOnAction(e -> Main.setSceneToHistorik());
         minaSidor.setOnAction(e -> Main.setSceneToMinaSidor());
-
     }
 
     private FXMLLoader initFXML() {

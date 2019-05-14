@@ -1,12 +1,12 @@
 package Model;
 
-import Model.Checkout.Checkout;
-import Model.Historik.Historik;
-import Model.Hjalp.Hjalp;
-import Model.Mainpage.MainPage;
-import Model.MinaSidor.MinaSidor;
-import Model.Testing.Testing;
-import Model.Testing2.Testing2;
+import Model.pages.Checkout.Checkout;
+import Model.pages.Historik.Historik;
+import Model.pages.Hjalp.Hjalp;
+import Model.pages.Mainpage.MainPage;
+import Model.pages.MinaSidor.MinaSidor;
+import Model.pages.Testing.Testing;
+import Model.pages.Testing2.Testing2;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -70,7 +70,7 @@ public class Main extends Application {
 
 
     public static void setSceneToCheckout(){
-        checkout.updateUI();
+        checkout.initUI();
 
         Group group = new Group();
         group.getChildren().add(checkout);

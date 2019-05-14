@@ -1,4 +1,4 @@
-package Model.Checkout.ShoppingCheckout.ShoppingCheckoutDetails;
+package Model.pages.Checkout.ShoppingCheckout.ShoppingCheckoutDetails;
 
 import Model.IMat;
 import javafx.fxml.FXML;
@@ -24,7 +24,7 @@ public class ShoppingCheckoutDetails extends AnchorPane {
     }
 
     private FXMLLoader initFXML() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Model/Checkout/ShoppingCheckout/ShoppingCheckoutDetails/ShoppingCheckoutDetails.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Model/pages/Checkout/ShoppingCheckout/ShoppingCheckoutDetails/ShoppingCheckoutDetails.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         return fxmlLoader;
