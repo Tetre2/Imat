@@ -94,7 +94,10 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
             starButton.setVisible(true);
         });
         rootPane.addEventFilter(MouseEvent.MOUSE_EXITED, e -> {
-            starButton.setVisible(false);
+            if(!isFavorited()){
+                starButton.setVisible(false);
+            }
+
         });
 
     }
