@@ -16,7 +16,7 @@
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1440.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
-            <Label text="iMat">
+            <Label fx:id="escape" text="iMat">
                <styleClass>
                   <String fx:value="text" />
                   <String fx:value="text-xl" />

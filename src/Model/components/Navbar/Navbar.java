@@ -4,6 +4,7 @@ import Model.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 
@@ -15,6 +16,8 @@ public class Navbar extends AnchorPane {
     private Button kvitton;
     @FXML
     private Button minaSidor;
+    @FXML
+    private Label escape;
 
 
     public Navbar(){
@@ -31,6 +34,7 @@ public class Navbar extends AnchorPane {
         hjalp.setOnAction(e -> Main.setSceneToHjalp());
         kvitton.setOnAction(e -> Main.setSceneToHistorik());
         minaSidor.setOnAction(e -> Main.setSceneToMinaSidor());
+        escape.setOnMouseClicked(e -> Main.setSceneToMainPage());
 
     }
 
