@@ -178,19 +178,6 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
         isAddedToCart = true;
     }
 
-    private void updateShopingCartItem(){
-
-        if (IMat.getInstance().getShoppingCartItems().contains(item)) {
-            if(item.getAmount() == 0){
-                removeFromShoppingCart();
-            }else {
-
-                IMat.getInstance().getShoppingCart().removeItem(item);
-                IMat.getInstance().getShoppingCart().addItem(item);
-            }
-        }
-    }
-
     private void removeFromShoppingCart(){
         isAddedToCart = false;          //TODO: @Joel du har en annan färg än vit som "default" men jag kan inte hitta den.
         rootPane.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
@@ -207,18 +194,6 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
                 removeFromShoppingCart();
             }
         }
-
-
-
-        //updateShopingCartItem();
-
-
-            /*if(item.getAmount() == 0){
-                isAddedToCart = false;   //TODO: @Joel du har en annan färg än vit som "default" men jag kan inte hitta den.
-                rootPane.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
-                hidePlusMinus();
-            }*/
-
 
     }
 }

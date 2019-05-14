@@ -39,9 +39,6 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
     private void addEventListeners() {
         plus.setOnAction(e -> onPlusButtonPressed());
         minus.setOnAction(e -> onMinusButtonPressed());
-        /*amount.textProperty().addListener((observable, oldValue, newValue) -> {
-
-        });*/
 
         amount.focusedProperty().addListener((obs, wasFocused, isNowFocused) -> {
             if(wasFocused){

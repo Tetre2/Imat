@@ -1,7 +1,10 @@
 package Model;
 
 import Model.Checkout.Checkout;
+import Model.Historik.Historik;
+import Model.Hjalp.Hjalp;
 import Model.Mainpage.MainPage;
+import Model.MinaSidor.MinaSidor;
 import Model.Testing.Testing;
 import javafx.application.Application;
 import javafx.scene.Group;
@@ -16,6 +19,9 @@ public class Main extends Application {
     private static MainPage mainPage;
     private static Checkout checkout;
     private static Testing testing;
+    private static Historik historik;
+    private static MinaSidor minaSidor;
+    private static Hjalp hjalp;
 
 
     @Override
@@ -29,11 +35,36 @@ public class Main extends Application {
         mainPage = new MainPage();
         checkout = new Checkout();
         testing = new Testing();
+        historik = new Historik();
+        minaSidor = new MinaSidor();
+        hjalp = new Hjalp();
 
         setSceneToMainPage();
         window.show();
 
     }
+
+    public static void setSceneToMinaSidor(){
+        Group group = new Group();
+        group.getChildren().add(historik);
+        Scene scene = new Scene(group);
+        window.setScene(scene);
+    }
+
+    public static void setSceneToHjalp(){
+        Group group = new Group();
+        group.getChildren().add(hjalp);
+        Scene scene = new Scene(group);
+        window.setScene(scene);
+    }
+
+    public static void setSceneToHistorik(){
+        Group group = new Group();
+        group.getChildren().add(historik);
+        Scene scene = new Scene(group);
+        window.setScene(scene);
+    }
+
 
     public static void setSceneToCheckout(){
         Group group = new Group();
