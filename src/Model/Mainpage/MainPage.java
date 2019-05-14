@@ -41,6 +41,7 @@ public class MainPage extends AnchorPane{
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
+        //visa alla produkter
         showProductsGrid(iMat.getProducts());
 
         leftSidebar = new LeftSidebar();
@@ -145,14 +146,14 @@ public class MainPage extends AnchorPane{
 
 
     private void showProductsGrid(List<Product> products){
-/*
+
         for (int i = 0; i < products.size(); i++) {
             ShoppingItem shoppingItem = new ShoppingItem(products.get(i));
 
             grid.setConstraints(shoppingItem, i%4, i/4);
             grid.getChildren().add(shoppingItem);
 
-        }*/
+        }
     }
 
 }
