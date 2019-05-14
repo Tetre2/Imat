@@ -24,7 +24,7 @@
                   <Image url="@../../resources/product_8.jpg" />
                </image>
             </ImageView>
-            <Label prefHeight="20.0" prefWidth="450.0" text="Grovt Bröd">
+            <Label fx:id="productNameLabel" prefHeight="20.0" prefWidth="450.0" text="Grovt Bröd">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -36,7 +36,7 @@
                   <String fx:value="text-sm" />
                </styleClass>
             </Label>
-            <Label alignment="CENTER" prefHeight="20.0" prefWidth="95.0" text="32,99">
+            <Label fx:id="priceLabel" alignment="CENTER" prefHeight="20.0" prefWidth="95.0" text="32,99">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -49,7 +49,7 @@
                </HBox.margin>
             </Label>
             <Pane prefHeight="200.0" prefWidth="200.0" />
-            <Label alignment="CENTER" prefHeight="20.0" prefWidth="87.0" text="32,99">
+            <Label fx:id="totalPriceLabel" alignment="CENTER" prefHeight="20.0" prefWidth="87.0" text="XXX (total pris)">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>

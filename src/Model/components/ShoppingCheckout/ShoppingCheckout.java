@@ -1,5 +1,8 @@
 package Model.components.ShoppingCheckout;
 
+import Model.IMat;
+import Model.components.ShoppingCheckout.ShoppingCheckoutDetails.ShoppingCheckoutDetails;
+import Model.components.VarukorgItem.VarukorgItem;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -7,22 +10,27 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.util.List;
 
 public class ShoppingCheckout extends AnchorPane {
     @FXML private GridPane gridPane;
-    @FXML private Label foodPriceLabel;
-    @FXML private Label transportPriceLabel;
-    @FXML private Label totalPriceLabel;
 
     public ShoppingCheckout() {
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
-    }
 
-    public void addShoppingItem(Node item) {
-        gridPane.add(item, 0, 1);
+        List<ShoppingItem> products = IMat.getInstance().getShoppingCart().getItems();
+        for (int i = 0; i < products.size(); i++) {
+            Product p = products.get(i).getProduct();
+            VarukorgItem varukorgItem = new VarukorgItem(p.getName(), Double.toString(p.getPrice()));
+            gridPane.add(varukorgItem, 0, i + 1);
+        }
+
+        gridPane.add(new ShoppingCheckoutDetails(), 0, products.size() + 1);
     }
 
     private FXMLLoader initFXML() {

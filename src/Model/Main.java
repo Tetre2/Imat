@@ -33,13 +33,15 @@ public class Main extends Application {
         testing = new Testing();
         testing2 = new Testing2();
 
-        setSceneToTesting2();
+        setSceneToMainPage();
         window.show();
 
 
     }
 
     public static void setSceneToCheckout(){
+        checkout.updateUI();
+
         Group group = new Group();
         group.getChildren().add(checkout);
         Scene scene = new Scene(group);
