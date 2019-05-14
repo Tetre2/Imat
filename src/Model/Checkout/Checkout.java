@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 
@@ -21,12 +22,27 @@ public class Checkout extends AnchorPane {
         tryToLoadFXML(fxmlLoader);
         addEventListeners();
 
+        initUI();
+    }
+
+    private void initUI() {
         Navbar navbar = new Navbar();
         content.getChildren().add(navbar);
 
+
         TitledSection varukorgSection = new TitledSection("Granska din varukorg");
-        VarukorgItem testItem = new VarukorgItem();
-        varukorgSection.addNode(testItem);
+        VarukorgItem testItem1 = new VarukorgItem();
+        VarukorgItem testItem2 = new VarukorgItem();
+        VarukorgItem testItem3 = new VarukorgItem();
+
+        VBox varukorgItemsContainer = new VBox();
+        varukorgItemsContainer.setSpacing(15);
+
+        varukorgItemsContainer.getChildren().add(testItem1);
+        varukorgItemsContainer.getChildren().add(testItem2);
+        varukorgItemsContainer.getChildren().add(testItem3);
+
+        varukorgSection.addNode(varukorgItemsContainer);
 
         content.getChildren().add(varukorgSection);
     }
