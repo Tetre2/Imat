@@ -1,10 +1,14 @@
 package Model.components.Picker;
 
 import Model.IMat;
+import Model.Main;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.CartEvent;
@@ -35,18 +39,47 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
     private void addEventListeners() {
         plus.setOnAction(e -> onPlusButtonPressed());
         minus.setOnAction(e -> onMinusButtonPressed());
+        /*amount.textProperty().addListener((observable, oldValue, newValue) -> {
+
+        });*/
+
+        amount.focusedProperty().addListener((obs, wasFocused, isNowFocused) -> {
+            if(wasFocused){
+                int i = (int) shoppingItem.getAmount();
+                try {
+                    i = Integer.parseInt(amount.getText());
+                    shoppingItem.setAmount(i);
+                    amount.setPromptText(i+"");
+                    amount.setText("");
+                    IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+                }catch (Exception e){
+                    System.out.println( i + " is not defined");
+                    amount.setText("");
+                }
+            }
+        });
+
+        amount.setOnKeyPressed(ke -> {
+            if (ke.getCode().equals(KeyCode.ENTER)) {
+                int i = (int) shoppingItem.getAmount();
+                try {
+                    i = Integer.parseInt(amount.getText());
+                    shoppingItem.setAmount(i);
+                    IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+                }catch (Exception e){
+                    System.out.println( i + " is not defined");
+                    amount.setText("");
+            }
+        }});
 
     }
 
-
-    //TODO Lägg i picker
     private void onPlusButtonPressed(){
         shoppingItem.setAmount(shoppingItem.getAmount()+1);
         IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
         shopingDebugg();
     }
 
-    //TODO Lägg i picker
     private void onMinusButtonPressed(){
         shoppingItem.setAmount(shoppingItem.getAmount()-1);
         IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
@@ -78,6 +111,6 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
 
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
-        amount.setText(shoppingItem.getAmount() + " St");
+        amount.setPromptText((int) shoppingItem.getAmount() +"");
     }
 }

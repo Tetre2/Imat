@@ -34,7 +34,7 @@
                   <Insets left="5.0" />
                </HBox.margin>
             </Button>
-            <TextField fx:id="amount" prefHeight="50.0" prefWidth="103.0" text="1st" />
+            <TextField fx:id="amount" prefHeight="50.0" prefWidth="103.0" />
             <Button fx:id="plus" mnemonicParsing="false" style="-fx-background-color: #4CD04C; -fx-border-radius: 30; -fx-border-width: 0;" styleClass="btn-nostyle">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">

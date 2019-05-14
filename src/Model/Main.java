@@ -33,7 +33,6 @@ public class Main extends Application {
         setSceneToMainPage();
         window.show();
 
-
     }
 
     public static void setSceneToCheckout(){
@@ -57,6 +56,9 @@ public class Main extends Application {
         window.setScene(scene);
     }
 
+    public static Scene getCurrentScene(){
+        return window.getScene();
+    }
 
 
 
