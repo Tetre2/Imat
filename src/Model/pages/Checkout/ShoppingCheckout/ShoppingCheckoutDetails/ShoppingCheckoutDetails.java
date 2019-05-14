@@ -5,10 +5,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import se.chalmers.cse.dat216.project.CartEvent;
+import se.chalmers.cse.dat216.project.ShoppingCartListener;
 
 import java.io.IOException;
 
-public class ShoppingCheckoutDetails extends AnchorPane {
+public class ShoppingCheckoutDetails extends AnchorPane implements ShoppingCartListener {
+    private static final Double TRANSPORT_PRICE = 50.0;
+
     @FXML private Label foodPriceLabel;
     @FXML private Label transportPriceLabel;
     @FXML private Label totalPriceLabel;
@@ -18,9 +22,13 @@ public class ShoppingCheckoutDetails extends AnchorPane {
         tryToLoadFXML(fxmlLoader);
 
         Double foodPrice = IMat.getInstance().getShoppingCart().getTotal();
-        transportPriceLabel.setText("50.0");
+        updateLabels(foodPrice);
+    }
+
+    private void updateLabels(Double foodPrice) {
+        transportPriceLabel.setText(Double.toString(TRANSPORT_PRICE));
         foodPriceLabel.setText(Double.toString(foodPrice));
-        totalPriceLabel.setText(Double.toString(foodPrice + 50.0));
+        totalPriceLabel.setText(Double.toString(foodPrice + TRANSPORT_PRICE));
     }
 
     private FXMLLoader initFXML() {
@@ -36,5 +44,11 @@ public class ShoppingCheckoutDetails extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+    }
+
+    @Override
+    public void shoppingCartChanged(CartEvent cartEvent) {
+        Double updatedFoodPrice = IMat.getInstance().getShoppingCart().getTotal();
+        updateLabels(updatedFoodPrice);
     }
 }
