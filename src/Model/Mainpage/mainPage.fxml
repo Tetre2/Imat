@@ -24,7 +24,7 @@
             </GridPane>
          </content>
       </ScrollPane>
-      <Label layoutX="402.0" layoutY="71.0" prefHeight="129.0" prefWidth="640.0" text="Alla varor" textAlignment="CENTER">
+      <Label contentDisplay="CENTER" layoutX="402.0" layoutY="71.0" prefHeight="129.0" prefWidth="640.0" text="Alla varor" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="57.0" />
          </font>

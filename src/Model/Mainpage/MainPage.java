@@ -42,7 +42,7 @@ public class MainPage extends AnchorPane{
         tryToLoadFXML(fxmlLoader);
 
         //visa alla produkter
-        showProductsGrid(iMat.getProducts());
+        //showProductsGrid(iMat.getProducts());
 
         leftSidebar = new LeftSidebar();
         LeftNavBar.getChildren().add(leftSidebar);
