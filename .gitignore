@@ -5,3 +5,7 @@ out/
 .idea/dictionaries
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
+*.xml
+*.iml
+*.xml
+.idea/workspace.xml
