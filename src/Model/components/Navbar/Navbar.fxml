@@ -2,8 +2,9 @@
 
 <?import java.lang.String?>
 <?import java.net.URL?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.image.Image?>
@@ -12,12 +13,11 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 
-<?import javafx.scene.control.Hyperlink?>
 <fx:root minWidth="1440.0" prefHeight="80.0" prefWidth="600.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1440.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
-            <Hyperlink text="iMat" fx:id="iMatLabel" onMouseClicked="#onIMatPressed" >
+            <Hyperlink fx:id="iMatLabel" onMouseClicked="#onIMatPressed" text="iMat">
                <styleClass>
                   <String fx:value="text" />
                   <String fx:value="text-xl" />
@@ -35,15 +35,27 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <TextField minWidth="600.0" promptText="Sök efter produkter här" />
+                  <TextField minWidth="600.0" promptText="Sök efter produkter här">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor></TextField>
               </items>
             </ToolBar>
             <Region prefHeight="60.0" prefWidth="207.0" HBox.hgrow="ALWAYS" />
             <HBox alignment="CENTER" prefHeight="60.0" prefWidth="284.0">
                <children>
-                  <Button fx:id="kvitton" mnemonicParsing="false" prefHeight="31.0" prefWidth="84.0" text="Kvitton" />
-                  <Button fx:id="hjalp" mnemonicParsing="false" prefHeight="31.0" prefWidth="71.0" text="Hjälp" />
-                  <Button fx:id="minaSidor" mnemonicParsing="false" prefHeight="31.0" prefWidth="114.0" text="Mina Sidor" />
+                  <Button fx:id="kvitton" mnemonicParsing="false" prefHeight="31.0" prefWidth="84.0" text="Kvitton">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="hjalp" mnemonicParsing="false" prefHeight="31.0" prefWidth="71.0" text="Hjälp">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="minaSidor" mnemonicParsing="false" prefHeight="31.0" prefWidth="114.0" text="Mina Sidor">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
                </children>
             </HBox>
          </children>

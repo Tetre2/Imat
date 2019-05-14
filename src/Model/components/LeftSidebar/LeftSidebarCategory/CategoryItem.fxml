@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
@@ -12,4 +13,7 @@
    <children>
       <Label fx:id="categoryName" layoutX="47.0" layoutY="16.0" prefHeight="17.0" prefWidth="133.0" text="CategoryName" />
    </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
 </fx:root>
