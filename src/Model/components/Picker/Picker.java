@@ -4,25 +4,30 @@ import Model.IMat;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import se.chalmers.cse.dat216.project.CartEvent;
+import se.chalmers.cse.dat216.project.ShoppingCartListener;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 
-public class Picker extends AnchorPane {
+public class Picker extends AnchorPane implements ShoppingCartListener {
 
     private ShoppingItem shoppingItem;
     @FXML
     private Button minus;
     @FXML
     private Button plus;
+    @FXML
+    private TextField amount;
 
     public Picker(ShoppingItem shoppingItem){
         this.shoppingItem = shoppingItem;
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
-
+        IMat.getInstance().getShoppingCart().addShoppingCartListener(this);
         addEventListeners();
 
     }
@@ -71,4 +76,8 @@ public class Picker extends AnchorPane {
     }
 
 
+    @Override
+    public void shoppingCartChanged(CartEvent cartEvent) {
+        amount.setText(shoppingItem.getAmount() + " St");
+    }
 }
