@@ -11,14 +11,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
-<<<<<<< HEAD
-import se.chalmers.cse.dat216.project.ProductCategory;
-=======
 import se.chalmers.cse.dat216.project.Product;
->>>>>>> 85dcfea664a835fc17b81558cb734c9ec7b9d3ee
+
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MainPage extends AnchorPane{
 
@@ -86,7 +86,6 @@ public class MainPage extends AnchorPane{
         }
     }
 
-<<<<<<< HEAD
 
     private void addCategoriesToLeftSideBar(LeftSidebar leftSidebar){
         for(MainCategory category : MainCategory.values()){
@@ -112,29 +111,48 @@ public class MainPage extends AnchorPane{
         }
     }
 
+    //cache used for storing shopping items in order to not generate new ones.
+    //Creating new objects all the time consumes a high amount of ram because of the product-image.
+    private Map<MainCategory, List<ShoppingItem>> cachedShoppingItems = new HashMap<>();
+
+    private List<ShoppingItem> getShoppingItems(MainCategory mainCategory){
+        List<ShoppingItem> shoppingItems = new ArrayList<>();
+        if(cachedShoppingItems.containsKey(mainCategory)){          // Reuse shopping items that has already been generated.
+            shoppingItems = cachedShoppingItems.get(mainCategory);
+        }else{                                                      // Generate shopping items and store them in our Map as cache.
+            for (int i = 0; i < mainCategory.getProducts().size(); i++) {
+                ShoppingItem shoppingItem = new ShoppingItem(mainCategory.getProducts().get(i));
+                shoppingItems.add(shoppingItem);
+                cachedShoppingItems.put(mainCategory, shoppingItems);
+            }
+        }
+        return shoppingItems;
+    }
     public void updateGrid(MainCategory mainCategory){
+
+        //Clear current grid of shoppingitems
         grid.getChildren().clear();
-        for (int i = 0; i < mainCategory.getProducts().size(); i++) {
-            ShoppingItem shoppingItem = new ShoppingItem(mainCategory.getProducts().get(i));
 
-            grid.setConstraints(shoppingItem, i%4, i/4);
-            grid.getChildren().add(shoppingItem);
+        //Get shopping items, either from cache or generate from scratch.
+        List<ShoppingItem> shoppingItems = getShoppingItems(mainCategory);
 
+        //Display shopping items
+        for(int i = 0; i < shoppingItems.size(); i++) {
+            grid.setConstraints(shoppingItems.get(i), i % 4, i / 4);
+            grid.getChildren().add(shoppingItems.get(i));
         }
     }
 
-    private void creatGrid(){
-=======
-    private void showProductsGrid(List<Product> products){
->>>>>>> 85dcfea664a835fc17b81558cb734c9ec7b9d3ee
 
+    private void showProductsGrid(List<Product> products){
+/*
         for (int i = 0; i < products.size(); i++) {
             ShoppingItem shoppingItem = new ShoppingItem(products.get(i));
 
             grid.setConstraints(shoppingItem, i%4, i/4);
             grid.getChildren().add(shoppingItem);
 
-        }
+        }*/
     }
 
 }
