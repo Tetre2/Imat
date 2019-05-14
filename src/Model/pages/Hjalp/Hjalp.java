@@ -1,14 +1,13 @@
-package Model.MinaSidor;
+package Model.pages.Hjalp;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class MinaSidor extends AnchorPane {
+public class Hjalp extends AnchorPane {
 
-
-    public MinaSidor(){
+    public Hjalp(){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
@@ -16,12 +15,14 @@ public class MinaSidor extends AnchorPane {
 
     }
 
+
     private void addEventListeners(){
+
 
     }
 
     private FXMLLoader initFXML() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MinaSidor.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Hjalp.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         return fxmlLoader;
@@ -34,5 +35,6 @@ public class MinaSidor extends AnchorPane {
             throw new RuntimeException(exception);
         }
     }
+
 
 }

@@ -1,27 +1,22 @@
-package Model.Historik;
+package Model.pages.Testing;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class Historik extends AnchorPane {
+public class Testing extends AnchorPane {
 
 
-    public Historik(){
+    public Testing(){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
-        addEventListeners();
-
-    }
-
-    private void addEventListeners(){
 
     }
 
     private FXMLLoader initFXML() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Historik.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Testing.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         return fxmlLoader;
@@ -34,5 +29,6 @@ public class Historik extends AnchorPane {
             throw new RuntimeException(exception);
         }
     }
+
 
 }

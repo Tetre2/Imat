@@ -1,22 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ea7e109-9fe2-4f60-91c0-e5d2dd7afc5f" name="Default Changelist" comment="">
+    <list default="true" id="6d94ad86-8790-4968-90d1-3cc3b9ff746a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Historik/Historik.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Historik/Historik.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Hjalp/Hjalp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Hjalp/Hjalp.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Mainpage/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Mainpage/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Mainpage/mainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Mainpage/mainPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/MinaSidor/MinaSidor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/MinaSidor/MinaSidor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Testing/Testing.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Testing/Testing.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/CreditCard/CreditCard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/CreditCard/CreditCard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/FavoriteItem/FavoriteItem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/FavoriteItem/FavoriteItem.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebarCategory/CategoryItem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebarCategory/CategoryItem.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Checkout/Checkout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Checkout/Checkout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Checkout/Checkout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Checkout/Checkout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Checkout/ShoppingCheckout/ShoppingCheckout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Checkout/ShoppingCheckout/ShoppingCheckout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Checkout/ShoppingCheckout/ShoppingCheckout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Checkout/ShoppingCheckout/ShoppingCheckout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Checkout/ShoppingCheckout/ShoppingCheckoutDetails/ShoppingCheckoutDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Checkout/ShoppingCheckout/ShoppingCheckoutDetails/ShoppingCheckoutDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Checkout/ShoppingCheckout/ShoppingCheckoutDetails/ShoppingCheckoutDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Checkout/ShoppingCheckout/ShoppingCheckoutDetails/ShoppingCheckoutDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Checkout/VarukorgItem/VarukorgItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Checkout/VarukorgItem/VarukorgItem.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Checkout/VarukorgItem/VarukorgItem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Checkout/VarukorgItem/VarukorgItem.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Checkout/VarukorgItem/VarukorgItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Checkout/VarukorgItem/VarukorgItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Historik/Historik.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Historik/Historik.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Historik/Historik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Historik/Historik.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Hjalp/Hjalp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Hjalp/Hjalp.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Hjalp/Hjalp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Hjalp/Hjalp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Mainpage/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Mainpage/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Mainpage/mainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Mainpage/mainPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/MinaSidor/MinaSidor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/MinaSidor/MinaSidor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/MinaSidor/MinaSidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/MinaSidor/MinaSidor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Testing/Testing.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Testing/Testing.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Testing/Testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Testing/Testing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Testing2/Testing2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Testing2/Testing2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Testing2/Testing2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Testing2/Testing2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/components/Navbar/Navbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Navbar/Navbar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/Picker/Picker.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Picker/Picker.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/ShoppingItem/shoppingItem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/ShoppingItem/shoppingItem.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/TitledSection/TitledSection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/TitledSection/TitledSection.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/Navbar/Navbar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Navbar/Navbar.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,15 +37,36 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1395913756">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="1" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="1" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Mainpage/MainPage.java">
+        <entry file="file://$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-221">
-              <caret line="44" column="10" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
+            <state relative-caret-position="230">
+              <caret line="49" column="41" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+              <folding>
+                <element signature="e#1919#1920#0" expanded="true" />
+                <element signature="e#1973#1974#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -42,26 +74,76 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102">
-              <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Model/components/Picker/Picker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="743">
-              <caret line="104" column="23" selection-start-line="104" selection-start-column="23" selection-end-line="104" selection-end-column="23" />
+            <state relative-caret-position="850">
+              <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebarCategory/CategoryItem.java">
+        <entry file="file://$PROJECT_DIR$/src/Model/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="663">
+              <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/components/Navbar/Navbar.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/projectbackend.jar!/se/chalmers/cse/dat216/project/ShoppingCart.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="472">
+              <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="178" column="5" selection-start-line="178" selection-start-column="5" selection-end-line="178" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebarItem/RightSidebarItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="692">
+              <caret line="69" column="20" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/projectbackend.jar!/se/chalmers/cse/dat216/project/ShoppingItem.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+              <folding>
+                <element signature="e#615#616#0" expanded="true" />
+                <element signature="e#651#652#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,19 +156,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java" />
-        <option value="$PROJECT_DIR$/src/Model/components/Picker/Picker.java" />
         <option value="$PROJECT_DIR$/src/Model/Mainpage/MainPage.java" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="159" />
-    <option name="y" value="-18" />
-    <option name="width" value="1612" />
-    <option name="height" value="876" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="4" />
+    <option name="y" value="23" />
+    <option name="width" value="1111" />
+    <option name="height" value="1027" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
@@ -94,6 +175,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -105,6 +188,11 @@
             <path>
               <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
               <item name="Imat" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Imat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -118,65 +206,53 @@
               <item name="Imat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="Checkout" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
               <item name="Imat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="Historik" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Navbar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
               <item name="Imat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="Hjalp" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="RightSidebar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
               <item name="Imat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="Mainpage" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="RightSidebar" type="462c0819:PsiDirectoryNode" />
+              <item name="RightSidebarItem" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
               <item name="Imat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="MinaSidor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Imat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="Testing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Imat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="Testing2" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="ShoppingItem" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557844360560" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -211,350 +287,83 @@
       <updated>1557837858523</updated>
       <workItem from="1557837859718" duration="1195000" />
     </task>
-    <task id="LOCAL-00001" summary="Cleaned up ShoppingItem and commented the code">
-      <created>1557842884473</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1557842884473</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Commented Picker">
-      <created>1557843147945</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1557843147945</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="1195000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1842" height="1002" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27345416" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25504485" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Designer" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3288889" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3288889" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27132195" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32941177" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-    </layout-to-restore>
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Cleaned up ShoppingItem and commented the code" />
-    <MESSAGE value="Commented Picker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commented Picker" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Testing2/Testing2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Checkout/Checkout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/IMat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
-          <folding>
-            <element signature="method#getInstance#0;class#IMat#0" />
-            <element signature="e#317#392#1" />
-            <element signature="n#!!block;n#getImage#0;n#IMat#0" />
-            <element signature="n#!!block;n#addFavorite#0;n#IMat#0" />
-            <element signature="n#!!block;n#addProduct#0;n#IMat#0" />
-            <element signature="n#!!block;n#findProducts#0;n#IMat#0" />
-            <element signature="n#!!block;n#getCreditCard#0;n#IMat#0" />
-            <element signature="n#!!block;n#getCustomer#0;n#IMat#0" />
-            <element signature="n#!!block;n#getOrders#0;n#IMat#0" />
-            <element signature="n#!!block;n#getProducts#0;n#IMat#0" />
-            <element signature="n#!!block;n#getProducts#1;n#IMat#0" />
-            <element signature="n#!!block;n#getProduct#0;n#IMat#0" />
-            <element signature="n#!!block;n#getShoppingCart#0;n#IMat#0" />
-            <element signature="n#!!block;n#getUser#0;n#IMat#0" />
-            <element signature="n#!!block;n#removeFavorite#0;n#IMat#0" />
-            <element signature="n#!!block;n#removeShopingCartItem#0;n#IMat#0" />
-            <element signature="n#!!block;n#hasImage#0;n#IMat#0" />
-            <element signature="n#!!block;n#isCustomerComplete#0;n#IMat#0" />
-            <element signature="n#!!block;n#isFavorite#0;n#IMat#0" />
-            <element signature="n#!!block;n#placeOrder#0;n#IMat#0" />
-            <element signature="n#!!block;n#placeOrder#1;n#IMat#0" />
-            <element signature="n#!!block;n#isFirstRun#0;n#IMat#0" />
-            <element signature="n#!!block;n#shutDown#0;n#IMat#0" />
-            <element signature="n#!!block;n#getFavorites#0;n#IMat#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="71" column="41" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
+        <state relative-caret-position="663">
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Mainpage/mainPage.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="169" selection-start-line="9" selection-start-column="169" selection-end-line="9" selection-end-column="169" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="175" column="110" selection-start-line="175" selection-start-column="110" selection-end-line="175" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/TitledSection/TitledSection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebarItem/RightSidebarItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-838">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebarCategory/MainCategory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebarCategory/CategoryItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebarCategory/CategoryItem.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebar.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/CreditCard/CreditCard.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/FavoriteItem/FavoriteItem.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/Navbar/Navbar.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/Picker/Picker.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebarItem/RightSidebarItem.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebar.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingItem/shoppingItem.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="28" lean-forward="true" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/TitledSection/TitledSection.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Mainpage/MainPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="44" column="10" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
+        <state relative-caret-position="-130">
+          <caret line="115" column="81" selection-start-line="115" selection-start-column="81" selection-end-line="115" selection-end-column="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Checkout/Checkout.fxml">
+    <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="442">
+          <caret line="178" column="5" selection-start-line="178" selection-start-column="5" selection-end-line="178" selection-end-column="5" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/Picker/Picker.java">
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
-          <caret line="104" column="23" selection-start-line="104" selection-start-column="23" selection-end-line="104" selection-end-column="23" />
+        <state relative-caret-position="136">
+          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>javafx 11</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

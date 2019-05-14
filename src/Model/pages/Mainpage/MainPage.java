@@ -1,4 +1,4 @@
-package Model.Mainpage;
+package Model.pages.Mainpage;
 
 import Model.IMat;
 import Model.components.LeftSidebar.LeftSidebar;
