@@ -39,7 +39,8 @@ public class VarukorgItem extends AnchorPane {
     }
 
     private void onCloseButtonPressed() {
-        IMat.getInstance().getShoppingCart().removeItem(shoppingItem);
+        shoppingItem.setAmount(0);
+        IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
         shoppingCheckout.removeShoppingItemFromUI(this);
     }
 
