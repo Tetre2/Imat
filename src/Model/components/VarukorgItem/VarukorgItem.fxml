@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 
-
-<AnchorPane minWidth="1020.0" prefHeight="60.0" prefWidth="600.0" styleClass="container" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Model.components.VarukorgItem.VarukorgItem">
+<fx:root minWidth="1020.0" prefHeight="60.0" prefWidth="600.0" styleClass="container" fx:id="rootPane" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <stylesheets>
       <URL value="@VarukorgItem.css" />
       <URL value="@../../../styles.css" />
@@ -74,4 +73,4 @@
          </children>
       </HBox>
    </children>
-</AnchorPane>
+</fx:root>

@@ -1,24 +1,29 @@
 package Model.Testing2;
 
+import Model.Checkout.Checkout;
 import Model.IMat;
 import Model.components.LeftSidebar.LeftSidebar;
 import Model.components.Navbar.Navbar;
 import Model.components.RightSidebar.RightSidebar;
 import Model.components.ShoppingItem.ShoppingItem;
+import Model.components.TitledSection.TitledSection;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 
 public class Testing2 extends AnchorPane {
     @FXML AnchorPane rootAnchorPane;
+    @FXML
+    VBox centerContainerVBox;
 
     public Testing2(){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
-        rootAnchorPane.getChildren().add(new LeftSidebar());
+        rootAnchorPane.getChildren().add(new Checkout());
     }
 
     private FXMLLoader initFXML() {

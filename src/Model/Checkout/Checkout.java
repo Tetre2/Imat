@@ -1,5 +1,8 @@
 package Model.Checkout;
 
+import Model.components.Navbar.Navbar;
+import Model.components.TitledSection.TitledSection;
+import Model.components.VarukorgItem.VarukorgItem;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
@@ -11,13 +14,21 @@ public class Checkout extends AnchorPane {
 
     @FXML
     private FlowPane content;
+    @FXML AnchorPane topNavBar;
 
     public Checkout(){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
-
         addEventListeners();
 
+        Navbar navbar = new Navbar();
+        content.getChildren().add(navbar);
+
+        TitledSection varukorgSection = new TitledSection("Granska din varukorg");
+        VarukorgItem testItem = new VarukorgItem();
+        varukorgSection.addNode(testItem);
+
+        content.getChildren().add(varukorgSection);
     }
 
     private FXMLLoader initFXML() {
