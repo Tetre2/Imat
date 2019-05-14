@@ -1,6 +1,7 @@
 package Model.Checkout;
 
 import Model.components.Navbar.Navbar;
+import Model.components.ShoppingCheckout.ShoppingCheckout;
 import Model.components.TitledSection.TitledSection;
 import Model.components.VarukorgItem.VarukorgItem;
 import javafx.fxml.FXML;
@@ -31,18 +32,20 @@ public class Checkout extends AnchorPane {
 
 
         TitledSection varukorgSection = new TitledSection("Granska din varukorg");
+
         VarukorgItem testItem1 = new VarukorgItem();
         VarukorgItem testItem2 = new VarukorgItem();
         VarukorgItem testItem3 = new VarukorgItem();
+        VarukorgItem testItem4 = new VarukorgItem();
 
-        VBox varukorgItemsContainer = new VBox();
-        varukorgItemsContainer.setSpacing(15);
+        ShoppingCheckout shoppingCheckout = new ShoppingCheckout();
+        shoppingCheckout.addShoppingItem(testItem1);
+        shoppingCheckout.addShoppingItem(testItem2);
+        shoppingCheckout.addShoppingItem(testItem3);
+        shoppingCheckout.addShoppingItem(testItem4);
 
-        varukorgItemsContainer.getChildren().add(testItem1);
-        varukorgItemsContainer.getChildren().add(testItem2);
-        varukorgItemsContainer.getChildren().add(testItem3);
 
-        varukorgSection.addNode(varukorgItemsContainer);
+        varukorgSection.addNode(shoppingCheckout);
 
         content.getChildren().add(varukorgSection);
     }
