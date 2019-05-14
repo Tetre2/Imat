@@ -2,7 +2,7 @@ package Model.components.LeftSidebar;
 
 import Model.IMat;
 import Model.Main;
-import Model.Mainpage.MainPage;
+import Model.pages.Mainpage.MainPage;
 import Model.components.LeftSidebar.LeftSidebarCategory.CategoryItem;
 import Model.components.LeftSidebar.LeftSidebarCategory.MainCategory;
 import javafx.fxml.FXML;

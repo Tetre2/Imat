@@ -1,7 +1,7 @@
-package Model.Checkout;
+package Model.pages.Checkout;
 
 import Model.components.Navbar.Navbar;
-import Model.Checkout.ShoppingCheckout.ShoppingCheckout;
+import Model.pages.Checkout.ShoppingCheckout.ShoppingCheckout;
 import Model.components.TitledSection.TitledSection;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +11,6 @@ import javafx.scene.layout.FlowPane;
 import java.io.IOException;
 
 public class Checkout extends AnchorPane {
-
     @FXML
     private FlowPane content;
     @FXML AnchorPane topNavBar;
@@ -22,10 +21,11 @@ public class Checkout extends AnchorPane {
         addEventListeners();
     }
 
-    public void updateUI() {
+    public void initUI() {
+        clearUI();
+
         Navbar navbar = new Navbar();
         content.getChildren().add(navbar);
-
 
         TitledSection varukorgSection = new TitledSection("Granska din varukorg");
 
@@ -34,6 +34,10 @@ public class Checkout extends AnchorPane {
         varukorgSection.addNode(shoppingCheckout);
 
         content.getChildren().add(varukorgSection);
+    }
+
+    private void clearUI() {
+        content.getChildren().clear();
     }
 
     private FXMLLoader initFXML() {

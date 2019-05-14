@@ -1,7 +1,7 @@
 package Model.components.LeftSidebar.LeftSidebarCategory;
 
 import Model.Main;
-import Model.Mainpage.MainPage;
+import Model.pages.Mainpage.MainPage;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
