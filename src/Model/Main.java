@@ -6,6 +6,7 @@ import Model.Hjalp.Hjalp;
 import Model.Mainpage.MainPage;
 import Model.MinaSidor.MinaSidor;
 import Model.Testing.Testing;
+import Model.Testing2.Testing2;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -19,6 +20,7 @@ public class Main extends Application {
     private static MainPage mainPage;
     private static Checkout checkout;
     private static Testing testing;
+    private static Testing2 testing2;
     private static Historik historik;
     private static MinaSidor minaSidor;
     private static Hjalp hjalp;
@@ -35,6 +37,7 @@ public class Main extends Application {
         mainPage = new MainPage();
         checkout = new Checkout();
         testing = new Testing();
+        testing2 = new Testing2();
         historik = new Historik();
         minaSidor = new MinaSidor();
         hjalp = new Hjalp();
@@ -67,6 +70,8 @@ public class Main extends Application {
 
 
     public static void setSceneToCheckout(){
+        checkout.updateUI();
+
         Group group = new Group();
         group.getChildren().add(checkout);
         Scene scene = new Scene(group);
@@ -76,6 +81,13 @@ public class Main extends Application {
     public static void setSceneToTesting(){
         Group group = new Group();
         group.getChildren().add(testing);
+        Scene scene = new Scene(group);
+        window.setScene(scene);
+    }
+
+    public static void setSceneToTesting2(){
+        Group group = new Group();
+        group.getChildren().add(testing2);
         Scene scene = new Scene(group);
         window.setScene(scene);
     }

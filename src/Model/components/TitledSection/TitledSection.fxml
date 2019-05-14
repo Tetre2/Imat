@@ -7,30 +7,31 @@
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane minHeight="200.0" prefWidth="1060.0" style="-fx-border-color: #EBEBEB; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Model.components.TitledSection.TitledSection">
+<fx:root id="titledSectionRootAnchorPane" fx:id="rootPane" prefWidth="1100.0" style="-fx-border-color: #EBEBEB; -fx-border-width: 2;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <stylesheets>
       <URL value="@TitledSection.css" />
       <URL value="@../../../styles.css" />
    </stylesheets>
    <children>
-      <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="1060.0" style="-fx-background-color: #EBEBEB;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox fx:id="centerContainerVBox" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label text="Granska din Varukorg">
-               <styleClass>
-                  <String fx:value="text" />
-                  <String fx:value="text-md" />
-                  <String fx:value="bold" />
-               </styleClass>
-               <HBox.margin>
-                  <Insets left="20.0" />
-               </HBox.margin>
-            </Label>
+            <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="1060.0" style="-fx-background-color: #EBEBEB;">
+               <children>
+                  <Label fx:id="titleLabel" text="Granska din Varukorg">
+                     <styleClass>
+                        <String fx:value="text" />
+                        <String fx:value="text-md" />
+                        <String fx:value="bold" />
+                     </styleClass>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
          </children>
-         <effect>
-            <DropShadow color="#dedede7d" height="3.0" offsetY="5.0" radius="0.25" spread="1.0" width="0.0" />
-         </effect>
-      </HBox>
+      </VBox>
    </children>
-</AnchorPane>
+</fx:root>
