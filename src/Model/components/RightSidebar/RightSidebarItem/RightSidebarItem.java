@@ -68,7 +68,8 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
 
     public void onClosePressed(){
         shoppingItem.setAmount(0);
-        IMat.getInstance().getShoppingCart().removeItem(shoppingItem);
+        IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+        //IMat.getInstance().getShoppingCart().removeItem(shoppingItem);
     }
 
 
