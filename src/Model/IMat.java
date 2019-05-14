@@ -34,6 +34,7 @@ public class IMat {
         }
 
         System.out.println("Products loaded: " + arr.size());
+        System.out.println(getOrders().size());
 
 
     }
