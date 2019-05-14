@@ -1,19 +1,18 @@
 package Model.Mainpage;
 
 import Model.IMat;
-import Model.Main;
 import Model.components.LeftSidebar.LeftSidebar;
 import Model.components.Navbar.Navbar;
 import Model.components.RightSidebar.RightSidebar;
 import Model.components.ShoppingItem.ShoppingItem;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
+import java.util.List;
 
 public class MainPage extends AnchorPane{
 
@@ -35,7 +34,7 @@ public class MainPage extends AnchorPane{
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
-        creatGrid();
+        showProductsGrid(iMat.getProducts());
 
         LeftSidebar leftSidebar = new LeftSidebar();
         LeftNavBar.getChildren().add(leftSidebar);
@@ -69,10 +68,10 @@ public class MainPage extends AnchorPane{
         }
     }
 
-    private void creatGrid(){
+    private void showProductsGrid(List<Product> products){
 
-        for (int i = 0; i < iMat.getProducts().size(); i++) {
-            ShoppingItem shoppingItem = new ShoppingItem(iMat.getProducts().get(i));
+        for (int i = 0; i < products.size(); i++) {
+            ShoppingItem shoppingItem = new ShoppingItem(products.get(i));
 
             grid.setConstraints(shoppingItem, i%4, i/4);
             grid.getChildren().add(shoppingItem);

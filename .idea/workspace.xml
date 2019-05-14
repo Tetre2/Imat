@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="418bc066-173f-44f2-8995-de2b2ea45bed" name="Default Changelist" comment="Laggt till så att mina s">
-      <change afterPath="$PROJECT_DIR$/src/Model/Historik/Historik.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Historik/Historik.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Hjalp/Hjalp.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Hjalp/Hjalp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/MinaSidor/MinaSidor.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/MinaSidor/MinaSidor.java" afterDir="false" />
+    <list default="true" id="418bc066-173f-44f2-8995-de2b2ea45bed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Mainpage/mainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Mainpage/mainPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/Navbar/Navbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Navbar/Navbar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/Navbar/Navbar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Navbar/Navbar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/Picker/Picker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Picker/Picker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Mainpage/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Mainpage/MainPage.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,29 +27,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/MinaSidor/MinaSidor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="20" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Model/Mainpage/MainPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="289">
+              <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/components/Navbar/Navbar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="32" column="63" lean-forward="true" selection-start-line="32" selection-start-column="63" selection-end-line="32" selection-end-column="63" />
+            <state relative-caret-position="82">
+              <caret line="16" column="28" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,6 +61,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
               <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/MinaSidor/MinaSidor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="20" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -128,7 +117,6 @@
         <option value="$PROJECT_DIR$/src/mainPageController.java" />
         <option value="$PROJECT_DIR$/src/Model/Testing/Testing.fxml" />
         <option value="$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebar.java" />
-        <option value="$PROJECT_DIR$/src/Model/Mainpage/MainPage.java" />
         <option value="$PROJECT_DIR$/src/Model/components/Picker/Picker.fxml" />
         <option value="$PROJECT_DIR$/src/Model/Testing/Testing.java" />
         <option value="$PROJECT_DIR$/src/Model/components/Picker/Picker.java" />
@@ -143,6 +131,7 @@
         <option value="$PROJECT_DIR$/src/Model/Main.java" />
         <option value="$PROJECT_DIR$/src/Model/Hjalp/Hjalp.java" />
         <option value="$PROJECT_DIR$/src/Model/components/Navbar/Navbar.java" />
+        <option value="$PROJECT_DIR$/src/Model/Mainpage/MainPage.java" />
       </list>
     </option>
   </component>
@@ -237,7 +226,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557835705559" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557836101556" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -311,7 +300,7 @@
       <option name="presentableId" value="Default" />
       <updated>1557469553605</updated>
       <workItem from="1557492801541" duration="3336000" />
-      <workItem from="1557820212895" duration="11381000" />
+      <workItem from="1557820212895" duration="11828000" />
     </task>
     <task id="LOCAL-00001" summary="Testing Sida implementerad">
       <created>1557821791411</created>
@@ -341,11 +330,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557829703729</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Laggt till minaSidor, Historik(kvitton) och hjälp">
+      <created>1557835767211</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1557835767211</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17028000" />
+    <option name="totallyTimeSpent" value="17475000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -391,7 +387,8 @@
     <MESSAGE value="Bytt till rätt picker" />
     <MESSAGE value="Pickerns antal uppdateras när man trycker på den" />
     <MESSAGE value="Picker är färdig" />
-    <option name="LAST_COMMIT_MESSAGE" value="Picker är färdig" />
+    <MESSAGE value="Laggt till minaSidor, Historik(kvitton) och hjälp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Laggt till minaSidor, Historik(kvitton) och hjälp" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/components/ShoppingItem/ShoppingItem/hej.css" />
@@ -536,28 +533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/MinaSidor/MinaSidor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/MinaSidor/MinaSidor.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="8" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Mainpage/MainPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Hjalp/Hjalp.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -610,13 +585,35 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/MinaSidor/MinaSidor.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="8" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/MinaSidor/MinaSidor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/components/Navbar/Navbar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="32" column="63" lean-forward="true" selection-start-line="32" selection-start-column="63" selection-end-line="32" selection-end-column="63" />
+        <state relative-caret-position="82">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Mainpage/MainPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
         </state>
       </provider>
     </entry>
