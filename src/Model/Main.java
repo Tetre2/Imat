@@ -3,6 +3,7 @@ package Model;
 import Model.Checkout.Checkout;
 import Model.Mainpage.MainPage;
 import Model.Testing.Testing;
+import Model.Testing2.Testing2;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -16,6 +17,7 @@ public class Main extends Application {
     private static MainPage mainPage;
     private static Checkout checkout;
     private static Testing testing;
+    private static Testing2 testing2;
 
 
     @Override
@@ -29,8 +31,9 @@ public class Main extends Application {
         mainPage = new MainPage();
         checkout = new Checkout();
         testing = new Testing();
+        testing2 = new Testing2();
 
-        setSceneToMainPage();
+        setSceneToTesting2();
         window.show();
 
 
@@ -46,6 +49,13 @@ public class Main extends Application {
     public static void setSceneToTesting(){
         Group group = new Group();
         group.getChildren().add(testing);
+        Scene scene = new Scene(group);
+        window.setScene(scene);
+    }
+
+    public static void setSceneToTesting2(){
+        Group group = new Group();
+        group.getChildren().add(testing2);
         Scene scene = new Scene(group);
         window.setScene(scene);
     }
