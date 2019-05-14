@@ -1,12 +1,15 @@
 package Model.Mainpage;
 
 import Model.IMat;
+import Model.Main;
 import Model.components.LeftSidebar.LeftSidebar;
 import Model.components.Navbar.Navbar;
 import Model.components.RightSidebar.RightSidebar;
 import Model.components.ShoppingItem.ShoppingItem;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 
@@ -47,6 +50,9 @@ public class MainPage extends AnchorPane{
 
 
     }
+
+
+
 
     private FXMLLoader initFXML() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("mainPage.fxml"));

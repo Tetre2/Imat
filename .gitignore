@@ -7,3 +7,5 @@ out/
 .idea/jsLibraryMappings.xml
 *.xml
 *.iml
+*.xml
+.idea/workspace.xml
