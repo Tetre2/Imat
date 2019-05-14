@@ -167,7 +167,6 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
     }
 
     private void removeFromShoppingCart(){
-        //TODO: sätta rätt färg här
         rootPane.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
         IMat.getInstance().getShoppingCart().removeItem(item);
         hidePlusMinus();

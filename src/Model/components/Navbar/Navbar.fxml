@@ -17,7 +17,7 @@
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1440.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
-            <Hyperlink fx:id="iMatLabel" onMouseClicked="#onIMatPressed" text="iMat">
+            <Hyperlink fx:id="iMatLabel" onMouseClicked="#onIMatPressed" prefHeight="61.0" prefWidth="99.0" text="iMat">
                <styleClass>
                   <String fx:value="text" />
                   <String fx:value="text-xl" />
@@ -41,7 +41,7 @@
                      </cursor></TextField>
               </items>
             </ToolBar>
-            <Region prefHeight="60.0" prefWidth="207.0" HBox.hgrow="ALWAYS" />
+            <Region prefHeight="61.0" prefWidth="160.0" HBox.hgrow="ALWAYS" />
             <HBox alignment="CENTER" prefHeight="60.0" prefWidth="284.0">
                <children>
                   <Button fx:id="kvitton" mnemonicParsing="false" prefHeight="31.0" prefWidth="84.0" text="Kvitton">

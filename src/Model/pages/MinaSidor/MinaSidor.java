@@ -1,5 +1,7 @@
 package Model.pages.MinaSidor;
 
+import Model.components.Navbar.Navbar;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 
@@ -8,11 +10,19 @@ import java.io.IOException;
 public class MinaSidor extends AnchorPane {
 
 
+    @FXML
+    private AnchorPane TopNav;
+
+
     public MinaSidor(){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
         addEventListeners();
+
+
+        TopNav.getChildren().add(new Navbar());
+
 
     }
 
