@@ -30,21 +30,6 @@ public enum MainCategory {
     FISK("Fisk",
             ProductCategory.FISH);
 
-    KOTT("Kött",
-            ProductCategory.MEAT),
-
-    MEJERI("Mejeri",
-            ProductCategory.DAIRIES),
-
-    BROD("Bröd",
-            ProductCategory.BREAD),
-
-    DRYCK("Dryck",
-            ProductCategory.COLD_DRINKS,
-            ProductCategory.HOT_DRINKS),
-    FISK("Fisk",
-         ProductCategory.FISH);
-
 
 
     String name;

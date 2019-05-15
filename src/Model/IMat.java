@@ -4,7 +4,9 @@ import javafx.scene.image.Image;
 import se.chalmers.cse.dat216.project.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class IMat {
 
@@ -48,8 +50,16 @@ public class IMat {
         Main.setSceneToCheckout();
     }
 
+    Map<Product, Image> images = new HashMap<>();
+
+
     public Image getImage(Product p){
-        return dataHandler.getFXImage(p);
+        if(images.containsKey(p)){
+            return images.get(p);
+        }
+        Image image = dataHandler.getFXImage(p);
+        images.put(p, image);
+        return image;
     }
 
     public void addFavorite(Product p){
