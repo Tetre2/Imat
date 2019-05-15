@@ -11,20 +11,20 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 
-<fx:root minWidth="1020.0" prefHeight="60.0" maxHeight="62" prefWidth="600.0" styleClass="container" fx:id="rootPane" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="rootPane" maxHeight="62" prefHeight="60.0" prefWidth="1000.0" styleClass="container" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <stylesheets>
       <URL value="@VarukorgItem.css" />
-      <URL value="@../../../styles.css" />
+      <URL value="@../../../../styles.css" />
    </stylesheets>
    <children>
-      <HBox alignment="CENTER_LEFT" prefHeight="62" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+      <HBox alignment="CENTER_LEFT" maxHeight="60" prefHeight="60" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
          <children>
-            <ImageView fx:id="productImageView" fitHeight="150.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="productImageView" fitHeight="55.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../resources/product_8.jpg" />
+                  <Image url="@../../../resources/product_8.jpg" />
                </image>
             </ImageView>
-            <Label fx:id="productNameLabel" prefHeight="20.0" prefWidth="450.0" text="Grovt Bröd">
+            <Label fx:id="productNameLabel" prefHeight="20.0" prefWidth="211.0" text="Grovt Bröd">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -36,7 +36,7 @@
                   <String fx:value="text-sm" />
                </styleClass>
             </Label>
-            <Label fx:id="priceLabel" alignment="CENTER" prefHeight="20.0" prefWidth="95.0" text="32,99">
+            <Label fx:id="priceLabel" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="114.0" text="32,99">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -48,8 +48,8 @@
                   <Insets right="40.0" />
                </HBox.margin>
             </Label>
-            <Pane prefHeight="200.0" prefWidth="200.0" />
-            <Label fx:id="totalPriceLabel" alignment="CENTER" prefHeight="20.0" prefWidth="87.0" text="XXX (total pris)">
+            <Pane maxHeight="60.0" prefHeight="55.0" prefWidth="293.0" />
+            <Label fx:id="totalPriceLabel" alignment="CENTER" prefHeight="20.0" prefWidth="129.0" text="XXX (total pris)">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -65,7 +65,7 @@
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../resources/icon_close.png" />
+                        <Image url="@../../../resources/icon_close.png" />
                      </image>
                   </ImageView>
                </graphic>

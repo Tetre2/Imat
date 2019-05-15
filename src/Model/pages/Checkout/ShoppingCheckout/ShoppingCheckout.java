@@ -6,6 +6,7 @@ import Model.pages.Checkout.VarukorgItem.VarukorgItem;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingItem;
@@ -14,7 +15,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class ShoppingCheckout extends AnchorPane {
-    @FXML private GridPane gridPane;
+    @FXML private FlowPane centerContainerFlowPane;
 
     public ShoppingCheckout() {
         FXMLLoader fxmlLoader = initFXML();
@@ -24,14 +25,14 @@ public class ShoppingCheckout extends AnchorPane {
         for (int i = 0; i < products.size(); i++) {
             ShoppingItem s = products.get(i);
             VarukorgItem varukorgItem = new VarukorgItem(s, this);
-            gridPane.add(varukorgItem, 0, i + 1);
+            centerContainerFlowPane.getChildren().add(varukorgItem);
         }
 
-        gridPane.add(new ShoppingCheckoutDetails(), 0, products.size() + 1);
+        //centerContainerFlowPane.getChildren().add(new ShoppingCheckoutDetails());
     }
 
     public void removeShoppingItemFromUI(VarukorgItem item) {
-        gridPane.getChildren().remove(item);
+        centerContainerFlowPane.getChildren().remove(item);
     }
 
     private FXMLLoader initFXML() {

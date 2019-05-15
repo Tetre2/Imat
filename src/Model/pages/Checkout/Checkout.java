@@ -7,12 +7,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 
 public class Checkout extends AnchorPane {
     @FXML
-    private FlowPane content;
+    private VBox content;
     @FXML AnchorPane topNavBar;
 
     public Checkout(){
@@ -27,13 +28,13 @@ public class Checkout extends AnchorPane {
         Navbar navbar = new Navbar();
         content.getChildren().add(navbar);
 
-        TitledSection varukorgSection = new TitledSection("Granska din varukorg");
+        //TitledSection varukorgSection = new TitledSection("Granska din varukorg");
 
         ShoppingCheckout shoppingCheckout = new ShoppingCheckout();
 
-        varukorgSection.addNode(shoppingCheckout);
+        //varukorgSection.addNode(shoppingCheckout);
 
-        content.getChildren().add(varukorgSection);
+        content.getChildren().add(shoppingCheckout);
     }
 
     private void clearUI() {

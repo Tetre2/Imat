@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
@@ -13,17 +14,18 @@ public class TitledSection extends AnchorPane {
     @FXML
     Label titleLabel;
     @FXML
-    VBox centerContainerVBox;
+    FlowPane centerContainerFlowPane;
 
     public TitledSection(String title) {
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
         titleLabel.setText(title);
+        //centerContainerVBox.maxHeightProperty().bind(centerContainerVBox.heightProperty());
     }
 
     public void addNode(Node node) {
-        centerContainerVBox.getChildren().add(node);
+        centerContainerFlowPane.getChildren().add(node);
     }
 
     private FXMLLoader initFXML() {
