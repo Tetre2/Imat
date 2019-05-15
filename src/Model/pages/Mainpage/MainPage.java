@@ -122,6 +122,12 @@ public class MainPage extends AnchorPane{
         return shoppingItems;
     }
 
+    public List<ShoppingItem> preloadShoppingItems(){
+       // List<ShoppingItem> shoppingItems
+        for(MainCategory mainCategory: MainCategory.values()){
+
+        }
+    }
 
     public void updateGrid(MainCategory mainCategory){
 
