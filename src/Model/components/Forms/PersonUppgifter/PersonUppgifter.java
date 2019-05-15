@@ -16,6 +16,7 @@ public class PersonUppgifter extends AnchorPane {
 
     @FXML
     private FlowPane flowPane;
+    @FXML
     private Button save;
 
 
