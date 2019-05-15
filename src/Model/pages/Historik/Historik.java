@@ -4,6 +4,7 @@ import Model.IMat;
 import Model.components.LeftSidebar.LeftSidebar;
 import Model.components.Navbar.Navbar;
 import Model.pages.Historik.HistorikItem.HistorikItem;
+import Model.pages.Historik.Kvitto.Kvitto;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
@@ -18,17 +19,22 @@ public class Historik extends AnchorPane {
     private AnchorPane TopNav;
     @FXML
     private GridPane gridPane;
+    @FXML
+    private AnchorPane kvittoOverlay;
+    @FXML
+    private AnchorPane kvittoGray;
 
     public Historik(){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
         addEventListeners();
+        hideKvitto();
 
         TopNav.getChildren().add(new Navbar());
 
         for (int i = 0; i < IMat.getInstance().getOrders().size(); i++) {
-            HistorikItem historikItem = new HistorikItem(IMat.getInstance().getOrders().get(i));
+            HistorikItem historikItem = new HistorikItem(IMat.getInstance().getOrders().get(i), this);
             gridPane.setConstraints(historikItem, 0, i);
             gridPane.getChildren().add(historikItem);
         }
@@ -36,7 +42,8 @@ public class Historik extends AnchorPane {
     }
 
     private void addEventListeners(){
-
+        kvittoGray.setOnMouseClicked(event -> hideKvitto());
+        kvittoOverlay.setOnMouseClicked(event -> event.consume());
     }
 
     private FXMLLoader initFXML() {
@@ -52,6 +59,18 @@ public class Historik extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+    }
+
+    public void showKvitto(Order order){
+        kvittoGray.setVisible(true);
+        kvittoOverlay.getChildren().clear();
+        Kvitto kvitto = new Kvitto(order);
+        kvittoOverlay.getChildren().add(kvitto);
+    }
+
+    private void hideKvitto(){
+        kvittoOverlay.getChildren().clear();
+        kvittoGray.setVisible(false);
     }
 
 }
