@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Favoriter extends AnchorPane {
 
-    public Favoriter(String categoryName, List<Product> products) {
+    public Favoriter() {
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
