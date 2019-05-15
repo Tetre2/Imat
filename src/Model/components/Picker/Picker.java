@@ -34,6 +34,7 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
         IMat.getInstance().getShoppingCart().addShoppingCartListener(this);
         addEventListeners();
 
+        updatePickerText();
     }
 
     private void addEventListeners() {
@@ -108,9 +109,12 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
         }
     }
 
-
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
+        updatePickerText();
+    }
+
+    private void updatePickerText() {
         amount.setPromptText((int) shoppingItem.getAmount() +"");
     }
 }
