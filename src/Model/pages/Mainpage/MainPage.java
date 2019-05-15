@@ -9,6 +9,7 @@ import Model.components.RightSidebar.RightSidebar;
 import Model.components.ShoppingItem.ShoppingItem;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import se.chalmers.cse.dat216.project.Product;
@@ -31,6 +32,8 @@ public class MainPage extends AnchorPane implements CategoryListener {
     AnchorPane varukorg;
     @FXML
     AnchorPane topNavBar;
+    @FXML
+    Label currentCategoryLabel;
 
     private IMat iMat;
     private LeftSidebar leftSidebar;
@@ -143,5 +146,6 @@ public class MainPage extends AnchorPane implements CategoryListener {
     public void categoryChanged(MainCategory mainCategory) {
             System.out.println("category: " + mainCategory.toString() + " was clicked");
             updateGrid(mainCategory);
+            currentCategoryLabel.setText(mainCategory.toString());
     }
 }
