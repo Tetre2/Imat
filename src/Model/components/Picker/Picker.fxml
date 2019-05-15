@@ -21,7 +21,7 @@
          <children>
             <Button fx:id="minus" mnemonicParsing="false" style="-fx-background-color: #F25757;">
                <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../resources/minus.png" />
                      </image>
@@ -44,7 +44,7 @@
                </cursor></TextField>
             <Button fx:id="plus" mnemonicParsing="false" style="-fx-background-color: #4CD04C; -fx-border-radius: 30; -fx-border-width: 0;" styleClass="btn-nostyle">
                <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../resources/plus.png" />
                      </image>
