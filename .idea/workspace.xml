@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d94ad86-8790-4968-90d1-3cc3b9ff746a" name="Default Changelist" comment="">
-<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/Model/Mainpage/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Mainpage/MainPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebarCategory/MainCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebarCategory/MainCategory.java" afterDir="false" />
-=======
       <change afterPath="$PROJECT_DIR$/src/Model/pages/Checkout/ShoppingCartIsEmpty/ShoppingCartIsEmpty.fxml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Model/pages/Checkout/ShoppingCartIsEmpty/ShoppingCartIsEmpty.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -14,7 +12,6 @@
       <change beforePath="$PROJECT_DIR$/src/Model/pages/Checkout/VarukorgItem/VarukorgItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Checkout/VarukorgItem/VarukorgItem.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/pages/Checkout/VarukorgItem/VarukorgItem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Checkout/VarukorgItem/VarukorgItem.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/pages/Checkout/VarukorgItem/VarukorgItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Checkout/VarukorgItem/VarukorgItem.java" afterDir="false" />
->>>>>>> 127f1f03fa273b1d20c19c54bfa2afdca8280884
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,10 +20,8 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-<<<<<<< HEAD
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-=======
   <component name="FUSProjectUsageTrigger">
     <session id="1395913756">
       <usages-collector id="statistics.file.extensions.open">
@@ -58,31 +53,25 @@
         </counts>
       </usages-collector>
     </session>
->>>>>>> 127f1f03fa273b1d20c19c54bfa2afdca8280884
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
             <state relative-caret-position="-766">
               <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-=======
             <state relative-caret-position="306">
               <caret line="38" column="32" lean-forward="true" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
->>>>>>> 127f1f03fa273b1d20c19c54bfa2afdca8280884
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebarCategory/MainCategory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-320">
               <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-=======
         <entry file="file://$PROJECT_DIR$/src/Model/pages/Checkout/VarukorgItem/VarukorgItem.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="595">
@@ -125,7 +114,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="310">
               <caret line="83" selection-start-line="83" selection-end-line="83" />
->>>>>>> 127f1f03fa273b1d20c19c54bfa2afdca8280884
             </state>
           </provider>
         </entry>
@@ -165,7 +153,6 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/pages/Checkout/ShoppingCartIsEmpty/ShoppingCartIsEmpty.fxml">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
             <state relative-caret-position="268">
               <caret line="132" column="9" selection-start-line="132" selection-start-column="9" selection-end-line="132" selection-end-column="9" />
             </state>
@@ -177,7 +164,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-=======
             <state relative-caret-position="204">
               <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
@@ -195,7 +181,6 @@
                 <element signature="e#2618#2619#0" expanded="true" />
                 <element signature="e#2658#2659#0" expanded="true" />
               </folding>
->>>>>>> 127f1f03fa273b1d20c19c54bfa2afdca8280884
             </state>
           </provider>
         </entry>
@@ -255,16 +240,13 @@
       </list>
     </option>
   </component>
-<<<<<<< HEAD
   <component name="ProjectFrameBounds">
     <option name="x" value="-50" />
     <option name="y" value="186" />
     <option name="width" value="1111" />
     <option name="height" value="1027" />
-=======
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
->>>>>>> 127f1f03fa273b1d20c19c54bfa2afdca8280884
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -290,8 +272,6 @@
               <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
               <item name="Imat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-<<<<<<< HEAD
-=======
             </path>
             <path>
               <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
@@ -305,24 +285,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
->>>>>>> 127f1f03fa273b1d20c19c54bfa2afdca8280884
             </path>
             <path>
               <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
               <item name="Imat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
-<<<<<<< HEAD
-=======
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
->>>>>>> 127f1f03fa273b1d20c19c54bfa2afdca8280884
             </path>
             <path>
               <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
               <item name="Imat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
-<<<<<<< HEAD
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -341,10 +315,8 @@
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="LeftSidebar" type="462c0819:PsiDirectoryNode" />
               <item name="LeftSidebarCategory" type="462c0819:PsiDirectoryNode" />
-=======
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="Checkout" type="462c0819:PsiDirectoryNode" />
->>>>>>> 127f1f03fa273b1d20c19c54bfa2afdca8280884
             </path>
             <path>
               <item name="Imat" type="b2602c69:ProjectViewProjectNode" />
@@ -428,7 +400,6 @@
     </task>
     <servers />
   </component>
-<<<<<<< HEAD
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="2119000" />
   </component>
@@ -443,19 +414,11 @@
       <window_info id="Designer" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-=======
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1842" height="1002" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17320628" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Image Layers" order="6" />
->>>>>>> 127f1f03fa273b1d20c19c54bfa2afdca8280884
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.0" />
@@ -463,7 +426,6 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-<<<<<<< HEAD
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
@@ -479,7 +441,6 @@
       <window_info anchor="right" id="Maven" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
-=======
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
@@ -496,7 +457,6 @@
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
->>>>>>> 127f1f03fa273b1d20c19c54bfa2afdca8280884
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -515,7 +475,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -527,7 +486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-320">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-=======
     <entry file="file://$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
@@ -600,7 +558,6 @@
 <<<<<<< HEAD
         <state relative-caret-position="-766">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-=======
         <state relative-caret-position="306">
           <caret line="38" column="32" lean-forward="true" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
         </state>
@@ -669,23 +626,19 @@
             <element signature="e#805#806#0" expanded="true" />
             <element signature="e#824#825#0" expanded="true" />
           </folding>
->>>>>>> 127f1f03fa273b1d20c19c54bfa2afdca8280884
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/pages/Checkout/ShoppingCheckout/ShoppingCheckout.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="268">
           <caret line="132" column="9" selection-start-line="132" selection-start-column="9" selection-end-line="132" selection-end-column="9" />
-=======
         <state relative-caret-position="754">
           <caret line="62" column="1" lean-forward="true" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
           <folding>
             <element signature="e#1437#1438#0" expanded="true" />
             <element signature="e#1503#1504#0" expanded="true" />
           </folding>
->>>>>>> 127f1f03fa273b1d20c19c54bfa2afdca8280884
         </state>
       </provider>
     </entry>

@@ -122,16 +122,13 @@ public class MainPage extends AnchorPane{
         return shoppingItems;
     }
 
-<<<<<<< HEAD:src/Model/Mainpage/MainPage.java
     public List<ShoppingItem> preloadShoppingItems(){
        // List<ShoppingItem> shoppingItems
         for(MainCategory mainCategory: MainCategory.values()){
 
         }
     }
-=======
 
->>>>>>> 127f1f03fa273b1d20c19c54bfa2afdca8280884:src/Model/pages/Mainpage/MainPage.java
     public void updateGrid(MainCategory mainCategory){
 
         //Clear current grid of shoppingitems

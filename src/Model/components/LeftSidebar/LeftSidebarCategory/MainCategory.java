@@ -18,7 +18,6 @@ public enum MainCategory {
             ProductCategory.NUTS_AND_SEEDS,
             ProductCategory.PASTA,
             ProductCategory.POTATO_RICE),
-<<<<<<< HEAD
     KÖTT("Kött",
             ProductCategory.MEAT),
     MEJERI("Mejeri",
@@ -30,7 +29,6 @@ public enum MainCategory {
             ProductCategory.COLD_DRINKS),
     FISK("Fisk",
             ProductCategory.FISH);
-=======
 
     KOTT("Kött",
             ProductCategory.MEAT),
@@ -48,7 +46,6 @@ public enum MainCategory {
          ProductCategory.FISH);
 
 
->>>>>>> 127f1f03fa273b1d20c19c54bfa2afdca8280884
 
     String name;
     List<ProductCategory> subCategories;
