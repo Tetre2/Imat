@@ -33,9 +33,6 @@ public class MinaSidor extends AnchorPane {
         TitledSection titledSectionKonto = new TitledSection("KontoUppgifter");
         titledSectionKonto.addNode(new KontoUppgifter());
 
-
-
-
         TopNav.getChildren().add(new Navbar());
         vBox.getChildren().add(titledSectionPerson);
         vBox.getChildren().add(titledSectionKonto);
