@@ -11,7 +11,7 @@
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1440.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane fx:id="LeftNavBar" layoutY="200.0" prefHeight="700.0" prefWidth="250.0" />
-      <AnchorPane fx:id="varukorg" layoutX="1040.0" layoutY="200.0" prefHeight="700.0" prefWidth="400.0" />
+      <AnchorPane fx:id="varukorg" layoutX="1066.0" layoutY="200.0" prefHeight="700.0" prefWidth="374.0" />
       <AnchorPane fx:id="topNavBar" prefHeight="200.0" prefWidth="1440.0" />
       <ScrollPane layoutX="250.0" layoutY="200.0" prefHeight="700.0" prefWidth="800.0">
          <content>
@@ -28,7 +28,7 @@
             </GridPane>
          </content>
       </ScrollPane>
-      <Label fx:id="currentCategoryLabel" contentDisplay="CENTER" layoutX="402.0" layoutY="71.0" prefHeight="129.0" prefWidth="640.0" text="Alla varor" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="currentCategoryLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="71.0" prefHeight="129.0" prefWidth="800.0" text="Alla varor" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="57.0" />
          </font>
