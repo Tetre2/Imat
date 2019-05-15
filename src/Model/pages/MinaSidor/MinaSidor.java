@@ -1,5 +1,6 @@
 package Model.pages.MinaSidor;
 
+import Model.components.Forms.Kontouppgifter.KontoUppgifter;
 import Model.components.Navbar.Navbar;
 import Model.components.TitledSection.TitledSection;
 import javafx.fxml.FXML;
@@ -23,8 +24,12 @@ public class MinaSidor extends AnchorPane {
 
         addEventListeners();
 
+        TitledSection titledSection = new TitledSection("PersonUppgifter");
+        titledSection.addNode(new KontoUppgifter());
+
         TopNav.getChildren().add(new Navbar());
-        pane.getChildren().add(new TitledSection("PersonUppgifter"));
+        pane.getChildren().add(titledSection);
+
 
 
     }
