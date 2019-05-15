@@ -56,6 +56,10 @@ public class VarukorgItem extends AnchorPane implements ShoppingCartListener {
     private void onCloseButtonPressed() {
         shoppingItem.setAmount(0);
         IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+        removeItemFromUI();
+    }
+
+    private void removeItemFromUI() {
         shoppingCheckout.removeShoppingItemFromUI(this);
     }
 
@@ -96,6 +100,14 @@ public class VarukorgItem extends AnchorPane implements ShoppingCartListener {
 
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
-        totalPriceLabel.setText(Double.toString(shoppingItem.getProduct().getPrice() * shoppingItem.getAmount()));
+        if (itemIsDeleted()) {
+            removeItemFromUI();
+        } else {
+            totalPriceLabel.setText(Double.toString(shoppingItem.getProduct().getPrice() * shoppingItem.getAmount()));
+        }
+    }
+
+    private boolean itemIsDeleted() {
+        return shoppingItem.getAmount() == 0;
     }
 }

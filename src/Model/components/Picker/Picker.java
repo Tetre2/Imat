@@ -58,7 +58,6 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
             }
         });
 
-
         //för att man ska kunna trycka enter
         amount.setOnKeyPressed(ke -> {
             if (ke.getCode().equals(KeyCode.ENTER)) {
