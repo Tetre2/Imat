@@ -14,7 +14,7 @@
 
 <fx:root id="titledSectionRootAnchorPane" fx:id="rootPane" minHeight="200.0" prefHeight="403.0" prefWidth="1020.0" style="-fx-background-color: white;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <stylesheets>
-        <URL value="@../../../../styles.css" />
+        <URL value="@../../../../../styles.css" />
     </stylesheets>
     <children>
         <VBox maxWidth="300.0" prefHeight="134.0" prefWidth="580.0" GridPane.halignment="RIGHT" GridPane.rowIndex="2">

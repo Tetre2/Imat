@@ -28,7 +28,7 @@ public class ShoppingCheckout extends AnchorPane {
             centerContainerFlowPane.getChildren().add(varukorgItem);
         }
 
-        //centerContainerFlowPane.getChildren().add(new ShoppingCheckoutDetails());
+        centerContainerFlowPane.getChildren().add(new ShoppingCheckoutDetails());
     }
 
     public void removeShoppingItemFromUI(VarukorgItem item) {

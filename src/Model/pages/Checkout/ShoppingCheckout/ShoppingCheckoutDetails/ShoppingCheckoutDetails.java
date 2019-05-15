@@ -21,15 +21,16 @@ public class ShoppingCheckoutDetails extends AnchorPane implements ShoppingCartL
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
-        Double foodPrice = IMat.getInstance().getShoppingCart().getTotal();
-        updateLabels(foodPrice);
+        updateLabels();
 
         IMat.getInstance().getShoppingCart().addShoppingCartListener(this);
     }
 
-    private void updateLabels(Double foodPrice) {
+    private void updateLabels() {
+        Double foodPrice = IMat.getInstance().getShoppingCart().getTotal();
         transportPriceLabel.setText(Double.toString(TRANSPORT_PRICE));
         foodPriceLabel.setText(Double.toString(foodPrice));
+        System.out.println(Double.toString(foodPrice));
         totalPriceLabel.setText(Double.toString(foodPrice + TRANSPORT_PRICE));
     }
 
@@ -50,7 +51,6 @@ public class ShoppingCheckoutDetails extends AnchorPane implements ShoppingCartL
 
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
-        Double updatedFoodPrice = IMat.getInstance().getShoppingCart().getTotal();
-        updateLabels(updatedFoodPrice);
+        updateLabels();
     }
 }
