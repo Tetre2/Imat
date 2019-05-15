@@ -61,7 +61,7 @@
       <AnchorPane fx:id="TopNav" prefHeight="100.0" prefWidth="1440.0" />
       <AnchorPane fx:id="kvittoGray" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: rgb(116,116,116,0.76);">
          <children>
-            <AnchorPane fx:id="kvittoOverlay" layoutX="370.0" layoutY="50.0" prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: red;" />
+            <AnchorPane fx:id="kvittoOverlay" layoutX="370.0" layoutY="50.0" prefHeight="800.0" prefWidth="700.0" />
          </children>
       </AnchorPane>
    </children>

@@ -13,6 +13,8 @@ import javafx.scene.layout.GridPane;
 import se.chalmers.cse.dat216.project.*;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Kvitto extends AnchorPane {
 
@@ -25,8 +27,11 @@ public class Kvitto extends AnchorPane {
     @FXML
     private GridPane grid;
 
+    private ArrayList<ProductCategory> categories;
+
 
     public Kvitto(Order order) {
+        categories = new ArrayList();
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
@@ -37,9 +42,35 @@ public class Kvitto extends AnchorPane {
         double calcPrice = 0;
 
         for (ShoppingItem shoppingItem : order.getItems()) {
-            calcPrice += shoppingItem.getTotal();
+            calcPrice += shoppingItem.getTotal();//ger totala kostnaden
+
+            if(!categories.contains(shoppingItem.getProduct().getCategory())){//om categorin inte finns i listan läggs den till
+                System.out.println("added category");
+                categories.add(shoppingItem.getProduct().getCategory());
+            }
+
         }
+
         price.setText(calcPrice + " Kr");
+
+        System.out.println("categorier" + categories.size());
+
+        for (int i = 0; i < categories.size(); i++) {
+
+            List<Product> arr = new ArrayList<>();
+
+            for (ShoppingItem shoppingItem : order.getItems()) {//lägger till alla produkter som har en kategori som finns i categories
+                if(categories.get(i).equals(shoppingItem.getProduct().getCategory())){
+                    System.out.println("added product");
+                    arr.add(shoppingItem.getProduct());
+                }
+            }
+
+
+            KvittoProduct kvittoProduct = new KvittoProduct(categories.get(i).name(), arr);
+            grid.setConstraints(kvittoProduct, 0, i);
+            grid.getChildren().add(kvittoProduct);
+        }
 
 
 
