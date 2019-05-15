@@ -106,12 +106,16 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
         //visar att varan är lagd i varukorgen
         rootPane.setBackground(new Background(new BackgroundFill(Color.LIGHTGRAY, CornerRadii.EMPTY, Insets.EMPTY)));
 
-        addToShoppingCart();
+        //lägger en utav varan i varukorgen
+        item.setAmount(1);
+        IMat.getInstance().getShoppingCart().addItem(item);
 
         //debugging ändast
         shopingDebugg();
 
         showPlusMinus();
+
+
     }
 
     private void showPlusMinus(){
@@ -160,25 +164,16 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
         return IMat.getInstance().getFavorites().contains(product);
     }
 
-    private void addToShoppingCart(){
-        //lägger en utav varan i varukorgen
-        item.setAmount(1);
-        IMat.getInstance().getShoppingCart().addItem(item);
-    }
-
-    private void removeFromShoppingCart(){
-        rootPane.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
-        IMat.getInstance().getShoppingCart().removeItem(item);
-        hidePlusMinus();
-    }
-
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
 
         if(item.getAmount() == 0 && pickerPane.isVisible()){ //sker när man klickar på krysset från varukorgen
-            pickerPane.setVisible(false);
+
+            hidePlusMinus();
+            rootPane.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
+
             if(IMat.getInstance().getShoppingCartItems().contains(item)){
-                removeFromShoppingCart();
+                IMat.getInstance().getShoppingCart().removeItem(item);
             }
         }
 
