@@ -41,8 +41,7 @@ public class VarukorgItem extends AnchorPane implements ShoppingCartListener {
 
         Product p = shoppingItem.getProduct();
         productNameLabel.setText(p.getName());
-        priceLabel.setText(Double.toString(p.getPrice()));
-        totalPriceLabel.setText(Double.toString(p.getPrice() * shoppingItem.getAmount()));
+        updatePriceLabels();
         productImageView.setImage(IMat.getInstance().getImage(p));
         pickerPane.getChildren().add(new Picker(shoppingItem));
 
@@ -51,6 +50,13 @@ public class VarukorgItem extends AnchorPane implements ShoppingCartListener {
         deleteButton.setOnMouseEntered(e -> closeButtonMouseEntered());
         deleteButton.setOnMousePressed(e -> closeButtonMousePressed());
         deleteButton.setOnMouseExited(e -> closeButtonMouseExited());
+    }
+
+    private void updatePriceLabels() {
+        Product p = shoppingItem.getProduct();
+
+        priceLabel.setText(Double.toString(p.getPrice()) + " kr");
+        totalPriceLabel.setText(Double.toString(p.getPrice() * shoppingItem.getAmount()) + " kr");
     }
 
     private void onCloseButtonPressed() {
@@ -103,7 +109,7 @@ public class VarukorgItem extends AnchorPane implements ShoppingCartListener {
         if (itemIsDeleted()) {
             removeItemFromUI();
         } else {
-            totalPriceLabel.setText(Double.toString(shoppingItem.getProduct().getPrice() * shoppingItem.getAmount()));
+            updatePriceLabels();
         }
     }
 

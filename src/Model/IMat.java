@@ -92,6 +92,10 @@ public class IMat {
         return dataHandler.getShoppingCart();
     }
 
+    public boolean isShoppingCartEmpty() {
+        return dataHandler.getShoppingCart().getItems().size() == 0;
+    }
+
     public User getUser(){
         return dataHandler.getUser();
     }

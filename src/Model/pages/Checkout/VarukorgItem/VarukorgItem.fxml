@@ -24,7 +24,7 @@
                   <Image url="@../../../resources/product_8.jpg" />
                </image>
             </ImageView>
-            <Label fx:id="productNameLabel" prefHeight="20.0" prefWidth="211.0" text="Grovt Bröd">
+            <Label fx:id="productNameLabel" prefHeight="20.0" prefWidth="451.0" text="Grovt Bröd">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -48,8 +48,8 @@
                   <Insets right="40.0" />
                </HBox.margin>
             </Label>
-            <Pane fx:id="pickerPane" maxHeight="60.0" prefHeight="55.0" prefWidth="293.0" />
-            <Label fx:id="totalPriceLabel" alignment="CENTER" prefHeight="20.0" prefWidth="129.0" text="XXX (total pris)">
+            <Pane fx:id="pickerPane" maxHeight="60.0" prefHeight="55.0" prefWidth="190.0" />
+            <Label fx:id="totalPriceLabel" alignment="CENTER" prefHeight="20.0" prefWidth="83.0" text="XXX,99">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -58,7 +58,7 @@
                   <String fx:value="text-sm" />
                </styleClass>
                <HBox.margin>
-                  <Insets left="20.0" right="15.0" />
+                  <Insets left="25.0" right="15.0" />
                </HBox.margin>
             </Label>
             <Button fx:id="deleteButton" mnemonicParsing="false" styleClass="btn-nostyle">
