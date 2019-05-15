@@ -11,13 +11,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<fx:root maxHeight="45.0" maxWidth="145.0" minHeight="40.0" minWidth="140.0" prefHeight="45.0" prefWidth="145.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="45.0" maxWidth="145.0" minHeight="40.0" minWidth="155.0" prefHeight="45.0" prefWidth="155.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <stylesheets>
       <URL value="@Picker.css" />
       <URL value="@../../../styles.css" />
    </stylesheets>
    <children>
-      <HBox alignment="CENTER_LEFT" layoutX="25.0" maxWidth="167.0" minHeight="40.0" minWidth="139.0" prefHeight="40.0" prefWidth="140.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+      <HBox alignment="CENTER_LEFT" layoutX="25.0" maxHeight="45.0" maxWidth="167.0" minHeight="40.0" minWidth="155.0" prefHeight="45.0" prefWidth="155.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button fx:id="minus" mnemonicParsing="false" style="-fx-background-color: #F25757;">
                <graphic>
@@ -32,7 +32,7 @@
                   <String fx:value="minus" />
                </styleClass>
                <HBox.margin>
-                  <Insets left="10.0" />
+                  <Insets left="13.0" />
                </HBox.margin>
                <cursor>
                   <Cursor fx:constant="HAND" />

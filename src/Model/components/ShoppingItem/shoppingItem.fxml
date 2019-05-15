@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<fx:root id="recipeRootAnchorPane" fx:id="rootPane" maxHeight="280.0" maxWidth="300.0" minHeight="280.0" minWidth="193.0" prefHeight="280.0" prefWidth="193.0" style="-fx-background-color: white; -fx-border-width: 1; -fx-border-color: red;" styleClass="anchor-container" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root id="recipeRootAnchorPane" fx:id="rootPane" maxHeight="280.0" maxWidth="300.0" minHeight="280.0" minWidth="193.0" prefHeight="280.0" prefWidth="193.0" styleClass="anchor-container" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="16.0" layoutY="39.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="238.0" prefWidth="158.0" styleClass="container">
          <children>
@@ -85,7 +85,7 @@
             </HBox>
          </children>
       </VBox>
-      <Button fx:id="addToCartButton" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="230.0" maxHeight="10.0" maxWidth="10.0" minHeight="35.0" minWidth="146.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="139.0" text="Lägg i kundvagn">
+      <Button fx:id="addToCartButton" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="230.0" maxHeight="10.0" maxWidth="10.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="150.0" text="Lägg i kundvagn">
          <styleClass>
             <String fx:value="btn-primary" />
             <String fx:value="bg-primary" />
@@ -94,7 +94,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <AnchorPane fx:id="pickerPane" layoutX="22.0" layoutY="224.0" maxHeight="54.0" maxWidth="150.0" minHeight="10.0" minWidth="10.0" prefHeight="47.0" prefWidth="150.0" style="-fx-background-color: white;" />
+      <AnchorPane fx:id="pickerPane" layoutX="20.0" layoutY="226.0" maxHeight="54.0" maxWidth="155.0" minHeight="10.0" minWidth="10.0" prefHeight="47.0" prefWidth="155.0" />
       <Button fx:id="starButton" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="btn-nostyle">
          <cursor>
             <Cursor fx:constant="HAND" />

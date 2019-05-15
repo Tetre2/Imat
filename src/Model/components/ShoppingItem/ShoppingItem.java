@@ -104,7 +104,9 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
     private void onAddToCartButtonPressed() {
         //visar att varan är lagd i varukorgen
-        rootPane.setBackground(new Background(new BackgroundFill(Color.LIGHTGRAY, CornerRadii.EMPTY, Insets.EMPTY)));
+        rootPane.getStyleClass().add("selected");
+        addToCartButton.setVisible(false);
+       // rootPane.setBackground(new Background(new BackgroundFill(Color.LIGHTGRAY, new CornerRadii(12), Insets.EMPTY)));
 
         //lägger en utav varan i varukorgen
         item.setAmount(1);
@@ -170,7 +172,9 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
         if(item.getAmount() == 0 && pickerPane.isVisible()){ //sker när man klickar på krysset från varukorgen
 
             hidePlusMinus();
-            rootPane.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
+            rootPane.getStyleClass().clear();
+            rootPane.getStyleClass().add("anchor-container");
+            addToCartButton.setVisible(true);
 
             if(IMat.getInstance().getShoppingCartItems().contains(item)){
                 IMat.getInstance().getShoppingCart().removeItem(item);
