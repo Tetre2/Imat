@@ -1,6 +1,7 @@
 package Model.pages.MinaSidor;
 
 import Model.components.Navbar.Navbar;
+import Model.components.TitledSection.TitledSection;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
@@ -22,9 +23,8 @@ public class MinaSidor extends AnchorPane {
 
         addEventListeners();
 
-
         TopNav.getChildren().add(new Navbar());
-        pane.getChildren().add(new TilePane());
+        pane.getChildren().add(new TitledSection("PersonUppgifter"));
 
 
     }
