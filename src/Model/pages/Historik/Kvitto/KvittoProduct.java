@@ -1,44 +1,36 @@
-package Model.pages.Historik.HistorikItem;
+package Model.pages.Historik.Kvitto;
 
 import Model.IMat;
+import Model.components.LeftSidebar.LeftSidebar;
 import Model.components.Navbar.Navbar;
-import Model.pages.Historik.Historik;
+import Model.pages.Historik.HistorikItem.HistorikItem;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
-import se.chalmers.cse.dat216.project.Order;
+import se.chalmers.cse.dat216.project.*;
 
 import java.io.IOException;
 
-public class HistorikItem extends AnchorPane {
+public class KvittoProduct extends AnchorPane {
 
-    @FXML
-    private Button kvittoButton;
 
-    private Historik parent;
-    private Order order;
-
-    public HistorikItem(Order order, Historik parent){
-        this.parent = parent;
-        this.order = order;
+    public KvittoProduct(Order order) {
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
         addEventListeners();
 
-
-
-
     }
 
-    private void addEventListeners(){
-        kvittoButton.setOnAction(e -> parent.showKvitto(order));
+    private void addEventListeners() {
+
     }
 
     private FXMLLoader initFXML() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("HistorikItem.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Kvitto.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         return fxmlLoader;
