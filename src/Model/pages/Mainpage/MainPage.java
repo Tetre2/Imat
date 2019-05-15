@@ -2,7 +2,7 @@ package Model.pages.Mainpage;
 
 import Model.IMat;
 import Model.components.LeftSidebar.LeftSidebar;
-import Model.components.LeftSidebar.LeftSidebarCategory.CategoryItem;
+import Model.components.LeftSidebar.LeftSidebarCategory.CategoryListener;
 import Model.components.LeftSidebar.LeftSidebarCategory.MainCategory;
 import Model.components.Navbar.Navbar;
 import Model.components.RightSidebar.RightSidebar;
@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MainPage extends AnchorPane implements CategoryListener{
+public class MainPage extends AnchorPane implements CategoryListener {
 
 
     @FXML

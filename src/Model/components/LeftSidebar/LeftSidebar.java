@@ -1,9 +1,7 @@
 package Model.components.LeftSidebar;
 
-import Model.IMat;
 import Model.Main;
-import Model.pages.Mainpage.CategoryListener;
-import Model.pages.Mainpage.MainPage;
+import Model.components.LeftSidebar.LeftSidebarCategory.CategoryListener;
 import Model.components.LeftSidebar.LeftSidebarCategory.CategoryItem;
 import Model.components.LeftSidebar.LeftSidebarCategory.MainCategory;
 import javafx.fxml.FXML;
@@ -11,10 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
-import se.chalmers.cse.dat216.project.CartEvent;
-import se.chalmers.cse.dat216.project.ProductCategory;
-import se.chalmers.cse.dat216.project.ShoppingCartListener;
-import se.chalmers.cse.dat216.project.ShoppingItem;
+import javafx.scene.paint.Paint;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -66,8 +61,11 @@ public class LeftSidebar extends AnchorPane  {
             //In this way you're sure you have no styles applied to your object button
             if(categoryItem.getCategory().equals(selectedCategory)){
                 categoryItem.getStyleClass().add("anchor-container-focused");
+                categoryItem.getCategoryName().setTextFill(Paint.valueOf("white"));
+
             }else{
                 categoryItem.getStyleClass().add("anchor-container-normal");
+                categoryItem.getCategoryName().setTextFill(Paint.valueOf("#194b42"));
             }
 
             //then you specify the class you would give to the button

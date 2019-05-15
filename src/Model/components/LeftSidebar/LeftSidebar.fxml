@@ -2,18 +2,16 @@
 
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 
-<fx:root minHeight="700.0" minWidth="400.0" styleClass="anchor-container" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root minHeight="700.0" minWidth="294.0" prefHeight="700.0" prefWidth="294.0" styleClass="anchor-container" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <stylesheets>
       <URL value="@LeftSidebar.css" />
       <URL value="@../../../styles.css" />
    </stylesheets>
    <children>
-      <Label layoutX="167.0" layoutY="342.0" text="Left Side Bar" />
       <Button fx:id="testingButton" layoutX="168.0" layoutY="574.0" mnemonicParsing="false" text="Testing" />
-      <FlowPane fx:id="categoryPane" layoutX="47.0" layoutY="30.0" prefHeight="332.0" prefWidth="296.0" />
+      <FlowPane fx:id="categoryPane" layoutX="1.0" prefHeight="700.0" prefWidth="288.0" />
    </children>
 </fx:root>

@@ -8,27 +8,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public enum MainCategory {
-    FRUKT_OCH_GRÖNT("Frukt & Grönt",
-            ProductCategory.CABBAGE, ProductCategory.FRUIT,
-            ProductCategory.MELONS, ProductCategory.VEGETABLE_FRUIT,
-            ProductCategory.BERRY, ProductCategory.CITRUS_FRUIT,
-            ProductCategory.ROOT_VEGETABLE, ProductCategory.EXOTIC_FRUIT),
-    SKAFFERI("Skafferi",
-            ProductCategory.FLOUR_SUGAR_SALT,
-            ProductCategory.NUTS_AND_SEEDS,
-            ProductCategory.PASTA,
-            ProductCategory.POTATO_RICE),
-    KÖTT("Kött",
-            ProductCategory.MEAT),
-    MEJERI("Mejeri",
-            ProductCategory.DAIRIES),
     BRÖD_OCH_KAKOR("Bröd & Kakor",
             ProductCategory.BREAD),
     DRYCK("Dryck",
             ProductCategory.HOT_DRINKS,
             ProductCategory.COLD_DRINKS),
     FISK("Fisk",
-            ProductCategory.FISH);
+            ProductCategory.FISH),
+    FRUKT_OCH_GRÖNT("Frukt & Grönt",
+            ProductCategory.CABBAGE, ProductCategory.FRUIT,
+            ProductCategory.MELONS, ProductCategory.VEGETABLE_FRUIT,
+            ProductCategory.BERRY, ProductCategory.CITRUS_FRUIT,
+            ProductCategory.ROOT_VEGETABLE, ProductCategory.EXOTIC_FRUIT),
+    KÖTT("Kött",
+            ProductCategory.MEAT),
+    MEJERI("Mejeri",
+            ProductCategory.DAIRIES),
+    SKAFFERI("Skafferi",
+            ProductCategory.FLOUR_SUGAR_SALT,
+            ProductCategory.NUTS_AND_SEEDS,
+            ProductCategory.PASTA,
+            ProductCategory.POTATO_RICE);
 
 
 
