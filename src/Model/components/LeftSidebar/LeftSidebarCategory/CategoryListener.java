@@ -1,4 +1,4 @@
-package Model.pages.Mainpage;
+package Model.components.LeftSidebar.LeftSidebarCategory;
 
 import Model.components.LeftSidebar.LeftSidebarCategory.MainCategory;
 
