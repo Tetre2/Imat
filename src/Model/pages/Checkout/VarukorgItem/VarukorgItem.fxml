@@ -48,7 +48,7 @@
                   <Insets right="40.0" />
                </HBox.margin>
             </Label>
-            <Pane maxHeight="60.0" prefHeight="55.0" prefWidth="293.0" />
+            <Pane fx:id="pickerPane" maxHeight="60.0" prefHeight="55.0" prefWidth="293.0" />
             <Label fx:id="totalPriceLabel" alignment="CENTER" prefHeight="20.0" prefWidth="129.0" text="XXX (total pris)">
                <opaqueInsets>
                   <Insets />

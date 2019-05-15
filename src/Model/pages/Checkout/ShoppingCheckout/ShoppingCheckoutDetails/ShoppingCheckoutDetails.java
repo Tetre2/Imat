@@ -23,6 +23,8 @@ public class ShoppingCheckoutDetails extends AnchorPane implements ShoppingCartL
 
         Double foodPrice = IMat.getInstance().getShoppingCart().getTotal();
         updateLabels(foodPrice);
+
+        IMat.getInstance().getShoppingCart().addShoppingCartListener(this);
     }
 
     private void updateLabels(Double foodPrice) {
