@@ -3,6 +3,7 @@
 <?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -10,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<fx:root prefHeight="74.0" prefWidth="210.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="74.0" prefWidth="150.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <stylesheets>
       <URL value="@Picker.css" />
       <URL value="@../../../styles.css" />
@@ -20,7 +21,7 @@
          <children>
             <Button fx:id="minus" mnemonicParsing="false" style="-fx-background-color: #F25757;">
                <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../resources/minus.png" />
                      </image>
@@ -33,11 +34,17 @@
                <HBox.margin>
                   <Insets left="5.0" />
                </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
-            <TextField fx:id="amount" prefHeight="50.0" prefWidth="103.0" />
+            <TextField fx:id="amount" prefHeight="35.0" prefWidth="34.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
             <Button fx:id="plus" mnemonicParsing="false" style="-fx-background-color: #4CD04C; -fx-border-radius: 30; -fx-border-width: 0;" styleClass="btn-nostyle">
                <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../resources/plus.png" />
                      </image>
@@ -46,6 +53,9 @@
                <HBox.margin>
                   <Insets right="5.0" />
                </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
       </HBox>

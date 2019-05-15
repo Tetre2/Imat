@@ -31,7 +31,7 @@ public class Main extends Application {
 
         window = primaryStage;
 
-        IMatDataHandler.getInstance().reset();
+        //IMatDataHandler.getInstance().reset();
         primaryStage.setTitle("IMat");
 
         mainPage = new MainPage();
@@ -49,7 +49,7 @@ public class Main extends Application {
 
     public static void setSceneToMinaSidor(){
         Group group = new Group();
-        group.getChildren().add(historik);
+        group.getChildren().add(minaSidor);
         Scene scene = new Scene(group);
         window.setScene(scene);
     }

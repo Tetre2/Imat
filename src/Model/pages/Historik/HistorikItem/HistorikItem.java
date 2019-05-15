@@ -1,9 +1,7 @@
-package Model.pages.Historik;
+package Model.pages.Historik.HistorikItem;
 
 import Model.IMat;
-import Model.components.LeftSidebar.LeftSidebar;
 import Model.components.Navbar.Navbar;
-import Model.pages.Historik.HistorikItem.HistorikItem;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
@@ -12,26 +10,16 @@ import se.chalmers.cse.dat216.project.Order;
 
 import java.io.IOException;
 
-public class Historik extends AnchorPane {
+public class HistorikItem extends AnchorPane {
 
-    @FXML
-    private AnchorPane TopNav;
-    @FXML
-    private GridPane gridPane;
-
-    public Historik(){
+    public HistorikItem(Order order){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
         addEventListeners();
 
-        TopNav.getChildren().add(new Navbar());
 
-        for (int i = 0; i < IMat.getInstance().getOrders().size(); i++) {
-            HistorikItem historikItem = new HistorikItem(IMat.getInstance().getOrders().get(i));
-            gridPane.setConstraints(historikItem, 0, i);
-            gridPane.getChildren().add(historikItem);
-        }
+
 
     }
 
@@ -40,7 +28,7 @@ public class Historik extends AnchorPane {
     }
 
     private FXMLLoader initFXML() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Historik.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("HistorikItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         return fxmlLoader;

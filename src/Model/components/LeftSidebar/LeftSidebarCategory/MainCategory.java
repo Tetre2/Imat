@@ -17,7 +17,24 @@ public enum MainCategory {
             ProductCategory.FLOUR_SUGAR_SALT,
             ProductCategory.NUTS_AND_SEEDS,
             ProductCategory.PASTA,
-            ProductCategory.POTATO_RICE);
+            ProductCategory.POTATO_RICE),
+
+    KOTT("Kött",
+            ProductCategory.MEAT),
+
+    MEJERI("Mejeri",
+            ProductCategory.DAIRIES),
+
+    BROD("Bröd",
+            ProductCategory.BREAD),
+
+    DRYCK("Dryck",
+            ProductCategory.COLD_DRINKS,
+            ProductCategory.HOT_DRINKS),
+    FISK("Fisk",
+         ProductCategory.FISH);
+
+
 
     String name;
     List<ProductCategory> subCategories;

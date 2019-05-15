@@ -1,5 +1,7 @@
 package Model.pages.Hjalp;
 
+import Model.components.Navbar.Navbar;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 
@@ -7,11 +9,17 @@ import java.io.IOException;
 
 public class Hjalp extends AnchorPane {
 
+    @FXML
+    private AnchorPane TopNav;
+
     public Hjalp(){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
         addEventListeners();
+
+
+        TopNav.getChildren().add(new Navbar());
 
     }
 
