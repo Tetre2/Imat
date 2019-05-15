@@ -4,6 +4,7 @@ import Model.components.Navbar.Navbar;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.TilePane;
 
 import java.io.IOException;
 
@@ -12,7 +13,8 @@ public class MinaSidor extends AnchorPane {
 
     @FXML
     private AnchorPane TopNav;
-
+    @FXML
+    private AnchorPane pane;
 
     public MinaSidor(){
         FXMLLoader fxmlLoader = initFXML();
@@ -22,6 +24,7 @@ public class MinaSidor extends AnchorPane {
 
 
         TopNav.getChildren().add(new Navbar());
+        pane.getChildren().add(new TilePane());
 
 
     }
