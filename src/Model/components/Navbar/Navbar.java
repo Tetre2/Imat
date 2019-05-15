@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 
@@ -19,6 +20,8 @@ public class Navbar extends AnchorPane {
     private Button kvitton;
     @FXML
     private Button minaSidor;
+    @FXML
+    private TextField searchBar;
 
 
     public Navbar(){
@@ -53,6 +56,12 @@ public class Navbar extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+    }
+
+    @FXML
+    private void onSearchTyped() {
+        System.out.println(searchBar.getCharacters());
+
     }
 
 
