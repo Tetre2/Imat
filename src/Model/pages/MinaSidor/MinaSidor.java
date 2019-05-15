@@ -1,12 +1,14 @@
 package Model.pages.MinaSidor;
 
 import Model.components.Forms.Kontouppgifter.KontoUppgifter;
+import Model.components.Forms.PersonUppgifter.PersonUppgifter;
 import Model.components.Navbar.Navbar;
 import Model.components.TitledSection.TitledSection;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.TilePane;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 
@@ -16,7 +18,7 @@ public class MinaSidor extends AnchorPane {
     @FXML
     private AnchorPane TopNav;
     @FXML
-    private AnchorPane pane;
+    private VBox vBox;
 
     public MinaSidor(){
         FXMLLoader fxmlLoader = initFXML();
@@ -24,11 +26,19 @@ public class MinaSidor extends AnchorPane {
 
         addEventListeners();
 
-        TitledSection titledSection = new TitledSection("PersonUppgifter");
-        titledSection.addNode(new KontoUppgifter());
+
+        TitledSection titledSectionPerson = new TitledSection("PersonUppgifter");
+        titledSectionPerson.addNode(new PersonUppgifter());
+
+        TitledSection titledSectionKonto = new TitledSection("KontoUppgifter");
+        titledSectionKonto.addNode(new KontoUppgifter());
+
+
+
 
         TopNav.getChildren().add(new Navbar());
-        pane.getChildren().add(titledSection);
+        vBox.getChildren().add(titledSectionPerson);
+        vBox.getChildren().add(titledSectionKonto);
 
 
 
