@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public enum MainCategory {
-    FRUKT_OCH_GRÖNT("Frukt och Grönt",
+    FRUKT_OCH_GRÖNT("Frukt & Grönt",
             ProductCategory.CABBAGE, ProductCategory.FRUIT,
             ProductCategory.MELONS, ProductCategory.VEGETABLE_FRUIT,
             ProductCategory.BERRY, ProductCategory.CITRUS_FRUIT,
@@ -17,7 +17,38 @@ public enum MainCategory {
             ProductCategory.FLOUR_SUGAR_SALT,
             ProductCategory.NUTS_AND_SEEDS,
             ProductCategory.PASTA,
-            ProductCategory.POTATO_RICE);
+            ProductCategory.POTATO_RICE),
+<<<<<<< HEAD
+    KÖTT("Kött",
+            ProductCategory.MEAT),
+    MEJERI("Mejeri",
+            ProductCategory.DAIRIES),
+    BRÖD_OCH_KAKOR("Bröd & Kakor",
+            ProductCategory.BREAD),
+    DRYCK("Dryck",
+            ProductCategory.HOT_DRINKS,
+            ProductCategory.COLD_DRINKS),
+    FISK("Fisk",
+            ProductCategory.FISH);
+=======
+
+    KOTT("Kött",
+            ProductCategory.MEAT),
+
+    MEJERI("Mejeri",
+            ProductCategory.DAIRIES),
+
+    BROD("Bröd",
+            ProductCategory.BREAD),
+
+    DRYCK("Dryck",
+            ProductCategory.COLD_DRINKS,
+            ProductCategory.HOT_DRINKS),
+    FISK("Fisk",
+         ProductCategory.FISH);
+
+
+>>>>>>> 127f1f03fa273b1d20c19c54bfa2afdca8280884
 
     String name;
     List<ProductCategory> subCategories;

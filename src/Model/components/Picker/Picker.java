@@ -34,12 +34,14 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
         IMat.getInstance().getShoppingCart().addShoppingCartListener(this);
         addEventListeners();
 
+        updatePickerText();
     }
 
     private void addEventListeners() {
         plus.setOnAction(e -> onPlusButtonPressed());
         minus.setOnAction(e -> onMinusButtonPressed());
 
+        //upptäcker om man skrivigt något i rutan
         amount.focusedProperty().addListener((obs, wasFocused, isNowFocused) -> {
             if(wasFocused){
                 int i = (int) shoppingItem.getAmount();
@@ -56,6 +58,7 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
             }
         });
 
+        //för att man ska kunna trycka enter
         amount.setOnKeyPressed(ke -> {
             if (ke.getCode().equals(KeyCode.ENTER)) {
                 int i = (int) shoppingItem.getAmount();
@@ -72,13 +75,13 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
     }
 
     private void onPlusButtonPressed(){
-        shoppingItem.setAmount(shoppingItem.getAmount()+1);
+        shoppingItem.setAmount(shoppingItem.getAmount()+1);     //ökar varan med ett
         IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
         shopingDebugg();
     }
 
     private void onMinusButtonPressed(){
-        shoppingItem.setAmount(shoppingItem.getAmount()-1);
+        shoppingItem.setAmount(shoppingItem.getAmount()-1);     //minskar varan med ett
         IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
         shopingDebugg();
     }
@@ -105,9 +108,12 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
         }
     }
 
-
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
+        updatePickerText();
+    }
+
+    private void updatePickerText() {
         amount.setPromptText((int) shoppingItem.getAmount() +"");
     }
 }

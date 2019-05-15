@@ -34,6 +34,7 @@ public class IMat {
         }
 
         System.out.println("Products loaded: " + arr.size());
+        System.out.println(getOrders().size());
 
 
     }
@@ -89,6 +90,10 @@ public class IMat {
 
     public ShoppingCart getShoppingCart(){
         return dataHandler.getShoppingCart();
+    }
+
+    public boolean isShoppingCartEmpty() {
+        return dataHandler.getShoppingCart().getItems().size() == 0;
     }
 
     public User getUser(){

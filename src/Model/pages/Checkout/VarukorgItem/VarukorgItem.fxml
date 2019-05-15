@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<fx:root fx:id="rootPane" maxHeight="62" prefHeight="60.0" prefWidth="1000.0" styleClass="container" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@VarukorgItem.css" />
+      <URL value="@../../../../styles.css" />
+   </stylesheets>
+   <children>
+      <HBox alignment="CENTER_LEFT" maxHeight="60" prefHeight="60" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <ImageView fx:id="productImageView" fitHeight="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../resources/product_8.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="productNameLabel" prefHeight="20.0" prefWidth="451.0" text="Grovt Bröd">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-sm" />
+               </styleClass>
+            </Label>
+            <Label fx:id="priceLabel" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="114.0" text="32,99">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-sm" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </Label>
+            <Pane fx:id="pickerPane" maxHeight="60.0" prefHeight="55.0" prefWidth="190.0" />
+            <Label fx:id="totalPriceLabel" alignment="CENTER" prefHeight="20.0" prefWidth="83.0" text="XXX,99">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-sm" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets left="25.0" right="15.0" />
+               </HBox.margin>
+            </Label>
+            <Button fx:id="deleteButton" mnemonicParsing="false" styleClass="btn-nostyle">
+               <graphic>
+                  <ImageView fx:id="deleteImageView" fitHeight="150.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../resources/icon_close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</fx:root>
