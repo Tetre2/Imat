@@ -63,8 +63,7 @@ public class KontoNummerInputItem extends AnchorPane implements ValidityCheckabl
     }
 
     public void setCardNumber(String cardNumber){
-        //System.out.println(cardNumber);
-        String[] arr = new String[4];
+        String[] arr = {"", "", "", ""};
         if(!cardNumber.equals("")){
             int start = 0;
             for (int i = 1; i <= 4; i++) {
@@ -110,7 +109,12 @@ public class KontoNummerInputItem extends AnchorPane implements ValidityCheckabl
                 input += l.getInput();
             }
         }
-        return input;
+        if(input.length() == 16){
+            return input;
+        }else {
+            throw new NotValidInput();
+        }
+
     }
 
     @Override
