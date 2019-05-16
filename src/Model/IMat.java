@@ -50,6 +50,10 @@ public class IMat {
         Main.setSceneToCheckout();
     }
 
+    public void setSceneToHelp(){
+        Main.setSceneToHjalp();
+    }
+
     Map<Product, Image> images = new HashMap<>();
 
 
@@ -100,6 +104,24 @@ public class IMat {
 
     public ShoppingCart getShoppingCart(){
         return dataHandler.getShoppingCart();
+    }
+
+    public boolean shoppingCartContainsProduct(Product product){
+        for(ShoppingItem addedItem : getShoppingCartItems()){
+            if(addedItem.getProduct().getName().equals(product.getName())){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public ShoppingItem getShoppingCartItem(Product product){
+        for(ShoppingItem addedItem : getShoppingCartItems()){
+            if(addedItem.getProduct().getName().equals(product.getName())){
+                return addedItem;
+            }
+        }
+        return new ShoppingItem(product);
     }
 
     public boolean isShoppingCartEmpty() {

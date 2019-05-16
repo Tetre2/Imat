@@ -5,9 +5,11 @@ import Model.components.RightSidebar.RightSidebarItem.RightSidebarItem;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.Pane;
 import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.ShoppingCartListener;
 import se.chalmers.cse.dat216.project.ShoppingItem;
@@ -24,6 +26,11 @@ public class RightSidebar extends AnchorPane implements ShoppingCartListener {
     private Label amaunt;
     @FXML
     private Button pay;
+    @FXML
+    private Pane helpPane;
+
+    @FXML
+    private Hyperlink link;
 
     public RightSidebar(){
         FXMLLoader fxmlLoader = initFXML();
@@ -33,6 +40,7 @@ public class RightSidebar extends AnchorPane implements ShoppingCartListener {
 
         addEventListeners();
         updateShoppingCart();
+
 
     }
 
@@ -56,15 +64,23 @@ public class RightSidebar extends AnchorPane implements ShoppingCartListener {
         inventory.getChildren().clear();
         List<ShoppingItem> items = IMat.getInstance().getShoppingCart().getItems();
         for (ShoppingItem si : items) {
+            System.out.println(si.getProduct().getName());
             RightSidebarItem rightSidebarItem = new RightSidebarItem(si);
             inventory.getChildren().add(rightSidebarItem);
         }
+
+        //ta bort hjälp texten
+        helpPane.setVisible(items.size() == 0);
     }
 
     private void addEventListeners() {
         pay.setOnAction(e -> onPayPressed());
+        link.setOnAction(e -> onLinkPressed());
     }
 
+    private void onLinkPressed(){
+        IMat.getInstance().setSceneToHelp();
+    }
     private void onPayPressed(){
        IMat.getInstance().setSceneToCheckout();
        //IMat.getInstance().placeOrder();
