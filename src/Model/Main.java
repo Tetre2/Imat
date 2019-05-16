@@ -1,5 +1,7 @@
 package Model;
 
+import Model.components.LeftSidebar.LeftSidebar;
+import Model.components.LeftSidebar.LeftSidebarCategory.MainCategory;
 import Model.pages.Checkout.Checkout;
 import Model.pages.Favoriter.Favoriter;
 import Model.pages.Historik.Historik;
@@ -49,6 +51,17 @@ public class Main extends Application {
         window.show();
 
     }
+
+   /* public static void setShowAll(){
+        mainPage.showAllItems();
+    }
+    */
+
+    public static void changeCategory(MainCategory mc){
+        mainPage.categoryChanged(mc);
+    }
+
+
 
     public static void setSceneToMinaSidor(){
         Group group = new Group();

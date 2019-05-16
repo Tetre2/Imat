@@ -54,7 +54,7 @@ public class LeftSidebar extends AnchorPane  {
 
 
 
-    private void setMainCategoryFocused(MainCategory selectedCategory){
+    public void setMainCategoryFocused(MainCategory selectedCategory){
         for(CategoryItem categoryItem: getCategories()){
             System.out.println("removing style");
             categoryItem.getStyleClass().clear();
