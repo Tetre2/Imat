@@ -74,7 +74,7 @@
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutY="96.0" prefHeight="50.0" prefWidth="380.0" styleClass="help_text_h1" text="Din varukorg är tom!" textAlignment="CENTER" />
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-4.0" layoutY="146.0" prefHeight="50.0" prefWidth="380.0" styleClass="help_text_h2" text="För att lägga till en vara:" textAlignment="CENTER" />
-            <TextArea layoutX="32.0" layoutY="196.0" prefHeight="127.0" prefWidth="317.0" text="1. Välj Kategori&#10;2. Hitta en vara&#10;3. Klicka på knappen &quot;lägg i varukorg&quot;&#10;4. Välj antal&#10;" />
+            <TextArea layoutX="32.0" layoutY="196.0" prefHeight="183.0" prefWidth="317.0" text="1. Välj Kategori&#10;2. Hitta en vara&#10;3. Klicka på knappen &quot;lägg i varukorg&quot;&#10;4. Välj antal&#10;" />
             <Label alignment="CENTER" layoutY="383.0" prefHeight="17.0" prefWidth="380.0" styleClass="help_text_h1" text="Behöver du mer hjälp?" />
             <Hyperlink fx:id="link" alignment="CENTER" layoutY="416.0" prefHeight="25.0" prefWidth="380.0" styleClass="hyper-link" text="Klicka här för att spana in hjälpsidan!" textFill="#03a678" />
          </children>
