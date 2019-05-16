@@ -62,68 +62,8 @@ public class KontoInputItem extends AnchorPane implements Focusalbe, CheckValidi
     private void addEventListeners() {
 
 
-
-
-        
-        /*//cardNumber3
-        //upptäcker om man skrivigt något i rutan
-        cardNumber3.textProperty().addListener((observable, oldValue, newValue) -> {
-            if(contains4(cardNumber3)){
-                //när de fyra sifrorna skrivits in tabba till nästa ruta
-                cardNumber4.requestFocus();
-            }
-        });
-
-        //cardNumber4
-        //upptäcker om man skrivigt något i rutan
-        cardNumber4.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (contains4(cardNumber4)) {
-                //När de fyra sista numren skrivits in skikas informationen till IMatdatahandler
-                if(validCardNumber()) {
-                    IMat.getInstance().getCreditCard().setCardNumber(cardNumber1.getText() + cardNumber2.getText() + cardNumber3.getText() + cardNumber4.getText());
-                }
-                if(next != null){
-                    next.setFocus();
-                }
-            }
-        });*/
     }
 
-    private boolean isValid(TextField textField){
-
-        if(textField.getText().length() == 4){
-            try {
-                int i = Integer.parseInt(textField.getText());
-                return true;
-            }catch (Exception e){
-                showError(textField);
-                return false;
-            }
-        }
-        return false;
-    }
-
-    private boolean validCardNumber(){
-       /* String cardNumber = "";
-        boolean check = true;
-
-        if(isValid(cardNumber1)){
-            cardNumber += Integer.parseInt(cardNumber1.getText());
-        }else {
-            check = false;
-        }
-
-        return check;*/
-       return false;
-    }
-
-    private void showError(TextField textField){
-        textField.getStyleClass().add("textBoxErr");
-    }
-
-    private boolean contains4(TextField textField) {
-        return textField.getText().length() == 4;
-    }
 
     private FXMLLoader initFXML() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("KontoInputItem.fxml"));
@@ -142,7 +82,7 @@ public class KontoInputItem extends AnchorPane implements Focusalbe, CheckValidi
 
     @Override
     public void setFocus() {
-        //cardNumber1.requestFocus();
+        limitedTextFields.get(0).requestFocus();
     }
 
     @Override
