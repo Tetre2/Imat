@@ -1,12 +1,9 @@
 package Model.components.Forms.PersonUppgifter;
 
-import Model.IMat;
-import Model.components.Forms.InputItem.InputItem;
+import Model.components.Forms.InputItem.InputItem.InputItem;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 
@@ -25,13 +22,13 @@ public class PersonUppgifter extends AnchorPane {
         tryToLoadFXML(fxmlLoader);
 
         addEventListeners();
-        flowPane.getChildren().add(new InputItem("Förnamn:", "Brit"));
-        flowPane.getChildren().add(new InputItem("Efternamn:", "persson"));
-        flowPane.getChildren().add(new InputItem("Telefon Nummer:", "123456789"));
-        flowPane.getChildren().add(new InputItem("Mejl:", "exempel@email.com"));
-        flowPane.getChildren().add(new InputItem("Adress:", "Långgatan 6"));
-        flowPane.getChildren().add(new InputItem("Post nummer:", "123 45"));
-        flowPane.getChildren().add(new InputItem("Post adress:", "Göteborg"));
+        flowPane.getChildren().add(new InputItem("Förnamn:", "Brit", "Ange ditt förnamn"));
+        flowPane.getChildren().add(new InputItem("Efternamn:", "persson", "Ange ditt efternamn"));
+        flowPane.getChildren().add(new InputItem("Telefonnummer:", "123456789", "Ange ditt telefonnummer"));
+        flowPane.getChildren().add(new InputItem("Mejl:", "exempel@email.com", "Ange din mejl"));
+        flowPane.getChildren().add(new InputItem("Adress:", "Långgatan 6", "Ange din adress"));
+        flowPane.getChildren().add(new InputItem("Postnummer:", "123 45", "Ange ditt postnummer"));
+        flowPane.getChildren().add(new InputItem("Postadress:", "Göteborg", "Ange din postadress"));
 
     }
 
