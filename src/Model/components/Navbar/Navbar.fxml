@@ -32,11 +32,10 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Region prefHeight="129.0" prefWidth="45.0" />
+                  <Region prefHeight="90.0" prefWidth="103.0" />
                   <Button fx:id="kvitton" mnemonicParsing="false" prefHeight="52.0" prefWidth="98.0" text="Kvitton" />
                   <Button fx:id="hjalp" mnemonicParsing="false" prefHeight="52.0" prefWidth="86.0" text="Hjälp" />
                   <Button fx:id="minaSidor" mnemonicParsing="false" prefHeight="52.0" prefWidth="98.0" text="Mina sidor" />
-                  <Button fx:id="favoriter" mnemonicParsing="false" prefHeight="52.0" prefWidth="94.0" text="Favoriter" />
                </items>
             </ToolBar>
          </children>

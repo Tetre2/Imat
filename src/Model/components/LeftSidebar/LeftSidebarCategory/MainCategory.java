@@ -1,6 +1,7 @@
 package Model.components.LeftSidebar.LeftSidebarCategory;
 
 import Model.IMat;
+import Model.Main;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ProductCategory;
 
@@ -8,6 +9,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public enum MainCategory {
+    ALLA_VAROR ("Alla varor",
+            ProductCategory.BREAD,
+            ProductCategory.HOT_DRINKS,
+            ProductCategory.COLD_DRINKS,
+            ProductCategory.FISH,
+            ProductCategory.CABBAGE, ProductCategory.FRUIT,
+            ProductCategory.MELONS, ProductCategory.VEGETABLE_FRUIT,
+            ProductCategory.BERRY, ProductCategory.CITRUS_FRUIT,
+            ProductCategory.ROOT_VEGETABLE, ProductCategory.EXOTIC_FRUIT,
+            ProductCategory.MEAT,
+            ProductCategory.DAIRIES,
+            ProductCategory.FLOUR_SUGAR_SALT,
+            ProductCategory.NUTS_AND_SEEDS,
+            ProductCategory.PASTA,
+            ProductCategory.POTATO_RICE),
     BRÖD_OCH_KAKOR("Bröd & Kakor",
             ProductCategory.BREAD),
     DRYCK("Dryck",
@@ -28,7 +44,9 @@ public enum MainCategory {
             ProductCategory.FLOUR_SUGAR_SALT,
             ProductCategory.NUTS_AND_SEEDS,
             ProductCategory.PASTA,
-            ProductCategory.POTATO_RICE);
+            ProductCategory.POTATO_RICE),
+    FAVORIT ("Favorit",
+            ProductCategory.BERRY);
 
 
 

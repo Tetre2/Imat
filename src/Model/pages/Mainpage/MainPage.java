@@ -113,6 +113,8 @@ public class MainPage extends AnchorPane implements CategoryListener {
 
     public void updateGrid(MainCategory mainCategory){
 
+
+
         //Clear current grid of shoppingitems
         grid.getChildren().clear();
 
@@ -126,11 +128,27 @@ public class MainPage extends AnchorPane implements CategoryListener {
         }
     }
 
+   /* private void favoriteGrid(){
+        grid.getChildren().clear();
+        System.out.println("test funktion");
+
+
+        List<String> products = new ArrayList<>();
+
+        for (int i = 0; i > IMat.getInstance().getFavorites().size(); i++){
+            System.out.println("test in loop");
+            products.add(IMat.getInstance().getFavorites().get(i).toString());
+            System.out.println(products.get(i));
+
+        }
+
+    } */ //denna verkar inte hitta några items i IMat.getInstance().getFavorites().size() även om det finns faovriter.
+
 
     /**
      * Laddar startsidan med samtliga produkter + preloadar alla produkter och lägger in de i en cache.
      */
-    private void showAllItems(){
+    public void showAllItems(){
         List<ShoppingItem> shoppingItems = preloadShoppingItems();
         int i = 0;
         for (ShoppingItem item: shoppingItems) {
