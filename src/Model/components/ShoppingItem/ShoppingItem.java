@@ -4,18 +4,12 @@ import Model.IMat;
 import Model.components.Picker.Picker;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.CornerRadii;
-import javafx.scene.paint.Color;
 import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingCartListener;
@@ -42,7 +36,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
     public ShoppingItem(Product p){
         this.product = p;
-        item = new se.chalmers.cse.dat216.project.ShoppingItem(p);
+        item = IMat.getInstance().getShoppingCartItem(product);
         picker = new Picker(item);
 
         FXMLLoader fxmlLoader = initFXML();
@@ -53,6 +47,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
         //Lägger till picker så att den går att visas
         pickerPane.getChildren().add(picker);
+
 
         addEventListeners();
 
@@ -68,6 +63,9 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
         //sätter rätt stjärna
         updateStarButtonUI();
+        if(IMat.getInstance().shoppingCartContainsProduct(p)){
+            toggleItemIsSelected();
+        }
 
     }
 
@@ -102,10 +100,15 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
     }
 
-    private void onAddToCartButtonPressed() {
-        //visar att varan är lagd i varukorgen
+    private void toggleItemIsSelected(){
         rootPane.getStyleClass().add("selected");
         addToCartButton.setVisible(false);
+        showPlusMinus();
+    }
+
+    private void onAddToCartButtonPressed() {
+        //visar att varan är lagd i varukorgen
+        toggleItemIsSelected();
        // rootPane.setBackground(new Background(new BackgroundFill(Color.LIGHTGRAY, new CornerRadii(12), Insets.EMPTY)));
 
         //lägger en utav varan i varukorgen
@@ -180,6 +183,14 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
                 IMat.getInstance().getShoppingCart().removeItem(item);
             }
         }
+    }
 
+
+    public se.chalmers.cse.dat216.project.ShoppingItem getShoppingItem(){
+        return item;
+    }
+
+    public Product getProduct(){
+        return product;
     }
 }
