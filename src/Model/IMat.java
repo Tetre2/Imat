@@ -179,4 +179,13 @@ public class IMat {
     public IMatDataHandler getDataHandler() {
         return dataHandler;
     }
+
+    public boolean favoritesContainsProduct(Product product) {
+        for(Product favorite : getFavorites()){
+            if(favorite.getName().equals(product.getName())) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

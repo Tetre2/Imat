@@ -158,6 +158,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
         if (isFavorited()) {
             icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPathFavorite));
+            starButton.setVisible(true);
         } else {
             icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPathNoFavorite));
         }
@@ -166,7 +167,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
     }
 
     private boolean isFavorited(){
-        return IMat.getInstance().getFavorites().contains(product);
+        return IMat.getInstance().favoritesContainsProduct(product);
     }
 
     @Override
