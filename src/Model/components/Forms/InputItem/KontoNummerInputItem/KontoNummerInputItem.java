@@ -1,4 +1,4 @@
-package Model.components.Forms.InputItem.KontoInputItem;
+package Model.components.Forms.InputItem.KontoNummerInputItem;
 
 import Model.components.Forms.InputItem.isInputItem;
 import Model.components.Forms.NotValidInput;
@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class KontoInputItem extends AnchorPane implements ValidityCheckable, isInputItem {
+public class KontoNummerInputItem extends AnchorPane implements ValidityCheckable, isInputItem {
 
     @FXML
     private Label label;
@@ -27,7 +27,7 @@ public class KontoInputItem extends AnchorPane implements ValidityCheckable, isI
     private Focusable next;
     private List<LimitedTextField> limitedTextFields;
 
-    public KontoInputItem(Focusable next) {
+    public KontoNummerInputItem(Focusable next) {
         this.next = next;
         limitedTextFields = new ArrayList<>();
         FXMLLoader fxmlLoader = initFXML();
@@ -84,7 +84,7 @@ public class KontoInputItem extends AnchorPane implements ValidityCheckable, isI
     }
 
     private FXMLLoader initFXML() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("KontoInputItem.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("KontoNummerInputItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         return fxmlLoader;

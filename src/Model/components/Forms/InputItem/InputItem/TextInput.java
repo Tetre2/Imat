@@ -11,7 +11,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class InputItem extends AnchorPane implements Focusable, isInputItem {
+public class TextInput extends AnchorPane implements Focusable, isInputItem {
 
 
     @FXML
@@ -23,12 +23,12 @@ public class InputItem extends AnchorPane implements Focusable, isInputItem {
 
     private Focusable next;
 
-    public InputItem(String label, String preVeiwText, String tooltip, Focusable next) {
+    public TextInput(String label, String preVeiwText, String tooltip, Focusable next) {
         this(label,preVeiwText,tooltip, 0, next);
 
     }
 
-    public InputItem(String label, String preVeiwText, String tooltip, int width, Focusable next) {
+    public TextInput(String label, String preVeiwText, String tooltip, int width, Focusable next) {
         this.next = next;
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
@@ -72,7 +72,7 @@ public class InputItem extends AnchorPane implements Focusable, isInputItem {
     }
 
     private FXMLLoader initFXML() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("InputItem.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TextInput.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         return fxmlLoader;

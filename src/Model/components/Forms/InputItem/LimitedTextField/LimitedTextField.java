@@ -93,7 +93,8 @@ public class LimitedTextField extends AnchorPane implements Focusable {
     }
 
     private void clearErr() {
-        textField.getStyleClass().remove("textBoxErr");
+        textField.getStyleClass().clear();
+        textField.getStyleClass().addAll("text-field", "text-input");
     }
 
     private void showErr() {

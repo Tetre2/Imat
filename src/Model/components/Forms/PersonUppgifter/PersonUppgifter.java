@@ -1,6 +1,6 @@
 package Model.components.Forms.PersonUppgifter;
 
-import Model.components.Forms.InputItem.InputItem.InputItem;
+import Model.components.Forms.InputItem.InputItem.TextInput;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -26,13 +26,13 @@ public class PersonUppgifter extends AnchorPane {
         tryToLoadFXML(fxmlLoader);
 
         addEventListeners();
-        InputItem postaddress = new InputItem("Postadress:", "Göteborg", "Ange din postadress", null);
-        InputItem postcode = new InputItem("Postnummer:", "123 45", "Ange ditt postnummer", postaddress);
-        InputItem address = new InputItem("Adress:", "Långgatan 6", "Ange din adress", postcode);
-        InputItem email = new InputItem("Mejl:", "exempel@email.com", "Ange din mejl", address);
-        InputItem phone = new InputItem("Telefonnummer:", "123456789", "Ange ditt telefonnummer", email);
-        InputItem lastname = new InputItem("Efternamn:", "persson", "Ange ditt efternamn", phone);
-        InputItem firstname = new InputItem("Förnamn:", "Brit", "Ange ditt förnamn", lastname);
+        TextInput postaddress = new TextInput("Postadress:", "Göteborg", "Ange din postadress", null);
+        TextInput postcode = new TextInput("Postnummer:", "123 45", "Ange ditt postnummer", postaddress);
+        TextInput address = new TextInput("Adress:", "Långgatan 6", "Ange din adress", postcode);
+        TextInput email = new TextInput("Mejl:", "exempel@email.com", "Ange din mejl", address);
+        TextInput phone = new TextInput("Telefonnummer:", "123456789", "Ange ditt telefonnummer", email);
+        TextInput lastname = new TextInput("Efternamn:", "persson", "Ange ditt efternamn", phone);
+        TextInput firstname = new TextInput("Förnamn:", "Brit", "Ange ditt förnamn", lastname);
 
 
 

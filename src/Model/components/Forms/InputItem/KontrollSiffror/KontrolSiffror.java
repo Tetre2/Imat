@@ -1,6 +1,7 @@
 package Model.components.Forms.InputItem.KontrollSiffror;
 
 import Model.components.Forms.Focusable;
+import Model.components.Forms.NotValidInput;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TextField;
@@ -30,7 +31,8 @@ public class KontrolSiffror extends AnchorPane implements Focusable{
             if (isAtCharLength()) {
                 if (isValid()) {
                     clearErr();
-                    next.setFocus();
+                    if(next != null)
+                        next.setFocus();
                 }
             }
             if (textField.getText().length() > 3) {
@@ -66,8 +68,10 @@ public class KontrolSiffror extends AnchorPane implements Focusable{
     }
 
 
-    public void setTextFieldText(String text){
-        textField.setText(text);
+    public void setKontrolKod(int i){
+        if(i >= 0){
+            textField.setText(i + "");
+        }
     }
 
     private boolean isAtCharLength() {
@@ -76,11 +80,19 @@ public class KontrolSiffror extends AnchorPane implements Focusable{
     }
 
     public boolean isValid() {
+        try {
+            Integer.parseInt(textField.getText());
+            return true;
+        }catch (Exception e){
+            showErr();
+        }
+        showErr();
         return false;
     }
 
     private void clearErr() {
-        textField.getStyleClass().remove("textBoxErr");
+        textField.getStyleClass().clear();
+        textField.getStyleClass().addAll("text-field", "text-input");
     }
 
     private void showErr() {
@@ -92,12 +104,13 @@ public class KontrolSiffror extends AnchorPane implements Focusable{
         textField.requestFocus();
     }
 
-    public void setNext(Focusable next) {
-        this.next = next;
-    }
-
-    public String getInput() {
-        return textField.getText();
+    public int getInput() throws NotValidInput {
+        if(isValid()){
+            return Integer.parseInt(textField.getText());
+        }else {
+            showErr();
+            throw new NotValidInput();
+        }
     }
 
 }

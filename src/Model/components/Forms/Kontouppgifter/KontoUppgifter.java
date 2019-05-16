@@ -1,9 +1,10 @@
 package Model.components.Forms.Kontouppgifter;
 
 import Model.IMat;
-import Model.components.Forms.InputItem.InputItem.InputItem;
+import Model.components.Forms.InputItem.InputItem.TextInput;
+import Model.components.Forms.InputItem.KontrollSiffror.KontrolSiffror;
 import Model.components.Forms.InputItem.MonthYearInputItem.MonthYearInputItem;
-import Model.components.Forms.InputItem.KontoInputItem.KontoInputItem;
+import Model.components.Forms.InputItem.KontoNummerInputItem.KontoNummerInputItem;
 import Model.components.Forms.NotValidInput;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -27,10 +28,10 @@ public class KontoUppgifter extends AnchorPane {
 
     private CreditCard creditCard;
 
-    private InputItem kontrollSiffror;
+    private KontrolSiffror kontrollSiffror;
     private MonthYearInputItem monthYearInputItem;
-    private KontoInputItem kontonummer;
-    private InputItem kontoAgare;
+    private KontoNummerInputItem kontonummer;
+    private TextInput kontoAgare;
 
     public KontoUppgifter() {
         this.creditCard = IMat.getInstance().getCreditCard();
@@ -39,19 +40,17 @@ public class KontoUppgifter extends AnchorPane {
 
         addEventListeners();
 
-        kontrollSiffror = new InputItem("Kontrollsiffror:", "XXX", "Ange de tre kontrollsiffrorna", 100, null);
+        kontrollSiffror = new KontrolSiffror(null);
         monthYearInputItem = new MonthYearInputItem(kontrollSiffror);
-        kontonummer = new KontoInputItem(monthYearInputItem.getLimitedTextFields().get(0));
-        kontoAgare = new InputItem("Ägarens förnamn:", "Britt", "Ange ägarens förnamn till kontokortet", kontonummer.getLimitedTextFields().get(0));
+        kontonummer = new KontoNummerInputItem(monthYearInputItem);
+        kontoAgare = new TextInput("Ägarens förnamn:", "Britt", "Ange ägarens förnamn till kontokortet", kontonummer.getLimitedTextFields().get(0));
 
         flowPane.getChildren().add(kontoAgare);
         flowPane.getChildren().add(kontonummer);
         flowPane.getChildren().add(monthYearInputItem);
         flowPane.getChildren().add(kontrollSiffror);
 
-        System.out.println("CARD NUMBER: " + creditCard.getCardNumber());
-
-        kontrollSiffror.setText(creditCard.getVerificationCode() + "");
+        kontrollSiffror.setKontrolKod(creditCard.getVerificationCode());
         monthYearInputItem.setMonth(creditCard.getValidMonth() + "");
         monthYearInputItem.setYear(creditCard.getValidYear() + "");
         kontonummer.setCardNumber(creditCard.getCardNumber());
@@ -70,10 +69,11 @@ public class KontoUppgifter extends AnchorPane {
     }
 
     private void saveInfo(){
-        creditCard.setVerificationCode(Integer.parseInt(kontrollSiffror.getInput()));
+
         try {
-            creditCard.setValidMonth(Integer.parseInt(monthYearInputItem.getInput().split(" ")[0]));
-            creditCard.setValidYear(Integer.parseInt(monthYearInputItem.getInput().split(" ")[1]));
+            creditCard.setVerificationCode(kontrollSiffror.getInput());
+            creditCard.setValidMonth(monthYearInputItem.getMonth());
+            creditCard.setValidYear(monthYearInputItem.getYear());
             creditCard.setCardNumber(kontonummer.getInput());
             creditCard.setHoldersName(kontoAgare.getInput());
 
