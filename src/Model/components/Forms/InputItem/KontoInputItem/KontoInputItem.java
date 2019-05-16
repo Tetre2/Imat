@@ -40,14 +40,17 @@ public class KontoInputItem extends AnchorPane {
     }
 
     private void addEventListeners() {
-//cardNumber1
+        //cardNumber1
         //upptäcker om man skrivigt något i rutan
-        cardNumber1.focusedProperty().addListener((obs, wasFocused, isNowFocused) -> {
-            if(wasFocused){
-                if(!cardNumber1.getText().equals("")){
-                    System.out.println(cardNumber1.getText());
-                }
+        cardNumber1.textProperty().addListener((observable, oldValue, newValue) -> {
+            if(!cardNumber1.getText().equals("")){
+            if(cardNumber1.getText().length() == 4){
+                //cardNumber2.focusedProperty();
+                System.out.println("fdk");
+                cardNumber2.requestFocus();
             }
+            System.out.println(cardNumber1.getText());
+        }
         });
 
         //för att man ska kunna trycka enter
@@ -60,58 +63,43 @@ public class KontoInputItem extends AnchorPane {
 
         //cardNumber2
         //upptäcker om man skrivigt något i rutan
-        cardNumber2.focusedProperty().addListener((obs, wasFocused, isNowFocused) -> {
-            if(wasFocused){
-                if(!cardNumber2.getText().equals("")){
-                    System.out.println(cardNumber2.getText());
+        cardNumber2.textProperty().addListener((observable, oldValue, newValue) -> {
+            if(!cardNumber2.getText().equals("")){
+                if(cardNumber2.getText().length() == 4){
+                    //cardNumber2.focusedProperty();
+                    System.out.println("fdk");
+                    cardNumber3.requestFocus();
                 }
+                System.out.println(cardNumber2.getText());
             }
         });
-
-        //för att man ska kunna trycka enter
-        cardNumber2.setOnKeyPressed(ke -> {
-            if (ke.getCode().equals(KeyCode.ENTER)) {
-                if(!cardNumber2.getText().equals("")) {
-                    System.out.println(cardNumber2.getText());
-                }
-            }});
 
         //cardNumber3
         //upptäcker om man skrivigt något i rutan
-        cardNumber3.focusedProperty().addListener((obs, wasFocused, isNowFocused) -> {
-            if(wasFocused){
-                if(!cardNumber3.getText().equals("")){
-                    System.out.println(cardNumber3.getText());
+        cardNumber3.textProperty().addListener((observable, oldValue, newValue) -> {
+            if(!cardNumber3.getText().equals("")){
+                if(cardNumber3.getText().length() == 4){
+                    //cardNumber2.focusedProperty();
+                    System.out.println("fdk");
+                    cardNumber4.requestFocus();
                 }
+                System.out.println(cardNumber3.getText());
             }
         });
-
-        //för att man ska kunna trycka enter
-        cardNumber3.setOnKeyPressed(ke -> {
-            if (ke.getCode().equals(KeyCode.ENTER)) {
-                if(!cardNumber3.getText().equals("")) {
-                    System.out.println(cardNumber3.getText());
-                }
-            }});
 
 
         //cardNumber4
         //upptäcker om man skrivigt något i rutan
-        cardNumber4.focusedProperty().addListener((obs, wasFocused, isNowFocused) -> {
-            if(wasFocused){
-                if(!cardNumber4.getText().equals("")){
-                    System.out.println(cardNumber4.getText());
+        cardNumber4.textProperty().addListener((observable, oldValue, newValue) -> {
+            if(!cardNumber4.getText().equals("")){
+                if(cardNumber4.getText().length() == 4){
+                    //cardNumber2.focusedProperty();
+                    System.out.println("fdk");
+                    //cardNumber2.requestFocus();
                 }
+                System.out.println(cardNumber4.getText());
             }
         });
-
-        //för att man ska kunna trycka enter
-        cardNumber4.setOnKeyPressed(ke -> {
-            if (ke.getCode().equals(KeyCode.ENTER)) {
-                if(!cardNumber4.getText().equals("")) {
-                    System.out.println(cardNumber4.getText());
-                }
-            }});
     }
 
     private FXMLLoader initFXML() {
