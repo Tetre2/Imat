@@ -2,13 +2,14 @@ package Model.pages.Mainpage;
 
 import Model.IMat;
 import Model.components.LeftSidebar.LeftSidebar;
-import Model.components.LeftSidebar.LeftSidebarCategory.CategoryItem;
+import Model.components.LeftSidebar.LeftSidebarCategory.CategoryListener;
 import Model.components.LeftSidebar.LeftSidebarCategory.MainCategory;
 import Model.components.Navbar.Navbar;
 import Model.components.RightSidebar.RightSidebar;
 import Model.components.ShoppingItem.ShoppingItem;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import se.chalmers.cse.dat216.project.Product;
@@ -20,7 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MainPage extends AnchorPane{
+public class MainPage extends AnchorPane implements CategoryListener {
 
 
     @FXML
@@ -31,6 +32,8 @@ public class MainPage extends AnchorPane{
     AnchorPane varukorg;
     @FXML
     AnchorPane topNavBar;
+    @FXML
+    Label currentCategoryLabel;
 
     private IMat iMat;
     private LeftSidebar leftSidebar;
@@ -42,11 +45,11 @@ public class MainPage extends AnchorPane{
         tryToLoadFXML(fxmlLoader);
 
         //visa alla produkter
-        //showProductsGrid(iMat.getProducts());
+        showAllItems();
 
         leftSidebar = new LeftSidebar();
         LeftNavBar.getChildren().add(leftSidebar);
-        addCategoriesToLeftSideBar(leftSidebar);
+        leftSidebar.addCategoryListener(this);
         RightSidebar rightSidebar = new RightSidebar();
         varukorg.getChildren().add(rightSidebar);
 
@@ -71,35 +74,7 @@ public class MainPage extends AnchorPane{
         }
     }
 
-    private void addCategoriesToLeftSideBar(LeftSidebar leftSidebar){
-        for(MainCategory category : MainCategory.values()){
-            CategoryItem categoryItem = new CategoryItem(category);
-            categoryItem.setOnMouseClicked(event -> testEvent(category));
-            leftSidebar.addCategory(categoryItem);
-        }
-    }
 
-    private void testEvent(MainCategory mainCategory){
-        System.out.println("category: " + mainCategory.toString() + " was clicked");
-        updateGrid(mainCategory);
-        setMainCategoryFocused(mainCategory);
-    }
-
-    private void setMainCategoryFocused(MainCategory selectedCategory){
-        for(CategoryItem categoryItem: leftSidebar.getCategories()){
-                System.out.println("removing style");
-                categoryItem.getStyleClass().clear();
-                //In this way you're sure you have no styles applied to your object button
-                if(categoryItem.getCategory().equals(selectedCategory)){
-                    categoryItem.getStyleClass().add("anchor-container-focused");
-                }else{
-                    categoryItem.getStyleClass().add("anchor-container-normal");
-                }
-
-                //then you specify the class you would give to the button
-
-        }
-    }
 
     //cache used for storing shopping items in order to not generate new ones.
     //Creating new objects all the time consumes a high amount of ram because of the product-image.
@@ -122,6 +97,19 @@ public class MainPage extends AnchorPane{
         return shoppingItems;
     }
 
+    public List<ShoppingItem> preloadShoppingItems(){
+        List<ShoppingItem> shoppingItems = new ArrayList<>();
+        for(MainCategory mainCategory: MainCategory.values()) {
+            List<ShoppingItem> currentItems = new ArrayList<>();
+            for (Product product : mainCategory.getProducts()) {
+                ShoppingItem shoppingItem = new ShoppingItem(product);
+                currentItems.add(shoppingItem);
+                shoppingItems.add(shoppingItem);
+            }
+            cachedShoppingItems.put(mainCategory,currentItems);
+        }
+        return shoppingItems;
+    }
 
     public void updateGrid(MainCategory mainCategory){
 
@@ -139,15 +127,25 @@ public class MainPage extends AnchorPane{
     }
 
 
-    private void showProductsGrid(List<Product> products){
+    /**
+     * Laddar startsidan med samtliga produkter + preloadar alla produkter och lägger in de i en cache.
+     */
+    private void showAllItems(){
+        List<ShoppingItem> shoppingItems = preloadShoppingItems();
+        int i = 0;
+        for (ShoppingItem item: shoppingItems) {
 
-        for (int i = 0; i < products.size(); i++) {
-            ShoppingItem shoppingItem = new ShoppingItem(products.get(i));
-
-            grid.setConstraints(shoppingItem, i%4, i/4);
-            grid.getChildren().add(shoppingItem);
-
+            grid.setConstraints(item, i%4, i/4);
+            grid.getChildren().add(item);
+            i++;
         }
     }
 
+    //todo - change product category name - center
+    @Override
+    public void categoryChanged(MainCategory mainCategory) {
+            System.out.println("category: " + mainCategory.toString() + " was clicked");
+            updateGrid(mainCategory);
+            currentCategoryLabel.setText(mainCategory.toString());
+    }
 }

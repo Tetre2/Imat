@@ -1,15 +1,25 @@
 /*** CategoryItem ***/
 .anchor-container-normal {
     -fx-border-style: solid;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 5px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
 }
 .anchor-container-focused {
-    -fx-border-style: solid;
-    -fx-background-color: green;
+    -fx-background-color: #03A678;
+    -fx-background-radius: 10px;
 }
 
 
 .anchor-container-normal:hover{
-    -fx-background-color: #000000;
+    -fx-background-color: #c2c2c2;
+    -fx-background-radius: 10px;
+}
+
+#category_name{
+    -fx-font: 32px Tahoma;
 }
 
 

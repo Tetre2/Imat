@@ -23,16 +23,12 @@ public class CategoryItem extends AnchorPane {
         tryToLoadFXML(fxmlLoader);
         this.category = category;
         this.categoryName.setText(category.name);
-        addEventListeners();
 
 
     }
 
 
-    private void addEventListeners() {
-        //categoryPane.setOnMouseClicked(e -> mainPage.updateGrid(category));
 
-    }
 
     private FXMLLoader initFXML() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CategoryItem.fxml"));
@@ -47,6 +43,10 @@ public class CategoryItem extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+    }
+
+    public Label getCategoryName(){
+        return categoryName;
     }
 
     public MainCategory getCategory(){

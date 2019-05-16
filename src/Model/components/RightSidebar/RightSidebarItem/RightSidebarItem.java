@@ -37,7 +37,9 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
-       test.setText(shoppingItem.getAmount() + "");
+        test.setText(shoppingItem.getAmount() + "");
+
+        //IMat.getInstance().getShoppingCart().addShoppingCartListener(this);
 
         addEventListeners();
 
@@ -68,13 +70,15 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
 
     public void onClosePressed(){
         shoppingItem.setAmount(0);
-        IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
-        //IMat.getInstance().getShoppingCart().removeItem(shoppingItem);
+        //IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+        IMat.getInstance().getShoppingCart().removeItem(shoppingItem);
     }
 
 
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
+        test.setText(shoppingItem.getAmount()+"");
+        System.out.println("fdlö");
         //amount.getValueFactory().setValue( (int) shoppingItem.getAmount()); funkar inte
     }
 }

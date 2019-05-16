@@ -4,14 +4,18 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<fx:root minHeight="48.0" minWidth="200.0" prefWidth="200.0" styleClass="anchor-container-normal" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root minHeight="48.0" minWidth="200.0" prefHeight="65.0" prefWidth="230.0" styleClass="anchor-container-normal" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <stylesheets>
         <URL value="@CategoryItem.css" />
         <URL value="@../../../../styles.css" />
     </stylesheets>
    <children>
-      <Label fx:id="categoryName" layoutX="47.0" layoutY="16.0" prefHeight="17.0" prefWidth="133.0" text="CategoryName" />
+      <Label id="category_name" fx:id="categoryName" layoutX="20.0" layoutY="10.0" prefHeight="36.0" prefWidth="236.0" style="-fx-border-type: solid;" styleClass=".category_name" text="Frukt &amp; Grönt" textFill="#194b42">
+         <font>
+            <Font name="Tahoma" size="55.0" />
+         </font></Label>
    </children>
    <cursor>
       <Cursor fx:constant="HAND" />

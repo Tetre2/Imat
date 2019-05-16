@@ -12,21 +12,22 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<fx:root id="recipeRootAnchorPane" fx:id="rootPane" maxHeight="285.0" prefHeight="235.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-width: 1;" styleClass="anchor-container" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root id="recipeRootAnchorPane" fx:id="rootPane" maxHeight="280.0" maxWidth="300.0" minHeight="280.0" minWidth="193.0" prefHeight="280.0" prefWidth="193.0" styleClass="anchor-container" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox alignment="TOP_CENTER" layoutX="-2.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="209.0" prefWidth="152.0" styleClass="container">
+      <VBox alignment="TOP_CENTER" layoutX="16.0" layoutY="39.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="155.0" prefWidth="158.0" styleClass="container">
          <children>
             <StackPane maxWidth="150.0" prefHeight="105.0" prefWidth="142.0" styleClass="image">
                <children>
-                  <ImageView fx:id="image" fitHeight="142.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="image" fitHeight="142.0" fitWidth="147.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../resources/product_8.jpg" />
                      </image>
                   </ImageView>
                </children>
             </StackPane>
-            <Label fx:id="name" alignment="CENTER" prefHeight="27.0" prefWidth="124.0" text="Grovt bröd">
+            <Label fx:id="name" alignment="CENTER" prefHeight="27.0" prefWidth="124.0" text="Grovt bröd" textFill="#03a678">
                <styleClass>
                   <String fx:value="text" />
                   <String fx:value="text-md" />
@@ -34,16 +35,19 @@
                <VBox.margin>
                   <Insets top="4.0" />
                </VBox.margin>
+               <font>
+                  <Font name="Tahoma" size="12.0" />
+               </font>
             </Label>
-            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="119.0" spacing="4.0">
+            <HBox alignment="CENTER" maxHeight="30.0" maxWidth="99.0" minHeight="30.0" minWidth="30.0" prefHeight="30.0" prefWidth="99.0" spacing="4.0">
                <children>
-                  <Label fx:id="price" prefHeight="35.0" prefWidth="46.0" text="23,9">
+                  <Label fx:id="price" alignment="TOP_RIGHT" contentDisplay="RIGHT" maxHeight="30.0" maxWidth="89.0" minHeight="30.0" minWidth="30.0" prefHeight="30.0" prefWidth="89.0" text="23,9" textAlignment="RIGHT">
                      <styleClass>
                         <String fx:value="text" />
                         <String fx:value="text-lg" />
                      </styleClass>
                   </Label>
-                  <Label fx:id="unit" prefHeight="35.0" prefWidth="49.0" text="/st">
+                  <Label fx:id="unit" prefHeight="35.0" prefWidth="50.0" text="/st" textAlignment="CENTER">
                      <styleClass>
                         <String fx:value="text" />
                         <String fx:value="text-xs" />
@@ -51,7 +55,7 @@
                   </Label>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="15.0" prefWidth="123.0">
+            <HBox alignment="CENTER" maxHeight="120.0" minHeight="10.0" prefHeight="15.0" prefWidth="123.0">
                <children>
                   <Label text="jmf-pris ">
                      <styleClass>
@@ -79,32 +83,29 @@
                   </Label>
                </children>
             </HBox>
-            <Button fx:id="addToCartButton" alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="37.0" prefWidth="139.0" text="Lägg i kundvagn">
-               <VBox.margin>
-                  <Insets top="6.0" />
-               </VBox.margin>
-               <styleClass>
-                  <String fx:value="btn-primary" />
-                  <String fx:value="bg-primary" />
-               </styleClass>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
          </children>
       </VBox>
-      <AnchorPane fx:id="pickerPane" layoutY="183.0" prefHeight="52.0" prefWidth="150.0" style="-fx-background-color: white;" />
+      <Button fx:id="addToCartButton" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="230.0" maxHeight="10.0" maxWidth="10.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="150.0" text="Lägg i kundvagn">
+         <styleClass>
+            <String fx:value="btn-primary" />
+            <String fx:value="bg-primary" />
+         </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <AnchorPane fx:id="pickerPane" layoutX="20.0" layoutY="223.0" maxHeight="54.0" maxWidth="155.0" minHeight="10.0" minWidth="10.0" prefHeight="47.0" prefWidth="155.0" />
       <Button fx:id="starButton" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="btn-nostyle">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
          <graphic>
-            <ImageView fx:id="starImageview" fitHeight="35.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" styleClass="btn-nostyle" translateX="5.0" translateY="5.0">
+            <ImageView fx:id="starImageview" fitHeight="35.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" styleClass="btn-nostyle">
                <image>
                   <Image url="@../../resources/star-unchecked.png" />
                </image>
             </ImageView>
          </graphic>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
       </Button>
    </children>
    <stylesheets>

@@ -1,10 +1,25 @@
 /*** Shopping item ***/
 .anchor-container {
-    -fx-border-radius: 12;
+    -fx-background-color: white;
+    -fx-border-with: 1px;
+    -fx-border-color:  #535353;
+    -fx-border-radius: 10;
+    -fx-background-color-radius: 1px;
+    -fx-start-margin: 10px;
+    -fx-padding: 5px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+}
+.selected {
+    -fx-background-color: #d2d2d2;
+    -fx-background-radius: 10;
+    -fx-border-type: solid;
+    -fx-border-color: #03A678;
+    -fx-border-width: 3;
+
 }
 
 .container {
-    -fx-padding: 4;
 }
 
 .image {

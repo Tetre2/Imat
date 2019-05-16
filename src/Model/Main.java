@@ -1,6 +1,7 @@
 package Model;
 
 import Model.pages.Checkout.Checkout;
+import Model.pages.Favoriter.Favoriter;
 import Model.pages.Historik.Historik;
 import Model.pages.Hjalp.Hjalp;
 import Model.pages.Mainpage.MainPage;
@@ -24,6 +25,7 @@ public class Main extends Application {
     private static Historik historik;
     private static MinaSidor minaSidor;
     private static Hjalp hjalp;
+    private static Favoriter favoriter;
 
 
     @Override
@@ -41,6 +43,7 @@ public class Main extends Application {
         historik = new Historik();
         minaSidor = new MinaSidor();
         hjalp = new Hjalp();
+        favoriter = new Favoriter();
 
         setSceneToMainPage();
         window.show();
@@ -50,6 +53,13 @@ public class Main extends Application {
     public static void setSceneToMinaSidor(){
         Group group = new Group();
         group.getChildren().add(minaSidor);
+        Scene scene = new Scene(group);
+        window.setScene(scene);
+    }
+
+    public static void setSceneToFavoriter(){
+        Group group = new Group();
+        group.getChildren().add(favoriter);
         Scene scene = new Scene(group);
         window.setScene(scene);
     }

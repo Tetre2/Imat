@@ -4,18 +4,12 @@ import Model.IMat;
 import Model.components.Picker.Picker;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.CornerRadii;
-import javafx.scene.paint.Color;
 import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingCartListener;
@@ -42,7 +36,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
     public ShoppingItem(Product p){
         this.product = p;
-        item = new se.chalmers.cse.dat216.project.ShoppingItem(p);
+        item = IMat.getInstance().getShoppingCartItem(product);
         picker = new Picker(item);
 
         FXMLLoader fxmlLoader = initFXML();
@@ -53,6 +47,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
         //Lägger till picker så att den går att visas
         pickerPane.getChildren().add(picker);
+
 
         addEventListeners();
 
@@ -68,6 +63,9 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
         //sätter rätt stjärna
         updateStarButtonUI();
+        if(IMat.getInstance().shoppingCartContainsProduct(p)){
+            toggleItemIsSelected();
+        }
 
     }
 
@@ -102,16 +100,27 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
     }
 
+    private void toggleItemIsSelected(){
+        rootPane.getStyleClass().add("selected");
+        addToCartButton.setVisible(false);
+        showPlusMinus();
+    }
+
     private void onAddToCartButtonPressed() {
         //visar att varan är lagd i varukorgen
-        rootPane.setBackground(new Background(new BackgroundFill(Color.LIGHTGRAY, CornerRadii.EMPTY, Insets.EMPTY)));
+        toggleItemIsSelected();
+       // rootPane.setBackground(new Background(new BackgroundFill(Color.LIGHTGRAY, new CornerRadii(12), Insets.EMPTY)));
 
-        addToShoppingCart();
+        //lägger en utav varan i varukorgen
+        item.setAmount(1);
+        IMat.getInstance().getShoppingCart().addItem(item);
 
         //debugging ändast
         shopingDebugg();
 
         showPlusMinus();
+
+
     }
 
     private void showPlusMinus(){
@@ -149,6 +158,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
         if (isFavorited()) {
             icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPathFavorite));
+            starButton.setVisible(true);
         } else {
             icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPathNoFavorite));
         }
@@ -157,30 +167,31 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
     }
 
     private boolean isFavorited(){
-        return IMat.getInstance().getFavorites().contains(product);
-    }
-
-    private void addToShoppingCart(){
-        //lägger en utav varan i varukorgen
-        item.setAmount(1);
-        IMat.getInstance().getShoppingCart().addItem(item);
-    }
-
-    private void removeFromShoppingCart(){
-        rootPane.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
-        IMat.getInstance().getShoppingCart().removeItem(item);
-        hidePlusMinus();
+        return IMat.getInstance().favoritesContainsProduct(product);
     }
 
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
 
         if(item.getAmount() == 0 && pickerPane.isVisible()){ //sker när man klickar på krysset från varukorgen
-            pickerPane.setVisible(false);
+
+            hidePlusMinus();
+            rootPane.getStyleClass().clear();
+            rootPane.getStyleClass().add("anchor-container");
+            addToCartButton.setVisible(true);
+
             if(IMat.getInstance().getShoppingCartItems().contains(item)){
-                removeFromShoppingCart();
+                IMat.getInstance().getShoppingCart().removeItem(item);
             }
         }
+    }
 
+
+    public se.chalmers.cse.dat216.project.ShoppingItem getShoppingItem(){
+        return item;
+    }
+
+    public Product getProduct(){
+        return product;
     }
 }
