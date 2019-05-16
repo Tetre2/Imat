@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<fx:root maxHeight="45.0" maxWidth="145.0" minHeight="40.0" minWidth="155.0" prefHeight="45.0" prefWidth="155.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="45.0" maxWidth="145.0" minHeight="40.0" minWidth="155.0" prefHeight="45.0" prefWidth="155.0" style="-fx-border-style: solid; -fx-border-color: black; -fx-background-color: white;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <stylesheets>
       <URL value="@Picker.css" />
       <URL value="@../../../styles.css" />
@@ -58,9 +58,6 @@
                </cursor>
             </Button>
          </children>
-         <padding>
-            <Insets top="3.0" />
-         </padding>
       </HBox>
    </children>
 </fx:root>
