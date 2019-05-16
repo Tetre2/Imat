@@ -29,7 +29,6 @@ public class PersonUppgifter extends AnchorPane {
         flowPane.getChildren().add(new InputItem("Adress:", "Långgatan 6", "Ange din adress"));
         flowPane.getChildren().add(new InputItem("Postnummer:", "123 45", "Ange ditt postnummer"));
         flowPane.getChildren().add(new InputItem("Postadress:", "Göteborg", "Ange din postadress"));
-
     }
 
     private void addEventListeners() {

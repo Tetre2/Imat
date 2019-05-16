@@ -1,11 +1,14 @@
 package Model.pages.Checkout;
 
 import Model.IMat;
+import Model.components.Forms.Kontouppgifter.KontoUppgifter;
+import Model.components.Forms.PersonUppgifter.PersonUppgifter;
 import Model.components.Navbar.Navbar;
 import Model.pages.Checkout.ShoppingCheckout.ShoppingCheckout;
 import Model.components.TitledSection.TitledSection;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
@@ -22,18 +25,18 @@ public class Checkout extends AnchorPane {
 
     @FXML private AnchorPane varukorgContainerAnchorPane;
     @FXML
-    private VBox content;
+    private VBox varukorgContainerVBox;
     @FXML private AnchorPane topNavBar;
 
     public Checkout(){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
         addEventListeners();
+
+        initUI();
     }
 
     public void initUI() {
-        clearUI();
-
         TopNav.getChildren().add(new Navbar());
 
         createVarukorgUI();
@@ -41,13 +44,25 @@ public class Checkout extends AnchorPane {
     }
 
     private void createPaymentUI() {
+        paymentContainerVBox.setSpacing(20.0);
+
         Button goToVarukorgButton = new Button();
         goToVarukorgButton.setText("<-- Gå Tillbaka till Varukorgen");
         goToVarukorgButton.getStyleClass().add("btn-primary");
-        goToVarukorgButton.setOnAction(e -> IMat.getInstance().setSceneToMainPage());
+        goToVarukorgButton.setOnAction(e -> goToVarukorgStep());
         HBox goToVarukorgHBox = new HBox();
         goToVarukorgHBox.setAlignment(Pos.CENTER_LEFT);
         goToVarukorgHBox.getChildren().add(goToVarukorgButton);
+
+        TitledSection titledSectionPerson = new TitledSection("Kontrollera dina personuppgifter");
+        titledSectionPerson.addNode(new PersonUppgifter());
+
+        TitledSection titledSectionKonto = new TitledSection("Gör din beställning");
+        titledSectionKonto.addNode(new KontoUppgifter());
+
+        paymentContainerVBox.getChildren().add(goToVarukorgHBox);
+        paymentContainerVBox.getChildren().add(titledSectionPerson);
+        paymentContainerVBox.getChildren().add(titledSectionKonto);
     }
 
     private void createVarukorgUI() {
@@ -73,17 +88,17 @@ public class Checkout extends AnchorPane {
         goToPaymentHBox.setAlignment(Pos.CENTER_RIGHT);
         goToPaymentHBox.getChildren().add(goToPaymentButton);
 
-        content.getChildren().add(continueShoppingHBox);
-        content.getChildren().add(varukorgSection);
-        content.getChildren().add(goToPaymentHBox);
+        varukorgContainerVBox.getChildren().add(continueShoppingHBox);
+        varukorgContainerVBox.getChildren().add(varukorgSection);
+        varukorgContainerVBox.getChildren().add(goToPaymentHBox);
     }
 
     private void goToPaymentStep() {
         paymentContainerAnchorPane.toFront();
     }
 
-    private void clearUI() {
-        content.getChildren().clear();
+    private void goToVarukorgStep() {
+        varukorgContainerAnchorPane.toFront();
     }
 
     private FXMLLoader initFXML() {

@@ -51,6 +51,11 @@
     -fx-background-color: #03A678;
 }
 
+.btn-primary:hover {
+    -fx-background-color: #03b280;
+    -fx-cursor: hand;
+}
+
 .btn-nostyle {
     -fx-border-color: transparent;
     -fx-border-width: 0;

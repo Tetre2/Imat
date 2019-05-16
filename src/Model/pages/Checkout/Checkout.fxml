@@ -32,7 +32,7 @@
                      <content>
                         <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="1438.0">
                            <children>
-                              <VBox fx:id="content" alignment="TOP_CENTER" prefHeight="886.0" prefWidth="1050.0">
+                              <VBox fx:id="varukorgContainerVBox" alignment="TOP_CENTER" prefHeight="886.0" prefWidth="1050.0">
                                  <padding>
                                     <Insets left="90.0" right="90.0" top="30.0" />
                                  </padding>

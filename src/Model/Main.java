@@ -80,8 +80,6 @@ public class Main extends Application {
 
 
     public static void setSceneToCheckout(){
-        checkout.initUI();
-
         Group group = new Group();
         group.getChildren().add(checkout);
         Scene scene = new Scene(group);

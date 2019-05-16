@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d94ad86-8790-4968-90d1-3cc3b9ff746a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Model/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/Forms/PersonUppgifter/PersonUppgifter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Forms/PersonUppgifter/PersonUppgifter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/pages/Checkout/Checkout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Checkout/Checkout.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/pages/Checkout/Checkout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/Checkout/Checkout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/pages/MinaSidor/MinaSidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/pages/MinaSidor/MinaSidor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,31 +20,31 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="css" value="2" />
+          <entry key="css" value="3" />
           <entry key="fxml" value="10" />
-          <entry key="java" value="10" />
+          <entry key="java" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="CSS" value="2" />
-          <entry key="JAVA" value="10" />
+          <entry key="CSS" value="3" />
+          <entry key="JAVA" value="13" />
           <entry key="XML" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="31" />
-          <entry key="fxml" value="4" />
-          <entry key="java" value="980" />
+          <entry key="css" value="78" />
+          <entry key="fxml" value="27" />
+          <entry key="java" value="1160" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="31" />
-          <entry key="JAVA" value="980" />
-          <entry key="XML" value="4" />
+          <entry key="CSS" value="78" />
+          <entry key="JAVA" value="1160" />
+          <entry key="XML" value="27" />
         </counts>
       </usages-collector>
     </session>
@@ -52,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/pages/MinaSidor/MinaSidor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="35" column="25" selection-start-line="35" selection-end-line="36" />
+            <state relative-caret-position="323">
+              <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="33" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -61,7 +63,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/pages/MinaSidor/MinaSidor.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
+            <state relative-caret-position="170">
               <caret line="10" column="36" selection-start-line="10" selection-end-line="11" />
             </state>
           </provider>
@@ -69,24 +71,56 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="77" column="31" lean-forward="true" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/IMat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1615">
+              <caret line="127" selection-start-line="127" selection-end-line="127" />
+              <folding>
+                <element signature="e#2938#2939#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/pages/Checkout/Checkout.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="73" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
+            <state relative-caret-position="362">
+              <caret line="40" column="31" lean-forward="true" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/pages/Checkout/Checkout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="17">
+              <caret line="22" column="14" selection-start-line="21" selection-start-column="53" selection-end-line="22" selection-end-column="14" />
               <folding>
                 <element signature="e#1886#1887#0" expanded="true" />
                 <element signature="e#1927#1928#0" expanded="true" />
+                <element signature="e#3570#3571#0" expanded="true" />
+                <element signature="e#3623#3624#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -99,15 +133,6 @@
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/PersonUppgifter/PersonUppgifter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="39" column="71" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
-            </state>
-          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -146,6 +171,11 @@
       <find>varukorgScrollPane</find>
       <find>styles</find>
       <find>top</find>
+      <find>content</find>
+      <find>spacing</find>
+      <find>createPaymentUI</find>
+      <find>initUI</find>
+      <find>initUIinitUI</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -172,8 +202,11 @@
         <option value="$PROJECT_DIR$/src/Model/pages/Checkout/ShoppingCartIsEmpty/ShoppingCartIsEmpty.java" />
         <option value="$PROJECT_DIR$/src/Model/pages/Checkout/ShoppingCheckout/ShoppingCheckout.java" />
         <option value="$PROJECT_DIR$/src/Model/pages/MinaSidor/MinaSidor.java" />
-        <option value="$PROJECT_DIR$/src/Model/pages/Checkout/Checkout.java" />
         <option value="$PROJECT_DIR$/src/Model/pages/Checkout/Checkout.fxml" />
+        <option value="$PROJECT_DIR$/src/Model/components/Forms/PersonUppgifter/PersonUppgifter.java" />
+        <option value="$PROJECT_DIR$/src/Model/Main.java" />
+        <option value="$PROJECT_DIR$/src/Model/pages/Checkout/Checkout.java" />
+        <option value="$PROJECT_DIR$/src/styles.css" />
       </list>
     </option>
   </component>
@@ -275,7 +308,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="personuppgifter&#9;FILE&#9;file://C:/Users/Joel Rudsberg/OneDrive/Ongoing Projects/Chalmers/Year1_LP4/Design &amp; Konstruktion/Imat/src/Model/components/Forms/PersonUppgifter" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558001349872" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558002315759" />
     <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RunDashboard">
@@ -328,7 +361,7 @@
     <frame x="-7" y="-7" width="1842" height="1002" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17320628" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17320628" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -337,7 +370,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32988507" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32988507" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -474,13 +507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="38" column="32" lean-forward="true" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/components/RightSidebar/RightSidebar.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -488,13 +514,6 @@
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/IMat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1133">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/pages/Checkout/ShoppingCheckout/ShoppingCheckoutDetails/ShoppingCheckoutDetails.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -557,17 +576,28 @@
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/PersonUppgifter/PersonUppgifter.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/pages/MinaSidor/MinaSidor.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="39" column="71" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
+        <state relative-caret-position="170">
+          <caret line="10" column="36" selection-start-line="10" selection-end-line="11" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/pages/MinaSidor/MinaSidor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="33" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles.css">
+    <entry file="file://$PROJECT_DIR$/src/Model/pages/Checkout/Checkout.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510" />
+        <state relative-caret-position="362">
+          <caret line="40" column="31" lean-forward="true" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+        </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingItem/shoppingItem.fxml">
       <provider selected="true" editor-type-id="text-editor">
@@ -577,37 +607,47 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/pages/MinaSidor/MinaSidor.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="10" column="36" selection-start-line="10" selection-end-line="11" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/pages/MinaSidor/MinaSidor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="35" column="25" selection-start-line="35" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/pages/Checkout/Checkout.fxml">
+    <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/PersonUppgifter/PersonUppgifter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="73" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/IMat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
+          <folding>
+            <element signature="e#2938#2939#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="77" column="31" lean-forward="true" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/pages/Checkout/Checkout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="17">
+          <caret line="22" column="14" selection-start-line="21" selection-start-column="53" selection-end-line="22" selection-end-column="14" />
           <folding>
             <element signature="e#1886#1887#0" expanded="true" />
             <element signature="e#1927#1928#0" expanded="true" />
+            <element signature="e#3570#3571#0" expanded="true" />
+            <element signature="e#3623#3624#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
         </state>
       </provider>
     </entry>
