@@ -1,6 +1,5 @@
-package Model.components.Forms.InputItem;
+package Model.components.Forms.InputItem.InputItem;
 
-import Model.IMat;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -17,16 +16,26 @@ public class InputItem extends AnchorPane {
     private TextField textField;
     @FXML
     private Label label;
+    @FXML
+    private Label tooltip;
 
-    public InputItem(String label, String preVeiwText) {
+    public InputItem(String label, String preVeiwText, String tooltip) {
+        this(label,preVeiwText,tooltip, 0);
 
+    }
+    public InputItem(String label, String preVeiwText, String tooltip, int width) {
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
+
+        if(width != 0){
+            textField.setMaxWidth(width);
+        }
+
         this.label.setText(label);
+        this.tooltip.setText(tooltip);
         textField.setPromptText(preVeiwText);
 
         addEventListeners();
-
     }
 
     private void addEventListeners() {
