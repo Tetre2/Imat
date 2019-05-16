@@ -22,5 +22,10 @@
          </font>
       </Button>
       <FlowPane fx:id="flowPane" layoutX="70.0" layoutY="12.0" prefHeight="663.0" prefWidth="681.0" />
+      <AnchorPane fx:id="gray" prefHeight="806.0" prefWidth="1000.0" style="-fx-background-color: rgb(116,116,116,0.76);" visible="false">
+         <children>
+            <AnchorPane fx:id="err" layoutX="275.0" layoutY="214.0" prefHeight="378.0" prefWidth="451.0" style="-fx-background-color: white;" />
+         </children>
+      </AnchorPane>
    </children>
 </fx:root>

@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root prefHeight="700.0" prefWidth="1000.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="547.0" prefWidth="1000.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" layoutX="387.0" layoutY="547.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="193.0" text="Spara">
+      <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" layoutX="404.0" layoutY="447.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="193.0" text="Spara">
          <styleClass>
             <String fx:value="btn-primary" />
             <String fx:value="bg-primary" />
@@ -21,6 +21,11 @@
             <Font size="24.0" />
          </font>
       </Button>
-      <FlowPane fx:id="flowPane" layoutX="80.0" layoutY="22.0" prefHeight="663.0" prefWidth="681.0" />
+      <FlowPane fx:id="flowPane" layoutX="80.0" layoutY="22.0" prefHeight="389.0" prefWidth="681.0" />
+      <AnchorPane fx:id="gray" layoutY="-3.0" prefHeight="547.0" prefWidth="1010.0" style="-fx-background-color: rgb(116,116,116,0.76);" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="err" layoutX="272.0" layoutY="53.0" prefHeight="378.0" prefWidth="451.0" style="-fx-background-color: white;" />
+         </children>
+      </AnchorPane>
    </children>
 </fx:root>

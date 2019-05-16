@@ -1,0 +1,10 @@
+.textBoxErr {
+    -fx-border-type: solid;
+    -fx-border-color: #ff0000;
+    -fx-border-radius: 3;
+    -fx-border-width: 3;
+}
+
+.text-field{
+
+}
