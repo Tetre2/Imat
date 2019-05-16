@@ -16,7 +16,7 @@
 
 <fx:root id="recipeRootAnchorPane" fx:id="rootPane" maxHeight="280.0" maxWidth="300.0" minHeight="280.0" minWidth="193.0" prefHeight="280.0" prefWidth="193.0" styleClass="anchor-container" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox alignment="TOP_CENTER" layoutX="16.0" layoutY="39.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="238.0" prefWidth="158.0" styleClass="container">
+      <VBox alignment="TOP_CENTER" layoutX="16.0" layoutY="39.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="155.0" prefWidth="158.0" styleClass="container">
          <children>
             <StackPane maxWidth="150.0" prefHeight="105.0" prefWidth="142.0" styleClass="image">
                <children>
@@ -94,7 +94,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <AnchorPane fx:id="pickerPane" layoutX="20.0" layoutY="226.0" maxHeight="54.0" maxWidth="155.0" minHeight="10.0" minWidth="10.0" prefHeight="47.0" prefWidth="155.0" />
+      <AnchorPane fx:id="pickerPane" layoutX="20.0" layoutY="223.0" maxHeight="54.0" maxWidth="155.0" minHeight="10.0" minWidth="10.0" prefHeight="47.0" prefWidth="155.0" />
       <Button fx:id="starButton" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="btn-nostyle">
          <cursor>
             <Cursor fx:constant="HAND" />
