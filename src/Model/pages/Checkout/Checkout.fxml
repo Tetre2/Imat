@@ -1,20 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
 <fx:root prefHeight="900.0" prefWidth="1440.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ScrollPane prefHeight="900.0" prefWidth="1440.0">
-         <content>
-            <VBox fx:id="content" alignment="TOP_CENTER" prefHeight="886.0" prefWidth="1438.0">
-               <padding>
-                  <Insets left="90.0" right="90.0" top="30.0" />
-               </padding>
-            </VBox>
-         </content>
-      </ScrollPane>
+      <AnchorPane fx:id="TopNav" prefHeight="100.0" prefWidth="1440.0" AnchorPane.topAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <StackPane fx:id="containerStackPane" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <AnchorPane fx:id="paymentContainerAnchorPane" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ScrollPane fx:id="paymentScrollPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="1426.0">
+                           <children>
+                              <VBox fx:id="paymentContainerVBox" prefHeight="100.0" prefWidth="1050.0" />
+                           </children>
+                        </HBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="varukorgContainerAnchorPane" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ScrollPane fx:id="varukorgScrollPane" prefHeight="694.0" prefWidth="1159.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="1438.0">
+                           <children>
+                              <VBox fx:id="content" alignment="TOP_CENTER" prefHeight="886.0" prefWidth="1050.0">
+                                 <padding>
+                                    <Insets left="90.0" right="90.0" top="30.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
    </children>
+   <stylesheets>
+      <URL value="@../../../styles.css" />
+   </stylesheets>
 </fx:root>
