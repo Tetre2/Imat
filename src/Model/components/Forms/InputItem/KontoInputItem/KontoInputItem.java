@@ -68,10 +68,13 @@ public class KontoInputItem extends AnchorPane implements ValidityCheckable, isI
         if(!cardNumber.equals("")){
             int start = 0;
             for (int i = 1; i <= 4; i++) {
-                arr[i-1] = cardNumber.substring(start, i*4);
+                try {
+                    arr[i-1] = cardNumber.substring(start, i*4);
+                }catch (Exception e){
+                    arr[i-1] = "";
+                }
                 start = i*4;
             }
-
         }
 
         for (int i = 0; i < limitedTextFields.size(); i++) {
