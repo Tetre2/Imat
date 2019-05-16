@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<fx:root id="titledSectionRootAnchorPane" fx:id="rootPane" prefHeight="350.0" prefWidth="500.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root id="titledSectionRootAnchorPane" fx:id="rootPane" prefHeight="350.0" maxWidth="500.0" prefWidth="500.0" styleClass="payment-container" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <stylesheets>
         <URL value="@../../../../styles.css" />
         <URL value="@./PaymentDoneBox.css" />
@@ -18,7 +18,7 @@
          <children>
             <Label styleClass="text-xl" text="Tack för ditt köp" />
             <Label alignment="CENTER" prefHeight="111.0" prefWidth="328.0" styleClass="text-md" text="Köpet har gått igenom och du kommer få dina produkter inom kort." textAlignment="CENTER" wrapText="true" />
-            <HBox alignment="CENTER" prefHeight="75.0" prefWidth="500.0" spacing="30.0">
+            <HBox alignment="CENTER" maxWidth="500.0" prefHeight="75.0" prefWidth="500.0" spacing="30.0">
                <children>
                   <Button fx:id="shopMoreButton" mnemonicParsing="false" styleClass="btn-primary" text="Handla mer" />
                   <Button fx:id="showReceiptButton" mnemonicParsing="false" styleClass="btn-secondary" text="Se Kvittot" />

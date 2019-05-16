@@ -4,6 +4,7 @@ import Model.IMat;
 import Model.components.Forms.Kontouppgifter.KontoUppgifter;
 import Model.components.Forms.PersonUppgifter.PersonUppgifter;
 import Model.components.Navbar.Navbar;
+import Model.pages.Checkout.PaymentDoneBox.PaymentDoneBox;
 import Model.pages.Checkout.ShoppingCheckout.ShoppingCheckout;
 import Model.components.TitledSection.TitledSection;
 import Model.pages.Checkout.ShoppingCheckout.ShoppingCheckoutDetails.ShoppingCheckoutDetails;
@@ -28,21 +29,26 @@ public class Checkout extends AnchorPane {
     @FXML private VBox varukorgContainerVBox;
 
     @FXML private AnchorPane paymentDoneContainerAnchorPane;
-
+    @FXML private VBox paymentDoneContainerVBox;
 
     public Checkout(){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
-        addEventListeners();
 
         initUI();
     }
 
     public void initUI() {
         TopNav.getChildren().add(new Navbar());
+        varukorgContainerAnchorPane.toFront();
 
-        createVarukorgUI();
+        createPaymentDoneUI();
         createPaymentUI();
+        createVarukorgUI();
+    }
+
+    private void createPaymentDoneUI() {
+        paymentDoneContainerVBox.getChildren().add(new PaymentDoneBox());
     }
 
     private void createPaymentUI() {
@@ -58,8 +64,7 @@ public class Checkout extends AnchorPane {
 
         Button makePaymentButton = new Button();
         makePaymentButton.setText("Betala");
-        makePaymentButton.getStyleClass().add("btn-primary");
-        makePaymentButton.getStyleClass().add("btn-lg");
+        makePaymentButton.getStyleClass().addAll("btn-lg", "btn-primary");
         makePaymentButton.setOnAction(e -> makePaymentButtonPressed());
         HBox makePaymentHBox = new HBox();
         makePaymentHBox.setAlignment(Pos.CENTER);
@@ -73,14 +78,15 @@ public class Checkout extends AnchorPane {
         titledSectionKonto.addNode(details);
         titledSectionKonto.addNode(new KontoUppgifter());
 
-
         paymentContainerVBox.getChildren().add(goToVarukorgHBox);
         paymentContainerVBox.getChildren().add(titledSectionPerson);
         paymentContainerVBox.getChildren().add(titledSectionKonto);
+        paymentContainerVBox.getChildren().add(makePaymentHBox);
     }
 
     private void makePaymentButtonPressed() {
-        IMat.getInstance().placeOrder(true);
+        //IMat.getInstance().placeOrder(true);
+        goToPaymentDoneStep();
     }
 
     private void createVarukorgUI() {
@@ -111,6 +117,10 @@ public class Checkout extends AnchorPane {
         varukorgContainerVBox.getChildren().add(goToPaymentHBox);
     }
 
+    private void goToPaymentDoneStep() {
+        paymentDoneContainerAnchorPane.toFront();
+    }
+
     private void goToPaymentStep() {
         paymentContainerAnchorPane.toFront();
     }
@@ -133,10 +143,4 @@ public class Checkout extends AnchorPane {
             throw new RuntimeException(exception);
         }
     }
-
-    private void addEventListeners() {
-        //pay.setOnAction(e -> onPayPressed());
-    }
-
-
 }

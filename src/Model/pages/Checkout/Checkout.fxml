@@ -10,16 +10,16 @@
 
 <fx:root prefHeight="900.0" prefWidth="1440.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane fx:id="TopNav" prefHeight="100.0" prefWidth="1440.0" AnchorPane.topAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <AnchorPane fx:id="TopNav" prefHeight="100.0" prefWidth="1440.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <StackPane fx:id="containerStackPane" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
          <children>
             <AnchorPane fx:id="paymentDoneContainerAnchorPane" prefHeight="200.0" prefWidth="200.0">
                <children>
                   <ScrollPane fx:id="paymentDoneScrollPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <content>
-                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="1426.0">
+                        <HBox alignment="CENTER" prefHeight="783.0" prefWidth="1426.0">
                            <children>
-                              <VBox fx:id="paymentDoneContainerVBox" prefHeight="100.0" prefWidth="1050.0" />
+                              <VBox fx:id="paymentDoneContainerVBox" alignment="CENTER" prefHeight="631.0" prefWidth="510.0" />
                            </children>
                         </HBox>
                      </content>

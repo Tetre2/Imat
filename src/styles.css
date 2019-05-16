@@ -52,7 +52,7 @@
 }
 
 .btn-primary:hover {
-    -fx-background-color: #03b280;
+    -fx-background-color: #03ad7d;
     -fx-cursor: hand;
 }
 
@@ -64,14 +64,14 @@
     -fx-background-color: #387368;
 }
 
-.btn-primary:hover {
-    -fx-background-color: #398c7b;
+.btn-secondary:hover {
+    -fx-background-color: #347f70;
     -fx-cursor: hand;
 }
 
 .btn-lg {
-     -fx-font-size: 24;
-     -fx-background-insets: -6;
+     -fx-font-size: 26;
+     -fx-background-insets: -10;
 }
 
 .btn-nostyle {
