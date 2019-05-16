@@ -1,5 +1,5 @@
 package Model.components.Forms;
 
-public interface CheckValidity {
+public interface ValidityCheckable {
     boolean checkValidity(String text);
 }

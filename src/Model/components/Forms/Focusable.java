@@ -1,6 +1,6 @@
 package Model.components.Forms;
 
-public interface Focusalbe {
+public interface Focusable {
 
     void setFocus();
 

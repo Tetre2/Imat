@@ -1,8 +1,7 @@
 package Model.components.Forms.InputItem.LimitedTextField;
 
-import Model.IMat;
-import Model.components.Forms.CheckValidity;
-import Model.components.Forms.Focusalbe;
+import Model.components.Forms.ValidityCheckable;
+import Model.components.Forms.Focusable;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -11,7 +10,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class LimitedTextField extends AnchorPane implements Focusalbe {
+public class LimitedTextField extends AnchorPane implements Focusable {
 
     @FXML
     private Label label;
@@ -20,11 +19,11 @@ public class LimitedTextField extends AnchorPane implements Focusalbe {
     @FXML
     private TextField textField;
 
-    private Focusalbe next;
+    private Focusable next;
     private int charLength;
-    private CheckValidity parent;
+    private ValidityCheckable parent;
 
-    public LimitedTextField(String preView, String tooltip, String separator, int charLength, Focusalbe next, int width, CheckValidity parent) {
+    public LimitedTextField(String preView, String tooltip, String separator, int charLength, Focusable next, int width, ValidityCheckable parent) {
         this.next = next;
         this.charLength = charLength;
         this.parent = parent;
@@ -42,7 +41,7 @@ public class LimitedTextField extends AnchorPane implements Focusalbe {
         addEventListeners();
     }
 
-    public LimitedTextField(String preView, String tooltip, String separator, int charLength, Focusalbe next, CheckValidity parent) {
+    public LimitedTextField(String preView, String tooltip, String separator, int charLength, Focusable next, ValidityCheckable parent) {
         this(preView, tooltip, separator, charLength, next, 0, parent);
     }
 
@@ -53,7 +52,6 @@ public class LimitedTextField extends AnchorPane implements Focusalbe {
             if (isAtCharLength()) {
                 if (isValid()) {
                     clearErr();
-                    System.out.println("fnkdnfksnfdånådfskndknsf");
                     next.setFocus();
                 }
             }
@@ -71,6 +69,10 @@ public class LimitedTextField extends AnchorPane implements Focusalbe {
             }
         });
 
+    }
+
+    public void setTextFieldText(String text){
+        textField.setText(text);
     }
 
     private boolean isAtCharLength() {
@@ -118,7 +120,7 @@ public class LimitedTextField extends AnchorPane implements Focusalbe {
         textField.requestFocus();
     }
 
-    public void setNext(Focusalbe next) {
+    public void setNext(Focusable next) {
         this.next = next;
     }
 

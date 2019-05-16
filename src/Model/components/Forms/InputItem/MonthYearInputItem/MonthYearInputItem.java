@@ -1,14 +1,12 @@
-package Model.components.Forms.InputItem.DayMonthInputItem;
+package Model.components.Forms.InputItem.MonthYearInputItem;
 
-import Model.IMat;
-import Model.components.Forms.CheckValidity;
-import Model.components.Forms.Focusalbe;
+import Model.components.Forms.InputItem.isInputItem;
+import Model.components.Forms.NotValidInput;
+import Model.components.Forms.ValidityCheckable;
+import Model.components.Forms.Focusable;
 import Model.components.Forms.InputItem.LimitedTextField.LimitedTextField;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 
@@ -16,15 +14,15 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DayMonthInputItem extends AnchorPane implements CheckValidity {
+public class MonthYearInputItem extends AnchorPane implements ValidityCheckable, isInputItem {
 
     @FXML
     private FlowPane flowPane;
 
-    private Focusalbe next;
+    private Focusable next;
     private List<LimitedTextField> limitedTextFields;
 
-    public DayMonthInputItem(Focusalbe next) {
+    public MonthYearInputItem(Focusable next) {
         this.next = next;
         limitedTextFields = new ArrayList<>();
         FXMLLoader fxmlLoader = initFXML();
@@ -41,19 +39,27 @@ public class DayMonthInputItem extends AnchorPane implements CheckValidity {
 
     private void init(){
 
-        LimitedTextField l2 = new LimitedTextField("År", "År", "", 2, next, this);
-        LimitedTextField l1 = new LimitedTextField("Månad", "Månad", "/", 2, l2, this);
+        LimitedTextField year = new LimitedTextField("År", "År", "", 2, next, this);
+        LimitedTextField month = new LimitedTextField("Månad", "Månad", "/", 2, year, this);
 
-        limitedTextFields.add(l1);
-        limitedTextFields.add(l2);
+        limitedTextFields.add(month);
+        limitedTextFields.add(year);
     }
 
     private void addEventListeners() {
 
     }
 
+    public void setMonth(String month){
+        limitedTextFields.get(0).setTextFieldText(month);
+    }
+
+    public void setYear(String year){
+        limitedTextFields.get(1).setTextFieldText(year);
+    }
+
     private FXMLLoader initFXML() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("DayMonthInputItem.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MonthYearInputItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         return fxmlLoader;
@@ -80,5 +86,27 @@ public class DayMonthInputItem extends AnchorPane implements CheckValidity {
         }catch (Exception e){
         }
         return false;
+    }
+
+    @Override
+    public String getInput() throws NotValidInput {
+        String s = "";
+        if(isValide()){
+            for (LimitedTextField l : limitedTextFields) {
+                s += l.getInput() + " ";
+            }
+        }
+        return s;
+    }
+
+    @Override
+    public boolean isValide() {
+        boolean valid = true;
+        for (LimitedTextField l : limitedTextFields) {
+            if(!l.isValid()){
+                valid = false;
+            }
+        }
+        return valid;
     }
 }

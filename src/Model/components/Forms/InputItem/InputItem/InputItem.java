@@ -1,9 +1,9 @@
 package Model.components.Forms.InputItem.InputItem;
 
-import Model.components.Forms.Focusalbe;
+import Model.components.Forms.Focusable;
+import Model.components.Forms.InputItem.isInputItem;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
@@ -11,7 +11,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class InputItem extends AnchorPane implements Focusalbe{
+public class InputItem extends AnchorPane implements Focusable, isInputItem {
 
 
     @FXML
@@ -21,14 +21,14 @@ public class InputItem extends AnchorPane implements Focusalbe{
     @FXML
     private Label tooltip;
 
-    private Focusalbe next;
+    private Focusable next;
 
-    public InputItem(String label, String preVeiwText, String tooltip, Focusalbe next) {
+    public InputItem(String label, String preVeiwText, String tooltip, Focusable next) {
         this(label,preVeiwText,tooltip, 0, next);
 
     }
 
-    public InputItem(String label, String preVeiwText, String tooltip, int width, Focusalbe next) {
+    public InputItem(String label, String preVeiwText, String tooltip, int width, Focusable next) {
         this.next = next;
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
@@ -67,6 +67,10 @@ public class InputItem extends AnchorPane implements Focusalbe{
             }});
     }
 
+    public void setText(String s) {
+        this.textField.setText(s);
+    }
+
     private FXMLLoader initFXML() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("InputItem.fxml"));
         fxmlLoader.setRoot(this);
@@ -85,5 +89,15 @@ public class InputItem extends AnchorPane implements Focusalbe{
     @Override
     public void setFocus() {
         textField.requestFocus();
+    }
+
+    @Override
+    public String getInput() {
+        return textField.getText();
+    }
+
+    @Override
+    public boolean isValide() {
+        return true;
     }
 }

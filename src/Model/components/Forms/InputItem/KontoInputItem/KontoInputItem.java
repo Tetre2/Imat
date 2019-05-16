@@ -1,7 +1,9 @@
 package Model.components.Forms.InputItem.KontoInputItem;
 
-import Model.components.Forms.CheckValidity;
-import Model.components.Forms.Focusalbe;
+import Model.components.Forms.InputItem.isInputItem;
+import Model.components.Forms.NotValidInput;
+import Model.components.Forms.ValidityCheckable;
+import Model.components.Forms.Focusable;
 import Model.components.Forms.InputItem.LimitedTextField.LimitedTextField;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +15,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class KontoInputItem extends AnchorPane implements CheckValidity {
+public class KontoInputItem extends AnchorPane implements ValidityCheckable, isInputItem {
 
     @FXML
     private Label label;
@@ -22,10 +24,10 @@ public class KontoInputItem extends AnchorPane implements CheckValidity {
     @FXML
     private FlowPane flowPane;
 
-    private Focusalbe next;
+    private Focusable next;
     private List<LimitedTextField> limitedTextFields;
 
-    public KontoInputItem(Focusalbe next) {
+    public KontoInputItem(Focusable next) {
         this.next = next;
         limitedTextFields = new ArrayList<>();
         FXMLLoader fxmlLoader = initFXML();
@@ -60,6 +62,24 @@ public class KontoInputItem extends AnchorPane implements CheckValidity {
 
     }
 
+    public void setCardNumber(String cardNumber){
+        //System.out.println(cardNumber);
+        String[] arr = new String[4];
+        if(!cardNumber.equals("")){
+            int start = 0;
+            for (int i = 1; i <= 4; i++) {
+                arr[i-1] = cardNumber.substring(start, i*4);
+                start = i*4;
+            }
+
+        }
+
+        for (int i = 0; i < limitedTextFields.size(); i++) {
+            limitedTextFields.get(i).setTextFieldText(arr[i]);
+        }
+
+    }
+
     private FXMLLoader initFXML() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("KontoInputItem.fxml"));
         fxmlLoader.setRoot(this);
@@ -79,8 +99,19 @@ public class KontoInputItem extends AnchorPane implements CheckValidity {
         return limitedTextFields;
     }
 
+    @Override
+    public String getInput() throws NotValidInput {
+        String input = "";
+        if (isValide()) {
+            for (LimitedTextField l : limitedTextFields) {
+                input += l.getInput();
+            }
+        }
+        return input;
+    }
 
-    public boolean isChildrenValid() {
+    @Override
+    public boolean isValide() {
         boolean valid = true;
         for (LimitedTextField l : limitedTextFields) {
             if(!l.isValid()){
@@ -88,16 +119,6 @@ public class KontoInputItem extends AnchorPane implements CheckValidity {
             }
         }
         return valid;
-    }
-
-    public String getInput(){
-        String input = "";
-        if (isChildrenValid()) {
-            for (LimitedTextField l : limitedTextFields) {
-                input += l.getInput();
-            }
-        }
-        return input;
     }
 
 
