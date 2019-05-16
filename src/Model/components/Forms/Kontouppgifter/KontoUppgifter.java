@@ -19,7 +19,10 @@ public class KontoUppgifter extends AnchorPane {
     private FlowPane flowPane;
     @FXML
     private Button save;
-
+    @FXML
+    private AnchorPane gray;
+    @FXML
+    private AnchorPane err;
 
     public KontoUppgifter() {
         FXMLLoader fxmlLoader = initFXML();
@@ -27,16 +30,34 @@ public class KontoUppgifter extends AnchorPane {
 
         addEventListeners();
 
-        flowPane.getChildren().add(new KontoInputItem("Kontonummer:", "Ange kontokortets kontonummer"));
-        flowPane.getChildren().add(new InputItem("Ägarens förnamn:", "Britt", "Ange ägarens förnamn till kontokortet"));
-        flowPane.getChildren().add(new DayMonthInputItem());
-        flowPane.getChildren().add(new InputItem("Kontrollsiffror:", "XXX", "Ange de tre kontrollsiffrorna", 100));
+        InputItem kontrollSiffror = new InputItem("Kontrollsiffror:", "XXX", "Ange de tre kontrollsiffrorna", 100, null);
+        DayMonthInputItem dayMonthInputItem = new DayMonthInputItem(kontrollSiffror);
+        KontoInputItem kontonummer = new KontoInputItem(dayMonthInputItem);
+        InputItem kontoAgare = new InputItem("Ägarens förnamn:", "Britt", "Ange ägarens förnamn till kontokortet", kontonummer);
+
+        flowPane.getChildren().add(kontoAgare);
+        flowPane.getChildren().add(kontonummer);
+        flowPane.getChildren().add(dayMonthInputItem);
+        flowPane.getChildren().add(kontrollSiffror);
+
+        hideErr();
 
     }
 
     private void addEventListeners() {
 
+        gray.setOnMouseClicked(event -> hideErr());
+        err.setOnMouseClicked(event -> event.consume());
+        save.setOnAction(event -> showErr());
 
+    }
+
+    private void showErr(){
+        gray.setVisible(true);
+    }
+
+    private void hideErr(){
+        gray.setVisible(false);
     }
 
     private FXMLLoader initFXML() {

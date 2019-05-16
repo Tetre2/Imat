@@ -7,15 +7,15 @@
 
 <fx:root prefHeight="92.0" prefWidth="582.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label alignment="TOP_RIGHT" contentDisplay="TOP" layoutY="27.0" prefHeight="21.0" prefWidth="210.0" text="Datum:" />
-      <TextField fx:id="day" layoutX="232.0" layoutY="7.0" prefHeight="60.0" prefWidth="82.0" promptText="Dag" />
-      <TextField fx:id="month" layoutX="356.0" layoutY="7.0" prefHeight="60.0" prefWidth="82.0" promptText="Månad" />
+      <Label alignment="TOP_RIGHT" contentDisplay="TOP" layoutY="27.0" prefHeight="21.0" prefWidth="210.0" text="Utgångsdatum:" />
+      <TextField fx:id="month" layoutX="232.0" layoutY="7.0" prefHeight="60.0" prefWidth="82.0" promptText="Månad" />
+      <TextField fx:id="year" layoutX="356.0" layoutY="7.0" prefHeight="60.0" prefWidth="82.0" promptText="År" />
       <Label layoutX="323.0" layoutY="-10.0" text="/">
          <font>
             <Font size="58.0" />
          </font>
       </Label>
-      <Label layoutX="232.0" layoutY="65.0" prefHeight="21.0" prefWidth="82.0" text="Dag" />
-      <Label layoutX="356.0" layoutY="65.0" prefHeight="21.0" prefWidth="82.0" text="Månad" />
+      <Label layoutX="240.0" layoutY="65.0" prefHeight="21.0" prefWidth="82.0" text="Månad" />
+      <Label layoutX="365.0" layoutY="65.0" prefHeight="21.0" prefWidth="82.0" text="År" />
    </children>
 </fx:root>

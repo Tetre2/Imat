@@ -1,7 +1,9 @@
 package Model.components.Forms.InputItem.InputItem;
 
+import Model.components.Forms.Focusalbe;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
@@ -9,7 +11,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class InputItem extends AnchorPane {
+public class InputItem extends AnchorPane implements Focusalbe{
 
 
     @FXML
@@ -19,11 +21,15 @@ public class InputItem extends AnchorPane {
     @FXML
     private Label tooltip;
 
-    public InputItem(String label, String preVeiwText, String tooltip) {
-        this(label,preVeiwText,tooltip, 0);
+    private Focusalbe next;
+
+    public InputItem(String label, String preVeiwText, String tooltip, Focusalbe next) {
+        this(label,preVeiwText,tooltip, 0, next);
 
     }
-    public InputItem(String label, String preVeiwText, String tooltip, int width) {
+
+    public InputItem(String label, String preVeiwText, String tooltip, int width, Focusalbe next) {
+        this.next = next;
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
@@ -40,7 +46,6 @@ public class InputItem extends AnchorPane {
 
     private void addEventListeners() {
 
-
         //upptäcker om man skrivigt något i rutan
         textField.focusedProperty().addListener((obs, wasFocused, isNowFocused) -> {
             if(wasFocused){
@@ -55,6 +60,9 @@ public class InputItem extends AnchorPane {
             if (ke.getCode().equals(KeyCode.ENTER)) {
                 if(!textField.getText().equals("")) {
                     System.out.println(textField.getText());
+                    if(next != null){
+                        next.setFocus();
+                    }
                 }
             }});
     }
@@ -72,5 +80,10 @@ public class InputItem extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+    }
+
+    @Override
+    public void setFocus() {
+        textField.requestFocus();
     }
 }
