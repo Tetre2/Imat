@@ -1,13 +1,11 @@
 package Model.components.Forms.InputItem.KontoInputItem;
 
-import Model.IMat;
 import Model.components.Forms.CheckValidity;
 import Model.components.Forms.Focusalbe;
-import Model.components.Forms.InputItem.KontoInputItem.LimitedTextField.LimitedTextField;
+import Model.components.Forms.InputItem.LimitedTextField.LimitedTextField;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 
@@ -15,7 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class KontoInputItem extends AnchorPane implements Focusalbe, CheckValidity {
+public class KontoInputItem extends AnchorPane implements CheckValidity {
 
     @FXML
     private Label label;
@@ -41,16 +39,14 @@ public class KontoInputItem extends AnchorPane implements Focusalbe, CheckValidi
         for (LimitedTextField l : limitedTextFields) {
             flowPane.getChildren().add(l);
         }
-
-
         addEventListeners();
     }
 
     private void init(){
-        LimitedTextField l4 = new LimitedTextField("XXXX", "", 4, next);
-        LimitedTextField l3 = new LimitedTextField("XXXX", "-", 4, l4);
-        LimitedTextField l2 = new LimitedTextField("XXXX", "-", 4, l3);
-        LimitedTextField l1 = new LimitedTextField("XXXX", "-", 4, l2);
+        LimitedTextField l4 = new LimitedTextField("XXXX", "", "", 4, next);
+        LimitedTextField l3 = new LimitedTextField("XXXX", "", "-", 4, l4);
+        LimitedTextField l2 = new LimitedTextField("XXXX", "", "-", 4, l3);
+        LimitedTextField l1 = new LimitedTextField("XXXX", "", "-", 4, l2);
 
         limitedTextFields.add(l1);
         limitedTextFields.add(l2);
@@ -63,7 +59,6 @@ public class KontoInputItem extends AnchorPane implements Focusalbe, CheckValidi
 
 
     }
-
 
     private FXMLLoader initFXML() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("KontoInputItem.fxml"));
@@ -80,13 +75,30 @@ public class KontoInputItem extends AnchorPane implements Focusalbe, CheckValidi
         }
     }
 
-    @Override
-    public void setFocus() {
-        limitedTextFields.get(0).requestFocus();
+    public List<LimitedTextField> getLimitedTextFields() {
+        return limitedTextFields;
     }
 
     @Override
-    public boolean checkValidity() {//TODO
-        return false;
+    public boolean checkValidity() {
+        boolean valid = true;
+        for (LimitedTextField l : limitedTextFields) {
+            if(!l.isValid()){
+                valid = false;
+            }
+        }
+        return valid;
     }
+
+    public String getInput(){
+        String input = "";
+        if (checkValidity()) {
+            for (LimitedTextField l : limitedTextFields) {
+                input += l.getInput();
+            }
+        }
+        return input;
+    }
+
+
 }

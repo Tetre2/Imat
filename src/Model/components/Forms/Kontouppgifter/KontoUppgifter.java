@@ -32,8 +32,8 @@ public class KontoUppgifter extends AnchorPane {
 
         InputItem kontrollSiffror = new InputItem("Kontrollsiffror:", "XXX", "Ange de tre kontrollsiffrorna", 100, null);
         DayMonthInputItem dayMonthInputItem = new DayMonthInputItem(kontrollSiffror);
-        KontoInputItem kontonummer = new KontoInputItem(dayMonthInputItem);
-        InputItem kontoAgare = new InputItem("Ägarens förnamn:", "Britt", "Ange ägarens förnamn till kontokortet", kontonummer);
+        KontoInputItem kontonummer = new KontoInputItem(dayMonthInputItem.getLimitedTextFields().get(0));
+        InputItem kontoAgare = new InputItem("Ägarens förnamn:", "Britt", "Ange ägarens förnamn till kontokortet", kontonummer.getLimitedTextFields().get(0));
 
         flowPane.getChildren().add(kontoAgare);
         flowPane.getChildren().add(kontonummer);

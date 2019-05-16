@@ -1,4 +1,4 @@
-package Model.components.Forms.InputItem.KontoInputItem.LimitedTextField;
+package Model.components.Forms.InputItem.LimitedTextField;
 
 import Model.components.Forms.Focusalbe;
 import javafx.fxml.FXML;
@@ -14,13 +14,14 @@ public class LimitedTextField extends AnchorPane implements Focusalbe {
     @FXML
     private Label label;
     @FXML
+    private Label tooltip;
+    @FXML
     private TextField textField;
 
     private Focusalbe next;
     private int charLength;
-    private int input;
 
-    public LimitedTextField(String preView, String separator, int charLength, Focusalbe next, int width) {
+    public LimitedTextField(String preView, String tooltip, String separator, int charLength, Focusalbe next, int width) {
         this.next = next;
         this.charLength = charLength;
         FXMLLoader fxmlLoader = initFXML();
@@ -29,6 +30,7 @@ public class LimitedTextField extends AnchorPane implements Focusalbe {
         if (width != 0) {
             textField.setMaxWidth(width);
         }
+        this.tooltip.setText(tooltip);
         label.setText(separator);
         textField.setPromptText(preView);
 
@@ -36,8 +38,8 @@ public class LimitedTextField extends AnchorPane implements Focusalbe {
         addEventListeners();
     }
 
-    public LimitedTextField(String preView, String separator, int charLength, Focusalbe next) {
-        this(preView, separator, charLength, next, 0);
+    public LimitedTextField(String preView, String tooltip, String separator, int charLength, Focusalbe next) {
+        this(preView, tooltip, separator, charLength, next, 0);
     }
 
     private void addEventListeners() {
@@ -70,7 +72,7 @@ public class LimitedTextField extends AnchorPane implements Focusalbe {
         return textField.getText().length() == charLength;
     }
 
-    private boolean isValid() {
+    public boolean isValid() {
 
         if (isAtCharLength()) {
             try {
@@ -115,5 +117,9 @@ public class LimitedTextField extends AnchorPane implements Focusalbe {
 
     public void setNext(Focusalbe next) {
         this.next = next;
+    }
+
+    public String getInput() {
+        return textField.getText();
     }
 }
