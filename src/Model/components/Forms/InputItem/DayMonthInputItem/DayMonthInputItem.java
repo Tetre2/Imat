@@ -41,8 +41,8 @@ public class DayMonthInputItem extends AnchorPane implements CheckValidity {
 
     private void init(){
 
-        LimitedTextField l2 = new LimitedTextField("År", "År", "", 2, next);
-        LimitedTextField l1 = new LimitedTextField("Månad", "Månad", "/", 2, l2);
+        LimitedTextField l2 = new LimitedTextField("År", "År", "", 2, next, this);
+        LimitedTextField l1 = new LimitedTextField("Månad", "Månad", "/", 2, l2, this);
 
         limitedTextFields.add(l1);
         limitedTextFields.add(l2);
@@ -50,53 +50,6 @@ public class DayMonthInputItem extends AnchorPane implements CheckValidity {
 
     private void addEventListeners() {
 
-        /*//month
-        //upptäcker om man skrivigt något i rutan
-        month.focusedProperty().addListener((obs, wasFocused, isNowFocused) -> {
-            if(wasFocused){
-                if(!month.getText().equals("")){
-                    try {
-                        int i = Integer.parseInt(month.getText());
-                        IMat.getInstance().getCreditCard().setValidMonth(i);
-                    }catch (Exception e){
-                        System.out.println("NOT VALID MONTH");
-                    }
-                }
-            }
-        });
-
-        //för att man ska kunna trycka enter
-        month.setOnKeyPressed(ke -> {
-            if (ke.getCode().equals(KeyCode.ENTER)) {
-                if(!month.getText().equals("")) {
-                    year.requestFocus();
-                }
-            }});
-
-        //year
-        //upptäcker om man skrivigt något i rutan
-        year.focusedProperty().addListener((obs, wasFocused, isNowFocused) -> {
-            if(wasFocused){
-                if(!year.getText().equals("")){try {
-                    int i = Integer.parseInt(year.getText());
-                    IMat.getInstance().getCreditCard().setValidYear(i);
-                }catch (Exception e){
-                    System.out.println("NOT VALID YEAR");
-                }
-                    next.setFocus();
-                }
-            }
-        });
-
-        //för att man ska kunna trycka enter
-        year.setOnKeyPressed(ke -> {
-            if (ke.getCode().equals(KeyCode.ENTER)) {
-                if(!year.getText().equals("")) {
-                    if(next != null){
-                        next.setFocus();
-                    }
-                }
-            }});*/
     }
 
     private FXMLLoader initFXML() {
@@ -119,7 +72,13 @@ public class DayMonthInputItem extends AnchorPane implements CheckValidity {
     }
 
     @Override
-    public boolean checkValidity() {//TODO
+    public boolean checkValidity(String text) {
+        try {
+            if(Integer.parseInt(text) <= 31 && Integer.parseInt(text) > 0){
+                return true;
+            }
+        }catch (Exception e){
+        }
         return false;
     }
 }

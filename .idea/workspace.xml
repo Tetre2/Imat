@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d94ad86-8790-4968-90d1-3cc3b9ff746a" name="Default Changelist" comment="Skapade limitedtextfields">
+    <list default="true" id="6d94ad86-8790-4968-90d1-3cc3b9ff746a" name="Default Changelist" comment="Månad år är konverterad till limitedtextfields">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/Forms/FormStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Forms/FormStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/Forms/CheckValidity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Forms/CheckValidity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/Forms/InputItem/DayMonthInputItem/DayMonthInputItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Forms/InputItem/DayMonthInputItem/DayMonthInputItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoInputItem/KontoInputItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoInputItem/KontoInputItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoInputItem/LimitedTextField/LimitedTextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoInputItem/LimitedTextField/LimitedTextField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/Forms/InputItem/LimitedTextField/LimitedTextField.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Forms/InputItem/LimitedTextField/LimitedTextField.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/Forms/InputItem/LimitedTextField/LimitedTextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Forms/InputItem/LimitedTextField/LimitedTextField.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/Kontouppgifter/KontoUppgifter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+            <state relative-caret-position="207">
+              <caret line="34" column="102" selection-start-line="34" selection-start-column="102" selection-end-line="34" selection-end-column="102" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1730#1731#0" expanded="true" />
@@ -61,53 +63,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoInputItem/KontoInputItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+            <state relative-caret-position="173">
+              <caret line="104" column="47" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#init#0;class#KontoInputItem#0" />
-                <element signature="e#3078#3079#0" expanded="true" />
-                <element signature="e#3126#3127#0" expanded="true" />
-                <element signature="e#4249#4250#0" expanded="true" />
-                <element signature="e#4283#4284#0" expanded="true" />
+                <element signature="e#2349#2350#0" expanded="true" />
+                <element signature="e#2389#2390#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoInputItem/LimitedTextField/LimitedTextField.java">
+        <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/InputItem/LimitedTextField/LimitedTextField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+            <state relative-caret-position="238">
+              <caret line="81" column="27" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2012#2013#0" expanded="true" />
-                <element signature="e#2409#2410#0" expanded="true" />
-                <element signature="e#2498#2499#0" expanded="true" />
-                <element signature="e#3034#3035#0" expanded="true" />
-                <element signature="e#3109#3110#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/components/ShoppingItem/ShoppingItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="178" column="45" lean-forward="true" selection-start-line="178" selection-start-column="45" selection-end-line="179" selection-end-column="61" />
-              <folding>
-                <element signature="e#3701#3702#0" expanded="true" />
-                <element signature="e#3744#3745#0" expanded="true" />
-                <element signature="e#3779#3780#0" expanded="true" />
-                <element signature="e#3823#3824#0" expanded="true" />
-                <element signature="e#5311#5312#0" expanded="true" />
-                <element signature="e#5386#5387#0" expanded="true" />
-                <element signature="e#6008#6009#0" expanded="true" />
-                <element signature="e#6035#6036#0" expanded="true" />
-                <element signature="e#6069#6070#0" expanded="true" />
-                <element signature="e#6099#6100#0" expanded="true" />
+                <element signature="e#2252#2253#0" expanded="true" />
+                <element signature="e#2597#2598#0" expanded="true" />
+                <element signature="e#2686#2687#0" expanded="true" />
+                <element signature="e#3222#3223#0" expanded="true" />
+                <element signature="e#3297#3298#0" expanded="true" />
+                <element signature="e#3138#3139#0" expanded="true" />
+                <element signature="e#3166#3167#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,11 +96,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/InputItem/DayMonthInputItem/DayMonthInputItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1734">
-              <caret line="104" column="42" selection-start-line="104" selection-start-column="42" selection-end-line="104" selection-end-column="42" />
+            <state relative-caret-position="275">
+              <caret line="81" column="21" lean-forward="true" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3141#3142#0" expanded="true" />
+                <element signature="e#3650#3651#0" expanded="true" />
+                <element signature="e#3690#3691#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -188,15 +169,16 @@
         <option value="$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoInputItem/KontoInputItem.fxml" />
         <option value="$PROJECT_DIR$/src/Model/components/Forms/Focusalbe.java" />
         <option value="$PROJECT_DIR$/src/Model/components/Forms/InputItem/InputItem/InputItem.java" />
-        <option value="$PROJECT_DIR$/src/Model/components/Forms/CheckValidity.java" />
-        <option value="$PROJECT_DIR$/src/Model/components/Forms/InputItem/DayMonthInputItem/DayMonthInputItem.java" />
         <option value="$PROJECT_DIR$/src/Model/components/Forms/PersonUppgifter/PersonUppgifter.java" />
-        <option value="$PROJECT_DIR$/src/Model/components/Forms/Kontouppgifter/KontoUppgifter.java" />
         <option value="$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoInputItem/LimitedTextField.java" />
         <option value="$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoInputItem/LimitedTextField/LimitedTextField.fxml" />
-        <option value="$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoInputItem/KontoInputItem.java" />
         <option value="$PROJECT_DIR$/src/Model/components/Forms/FormStyles.css" />
         <option value="$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoInputItem/LimitedTextField/LimitedTextField.java" />
+        <option value="$PROJECT_DIR$/src/Model/components/Forms/Kontouppgifter/KontoUppgifter.java" />
+        <option value="$PROJECT_DIR$/src/Model/components/Forms/CheckValidity.java" />
+        <option value="$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoInputItem/KontoInputItem.java" />
+        <option value="$PROJECT_DIR$/src/Model/components/Forms/InputItem/DayMonthInputItem/DayMonthInputItem.java" />
+        <option value="$PROJECT_DIR$/src/Model/components/Forms/InputItem/LimitedTextField/LimitedTextField.java" />
       </list>
     </option>
   </component>
@@ -320,7 +302,6 @@
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Forms" type="462c0819:PsiDirectoryNode" />
               <item name="InputItem" type="462c0819:PsiDirectoryNode" />
-              <item name="KontoInputItem" type="462c0819:PsiDirectoryNode" />
               <item name="LimitedTextField" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -391,7 +372,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558020611708" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558023600397" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -514,11 +495,25 @@
       <option name="project" value="LOCAL" />
       <updated>1558018822603</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Konto nummer ger respons om man skriver fel">
+      <created>1558020781408</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1558020781408</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Månad år är konverterad till limitedtextfields">
+      <created>1558022317269</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1558022317269</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39471000" />
+    <option name="totallyTimeSpent" value="42468000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -571,7 +566,9 @@
     <MESSAGE value="Loggan ligger i resurser" />
     <MESSAGE value="MinaSidor uppdaterad" />
     <MESSAGE value="Skapade limitedtextfields" />
-    <option name="LAST_COMMIT_MESSAGE" value="Skapade limitedtextfields" />
+    <MESSAGE value="Konto nummer ger respons om man skriver fel" />
+    <MESSAGE value="Månad år är konverterad till limitedtextfields" />
+    <option name="LAST_COMMIT_MESSAGE" value="Månad år är konverterad till limitedtextfields" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Model/pages/Mainpage/CategoryListener.java" />
@@ -897,58 +894,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/CheckValidity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/Kontouppgifter/KontoUppgifter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1730#1731#0" expanded="true" />
-            <element signature="e#1767#1768#0" expanded="true" />
-            <element signature="e#1796#1797#0" expanded="true" />
-            <element signature="e#1834#1835#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/InputItem/DayMonthInputItem/DayMonthInputItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
-          <caret line="104" column="42" selection-start-line="104" selection-start-column="42" selection-end-line="104" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3141#3142#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoInputItem/LimitedTextField/LimitedTextField.fxml">
+    <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/InputItem/LimitedTextField/LimitedTextField.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="85" selection-start-line="10" selection-start-column="85" selection-end-line="10" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoInputItem/KontoInputItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#init#0;class#KontoInputItem#0" />
-            <element signature="e#3078#3079#0" expanded="true" />
-            <element signature="e#3126#3127#0" expanded="true" />
-            <element signature="e#4249#4250#0" expanded="true" />
-            <element signature="e#4283#4284#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -990,17 +940,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoInputItem/LimitedTextField/LimitedTextField.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/Kontouppgifter/KontoUppgifter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+        <state relative-caret-position="207">
+          <caret line="34" column="102" selection-start-line="34" selection-start-column="102" selection-end-line="34" selection-end-column="102" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2012#2013#0" expanded="true" />
-            <element signature="e#2409#2410#0" expanded="true" />
-            <element signature="e#2498#2499#0" expanded="true" />
-            <element signature="e#3034#3035#0" expanded="true" />
-            <element signature="e#3109#3110#0" expanded="true" />
+            <element signature="e#1730#1731#0" expanded="true" />
+            <element signature="e#1767#1768#0" expanded="true" />
+            <element signature="e#1796#1797#0" expanded="true" />
+            <element signature="e#1834#1835#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/CheckValidity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoInputItem/KontoInputItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="104" column="47" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2349#2350#0" expanded="true" />
+            <element signature="e#2389#2390#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/InputItem/DayMonthInputItem/DayMonthInputItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="81" column="21" lean-forward="true" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3650#3651#0" expanded="true" />
+            <element signature="e#3690#3691#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/InputItem/LimitedTextField/LimitedTextField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="81" column="27" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2252#2253#0" expanded="true" />
+            <element signature="e#2597#2598#0" expanded="true" />
+            <element signature="e#2686#2687#0" expanded="true" />
+            <element signature="e#3222#3223#0" expanded="true" />
+            <element signature="e#3297#3298#0" expanded="true" />
+            <element signature="e#3138#3139#0" expanded="true" />
+            <element signature="e#3166#3167#0" expanded="true" />
           </folding>
         </state>
       </provider>

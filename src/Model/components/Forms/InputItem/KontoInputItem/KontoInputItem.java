@@ -43,10 +43,10 @@ public class KontoInputItem extends AnchorPane implements CheckValidity {
     }
 
     private void init(){
-        LimitedTextField l4 = new LimitedTextField("XXXX", "", "", 4, next);
-        LimitedTextField l3 = new LimitedTextField("XXXX", "", "-", 4, l4);
-        LimitedTextField l2 = new LimitedTextField("XXXX", "", "-", 4, l3);
-        LimitedTextField l1 = new LimitedTextField("XXXX", "", "-", 4, l2);
+        LimitedTextField l4 = new LimitedTextField("XXXX", "", "", 4, next, this);
+        LimitedTextField l3 = new LimitedTextField("XXXX", "", "-", 4, l4, this);
+        LimitedTextField l2 = new LimitedTextField("XXXX", "", "-", 4, l3, this);
+        LimitedTextField l1 = new LimitedTextField("XXXX", "", "-", 4, l2, this);
 
         limitedTextFields.add(l1);
         limitedTextFields.add(l2);
@@ -79,8 +79,8 @@ public class KontoInputItem extends AnchorPane implements CheckValidity {
         return limitedTextFields;
     }
 
-    @Override
-    public boolean checkValidity() {
+
+    public boolean isChildrenValid() {
         boolean valid = true;
         for (LimitedTextField l : limitedTextFields) {
             if(!l.isValid()){
@@ -92,7 +92,7 @@ public class KontoInputItem extends AnchorPane implements CheckValidity {
 
     public String getInput(){
         String input = "";
-        if (checkValidity()) {
+        if (isChildrenValid()) {
             for (LimitedTextField l : limitedTextFields) {
                 input += l.getInput();
             }
@@ -101,4 +101,13 @@ public class KontoInputItem extends AnchorPane implements CheckValidity {
     }
 
 
+    @Override
+    public boolean checkValidity(String text) {
+        try {
+            Integer.parseInt(text);
+            return true;
+        }catch (Exception e){
+        }
+        return false;
+    }
 }

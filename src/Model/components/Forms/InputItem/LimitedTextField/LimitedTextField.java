@@ -1,5 +1,6 @@
 package Model.components.Forms.InputItem.LimitedTextField;
 
+import Model.components.Forms.CheckValidity;
 import Model.components.Forms.Focusalbe;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,10 +21,12 @@ public class LimitedTextField extends AnchorPane implements Focusalbe {
 
     private Focusalbe next;
     private int charLength;
+    private CheckValidity parent;
 
-    public LimitedTextField(String preView, String tooltip, String separator, int charLength, Focusalbe next, int width) {
+    public LimitedTextField(String preView, String tooltip, String separator, int charLength, Focusalbe next, int width, CheckValidity parent) {
         this.next = next;
         this.charLength = charLength;
+        this.parent = parent;
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
@@ -38,8 +41,8 @@ public class LimitedTextField extends AnchorPane implements Focusalbe {
         addEventListeners();
     }
 
-    public LimitedTextField(String preView, String tooltip, String separator, int charLength, Focusalbe next) {
-        this(preView, tooltip, separator, charLength, next, 0);
+    public LimitedTextField(String preView, String tooltip, String separator, int charLength, Focusalbe next, CheckValidity parent) {
+        this(preView, tooltip, separator, charLength, next, 0, parent);
     }
 
     private void addEventListeners() {
@@ -75,12 +78,9 @@ public class LimitedTextField extends AnchorPane implements Focusalbe {
     public boolean isValid() {
 
         if (isAtCharLength()) {
-            try {
-                Integer.parseInt(textField.getText());
+            if(parent.checkValidity(textField.getText())){
                 clearErr();
                 return true;
-            } catch (Exception e) {
-
             }
         }
         showErr();
