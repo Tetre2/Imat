@@ -6,6 +6,7 @@ import Model.components.Forms.PersonUppgifter.PersonUppgifter;
 import Model.components.Navbar.Navbar;
 import Model.pages.Checkout.ShoppingCheckout.ShoppingCheckout;
 import Model.components.TitledSection.TitledSection;
+import Model.pages.Checkout.ShoppingCheckout.ShoppingCheckoutDetails.ShoppingCheckoutDetails;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -24,9 +25,10 @@ public class Checkout extends AnchorPane {
     @FXML private VBox paymentContainerVBox;
 
     @FXML private AnchorPane varukorgContainerAnchorPane;
-    @FXML
-    private VBox varukorgContainerVBox;
-    @FXML private AnchorPane topNavBar;
+    @FXML private VBox varukorgContainerVBox;
+
+    @FXML private AnchorPane paymentDoneContainerAnchorPane;
+
 
     public Checkout(){
         FXMLLoader fxmlLoader = initFXML();
@@ -54,15 +56,31 @@ public class Checkout extends AnchorPane {
         goToVarukorgHBox.setAlignment(Pos.CENTER_LEFT);
         goToVarukorgHBox.getChildren().add(goToVarukorgButton);
 
+        Button makePaymentButton = new Button();
+        makePaymentButton.setText("Betala");
+        makePaymentButton.getStyleClass().add("btn-primary");
+        makePaymentButton.getStyleClass().add("btn-lg");
+        makePaymentButton.setOnAction(e -> makePaymentButtonPressed());
+        HBox makePaymentHBox = new HBox();
+        makePaymentHBox.setAlignment(Pos.CENTER);
+        makePaymentHBox.getChildren().add(makePaymentButton);
+
         TitledSection titledSectionPerson = new TitledSection("Kontrollera dina personuppgifter");
         titledSectionPerson.addNode(new PersonUppgifter());
 
         TitledSection titledSectionKonto = new TitledSection("Gör din beställning");
+        ShoppingCheckoutDetails details = new ShoppingCheckoutDetails();
+        titledSectionKonto.addNode(details);
         titledSectionKonto.addNode(new KontoUppgifter());
+
 
         paymentContainerVBox.getChildren().add(goToVarukorgHBox);
         paymentContainerVBox.getChildren().add(titledSectionPerson);
         paymentContainerVBox.getChildren().add(titledSectionKonto);
+    }
+
+    private void makePaymentButtonPressed() {
+        IMat.getInstance().placeOrder(true);
     }
 
     private void createVarukorgUI() {

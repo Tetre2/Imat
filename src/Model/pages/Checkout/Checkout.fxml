@@ -13,6 +13,19 @@
       <AnchorPane fx:id="TopNav" prefHeight="100.0" prefWidth="1440.0" AnchorPane.topAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <StackPane fx:id="containerStackPane" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
          <children>
+            <AnchorPane fx:id="paymentDoneContainerAnchorPane" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ScrollPane fx:id="paymentDoneScrollPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="1426.0">
+                           <children>
+                              <VBox fx:id="paymentDoneContainerVBox" prefHeight="100.0" prefWidth="1050.0" />
+                           </children>
+                        </HBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
             <AnchorPane fx:id="paymentContainerAnchorPane" prefHeight="200.0" prefWidth="200.0">
                <children>
                   <ScrollPane fx:id="paymentScrollPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
