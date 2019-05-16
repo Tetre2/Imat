@@ -1,5 +1,6 @@
 package Model.components.Forms.InputItem.LimitedTextField;
 
+import Model.IMat;
 import Model.components.Forms.CheckValidity;
 import Model.components.Forms.Focusalbe;
 import javafx.fxml.FXML;
@@ -52,6 +53,7 @@ public class LimitedTextField extends AnchorPane implements Focusalbe {
             if (isAtCharLength()) {
                 if (isValid()) {
                     clearErr();
+                    System.out.println("fnkdnfksnfdånådfskndknsf");
                     next.setFocus();
                 }
             }
@@ -72,6 +74,7 @@ public class LimitedTextField extends AnchorPane implements Focusalbe {
     }
 
     private boolean isAtCharLength() {
+
         return textField.getText().length() == charLength;
     }
 
