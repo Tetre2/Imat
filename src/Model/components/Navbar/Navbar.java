@@ -15,10 +15,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static Model.components.LeftSidebar.LeftSidebarCategory.MainCategory.ALLA_VAROR;
-
-//import static Model.components.LeftSidebar.LeftSidebarCategory.MainCategory.ALLA_VAROR;
-
 public class Navbar extends AnchorPane {
 
     @FXML

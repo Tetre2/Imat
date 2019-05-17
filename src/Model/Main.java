@@ -52,7 +52,7 @@ public class Main extends Application {
 
         navbar = new Navbar();
 
-        setSceneToMainPage();
+        navbar.goToMainPage();
         window.show();
 
     }
