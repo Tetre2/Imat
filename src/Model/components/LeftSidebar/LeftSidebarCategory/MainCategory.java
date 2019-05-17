@@ -46,13 +46,20 @@ public enum MainCategory {
             ProductCategory.PASTA,
             ProductCategory.POTATO_RICE),
     FAVORIT ("Favorit",
-            ProductCategory.BERRY);
+            IMat.getInstance().getFavorites());
 
 
 
     String name;
     List<ProductCategory> subCategories;
     List<Product> products;
+
+    MainCategory(String name, List<Product> products){
+        this.name = name;
+        this.products = products;
+
+        //getProducts();
+    }
     MainCategory(String name, ProductCategory... productCategories){
         this.name = name;
         subCategories = new ArrayList<ProductCategory>();
@@ -69,7 +76,7 @@ public enum MainCategory {
      * @return products that belongs to a specific main category
      */
     public List<Product> getProducts(){
-        if(products == null || products.size() == 0){
+        if(products == null){
             products = new ArrayList<Product>();
             for(ProductCategory category: subCategories){
                 products.addAll(IMat.getInstance().getProducts(category));

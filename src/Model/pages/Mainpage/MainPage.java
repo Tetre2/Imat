@@ -78,46 +78,65 @@ public class MainPage extends AnchorPane implements CategoryListener {
 
     //cache used for storing shopping items in order to not generate new ones.
     //Creating new objects all the time consumes a high amount of ram because of the product-image.
-    private Map<MainCategory, List<ShoppingItem>> cachedShoppingItems = new HashMap<>();
+    private Map<Product, ShoppingItem> cachedShoppingItems = new HashMap<>();
 
+
+    /**
+     * If a product already has a shoppingItem connected to itself - return that object
+     * else - create a new shoppingItem from the selected product and then return that object.
+     * @param product
+     * @return a shopping item for the product
+     */
+    private ShoppingItem getShoppingItem(Product product){
+        if(cachedShoppingItems.containsKey(product)){
+            return cachedShoppingItems.get(product);
+        }
+        ShoppingItem shoppingItem = new ShoppingItem(product);
+        cachedShoppingItems.put(product, shoppingItem);
+        return shoppingItem;
+
+    }
+
+    /**
+     *
+     * @param mainCategory
+     * @return a list of items that has mainCategory as "parent"
+     */
     private List<ShoppingItem> getShoppingItems(MainCategory mainCategory){
 
         List<ShoppingItem> shoppingItems = new ArrayList<>();
 
-        if(cachedShoppingItems.containsKey(mainCategory)){          // Reuse shopping items that has already been generated.
-            shoppingItems = cachedShoppingItems.get(mainCategory);
-
-        }else{                                                      // Generate shopping items and store them in our Map as cache.
-            for (int i = 0; i < mainCategory.getProducts().size(); i++) {
-                ShoppingItem shoppingItem = new ShoppingItem(mainCategory.getProducts().get(i));
-                shoppingItems.add(shoppingItem);
-                cachedShoppingItems.put(mainCategory, shoppingItems);
-            }
+        // Generate shopping items and store them in our Map as cache.
+        for (int i = 0; i < mainCategory.getProducts().size(); i++) {
+            ShoppingItem shoppingItem = getShoppingItem(mainCategory.getProducts().get(i));
+            shoppingItems.add(shoppingItem);
         }
+
         return shoppingItems;
     }
 
+
+    /**
+     * This method shall only run once. It shall run when application is initialized.
+     * @return
+     */
     public List<ShoppingItem> preloadShoppingItems(){
         List<ShoppingItem> shoppingItems = new ArrayList<>();
-        //Ta in lista med alla produkter
 
-        //Skapa 1 Shopping Item för varje produkt
+        //Loop through each category and cache each item to the specific category
+        for(Product product : IMat.getInstance().getProducts()) {
+            //getShoppingItem - if shoppingItem has already been created - use the cached object, else - create new object and cache
+            ShoppingItem shoppingItem = getShoppingItem(product);
+            shoppingItems.add(shoppingItem);                                //shoppingItems is the list that will be returned
 
-        //Lägg till referens till Shopping Item i en Map<Product, ShoppingItem>
-
-        //Lägg till referens till Shopping Item i current items
-        for(MainCategory mainCategory: MainCategory.values()) {
-            List<ShoppingItem> currentItems = new ArrayList<>();
-            for (Product product : mainCategory.getProducts()) {
-                ShoppingItem shoppingItem = new ShoppingItem(product);
-                currentItems.add(shoppingItem);
-                shoppingItems.add(shoppingItem);
-            }
-            cachedShoppingItems.put(mainCategory,currentItems);
         }
         return shoppingItems;
     }
 
+    /**
+     * Update the "main grid" with shoppingItems from a selected category
+     * @param mainCategory
+     */
     public void updateGrid(MainCategory mainCategory){
 
 
@@ -159,10 +178,11 @@ public class MainPage extends AnchorPane implements CategoryListener {
         List<ShoppingItem> shoppingItems = preloadShoppingItems();
         int i = 0;
         for (ShoppingItem item: shoppingItems) {
-
-            grid.setConstraints(item, i%4, i/4);
-            grid.getChildren().add(item);
-            i++;
+            if(!grid.getChildren().contains(item)) {
+                grid.setConstraints(item, i % 4, i / 4);
+                grid.getChildren().add(item);
+                i++;
+            }
         }
     }
 
