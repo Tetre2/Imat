@@ -8,6 +8,7 @@ import Model.components.Forms.InputItem.LimitedTextField.LimitedTextField;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 
@@ -55,6 +56,14 @@ public class MonthYearInputItem extends AnchorPane implements Focusable {
                 isMonthValide();
             }
         });
+        //för att man ska kunna trycka enter
+        month.setOnKeyPressed(ke -> {
+            if (ke.getCode().equals(KeyCode.ENTER)) {
+                if(!month.getText().equals("")) {
+                    year.requestFocus();
+                }
+            }});
+
 
         //upptäcker om man skrivigt något i rutan
         year.textProperty().addListener((observable, oldValue, newValue) -> {
@@ -77,6 +86,16 @@ public class MonthYearInputItem extends AnchorPane implements Focusable {
                 isYearValide();
             }
         });
+        //för att man ska kunna trycka enter
+        year.setOnKeyPressed(ke -> {
+            if (ke.getCode().equals(KeyCode.ENTER)) {
+                if(!year.getText().equals("")) {
+                    if(next != null){
+                        next.setFocus();
+                    }
+                }
+            }});
+
     }
 
 
@@ -138,6 +157,7 @@ public class MonthYearInputItem extends AnchorPane implements Focusable {
             return false;
         }
         if(month < 13 && month > 0) {
+            clearErr(this.month);
             return true;
         }
         showErr(this.month);
@@ -153,6 +173,10 @@ public class MonthYearInputItem extends AnchorPane implements Focusable {
             return false;
         }
         if(year > 2019 && year < 2026){
+            clearErr(this.year);
+            return true;
+        }else if(year > 19 && year < 26){
+            clearErr(this.year);
             return true;
         }
         showErr(this.year);
