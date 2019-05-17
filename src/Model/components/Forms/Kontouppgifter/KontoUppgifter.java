@@ -1,6 +1,7 @@
 package Model.components.Forms.Kontouppgifter;
 
 import Model.IMat;
+import Model.components.Forms.Focusable;
 import Model.components.Forms.InputItem.InputItem.TextInput;
 import Model.components.Forms.InputItem.KontrollSiffror.KontrolSiffror;
 import Model.components.Forms.InputItem.MonthYearInputItem.MonthYearInputItem;
@@ -15,7 +16,7 @@ import se.chalmers.cse.dat216.project.CreditCard;
 
 import java.io.IOException;
 
-public class KontoUppgifter extends AnchorPane {
+public class KontoUppgifter extends AnchorPane implements Focusable {
 
     @FXML
     private FlowPane flowPane;
@@ -38,12 +39,10 @@ public class KontoUppgifter extends AnchorPane {
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
-        addEventListeners();
-
         kontrollSiffror = new KontrolSiffror(null);
         monthYearInputItem = new MonthYearInputItem(kontrollSiffror);
         kontonummer = new KontoNummerInputItem(monthYearInputItem);
-        kontoAgare = new TextInput("Ägarens förnamn:", "Britt", "Ange ägarens förnamn till kontokortet", kontonummer.getLimitedTextFields().get(0));
+        kontoAgare = new TextInput("Ägarens förnamn:", "Britt", "Ange ägarens förnamn till kontokortet *", kontonummer.getLimitedTextFields().get(0), true);
 
         flowPane.getChildren().add(kontoAgare);
         flowPane.getChildren().add(kontonummer);
@@ -55,6 +54,8 @@ public class KontoUppgifter extends AnchorPane {
         monthYearInputItem.setYear(creditCard.getValidYear() + "");
         kontonummer.setCardNumber(creditCard.getCardNumber());
         kontoAgare.setText(creditCard.getHoldersName());
+
+        addEventListeners();
 
         hideErr();
 
@@ -114,4 +115,8 @@ public class KontoUppgifter extends AnchorPane {
         }
     }
 
+    @Override
+    public void setFocus() {
+        kontoAgare.setFocus();
+    }
 }

@@ -1,19 +1,23 @@
 package Model.components.Forms.PersonUppgifter;
 
 import Model.IMat;
+import Model.components.Forms.Focusable;
 import Model.components.Forms.InputItem.InputItem.TextInput;
 import Model.components.Forms.NotValidInput;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.Customer;
 
 import javax.swing.text.html.ImageView;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-public class PersonUppgifter extends AnchorPane {
+public class PersonUppgifter extends AnchorPane implements Focusable{
 
     @FXML
     private FlowPane flowPane;
@@ -33,21 +37,26 @@ public class PersonUppgifter extends AnchorPane {
     private TextInput firstname;
 
     private Customer customer;
+    private List<TextInput> textInputs;
 
     public PersonUppgifter() {
+        textInputs = new ArrayList<>();
         customer = IMat.getInstance().getCustomer();
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
         addEventListeners();
-        postaddress = new TextInput("Postadress:", "Göteborg", "Ange din postadress", null);
-        postcode = new TextInput("Postnummer:", "123 45", "Ange ditt postnummer", postaddress);
-        address = new TextInput("Adress:", "Långgatan 6", "Ange din adress", postcode);
-        email = new TextInput("Mejl:", "exempel@email.com", "Ange din mejl", address);
-        phone = new TextInput("Telefonnummer:", "123456789", "Ange ditt telefonnummer", email);
-        lastname = new TextInput("Efternamn:", "persson", "Ange ditt efternamn", phone);
-        firstname = new TextInput("Förnamn:", "Brit", "Ange ditt förnamn", lastname);
+        postaddress = new TextInput("Postadress:", "Göteborg", "Ange din postadress *", null, true);
+        postcode = new TextInput("Postnummer:", "123 45", "Ange ditt postnummer *", postaddress, true);
+        address = new TextInput("Adress:", "Långgatan 6", "Ange din adress *", postcode, true);
+        email = new TextInput("Mejl:", "exempel@email.com", "Ange din mejl *", address, true);
+        phone = new TextInput("Telefonnummer:", "123456789", "Ange ditt telefonnummer", email, false);
+        lastname = new TextInput("Efternamn:", "persson", "Ange ditt efternamn *", phone, true);
+        firstname = new TextInput("Förnamn:", "Brit", "Ange ditt förnamn *", lastname, true);
 
+        Label label = new Label("Fält med * måste fyllas i");
+
+        flowPane.getChildren().add(label);
         flowPane.getChildren().add(firstname);
         flowPane.getChildren().add(lastname);
         flowPane.getChildren().add(phone);
@@ -63,6 +72,14 @@ public class PersonUppgifter extends AnchorPane {
         phone.setText(customer.getPhoneNumber());
         lastname.setText(customer.getLastName());
         firstname.setText(customer.getFirstName());
+        
+        textInputs.add(firstname);
+        textInputs.add(lastname);
+        textInputs.add(phone);
+        textInputs.add(email);
+        textInputs.add(address);
+        textInputs.add(postcode);
+        textInputs.add(postaddress);
 
         hideErr();
 
@@ -92,8 +109,8 @@ public class PersonUppgifter extends AnchorPane {
     }
 
     private void showSaved(){
-        for (int i = 0; i < flowPane.getChildren().size(); i++) {
-            ((TextInput) flowPane.getChildren().get(i)).setSaved();
+        for (TextInput t : textInputs) {
+            t.setSaved();
         }
     }
 
@@ -120,4 +137,8 @@ public class PersonUppgifter extends AnchorPane {
         }
     }
 
+    @Override
+    public void setFocus() {
+        firstname.setFocus();
+    }
 }

@@ -42,4 +42,5 @@ public class TitledSection extends AnchorPane {
             throw new RuntimeException(exception);
         }
     }
+
 }
