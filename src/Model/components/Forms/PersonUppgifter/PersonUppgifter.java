@@ -47,8 +47,6 @@ public class PersonUppgifter extends AnchorPane {
         lastname = new TextInput("Efternamn:", "persson", "Ange ditt efternamn", phone);
         firstname = new TextInput("Förnamn:", "Brit", "Ange ditt förnamn", lastname);
 
-
-
         flowPane.getChildren().add(firstname);
         flowPane.getChildren().add(lastname);
         flowPane.getChildren().add(phone);

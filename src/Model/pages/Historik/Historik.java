@@ -64,11 +64,11 @@ public class Historik extends AnchorPane {
     public void showKvitto(Order order){
         kvittoGray.setVisible(true);
         kvittoOverlay.getChildren().clear();
-        Kvitto kvitto = new Kvitto(order);
+        Kvitto kvitto = new Kvitto(order, this);
         kvittoOverlay.getChildren().add(kvitto);
     }
 
-    private void hideKvitto(){
+    public void hideKvitto(){
         kvittoOverlay.getChildren().clear();
         kvittoGray.setVisible(false);
     }
