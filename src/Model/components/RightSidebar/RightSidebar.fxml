@@ -16,9 +16,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxWidth="400.0" minHeight="670.0" prefHeight="720.0" prefWidth="400.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxWidth="400.0" minHeight="670.0" prefHeight="720.0" prefWidth="470.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="400.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="470.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label alignment="CENTER" prefHeight="35.0" prefWidth="403.0" text="Varukorg">
                <styleClass>
@@ -31,7 +31,7 @@
             </Label>
             <ScrollPane prefHeight="559.0" prefWidth="380.0">
                <content>
-                  <FlowPane fx:id="inventory" maxWidth="365.0" prefHeight="548.0" prefWidth="365.0" />
+                  <FlowPane fx:id="inventory" maxWidth="432.0" prefHeight="610.0" prefWidth="177.0" />
                </content>
             </ScrollPane>
             <VBox prefHeight="99.0" prefWidth="380.0">
@@ -58,7 +58,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <Button fx:id="pay" alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="37.0" prefWidth="392.0" styleClass="btn-primary" text="Gå Till Kassan">
+                  <Button fx:id="pay" alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="37.0" prefWidth="464.0" styleClass="btn-primary" text="Gå Till Kassan">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
@@ -70,7 +70,7 @@
             </VBox>
          </children>
       </VBox>
-      <Pane fx:id="helpPane" layoutX="11.0" layoutY="36.0" prefHeight="559.0" prefWidth="380.0" style="-fx-border-color: white;">
+      <Pane fx:id="helpPane" layoutX="11.0" layoutY="36.0" prefHeight="559.0" prefWidth="460.0" style="-fx-border-color: white;">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutY="96.0" prefHeight="50.0" prefWidth="380.0" styleClass="help_text_h1" text="Din varukorg är tom!" textAlignment="CENTER" />
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-4.0" layoutY="146.0" prefHeight="50.0" prefWidth="380.0" styleClass="help_text_h2" text="För att lägga till en vara:" textAlignment="CENTER" />

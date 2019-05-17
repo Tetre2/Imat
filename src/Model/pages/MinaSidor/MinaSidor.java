@@ -39,8 +39,8 @@ public class MinaSidor extends AnchorPane {
 
 
 
-        Navbar tmpBar = new Navbar();
-        TopNav.getChildren().add(tmpBar);
+        /*navbar = new Navbar();
+        TopNav.getChildren().add(navbar);*/
         vBox.getChildren().add(titledSectionPerson);
         vBox.getChildren().add(titledSectionKonto);
 
@@ -63,6 +63,10 @@ public class MinaSidor extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+    }
+
+    public void setNavBar(Navbar navBar){
+        TopNav.getChildren().add(navBar);
     }
 
 }

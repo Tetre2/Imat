@@ -54,7 +54,7 @@ public class MainPage extends AnchorPane implements CategoryListener {
         varukorg.getChildren().add(rightSidebar);
 
         Navbar navbar = new Navbar();
-        topNavBar.getChildren().add(navbar);
+        //topNavBar.getChildren().add(navbar);
 
     }
 
@@ -192,5 +192,9 @@ public class MainPage extends AnchorPane implements CategoryListener {
             System.out.println("category: " + mainCategory.toString() + " was clicked");
             updateGrid(mainCategory);
             currentCategoryLabel.setText(mainCategory.toString());
+    }
+
+    public void setNavBar(Navbar navBar){
+        topNavBar.getChildren().add(navBar);
     }
 }

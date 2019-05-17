@@ -12,6 +12,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import static Model.components.LeftSidebar.LeftSidebarCategory.MainCategory.ALLA_VAROR;
 
@@ -28,32 +30,32 @@ public class Navbar extends AnchorPane {
     @FXML
     private Button minaSidor;
     @FXML
+    private Button handla;
+    @FXML
     private TextField searchBar;
 
-    LeftSidebar leftSidebar = new LeftSidebar();
-
+    private List<Button> buttons;
 
     public Navbar(){
+        buttons = new ArrayList<>();
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
         addEventListeners();
-    }
 
-    @FXML
-    private void onIMatPressed() { //setMainCategoryFocused fungerar inte helt när man använder den på detta vis verkar det som.
-        Main.setSceneToMainPage();
-        leftSidebar.setMainCategoryFocused(ALLA_VAROR);
-        Main.changeCategory(ALLA_VAROR);
-
-
+        buttons.add(hjalp);
+        buttons.add(kvitton);
+        buttons.add(minaSidor);
+        buttons.add(handla);
     }
 
     private void addEventListeners(){
+        iMatLabel.setOnMouseClicked(event -> goToMainPage());
+        hjalp.setOnAction(e -> goToHjalp());
+        kvitton.setOnAction(e -> goToHistorik());
+        minaSidor.setOnAction(e -> goToMinaSidor());
+        handla.setOnAction(event -> goToMainPage());
 
-        hjalp.setOnAction(e -> Main.setSceneToHjalp());
-        kvitton.setOnAction(e -> Main.setSceneToHistorik());
-        minaSidor.setOnAction(e -> Main.setSceneToMinaSidor());
     }
 
     private FXMLLoader initFXML() {
@@ -77,5 +79,39 @@ public class Navbar extends AnchorPane {
 
     }
 
+    public void goToMainPage(){
+        clearAllButtonStyles();
+        setActiveButton(handla);
+        Main.setSceneToMainPage();
+    }
+
+    public void goToMinaSidor(){
+        clearAllButtonStyles();
+        setActiveButton(minaSidor);
+        Main.setSceneToMinaSidor();
+    }
+
+    public void goToHistorik(){
+        clearAllButtonStyles();
+        setActiveButton(kvitton);
+        Main.setSceneToHistorik();
+    }
+
+    public void goToHjalp(){
+        clearAllButtonStyles();
+        setActiveButton(hjalp);
+        Main.setSceneToHjalp();
+    }
+
+    private void clearAllButtonStyles(){
+        for (Button b : buttons) {
+            b.getStyleClass().clear();
+            b.getStyleClass().add("button");
+        }
+    }
+
+    private void setActiveButton(Button b){
+        b.getStyleClass().add("selected");
+    }
 
 }

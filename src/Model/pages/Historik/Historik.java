@@ -31,7 +31,7 @@ public class Historik extends AnchorPane {
         addEventListeners();
         hideKvitto();
 
-        TopNav.getChildren().add(new Navbar());
+        //TopNav.getChildren().add(new Navbar());
 
         for (int i = 0; i < IMat.getInstance().getOrders().size(); i++) {
             HistorikItem historikItem = new HistorikItem(IMat.getInstance().getOrders().get(i), this);
@@ -71,6 +71,10 @@ public class Historik extends AnchorPane {
     public void hideKvitto(){
         kvittoOverlay.getChildren().clear();
         kvittoGray.setVisible(false);
+    }
+
+    public void setNavBar(Navbar navBar){
+        TopNav.getChildren().add(navBar);
     }
 
 }

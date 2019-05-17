@@ -39,7 +39,7 @@ public class Checkout extends AnchorPane {
     }
 
     public void initUI() {
-        TopNav.getChildren().add(new Navbar());
+        //TopNav.getChildren().add(new Navbar());
         varukorgContainerAnchorPane.toFront();
 
         createPaymentDoneUI();
@@ -142,5 +142,9 @@ public class Checkout extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+    }
+
+    public void setNavBar(Navbar navBar){
+        TopNav.getChildren().add(navBar);
     }
 }

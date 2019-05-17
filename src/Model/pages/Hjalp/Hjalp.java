@@ -19,7 +19,7 @@ public class Hjalp extends AnchorPane {
         addEventListeners();
 
 
-        TopNav.getChildren().add(new Navbar());
+        //TopNav.getChildren().add(new Navbar());
 
     }
 
@@ -44,5 +44,8 @@ public class Hjalp extends AnchorPane {
         }
     }
 
+    public void setNavBar(Navbar navBar){
+        TopNav.getChildren().add(navBar);
+    }
 
 }

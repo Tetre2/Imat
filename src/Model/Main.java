@@ -2,6 +2,7 @@ package Model;
 
 import Model.components.LeftSidebar.LeftSidebar;
 import Model.components.LeftSidebar.LeftSidebarCategory.MainCategory;
+import Model.components.Navbar.Navbar;
 import Model.pages.Checkout.Checkout;
 import Model.pages.Favoriter.Favoriter;
 import Model.pages.Historik.Historik;
@@ -29,6 +30,8 @@ public class Main extends Application {
     private static Hjalp hjalp;
     private static Favoriter favoriter;
 
+    private static Navbar navbar;
+
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -46,6 +49,8 @@ public class Main extends Application {
         minaSidor = new MinaSidor();
         hjalp = new Hjalp();
         favoriter = new Favoriter();
+
+        navbar = new Navbar();
 
         setSceneToMainPage();
         window.show();
@@ -66,6 +71,7 @@ public class Main extends Application {
     public static void setSceneToMinaSidor(){
         Group group = new Group();
         group.getChildren().add(minaSidor);
+        minaSidor.setNavBar(navbar);
         Scene scene = new Scene(group);
         window.setScene(scene);
     }
@@ -80,6 +86,7 @@ public class Main extends Application {
     public static void setSceneToHjalp(){
         Group group = new Group();
         group.getChildren().add(hjalp);
+        hjalp.setNavBar(navbar);
         Scene scene = new Scene(group);
         window.setScene(scene);
     }
@@ -87,6 +94,7 @@ public class Main extends Application {
     public static void setSceneToHistorik(){
         Group group = new Group();
         group.getChildren().add(historik);
+        historik.setNavBar(navbar);
         Scene scene = new Scene(group);
         window.setScene(scene);
     }
@@ -95,6 +103,7 @@ public class Main extends Application {
     public static void setSceneToCheckout(){
         Group group = new Group();
         group.getChildren().add(checkout);
+        checkout.setNavBar(navbar);
         Scene scene = new Scene(group);
         window.setScene(scene);
     }
@@ -116,6 +125,7 @@ public class Main extends Application {
     public static void setSceneToMainPage(){
         Group group = new Group();
         group.getChildren().add(mainPage);
+        mainPage.setNavBar(navbar);
         Scene scene = new Scene(group);
         window.setScene(scene);
     }
