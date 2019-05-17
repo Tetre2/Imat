@@ -14,8 +14,8 @@
             <Font size="58.0" />
          </font>
       </Label>
-      <Label fx:id="tooltip" layoutX="233.0" layoutY="69.0" text="Månad" />
+      <Label fx:id="tooltip" layoutX="233.0" layoutY="69.0" text="Månad *" />
       <TextField fx:id="year" layoutX="342.0" layoutY="9.0" prefHeight="60.0" prefWidth="82.0" promptText="XXXX" stylesheets="@../../FormStyles.css" text="År" />
-      <Label fx:id="tooltip1" layoutX="342.0" layoutY="69.0" text="År" />
+      <Label fx:id="tooltip1" layoutX="342.0" layoutY="69.0" text="År *" />
    </children>
 </fx:root>

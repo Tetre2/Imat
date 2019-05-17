@@ -24,14 +24,16 @@ public class TextInput extends AnchorPane implements Focusable{
     private Label tooltip;
 
     private Focusable next;
+    private Boolean needed;
 
-    public TextInput(String label, String preVeiwText, String tooltip, Focusable next) {
-        this(label,preVeiwText,tooltip, 0, next);
+    public TextInput(String label, String preVeiwText, String tooltip, Focusable next, Boolean needed) {
+        this(label,preVeiwText,tooltip, 0, next, needed);
 
     }
 
-    public TextInput(String label, String preVeiwText, String tooltip, int width, Focusable next) {
+    public TextInput(String label, String preVeiwText, String tooltip, int width, Focusable next, Boolean needed) {
         this.next = next;
+        this.needed = needed;
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
@@ -51,8 +53,8 @@ public class TextInput extends AnchorPane implements Focusable{
         //upptäcker om man skrivigt något i rutan
         textField.focusedProperty().addListener((obs, wasFocused, isNowFocused) -> {
             if(wasFocused){
-                if(!textField.getText().equals("")){
-
+                if(textField.getText().equals("") && needed){
+                    setErr();
                 }
             }
         });
@@ -61,7 +63,6 @@ public class TextInput extends AnchorPane implements Focusable{
         textField.setOnKeyPressed(ke -> {
             if (ke.getCode().equals(KeyCode.ENTER)) {
                 if(!textField.getText().equals("")) {
-                    System.out.println(textField.getText());
                     if(next != null){
                         next.setFocus();
                     }
@@ -71,6 +72,10 @@ public class TextInput extends AnchorPane implements Focusable{
 
     public void setText(String s) {
         this.textField.setText(s);
+    }
+
+    public TextField getTextField(){
+        return textField;
     }
 
     private FXMLLoader initFXML() {
@@ -94,15 +99,27 @@ public class TextInput extends AnchorPane implements Focusable{
     }
 
     public String getInput() throws NotValidInput {
-        if(textField.getText().equals("")){
+        if(textField.getText().equals("") && needed){
+            setErr();
             throw new NotValidInput();
         }else {
             return textField.getText();
         }
     }
 
+    public void setErr(){
+        setDefault();
+        textField.getStyleClass().add("textBoxErr");
+    }
+
     public void setSaved(){
+        setDefault();
         textField.getStyleClass().add("textBoxSaved");
+    }
+
+    public void setDefault(){
+        textField.getStyleClass().clear();
+        textField.getStyleClass().addAll("text-field", "text-input");
     }
 
 }

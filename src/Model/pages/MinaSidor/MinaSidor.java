@@ -6,6 +6,7 @@ import Model.components.Navbar.Navbar;
 import Model.components.TitledSection.TitledSection;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
@@ -19,6 +20,8 @@ public class MinaSidor extends AnchorPane {
     private AnchorPane TopNav;
     @FXML
     private VBox vBox;
+    @FXML
+    private ScrollPane scrollPane;
 
     public MinaSidor(){
         FXMLLoader fxmlLoader = initFXML();
@@ -26,14 +29,15 @@ public class MinaSidor extends AnchorPane {
 
         addEventListeners();
 
+        TitledSection titledSectionKonto = new TitledSection("Kontouppgifter");
+        KontoUppgifter tmpKonto = new KontoUppgifter();
+        titledSectionKonto.addNode(tmpKonto);
 
         TitledSection titledSectionPerson = new TitledSection("Personuppgifter");
         PersonUppgifter tmpUppgifter = new PersonUppgifter();
         titledSectionPerson.addNode(tmpUppgifter);
 
-        TitledSection titledSectionKonto = new TitledSection("Kontouppgifter");
-        KontoUppgifter tmpKonto = new KontoUppgifter();
-        titledSectionKonto.addNode(tmpKonto);
+
 
         Navbar tmpBar = new Navbar();
         TopNav.getChildren().add(tmpBar);
