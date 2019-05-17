@@ -1,5 +1,6 @@
 package Model.components.Forms.InputItem.InputItem;
 
+import Model.IMat;
 import Model.components.Forms.Focusable;
 import Model.components.Forms.InputItem.isInputItem;
 import javafx.fxml.FXML;
@@ -11,7 +12,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class TextInput extends AnchorPane implements Focusable, isInputItem {
+public class TextInput extends AnchorPane implements Focusable{
 
 
     @FXML
@@ -50,7 +51,7 @@ public class TextInput extends AnchorPane implements Focusable, isInputItem {
         textField.focusedProperty().addListener((obs, wasFocused, isNowFocused) -> {
             if(wasFocused){
                 if(!textField.getText().equals("")){
-                    System.out.println(textField.getText());
+
                 }
             }
         });
@@ -91,13 +92,8 @@ public class TextInput extends AnchorPane implements Focusable, isInputItem {
         textField.requestFocus();
     }
 
-    @Override
     public String getInput() {
         return textField.getText();
     }
 
-    @Override
-    public boolean isValide() {
-        return true;
-    }
 }
