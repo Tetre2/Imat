@@ -13,6 +13,8 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
+import static Model.components.LeftSidebar.LeftSidebarCategory.MainCategory.ALLA_VAROR;
+
 //import static Model.components.LeftSidebar.LeftSidebarCategory.MainCategory.ALLA_VAROR;
 
 public class Navbar extends AnchorPane {
@@ -41,8 +43,8 @@ public class Navbar extends AnchorPane {
     @FXML
     private void onIMatPressed() { //setMainCategoryFocused fungerar inte helt när man använder den på detta vis verkar det som.
         Main.setSceneToMainPage();
-       // leftSidebar.setMainCategoryFocused(ALLA_VAROR);
-      //  Main.changeCategory(ALLA_VAROR);
+        leftSidebar.setMainCategoryFocused(ALLA_VAROR);
+        Main.changeCategory(ALLA_VAROR);
 
 
     }

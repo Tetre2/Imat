@@ -28,16 +28,17 @@ public class MinaSidor extends AnchorPane {
 
 
         TitledSection titledSectionPerson = new TitledSection("Personuppgifter");
-        titledSectionPerson.addNode(new PersonUppgifter());
+        PersonUppgifter tmpUppgifter = new PersonUppgifter();
+        titledSectionPerson.addNode(tmpUppgifter);
 
         TitledSection titledSectionKonto = new TitledSection("Kontouppgifter");
-        titledSectionKonto.addNode(new KontoUppgifter());
+        KontoUppgifter tmpKonto = new KontoUppgifter();
+        titledSectionKonto.addNode(tmpKonto);
 
-        TopNav.getChildren().add(new Navbar());
+        Navbar tmpBar = new Navbar();
+        TopNav.getChildren().add(tmpBar);
         vBox.getChildren().add(titledSectionPerson);
         vBox.getChildren().add(titledSectionKonto);
-
-
 
     }
 

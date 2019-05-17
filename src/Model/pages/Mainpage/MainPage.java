@@ -99,6 +99,13 @@ public class MainPage extends AnchorPane implements CategoryListener {
 
     public List<ShoppingItem> preloadShoppingItems(){
         List<ShoppingItem> shoppingItems = new ArrayList<>();
+        //Ta in lista med alla produkter
+
+        //Skapa 1 Shopping Item för varje produkt
+
+        //Lägg till referens till Shopping Item i en Map<Product, ShoppingItem>
+
+        //Lägg till referens till Shopping Item i current items
         for(MainCategory mainCategory: MainCategory.values()) {
             List<ShoppingItem> currentItems = new ArrayList<>();
             for (Product product : mainCategory.getProducts()) {
@@ -135,7 +142,7 @@ public class MainPage extends AnchorPane implements CategoryListener {
 
         List<String> products = new ArrayList<>();
 
-        for (int i = 0; i > IMat.getInstance().getFavorites().size(); i++){
+        for (int i = 0; i < IMat.getInstance().getFavorites().size(); i++){
             System.out.println("test in loop");
             products.add(IMat.getInstance().getFavorites().get(i).toString());
             System.out.println(products.get(i));

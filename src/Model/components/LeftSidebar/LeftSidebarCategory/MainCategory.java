@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public enum MainCategory {
-    /*ALLA_VAROR ("Alla varor",
+    ALLA_VAROR ("Alla varor",
             ProductCategory.BREAD,
             ProductCategory.HOT_DRINKS,
             ProductCategory.COLD_DRINKS,
@@ -23,7 +23,7 @@ public enum MainCategory {
             ProductCategory.FLOUR_SUGAR_SALT,
             ProductCategory.NUTS_AND_SEEDS,
             ProductCategory.PASTA,
-            ProductCategory.POTATO_RICE),*/
+            ProductCategory.POTATO_RICE),
     BRÖD_OCH_KAKOR("Bröd & Kakor",
             ProductCategory.BREAD),
     DRYCK("Dryck",
@@ -59,7 +59,7 @@ public enum MainCategory {
         for(ProductCategory category: productCategories){
             subCategories.add(category);
         }
-        getProducts();
+        //getProducts();
     }
 
 
