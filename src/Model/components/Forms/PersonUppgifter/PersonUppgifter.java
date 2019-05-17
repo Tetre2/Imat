@@ -2,6 +2,7 @@ package Model.components.Forms.PersonUppgifter;
 
 import Model.IMat;
 import Model.components.Forms.InputItem.InputItem.TextInput;
+import Model.components.Forms.NotValidInput;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -34,7 +35,7 @@ public class PersonUppgifter extends AnchorPane {
     private Customer customer;
 
     public PersonUppgifter() {
-        Customer customer = IMat.getInstance().getCustomer();
+        customer = IMat.getInstance().getCustomer();
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
@@ -74,13 +75,26 @@ public class PersonUppgifter extends AnchorPane {
     }
 
     private void save(){
-        customer.setPostAddress(postaddress.getInput());
-        customer.setPostCode(postcode.getInput());
-        customer.setAddress(address.getInput());
-        customer.setEmail(email.getInput());
-        customer.setPhoneNumber(phone.getInput());
-        customer.setLastName(lastname.getInput());
-        customer.setFirstName(firstname.getInput());
+        try {
+            customer.setPostAddress(postaddress.getInput());
+            customer.setPostCode(postcode.getInput());
+            customer.setAddress(address.getInput());
+            customer.setEmail(email.getInput());
+            customer.setPhoneNumber(phone.getInput());
+            customer.setLastName(lastname.getInput());
+            customer.setFirstName(firstname.getInput());
+            save.setText("Sparad");
+            showSaved();
+        } catch (NotValidInput notValidInput) {
+            notValidInput.printStackTrace();
+            showErr();
+        }
+    }
+
+    private void showSaved(){
+        for (int i = 0; i < flowPane.getChildren().size(); i++) {
+            ((TextInput) flowPane.getChildren().get(i)).setSaved();
+        }
     }
 
     private void showErr(){

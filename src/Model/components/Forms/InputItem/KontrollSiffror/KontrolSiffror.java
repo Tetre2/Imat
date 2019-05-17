@@ -113,4 +113,9 @@ public class KontrolSiffror extends AnchorPane implements Focusable{
         }
     }
 
+    public void setSaved(){
+        textField.getStyleClass().add("textBoxSaved");
+    }
+
+
 }

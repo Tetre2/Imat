@@ -117,6 +117,12 @@ public class KontoNummerInputItem extends AnchorPane implements ValidityCheckabl
 
     }
 
+    public void setSaved(){
+        for (LimitedTextField l : limitedTextFields) {
+            l.setSaved();
+        }
+    }
+
     @Override
     public boolean isValide() {
         boolean valid = true;

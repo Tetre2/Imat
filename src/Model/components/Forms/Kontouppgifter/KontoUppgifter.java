@@ -76,10 +76,19 @@ public class KontoUppgifter extends AnchorPane {
             creditCard.setValidYear(monthYearInputItem.getYear());
             creditCard.setCardNumber(kontonummer.getInput());
             creditCard.setHoldersName(kontoAgare.getInput());
-
+            save.setText("Sparad");
+            showSaved();
         } catch (NotValidInput notValidInput) {
             System.out.println("Input not Valid");
+            showErr();
         }
+    }
+
+    private void showSaved(){
+        kontrollSiffror.setSaved();
+        monthYearInputItem.setSaved();
+        kontonummer.setSaved();
+        kontoAgare.setSaved();
     }
 
     private void showErr(){

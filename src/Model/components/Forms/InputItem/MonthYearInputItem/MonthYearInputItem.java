@@ -98,6 +98,10 @@ public class MonthYearInputItem extends AnchorPane implements Focusable {
 
     }
 
+    public void setSaved(){
+        month.getStyleClass().add("textBoxSaved");
+        year.getStyleClass().add("textBoxSaved");
+    }
 
 
     private FXMLLoader initFXML() {

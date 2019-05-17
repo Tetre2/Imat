@@ -128,4 +128,9 @@ public class LimitedTextField extends AnchorPane implements Focusable {
     public String getInput() {
         return textField.getText();
     }
+
+    public void setSaved(){
+        textField.getStyleClass().add("textBoxSaved");
+    }
+
 }

@@ -3,6 +3,7 @@ package Model.components.Forms.InputItem.InputItem;
 import Model.IMat;
 import Model.components.Forms.Focusable;
 import Model.components.Forms.InputItem.isInputItem;
+import Model.components.Forms.NotValidInput;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -92,8 +93,16 @@ public class TextInput extends AnchorPane implements Focusable{
         textField.requestFocus();
     }
 
-    public String getInput() {
-        return textField.getText();
+    public String getInput() throws NotValidInput {
+        if(textField.getText().equals("")){
+            throw new NotValidInput();
+        }else {
+            return textField.getText();
+        }
+    }
+
+    public void setSaved(){
+        textField.getStyleClass().add("textBoxSaved");
     }
 
 }

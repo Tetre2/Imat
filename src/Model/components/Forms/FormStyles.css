@@ -5,6 +5,9 @@
     -fx-border-width: 3;
 }
 
-.text-field{
-
+.textBoxSaved{
+    -fx-border-type: solid;
+    -fx-border-color: #2fa600;
+    -fx-border-radius: 3;
+    -fx-border-width: 3;
 }

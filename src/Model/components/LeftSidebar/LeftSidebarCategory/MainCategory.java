@@ -61,6 +61,7 @@ public enum MainCategory {
         //getProducts();
     }
     MainCategory(String name, ProductCategory... productCategories){
+//   bara lite nyfiken vad betyder punkterna  ^  ? /Mattias
         this.name = name;
         subCategories = new ArrayList<ProductCategory>();
         for(ProductCategory category: productCategories){
