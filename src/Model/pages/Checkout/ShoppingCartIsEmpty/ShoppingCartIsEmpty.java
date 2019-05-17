@@ -7,11 +7,11 @@ import Model.pages.Checkout.ShoppingCheckout.ShoppingCheckout;
 import Model.components.TitledSection.TitledSection;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 
-import java.awt.*;
 import java.io.IOException;
 
 public class ShoppingCartIsEmpty extends AnchorPane {
@@ -21,7 +21,7 @@ public class ShoppingCartIsEmpty extends AnchorPane {
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
-        continueShoppingButton.addActionListener(e -> onContinueShoppingButtonPressed());
+        continueShoppingButton.setOnAction(e -> onContinueShoppingButtonPressed());
     }
 
     private void onContinueShoppingButtonPressed() {
