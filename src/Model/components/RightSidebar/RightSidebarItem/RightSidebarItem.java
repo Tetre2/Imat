@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.CartEvent;
@@ -23,11 +24,7 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
     @FXML
     private Label name;
     @FXML
-    private Label test;
-
-    //kanske sätta till double
-    @FXML
-    private Spinner amount;
+    private Spinner<Integer> amount;
     @FXML
     private Button close;
 
@@ -37,9 +34,9 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
-        test.setText(shoppingItem.getAmount() + "");
+        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, (int)shoppingItem.getAmount());
 
-        //IMat.getInstance().getShoppingCart().addShoppingCartListener(this);
+        amount.setValueFactory(valueFactory);
 
         addEventListeners();
 
@@ -66,6 +63,14 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
 
     private void addEventListeners() {
         close.setOnAction(e -> onClosePressed());
+
+        amount.valueProperty().addListener((obs, oldValue, newValue) -> setShoppingItemAmount());
+
+    }
+
+    private void setShoppingItemAmount(){
+        shoppingItem.setAmount(amount.getValue());
+        IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
     }
 
     public void onClosePressed(){
@@ -77,8 +82,7 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
 
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
-        test.setText(shoppingItem.getAmount()+"");
-        System.out.println("fdlö");
+
         //amount.getValueFactory().setValue( (int) shoppingItem.getAmount()); funkar inte
     }
 }
