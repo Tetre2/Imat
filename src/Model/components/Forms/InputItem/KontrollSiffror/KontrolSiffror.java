@@ -96,9 +96,13 @@ public class KontrolSiffror extends AnchorPane implements Focusable{
     }
 
     private void clearErr() {
+        setDefault();
+        error.setVisible(false);
+    }
+
+    public void setDefault(){
         textField.getStyleClass().clear();
         textField.getStyleClass().addAll("text-field", "text-input");
-        error.setVisible(false);
     }
 
     private void showErr() {

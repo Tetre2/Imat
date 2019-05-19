@@ -91,6 +91,7 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
 
     private void save(){
         hideErr();
+        clearVisuals();
         try {
             customer.setPostAddress(postaddress.getInput());
             customer.setPostCode(postcode.getInput());
@@ -110,6 +111,12 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
     private void showSaved(){
         for (TextInput t : textInputs) {
             t.setSaved();
+        }
+    }
+
+    private void clearVisuals(){
+        for (TextInput t : textInputs) {
+            t.setDefault();
         }
     }
 

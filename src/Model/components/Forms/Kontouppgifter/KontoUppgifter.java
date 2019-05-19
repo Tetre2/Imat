@@ -69,9 +69,8 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
     }
 
     private void saveInfo(){
-
         hideErr();
-
+        clearVisuals();
         try {
             creditCard.setVerificationCode(kontrollSiffror.getInput());
             creditCard.setValidMonth(monthYearInputItem.getMonth());
@@ -84,6 +83,13 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
             System.out.println("Input not Valid");
             showErr();
         }
+    }
+
+    private void clearVisuals(){
+        kontrollSiffror.setDefault();
+        monthYearInputItem.setDefaults();
+        kontonummer.setDefault();
+        kontoAgare.setDefault();
     }
 
     private void showSaved(){

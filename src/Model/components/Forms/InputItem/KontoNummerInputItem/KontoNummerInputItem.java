@@ -121,6 +121,14 @@ public class KontoNummerInputItem extends AnchorPane implements ValidityCheckabl
 
     }
 
+    public void setDefault(){
+        for (LimitedTextField l : limitedTextFields) {
+            l.clearErr();
+        }
+
+
+    }
+
     public void setSaved(){
         for (LimitedTextField l : limitedTextFields) {
             l.setSaved();

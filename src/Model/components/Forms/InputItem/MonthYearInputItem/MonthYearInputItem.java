@@ -126,6 +126,13 @@ public class MonthYearInputItem extends AnchorPane implements Focusable {
         error.setVisible(false);
     }
 
+    public void setDefaults(){
+        month.getStyleClass().clear();
+        month.getStyleClass().addAll("text-field", "text-input");
+        year.getStyleClass().clear();
+        year.getStyleClass().addAll("text-field", "text-input");
+    }
+
     private void showErr(TextField textField) {
         textField.getStyleClass().add("textBoxErr");
         error.setVisible(true);
