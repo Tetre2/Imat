@@ -142,11 +142,20 @@ public class MainPage extends AnchorPane implements CategoryListener {
         List<ShoppingItem> shoppingItems = getShoppingItems(mainCategory);
 
         //Display shopping items
-        showProductsToGrid(shoppingItems);
+        showShoppingItemToGrid(shoppingItems);
+    }
+
+    public void showProductsToGrid(List<Product> products){
+        ArrayList<ShoppingItem> arr = new ArrayList<>();
+
+        for (Product p : products) {//Hämtar shoppingitems för produkterna
+            arr.add(getShoppingItem(p));
+        }
+            showShoppingItemToGrid(arr);
     }
 
 
-    public void showProductsToGrid(List<ShoppingItem> arr){
+    private void showShoppingItemToGrid(List<ShoppingItem> arr){
         //Clear current grid of shoppingitems
         grid.getChildren().clear();
 

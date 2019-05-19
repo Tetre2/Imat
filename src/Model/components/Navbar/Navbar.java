@@ -3,11 +3,13 @@ package Model.components.Navbar;
 import Model.IMat;
 import Model.Main;
 import Model.components.Navbar.SearchedItem.SearchedItem;
+import Model.pages.Mainpage.MainPage;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.Product;
@@ -39,8 +41,10 @@ public class Navbar extends AnchorPane {
 
     private List<Product> searchedItems;
     private List<Button> buttons;
+    private MainPage mainPage;
 
     public Navbar(){
+        mainPage = Main.getMainPage();
         buttons = new ArrayList<>();
         searchedItems = new ArrayList<>();
         FXMLLoader fxmlLoader = initFXML();
@@ -75,11 +79,6 @@ public class Navbar extends AnchorPane {
 
         searchBar.textProperty().addListener((observable, oldValue, newValue) -> {
             if (searchBar.getText().length() >= 3) {
-                //TODO TA bort output
-                System.out.println();
-                for (Product p : IMat.getInstance().findProducts(searchBar.getText())) {
-                    System.out.println(p.getName());
-                }
                 searchedItems.clear();
                 searchedItems.addAll(IMat.getInstance().findProducts(searchBar.getText()));
                 showSearchedItems();
@@ -87,6 +86,13 @@ public class Navbar extends AnchorPane {
                 hideSearchedItems();
             }
         });
+
+        //för att man ska kunna trycka enter
+        searchBar.setOnKeyPressed(ke -> {
+            if (ke.getCode().equals(KeyCode.ENTER)) {
+                mainPage.showProductsToGrid(searchedItems);
+                hideSearchedItems();
+            }});
 
     }
 
