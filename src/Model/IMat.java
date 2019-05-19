@@ -74,7 +74,7 @@ public class IMat {
         dataHandler.addProduct(p);
     }
 
-    public List findProducts(String s){
+    public List<Product> findProducts(String s){
         return dataHandler.findProducts(s);
     }
 

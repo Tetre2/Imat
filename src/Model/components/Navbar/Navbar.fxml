@@ -6,43 +6,50 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1540.0" stylesheets="@Navbar.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+
+<fx:root fx:id="root" prefHeight="156.0" prefWidth="1540.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox prefHeight="100.0" prefWidth="1440.0">
+      <javafx.scene.layout.AnchorPane fx:id="nav" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1540.0" stylesheets="@Navbar.css">
          <children>
-            <ToolBar accessibleText="fds" maxHeight="100.0" maxWidth="1540.0" minHeight="100.0" minWidth="1540.0" prefHeight="100.0" prefWidth="1540.0">
-               <items>
-                  <ImageView fx:id="iMatLabel" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../resources/Logga.PNG" />
-                     </image>
-                  </ImageView>
-                  <Region prefHeight="100.0" prefWidth="104.0" />
-                  <TextField fx:id="searchBar" onAction="#onSearchTyped" onKeyPressed="#onSearchTyped" prefHeight="48.0" prefWidth="630.0" promptText="Sök efter produkter här" />
-                  <Region prefHeight="100.0" prefWidth="21.0" />
-                  <Button fx:id="SearchButton" mnemonicParsing="false" prefHeight="56.0" prefWidth="53.0">
-                     <graphic>
-                        <ImageView fitHeight="48.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+            <HBox prefHeight="100.0" prefWidth="1440.0">
+               <children>
+                  <ToolBar accessibleText="fds" maxHeight="100.0" maxWidth="1540.0" minHeight="100.0" minWidth="1540.0" prefHeight="100.0" prefWidth="1540.0">
+                     <items>
+                        <ImageView fx:id="iMatLabel" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../resources/search.png" />
+                              <Image url="@../../resources/Logga.PNG" />
                            </image>
                         </ImageView>
-                     </graphic>
-                  </Button>
-                  <Region prefHeight="86.0" prefWidth="3.0" />
-                  <Button fx:id="handla" mnemonicParsing="false" prefHeight="52.0" prefWidth="98.0" text="Handla" />
-                  <Region prefHeight="86.0" prefWidth="3.0" />
-                  <Button fx:id="kvitton" mnemonicParsing="false" prefHeight="52.0" prefWidth="98.0" text="Kvitton" />
-                  <Region prefHeight="86.0" prefWidth="3.0" />
-                  <Button fx:id="hjalp" mnemonicParsing="false" prefHeight="52.0" prefWidth="86.0" text="Hjälp" />
-                  <Region prefHeight="86.0" prefWidth="3.0" />
-                  <Button fx:id="minaSidor" mnemonicParsing="false" prefHeight="52.0" prefWidth="98.0" text="Mina sidor" />
-               </items>
-            </ToolBar>
+                        <Region prefHeight="100.0" prefWidth="104.0" />
+                        <TextField fx:id="searchBar" prefHeight="48.0" prefWidth="630.0" promptText="Sök efter produkter här" />
+                        <Region prefHeight="100.0" prefWidth="21.0" />
+                        <Button fx:id="SearchButton" mnemonicParsing="false" prefHeight="56.0" prefWidth="53.0">
+                           <graphic>
+                              <ImageView fitHeight="48.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Region prefHeight="86.0" prefWidth="3.0" />
+                        <Button fx:id="handla" mnemonicParsing="false" prefHeight="52.0" prefWidth="98.0" text="Handla" />
+                        <Region prefHeight="86.0" prefWidth="3.0" />
+                        <Button fx:id="kvitton" mnemonicParsing="false" prefHeight="52.0" prefWidth="98.0" text="Kvitton" />
+                        <Region prefHeight="86.0" prefWidth="3.0" />
+                        <Button fx:id="hjalp" mnemonicParsing="false" prefHeight="52.0" prefWidth="86.0" text="Hjälp" />
+                        <Region prefHeight="86.0" prefWidth="3.0" />
+                        <Button fx:id="minaSidor" mnemonicParsing="false" prefHeight="52.0" prefWidth="98.0" text="Mina sidor" />
+                     </items>
+                  </ToolBar>
+               </children>
+            </HBox>
          </children>
-      </HBox>
+      </javafx.scene.layout.AnchorPane>
+      <FlowPane fx:id="searchItems" layoutX="320.0" layoutY="100.0" prefHeight="69.0" prefWidth="630.0" />
    </children>
 </fx:root>

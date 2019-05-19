@@ -1,15 +1,16 @@
 package Model.components.Navbar;
 
+import Model.IMat;
 import Model.Main;
-import Model.components.LeftSidebar.LeftSidebar;
+import Model.components.Navbar.SearchedItem.SearchedItem;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
+import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,11 +30,19 @@ public class Navbar extends AnchorPane {
     private Button handla;
     @FXML
     private TextField searchBar;
+    @FXML
+    private FlowPane searchItems;
+    @FXML
+    private AnchorPane root;
+    @FXML
+    private AnchorPane nav;
 
+    private List<Product> searchedItems;
     private List<Button> buttons;
 
     public Navbar(){
         buttons = new ArrayList<>();
+        searchedItems = new ArrayList<>();
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
@@ -43,6 +52,7 @@ public class Navbar extends AnchorPane {
         buttons.add(kvitton);
         buttons.add(minaSidor);
         buttons.add(handla);
+        hideSearchedItems();
     }
 
     private void addEventListeners(){
@@ -51,6 +61,49 @@ public class Navbar extends AnchorPane {
         kvitton.setOnAction(e -> goToHistorik());
         minaSidor.setOnAction(e -> goToMinaSidor());
         handla.setOnAction(event -> goToMainPage());
+        nav.setOnMouseClicked(event -> event.consume());
+        root.setOnMouseClicked(event -> hideSearchedItems());
+
+        searchBar.focusedProperty().addListener((obs, wasFocused, isNowFocused) -> {
+            if (isNowFocused) {
+                showSearchedItems();
+            }
+            if (wasFocused) {
+                hideSearchedItems();
+            }
+        });
+
+        searchBar.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (searchBar.getText().length() >= 3) {
+                //TODO TA bort output
+                System.out.println();
+                for (Product p : IMat.getInstance().findProducts(searchBar.getText())) {
+                    System.out.println(p.getName());
+                }
+                searchedItems.clear();
+                searchedItems.addAll(IMat.getInstance().findProducts(searchBar.getText()));
+                showSearchedItems();
+            }else {
+                hideSearchedItems();
+            }
+        });
+
+    }
+
+    private void showSearchedItems(){
+        System.out.println("SHOWING");
+        searchItems.setVisible(true);
+        searchItems.getChildren().clear();
+        for (Product p : searchedItems) {
+            searchItems.getChildren().add(new SearchedItem(p));
+        }
+
+    }
+
+    private void hideSearchedItems(){
+        searchedItems.clear();
+        searchItems.getChildren().clear();
+        searchItems.setVisible(false);
 
     }
 
@@ -69,7 +122,6 @@ public class Navbar extends AnchorPane {
         }
     }
 
-    @FXML
     private void onSearchTyped() {
         System.out.println(searchBar.getCharacters());
 

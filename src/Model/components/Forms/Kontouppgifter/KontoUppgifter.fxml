@@ -23,7 +23,7 @@
          </font>
       </Button>
       <FlowPane fx:id="flowPane" layoutX="80.0" layoutY="22.0" prefHeight="389.0" prefWidth="681.0" />
-      <AnchorPane fx:id="error" layoutX="635.0" layoutY="447.0" prefHeight="70.0" prefWidth="307.0" style="-fx-border-width: 3; -fx-border-color: red; -fx-border-radius: 5;">
+      <AnchorPane fx:id="error" layoutX="635.0" layoutY="447.0" prefHeight="70.0" prefWidth="307.0" style="-fx-border-width: 3; -fx-border-color: red; -fx-border-radius: 5;" visible="false">
          <children>
             <Label fx:id="errLabel" layoutX="5.0" layoutY="1.0" prefHeight="53.0" prefWidth="296.0" text="Label" wrapText="true" />
          </children>
