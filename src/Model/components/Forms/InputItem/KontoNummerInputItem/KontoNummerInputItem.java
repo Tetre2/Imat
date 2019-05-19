@@ -23,6 +23,10 @@ public class KontoNummerInputItem extends AnchorPane implements ValidityCheckabl
     private Label tooltip;
     @FXML
     private FlowPane flowPane;
+    @FXML
+    private AnchorPane error;
+    @FXML
+    private Label errLabel;
 
     private Focusable next;
     private List<LimitedTextField> limitedTextFields;
@@ -123,6 +127,15 @@ public class KontoNummerInputItem extends AnchorPane implements ValidityCheckabl
         }
     }
 
+    private void showErr(){
+        error.setVisible(true);
+        errLabel.setText("Det angivna kontonummret är inte giltligt");
+    }
+
+    private void clearErr(){
+        error.setVisible(false);
+    }
+
     @Override
     public boolean isValide() {
         boolean valid = true;
@@ -139,9 +152,11 @@ public class KontoNummerInputItem extends AnchorPane implements ValidityCheckabl
     public boolean checkValidity(String text) {
         try {
             Integer.parseInt(text);
+            clearErr();
             return true;
         }catch (Exception e){
         }
+        showErr();
         return false;
     }
 }

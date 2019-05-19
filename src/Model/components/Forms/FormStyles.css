@@ -11,3 +11,7 @@
     -fx-border-radius: 3;
     -fx-border-width: 3;
 }
+
+.monthYearSlash{
+    -fx-font-size: 58;
+}
