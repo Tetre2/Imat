@@ -45,6 +45,7 @@ public class Hjalp extends AnchorPane {
     }
 
     public void setNavBar(Navbar navBar){
+        if(!TopNav.getChildren().contains(navBar))
         TopNav.getChildren().add(navBar);
     }
 

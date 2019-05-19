@@ -194,9 +194,7 @@ public class MainPage extends AnchorPane implements CategoryListener {
     }
 
     public void setNavBar(Navbar navBar){
-        leftSidebar.resetCategoryFocused();                 //remove focused category since we click at home page.
-        if(!topNavBar.getChildren().contains(navBar)) {
+        if(!topNavBar.getChildren().contains(navBar))
             topNavBar.getChildren().add(navBar);
-        }
     }
 }
