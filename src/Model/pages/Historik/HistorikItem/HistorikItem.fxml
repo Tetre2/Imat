@@ -27,9 +27,9 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label alignment="CENTER" prefHeight="122.0" prefWidth="232.0" text="Label" />
-                  <Label alignment="CENTER" prefHeight="122.0" prefWidth="232.0" text="Label" GridPane.columnIndex="1" />
-                  <Label alignment="CENTER" prefHeight="122.0" prefWidth="232.0" text="Label" GridPane.columnIndex="2" />
+                  <Label fx:id="date" alignment="CENTER" prefHeight="122.0" prefWidth="232.0" text="Datum" />
+                  <Label fx:id="orderNumber" alignment="CENTER" prefHeight="122.0" prefWidth="232.0" text="Ordernummer" GridPane.columnIndex="1" />
+                  <Label fx:id="price" alignment="CENTER" prefHeight="122.0" prefWidth="232.0" text="Pris" GridPane.columnIndex="2" />
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3">
                      <children>
                         <Button fx:id="kvittoButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="193.0" text="Visa Kvitto">

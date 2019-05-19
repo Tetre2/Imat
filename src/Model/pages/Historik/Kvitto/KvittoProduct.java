@@ -23,7 +23,7 @@ public class KvittoProduct extends AnchorPane {
     @FXML
     private VBox vBox;
 
-    public KvittoProduct(String categoryName, List<Product> products) {
+    public KvittoProduct(String categoryName, List<ShoppingItem> products) {
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
@@ -32,8 +32,8 @@ public class KvittoProduct extends AnchorPane {
         System.out.println(categoryName);
         category.setText(categoryName);
 
-        for (Product p : products) {
-            vBox.getChildren().add(new Label((p.getName())));
+        for (ShoppingItem s : products) {
+            vBox.getChildren().add(new Label((s.getProduct().getName() + ", " + s.getAmount() + " St, " + s.getTotal() + " Kr")));
         }
 
 

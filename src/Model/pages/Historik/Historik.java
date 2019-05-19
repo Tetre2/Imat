@@ -1,7 +1,6 @@
 package Model.pages.Historik;
 
 import Model.IMat;
-import Model.components.LeftSidebar.LeftSidebar;
 import Model.components.Navbar.Navbar;
 import Model.pages.Historik.HistorikItem.HistorikItem;
 import Model.pages.Historik.Kvitto.Kvitto;
@@ -31,14 +30,6 @@ public class Historik extends AnchorPane {
         addEventListeners();
         hideKvitto();
 
-        //TopNav.getChildren().add(new Navbar());
-
-        for (int i = 0; i < IMat.getInstance().getOrders().size(); i++) {
-            HistorikItem historikItem = new HistorikItem(IMat.getInstance().getOrders().get(i), this);
-            gridPane.setConstraints(historikItem, 0, i);
-            gridPane.getChildren().add(historikItem);
-        }
-
     }
 
     private void addEventListeners(){
@@ -61,6 +52,14 @@ public class Historik extends AnchorPane {
         }
     }
 
+    private void loadOrders(){
+        for (int i = 0; i < IMat.getInstance().getOrders().size(); i++) {
+            HistorikItem historikItem = new HistorikItem(IMat.getInstance().getOrders().get(i), this);
+            gridPane.setConstraints(historikItem, 0, i);
+            gridPane.getChildren().add(historikItem);
+        }
+    }
+
     public void showKvitto(Order order){
         kvittoGray.setVisible(true);
         kvittoOverlay.getChildren().clear();
@@ -76,6 +75,8 @@ public class Historik extends AnchorPane {
     public void setNavBar(Navbar navBar){
         if(!TopNav.getChildren().contains(navBar))
         TopNav.getChildren().add(navBar);
+
+        loadOrders();
     }
 
 }

@@ -57,16 +57,13 @@ public class Kvitto extends AnchorPane {
 
         price.setText(calcPrice + " Kr");
 
-        System.out.println("categorier" + categories.size());
-
         for (int i = 0; i < categories.size(); i++) {
 
-            List<Product> arr = new ArrayList<>();
+            List<ShoppingItem> arr = new ArrayList<>();
 
             for (ShoppingItem shoppingItem : order.getItems()) {//lägger till alla produkter som har en kategori som finns i categories
                 if(categories.get(i).equals(shoppingItem.getProduct().getCategory())){
-                    System.out.println("added product");
-                    arr.add(shoppingItem.getProduct());
+                    arr.add(shoppingItem);
                 }
             }
 
@@ -75,8 +72,6 @@ public class Kvitto extends AnchorPane {
             grid.setConstraints(kvittoProduct, 0, i);
             grid.getChildren().add(kvittoProduct);
         }
-
-
 
     }
 
