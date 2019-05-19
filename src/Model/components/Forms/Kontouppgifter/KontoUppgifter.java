@@ -7,9 +7,11 @@ import Model.components.Forms.InputItem.KontrollSiffror.KontrolSiffror;
 import Model.components.Forms.InputItem.MonthYearInputItem.MonthYearInputItem;
 import Model.components.Forms.InputItem.KontoNummerInputItem.KontoNummerInputItem;
 import Model.components.Forms.NotValidInput;
+import com.sun.org.glassfish.gmbal.DescriptorFields;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.CreditCard;
@@ -23,9 +25,9 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
     @FXML
     private Button save;
     @FXML
-    private AnchorPane gray;
+    private AnchorPane error;
     @FXML
-    private AnchorPane err;
+    private Label errLabel;
 
     private CreditCard creditCard;
 
@@ -62,14 +64,13 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
     }
 
     private void addEventListeners() {
-
-        gray.setOnMouseClicked(event -> hideErr());
-        err.setOnMouseClicked(event -> event.consume());
         save.setOnAction(event -> saveInfo());
 
     }
 
     private void saveInfo(){
+
+        hideErr();
 
         try {
             creditCard.setVerificationCode(kontrollSiffror.getInput());
@@ -93,11 +94,12 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
     }
 
     private void showErr(){
-        gray.setVisible(true);
+        error.setVisible(true);
+        errLabel.setText("Dina uppgifter sparades inte eftersom felaktig information angivits");
     }
 
     private void hideErr(){
-        gray.setVisible(false);
+        error.setVisible(false);
     }
 
     private FXMLLoader initFXML() {

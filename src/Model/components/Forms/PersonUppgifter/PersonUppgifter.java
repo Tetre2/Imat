@@ -24,9 +24,9 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
     @FXML
     private Button save;
     @FXML
-    private AnchorPane gray;
+    private AnchorPane error;
     @FXML
-    private AnchorPane err;
+    private Label errLabel;
 
     private TextInput postaddress;
     private TextInput postcode;
@@ -86,12 +86,11 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
     }
 
     private void addEventListeners() {
-        gray.setOnMouseClicked(event -> hideErr());
-        err.setOnMouseClicked(event -> event.consume());
         save.setOnAction(event -> save());
     }
 
     private void save(){
+        hideErr();
         try {
             customer.setPostAddress(postaddress.getInput());
             customer.setPostCode(postcode.getInput());
@@ -115,11 +114,12 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
     }
 
     private void showErr(){
-        gray.setVisible(true);
+        error.setVisible(true);
+        errLabel.setText("Dina uppgifter sparades inte eftersom felaktig information angivits");
     }
 
     private void hideErr(){
-        gray.setVisible(false);
+        error.setVisible(false);
     }
 
     private FXMLLoader initFXML() {
