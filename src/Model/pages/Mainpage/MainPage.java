@@ -186,7 +186,6 @@ public class MainPage extends AnchorPane implements CategoryListener {
         }
     }
 
-    //todo - change product category name - center
     @Override
     public void categoryChanged(MainCategory mainCategory) {
             System.out.println("category: " + mainCategory.toString() + " was clicked");
@@ -195,6 +194,7 @@ public class MainPage extends AnchorPane implements CategoryListener {
     }
 
     public void setNavBar(Navbar navBar){
+        leftSidebar.resetCategoryFocused();                 //remove focused category since we click at home page.
         if(!topNavBar.getChildren().contains(navBar)) {
             topNavBar.getChildren().add(navBar);
         }

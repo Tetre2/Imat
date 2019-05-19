@@ -54,6 +54,15 @@ public class LeftSidebar extends AnchorPane  {
 
 
 
+    public void resetCategoryFocused(){
+        for(CategoryItem categoryItem: getCategories()){
+            System.out.println("removing style");
+            categoryItem.getStyleClass().clear();
+            //In this way you're sure you have no styles applied to your object button
+            categoryItem.getStyleClass().add("anchor-container-normal");
+            categoryItem.getCategoryName().setTextFill(Paint.valueOf("#194b42"));
+            }
+    }
     public void setMainCategoryFocused(MainCategory selectedCategory){
         for(CategoryItem categoryItem: getCategories()){
             System.out.println("removing style");
