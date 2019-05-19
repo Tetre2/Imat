@@ -90,7 +90,7 @@ public class Navbar extends AnchorPane {
         //för att man ska kunna trycka enter
         searchBar.setOnKeyPressed(ke -> {
             if (ke.getCode().equals(KeyCode.ENTER)) {
-                mainPage.showProductsToGrid(searchedItems);
+                mainPage.showProductsToGrid(searchedItems, " Resultat utav sökning: \""+ searchBar.getText() + "\"");
                 hideSearchedItems();
             }});
 

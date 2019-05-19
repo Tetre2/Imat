@@ -137,27 +137,28 @@ public class MainPage extends AnchorPane implements CategoryListener {
      * Update the "main grid" with shoppingItems from a selected category
      * @param mainCategory
      */
-    public void updateGrid(MainCategory mainCategory){
+    public void updateGrid(MainCategory mainCategory, String currentCatigory){
         //Get shopping items, either from cache or generate from scratch.
         List<ShoppingItem> shoppingItems = getShoppingItems(mainCategory);
 
         //Display shopping items
-        showShoppingItemToGrid(shoppingItems);
+        showShoppingItemToGrid(shoppingItems, currentCatigory);
     }
 
-    public void showProductsToGrid(List<Product> products){
+    public void showProductsToGrid(List<Product> products, String currentCatigory){
         ArrayList<ShoppingItem> arr = new ArrayList<>();
 
         for (Product p : products) {//Hämtar shoppingitems för produkterna
             arr.add(getShoppingItem(p));
         }
-            showShoppingItemToGrid(arr);
+            showShoppingItemToGrid(arr, currentCatigory);
     }
 
 
-    private void showShoppingItemToGrid(List<ShoppingItem> arr){
+    private void showShoppingItemToGrid(List<ShoppingItem> arr, String currentCatigory){
         //Clear current grid of shoppingitems
         grid.getChildren().clear();
+        currentCategoryLabel.setText(currentCatigory);
 
         //Display shopping items
         for(int i = 0; i < arr.size(); i++) {
@@ -176,13 +177,14 @@ public class MainPage extends AnchorPane implements CategoryListener {
                 i++;
             }
         }
+        currentCategoryLabel.setText("Alla varor");
     }
 
     @Override
     public void categoryChanged(MainCategory mainCategory) {
             System.out.println("category: " + mainCategory.toString() + " was clicked");
-            updateGrid(mainCategory);
-            currentCategoryLabel.setText(mainCategory.toString());
+            updateGrid(mainCategory, mainCategory.toString());
+            //currentCategoryLabel.setText(mainCategory.toString());
     }
 
     public void setNavBar(Navbar navBar){

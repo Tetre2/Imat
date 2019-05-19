@@ -46,7 +46,7 @@ public class SearchedItem extends AnchorPane {
         root.setOnMouseClicked(event -> {
             List<Product> arr = new ArrayList<>();
             arr.add(product);
-            mainPage.showProductsToGrid(arr);
+            mainPage.showProductsToGrid(arr, product.getName());
         });
     }
 
