@@ -150,6 +150,10 @@ public class KontoNummerInputItem extends AnchorPane implements ValidityCheckabl
 
     @Override
     public boolean checkValidity(String text) {
+        if(text.equals("") || text.length() < 4){
+            showErr();
+            return false;
+        }
         try {
             Integer.parseInt(text);
             clearErr();

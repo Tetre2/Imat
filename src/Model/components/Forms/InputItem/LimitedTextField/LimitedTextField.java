@@ -71,7 +71,7 @@ public class LimitedTextField extends AnchorPane implements Focusable {
 
     }
 
-    public void setTextFieldText(String text){
+    public void setTextFieldText(String text) {
         textField.setText(text);
     }
 
@@ -82,12 +82,11 @@ public class LimitedTextField extends AnchorPane implements Focusable {
 
     public boolean isValid() {
 
-        if (isAtCharLength()) {
-            if(parent.checkValidity(textField.getText())){
-                clearErr();
-                return true;
-            }
+        if (parent.checkValidity(textField.getText())) {
+            clearErr();
+            return true;
         }
+
         showErr();
         return false;
     }
@@ -129,7 +128,7 @@ public class LimitedTextField extends AnchorPane implements Focusable {
         return textField.getText();
     }
 
-    public void setSaved(){
+    public void setSaved() {
         textField.getStyleClass().add("textBoxSaved");
     }
 

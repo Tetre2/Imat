@@ -22,6 +22,10 @@ public class TextInput extends AnchorPane implements Focusable{
     private Label label;
     @FXML
     private Label tooltip;
+    @FXML
+    private AnchorPane error;
+    @FXML
+    private Label errLabel;
 
     private Focusable next;
     private Boolean needed;
@@ -110,11 +114,14 @@ public class TextInput extends AnchorPane implements Focusable{
     public void setErr(){
         setDefault();
         textField.getStyleClass().add("textBoxErr");
+        error.setVisible(true);
+        errLabel.setText("Du har inte anget något i ett fällt som det är nödvändigt att fylla i");
     }
 
     public void setSaved(){
         setDefault();
         textField.getStyleClass().add("textBoxSaved");
+        error.setVisible(false);
     }
 
     public void setDefault(){
