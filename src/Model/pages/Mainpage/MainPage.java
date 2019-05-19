@@ -195,6 +195,8 @@ public class MainPage extends AnchorPane implements CategoryListener {
     }
 
     public void setNavBar(Navbar navBar){
-        topNavBar.getChildren().add(navBar);
+        if(!topNavBar.getChildren().contains(navBar)) {
+            topNavBar.getChildren().add(navBar);
+        }
     }
 }
