@@ -9,7 +9,7 @@
    <children>
       <Label fx:id="label" alignment="TOP_RIGHT" contentDisplay="TOP" layoutY="35.0" prefHeight="21.0" prefWidth="210.0" text="Kortnummer:" />
       <Label fx:id="tooltip" layoutX="232.0" layoutY="75.0" prefHeight="21.0" prefWidth="417.0" text="Label" />
-      <FlowPane fx:id="flowPane" layoutX="229.0" layoutY="-1.0" prefHeight="71.0" prefWidth="511.0" />
+      <FlowPane fx:id="flowPane" layoutX="229.0" layoutY="-1.0" prefHeight="71.0" prefWidth="511.0" style="-fx-background-color: red;" />
    </children>
    <stylesheets>
       <URL value="@../../../../../styles.css" />

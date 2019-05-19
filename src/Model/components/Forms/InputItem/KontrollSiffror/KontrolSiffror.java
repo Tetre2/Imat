@@ -4,6 +4,7 @@ import Model.components.Forms.Focusable;
 import Model.components.Forms.NotValidInput;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
@@ -13,6 +14,10 @@ public class KontrolSiffror extends AnchorPane implements Focusable{
 
     @FXML
     private TextField textField;
+    @FXML
+    private AnchorPane error;
+    @FXML
+    private Label errLabel;
 
     private Focusable next;
 
@@ -93,10 +98,13 @@ public class KontrolSiffror extends AnchorPane implements Focusable{
     private void clearErr() {
         textField.getStyleClass().clear();
         textField.getStyleClass().addAll("text-field", "text-input");
+        error.setVisible(false);
     }
 
     private void showErr() {
         textField.getStyleClass().add("textBoxErr");
+        error.setVisible(true);
+        errLabel.setText(textField.getText() + " Är inte giltliga kontrollsiffror");
     }
 
     @Override

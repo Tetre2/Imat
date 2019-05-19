@@ -1,20 +1,15 @@
 package Model.components.Forms.InputItem.MonthYearInputItem;
 
-import Model.components.Forms.InputItem.isInputItem;
 import Model.components.Forms.NotValidInput;
-import Model.components.Forms.ValidityCheckable;
 import Model.components.Forms.Focusable;
-import Model.components.Forms.InputItem.LimitedTextField.LimitedTextField;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.FlowPane;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class MonthYearInputItem extends AnchorPane implements Focusable {
 
@@ -22,6 +17,10 @@ public class MonthYearInputItem extends AnchorPane implements Focusable {
     private TextField month;
     @FXML
     private TextField year;
+    @FXML
+    private AnchorPane error;
+    @FXML
+    private Label errLabel;
 
     private Focusable next;
 
@@ -31,6 +30,8 @@ public class MonthYearInputItem extends AnchorPane implements Focusable {
         tryToLoadFXML(fxmlLoader);
 
         addEventListeners();
+
+        error.setVisible(false);
     }
 
 
@@ -122,10 +123,19 @@ public class MonthYearInputItem extends AnchorPane implements Focusable {
     private void clearErr(TextField textField) {
         textField.getStyleClass().clear();
         textField.getStyleClass().addAll("text-field", "text-input");
+        error.setVisible(false);
     }
 
     private void showErr(TextField textField) {
         textField.getStyleClass().add("textBoxErr");
+        error.setVisible(true);
+
+        if(textField.getId().equals("month")){
+            errLabel.setText(textField.getText() + " Är inte en giltlig Månad");
+        }else if(textField.getId().equals("year")){
+            errLabel.setText(textField.getText() + " Är inte ett giltlig år");
+        }
+
     }
 
     public void setMonth(String month){
