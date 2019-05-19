@@ -2,4 +2,11 @@
     -fx-background-color: white;
     -fx-border-style: solid;
     -fx-border-color: #a57b7b;
-    -fx-border-width: 1;}
+    -fx-border-width: 1;
+}
+
+.item:hover{
+    -fx-background-color: #d2d2d2;
+    -fx-border-color: #03A678;
+    -fx-border-width: 2;
+}

@@ -87,7 +87,7 @@ public class MainPage extends AnchorPane implements CategoryListener {
      * @param product
      * @return a shopping item for the product
      */
-    private ShoppingItem getShoppingItem(Product product){
+    public ShoppingItem getShoppingItem(Product product){
         if(cachedShoppingItems.containsKey(product)){
             return cachedShoppingItems.get(product);
         }
@@ -138,42 +138,25 @@ public class MainPage extends AnchorPane implements CategoryListener {
      * @param mainCategory
      */
     public void updateGrid(MainCategory mainCategory){
-
-
-
-        //Clear current grid of shoppingitems
-        grid.getChildren().clear();
-
         //Get shopping items, either from cache or generate from scratch.
         List<ShoppingItem> shoppingItems = getShoppingItems(mainCategory);
 
         //Display shopping items
-        for(int i = 0; i < shoppingItems.size(); i++) {
-            grid.setConstraints(shoppingItems.get(i), i % 4, i / 4);
-            grid.getChildren().add(shoppingItems.get(i));
+        showProductsToGrid(shoppingItems);
+    }
+
+
+    public void showProductsToGrid(List<ShoppingItem> arr){
+        //Clear current grid of shoppingitems
+        grid.getChildren().clear();
+
+        //Display shopping items
+        for(int i = 0; i < arr.size(); i++) {
+            grid.setConstraints(arr.get(i), i % 4, i / 4);
+            grid.getChildren().add(arr.get(i));
         }
     }
 
-   /* private void favoriteGrid(){
-        grid.getChildren().clear();
-        System.out.println("test funktion");
-
-
-        List<String> products = new ArrayList<>();
-
-        for (int i = 0; i < IMat.getInstance().getFavorites().size(); i++){
-            System.out.println("test in loop");
-            products.add(IMat.getInstance().getFavorites().get(i).toString());
-            System.out.println(products.get(i));
-
-        }
-
-    } */ //denna verkar inte hitta några items i IMat.getInstance().getFavorites().size() även om det finns faovriter.
-
-
-    /**
-     * Laddar startsidan med samtliga produkter + preloadar alla produkter och lägger in de i en cache.
-     */
     public void showAllItems(){
         List<ShoppingItem> shoppingItems = preloadShoppingItems();
         int i = 0;

@@ -1,5 +1,8 @@
 package Model.components.Navbar.SearchedItem;
 
+import Model.Main;
+import Model.components.ShoppingItem.ShoppingItem;
+import Model.pages.Mainpage.MainPage;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -8,6 +11,8 @@ import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SearchedItem extends AnchorPane {
 
@@ -17,11 +22,15 @@ public class SearchedItem extends AnchorPane {
     private Label name;
     @FXML
     private Label price;
+    @FXML
+    private AnchorPane root;
 
     private Product product;
+    private static MainPage mainPage;
 
     public SearchedItem(Product product) {
         this.product = product;
+        mainPage = Main.getMainPage();
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
@@ -34,7 +43,11 @@ public class SearchedItem extends AnchorPane {
 
 
     private void addEventListeners(){
-
+        root.setOnMouseClicked(event -> {
+            List<ShoppingItem> arr = new ArrayList<>();
+            arr.add(mainPage.getShoppingItem(product));
+            mainPage.showProductsToGrid(arr);
+        });
     }
 
     private FXMLLoader initFXML() {

@@ -130,6 +130,10 @@ public class Main extends Application {
         window.setScene(scene);
     }
 
+    public static MainPage getMainPage(){
+        return mainPage;
+    }
+
     public static Scene getCurrentScene(){
         return window.getScene();
     }
