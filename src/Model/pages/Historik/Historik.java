@@ -11,6 +11,7 @@ import javafx.scene.layout.GridPane;
 import se.chalmers.cse.dat216.project.Order;
 
 import java.io.IOException;
+import java.util.Date;
 
 public class Historik extends AnchorPane {
 
@@ -77,6 +78,11 @@ public class Historik extends AnchorPane {
         TopNav.getChildren().add(navBar);
 
         loadOrders();
+    }
+
+    public String getDate(Date d){
+        String[] date = d.toString().split(" ");
+        return date[2] + " " + date[1];
     }
 
 }

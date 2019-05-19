@@ -44,10 +44,8 @@ public class HistorikItem extends AnchorPane {
             total += s.getTotal();
         }
         price.setText(total + " Kr");
-        date.setText(order.getDate().toString());
+        date.setText(parent.getDate(order.getDate()));
         orderNumber.setText(order.getOrderNumber() + "");
-
-
 
     }
 

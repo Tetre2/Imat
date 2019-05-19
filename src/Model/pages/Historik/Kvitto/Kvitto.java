@@ -41,7 +41,7 @@ public class Kvitto extends AnchorPane {
 
         addEventListeners();
 
-        date.setText(order.getDate().toString());
+        date.setText(parent.getDate(order.getDate()));
 
         double calcPrice = 0;
 
