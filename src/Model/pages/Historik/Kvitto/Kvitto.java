@@ -57,8 +57,8 @@ public class Kvitto extends AnchorPane {
             }
 
         }
-
-        price.setText(calcPrice + " Kr");
+        String totPrice = String.format("%.2f", calcPrice);
+        price.setText(totPrice + " Kr");
 
         for (int i = 0; i < categories.size(); i++) {
 
@@ -87,7 +87,8 @@ public class Kvitto extends AnchorPane {
         for (ShoppingItem s : order.getItems()) {
             IMat.getInstance().getShoppingCart().addItem(s);
         }
-        Main.setSceneToMainPage();
+
+        Main.getNavbar().goToMainPage();
     }
 
     private FXMLLoader initFXML() {

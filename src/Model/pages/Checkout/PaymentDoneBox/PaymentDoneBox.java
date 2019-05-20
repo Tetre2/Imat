@@ -25,10 +25,7 @@ public class PaymentDoneBox extends AnchorPane {
     @FXML private Button shopMoreButton;
     @FXML private Button showReceiptButton;
 
-    private Checkout parent;
-
-    public PaymentDoneBox(Order order, Checkout parent){
-        this.parent = parent;
+    public PaymentDoneBox(Order order){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
@@ -52,7 +49,7 @@ public class PaymentDoneBox extends AnchorPane {
     }
 
     private void showReceipt(Order order){
-        parent.getNavBar().goToHistorik();
+        Main.getNavbar().goToHistorik();
         Main.getHistorik().showKvitto(order);
     }
 

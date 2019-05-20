@@ -51,7 +51,7 @@ public class Checkout extends AnchorPane {
     }
 
     private void createPaymentDoneUI() {
-        paymentDoneContainerVBox.getChildren().add(new PaymentDoneBox(null, this));
+        paymentDoneContainerVBox.getChildren().add(new PaymentDoneBox(null));
     }
 
     private void createPaymentUI() {
@@ -92,7 +92,7 @@ public class Checkout extends AnchorPane {
         //IMat.getInstance().placeOrder(true);
         Order order = IMat.getInstance().placeOrder();
         paymentDoneContainerVBox.getChildren().clear();
-        paymentDoneContainerVBox.getChildren().add(new PaymentDoneBox(order, this));
+        paymentDoneContainerVBox.getChildren().add(new PaymentDoneBox(order));
         goToPaymentDoneStep();
     }
 
@@ -152,9 +152,6 @@ public class Checkout extends AnchorPane {
         }
     }
 
-    public Navbar getNavBar() {
-        return (Navbar) TopNav.getChildren().get(0);
-    }
 
     public void setNavBar(Navbar navBar){
         if(!TopNav.getChildren().contains(navBar))

@@ -142,6 +142,10 @@ public class Main extends Application {
         return historik;
     }
 
+    public static Navbar getNavbar() {
+        return navbar;
+    }
+
     public static MainPage getMainPage(){
         return mainPage;
     }

@@ -29,9 +29,12 @@ public class ShoppingCheckoutDetails extends AnchorPane implements ShoppingCartL
     private void updateLabels() {
         Double foodPrice = IMat.getInstance().getShoppingCart().getTotal();
         transportPriceLabel.setText(Double.toString(TRANSPORT_PRICE));
-        foodPriceLabel.setText(Double.toString(foodPrice));
-        System.out.println("Ceckout, TotalPrice: " + Double.toString(foodPrice));
-        totalPriceLabel.setText(Double.toString(foodPrice + TRANSPORT_PRICE));
+        String price = String.format("%.2f", foodPrice);
+        foodPriceLabel.setText(price);
+        System.out.println("Ceckout, TotalPrice: " + price);
+
+        price = String.format("%.2f", foodPrice + TRANSPORT_PRICE);
+        totalPriceLabel.setText(price);
     }
 
     private FXMLLoader initFXML() {

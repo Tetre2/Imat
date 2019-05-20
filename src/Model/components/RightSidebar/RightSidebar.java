@@ -87,7 +87,8 @@ public class RightSidebar extends AnchorPane implements ShoppingCartListener {
 
         //ta bort hjälp texten
         helpPane.setVisible(items.size() == 0);
-        amaunt.setText(IMat.getInstance().getShoppingCart().getTotal() + " kr");
+        String s = String.format("%.2f", IMat.getInstance().getShoppingCart().getTotal());
+        amaunt.setText( s + " kr");
     }
 
     @Override

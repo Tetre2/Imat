@@ -55,8 +55,10 @@ public class VarukorgItem extends AnchorPane implements ShoppingCartListener {
     private void updatePriceLabels() {
         Product p = shoppingItem.getProduct();
 
-        priceLabel.setText(Double.toString(p.getPrice()) + " kr");
-        totalPriceLabel.setText(Double.toString(p.getPrice() * shoppingItem.getAmount()) + " kr");
+        String s = String.format("%.2f", p.getPrice());
+        priceLabel.setText(s + " kr");
+        s = String.format("%.2f", p.getPrice() * shoppingItem.getAmount());
+        totalPriceLabel.setText(s + " kr");
     }
 
     private void onCloseButtonPressed() {
