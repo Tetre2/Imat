@@ -52,7 +52,13 @@ public class Main extends Application {
 
         navbar = new Navbar();
 
-        navbar.goToMainPage();
+        if(IMat.getInstance().isFirstRun()){
+            navbar.goToHjalp();
+        }else {
+            navbar.goToMainPage();
+        }
+
+
         window.show();
 
     }
