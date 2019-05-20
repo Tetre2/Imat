@@ -3,6 +3,8 @@
 <?import java.net.URL?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -12,10 +14,15 @@
         <URL value="@../../../../styles.css" />
     </stylesheets>
    <children>
-      <Label id="category_name" fx:id="categoryName" layoutX="20.0" layoutY="10.0" prefHeight="36.0" prefWidth="236.0" style="-fx-border-type: solid;" styleClass=".category_name" text="Frukt &amp; Grönt" textFill="#194b42">
+      <Label id="category_name" fx:id="categoryName" layoutX="20.0" layoutY="10.0" prefHeight="36.0" prefWidth="236.0" style="-fx-border-type: solid;" styleClass=".category_name" text="Favorit" textFill="#194b42">
          <font>
             <Font name="Tahoma" size="55.0" />
          </font></Label>
+      <ImageView fx:id="categoryPicture" fitHeight="56.0" fitWidth="51.0" layoutX="7.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../resources/star-checked.png" />
+         </image>
+      </ImageView>
    </children>
    <cursor>
       <Cursor fx:constant="HAND" />

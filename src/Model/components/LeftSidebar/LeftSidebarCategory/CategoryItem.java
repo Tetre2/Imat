@@ -5,6 +5,7 @@ import Model.pages.Mainpage.MainPage;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 
@@ -17,14 +18,20 @@ public class CategoryItem extends AnchorPane {
     @FXML
     private FlowPane categoryPane;
 
+    @FXML
+    private ImageView categoryPicture;
+
     private MainCategory category;
     public CategoryItem(MainCategory category){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
         this.category = category;
         this.categoryName.setText(category.name);
-
-
+        //används för favoritKategorin.
+        if(category.shouldUsePicture()){
+            categoryPicture.setVisible(true);
+            this.categoryName.setLayoutX(62);
+        }
     }
 
 

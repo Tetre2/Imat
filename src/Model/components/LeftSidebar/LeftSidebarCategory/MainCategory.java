@@ -46,17 +46,19 @@ public enum MainCategory {
             ProductCategory.PASTA,
             ProductCategory.POTATO_RICE),
     FAVORIT ("Favorit",
-            IMat.getInstance().getFavorites());
+            IMat.getInstance().getFavorites(), true);
 
 
 
     String name;
     List<ProductCategory> subCategories;
     List<Product> products;
+    private boolean usePicture = false;
 
-    MainCategory(String name, List<Product> products){
+    MainCategory(String name, List<Product> products, boolean usePicture){
         this.name = name;
         this.products = products;
+        this.usePicture = usePicture;
 
         //getProducts();
     }
@@ -84,6 +86,10 @@ public enum MainCategory {
             }
         }
         return products;
+    }
+
+    public boolean shouldUsePicture(){
+        return usePicture;
     }
 
     public String toString(){

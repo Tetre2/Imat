@@ -7,6 +7,7 @@ import Model.components.LeftSidebar.LeftSidebarCategory.MainCategory;
 import Model.components.Navbar.Navbar;
 import Model.components.RightSidebar.RightSidebar;
 import Model.components.ShoppingItem.ShoppingItem;
+import Model.components.ShoppingItem.ShoppingItemListener;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -21,7 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MainPage extends AnchorPane implements CategoryListener {
+public class MainPage extends AnchorPane implements CategoryListener, ShoppingItemListener {
 
 
     @FXML
@@ -110,6 +111,7 @@ public class MainPage extends AnchorPane implements CategoryListener {
         for (int i = 0; i < mainCategory.getProducts().size(); i++) {
             ShoppingItem shoppingItem = getShoppingItem(mainCategory.getProducts().get(i));
             shoppingItems.add(shoppingItem);
+            shoppingItem.addShoppingItemListener(this);
         }
 
         return shoppingItems;
@@ -190,5 +192,13 @@ public class MainPage extends AnchorPane implements CategoryListener {
     public void setNavBar(Navbar navBar){
         if(!topNavBar.getChildren().contains(navBar))
             topNavBar.getChildren().add(navBar);
+    }
+
+    @Override
+    public void shoppingItemClicked(ShoppingItem shoppingItem) {
+        System.out.println("HELLOOO, item was clicked");
+        if(grid.getChildren().contains(shoppingItem)){
+            updateGrid(MainCategory.FAVORIT, MainCategory.FAVORIT.name());
+        }
     }
 }

@@ -1,5 +1,6 @@
 package Model.components.Navbar.SearchedItem;
 
+import Model.IMat;
 import Model.Main;
 import Model.components.ShoppingItem.ShoppingItem;
 import Model.pages.Mainpage.MainPage;
@@ -17,7 +18,7 @@ import java.util.List;
 public class SearchedItem extends AnchorPane {
 
     @FXML
-    private ImageView iamge;
+    private ImageView image;
     @FXML
     private Label name;
     @FXML
@@ -36,6 +37,7 @@ public class SearchedItem extends AnchorPane {
 
         name.setText(product.getName());
         price.setText(product.getPrice() + "Kr");
+        image.setImage(IMat.getInstance().getImage(product));
 
         addEventListeners();
 

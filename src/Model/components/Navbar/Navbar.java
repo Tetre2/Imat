@@ -6,12 +6,14 @@ import Model.components.Navbar.SearchedItem.SearchedItem;
 import Model.pages.Mainpage.MainPage;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import me.xdrop.fuzzywuzzy.FuzzySearch;
 import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
@@ -54,6 +56,8 @@ public class Navbar extends AnchorPane {
 
         buttons.add(hjalp);
         buttons.add(kvitton);
+        //för att bli av med margin.
+        minaSidor.setPadding(Insets.EMPTY);
         buttons.add(minaSidor);
         buttons.add(handla);
         hideSearchedItems();
@@ -80,7 +84,7 @@ public class Navbar extends AnchorPane {
         searchBar.textProperty().addListener((observable, oldValue, newValue) -> {
             if (searchBar.getText().length() >= 3) {
                 searchedItems.clear();
-                searchedItems.addAll(IMat.getInstance().findProducts(searchBar.getText()));
+                searchedItems.addAll(getProductsFromSearch(searchBar.getText()));
                 showSearchedItems();
             }else {
                 hideSearchedItems();
@@ -94,6 +98,26 @@ public class Navbar extends AnchorPane {
                 hideSearchedItems();
             }});
 
+    }
+
+    private List<Product> getProductsFromSearch(String text){
+        List<Product> products = IMat.getInstance().findProducts(searchBar.getText());
+        if(products == null || products.size() == 0){                           //om inte någon produkt hittas kollar vi om användaren eventuellt har stavat fel.
+            products = new ArrayList<>();
+            for(Product product: IMat.getInstance().getProducts()){             //Vi går igenom samtliga produkter
+                String productName = product.getName();
+                String[] splittedProductNames = productName.split(" ");     //Splittar upp produktnamnet i flera delar om det är flera ord. Tex Cola Burk ställer till det annars
+                for(String splittedProductName : splittedProductNames){
+                    int ratio = FuzzySearch.ratio(text,splittedProductName);        //Jämför sökinputen med det splittade produktnamnet. Om de matchar så lägger vi till produkten.
+                    if(ratio > 58){
+                        products.add(product);
+                        break;
+                    }
+                }
+
+            }
+        }
+        return products;
     }
 
     private void showSearchedItems(){

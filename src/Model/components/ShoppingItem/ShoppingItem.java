@@ -1,6 +1,8 @@
 package Model.components.ShoppingItem;
 
 import Model.IMat;
+import Model.components.LeftSidebar.LeftSidebarCategory.CategoryListener;
+import Model.components.LeftSidebar.LeftSidebarCategory.MainCategory;
 import Model.components.Picker.Picker;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +17,9 @@ import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingCartListener;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
     @FXML
@@ -40,6 +45,8 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
     @FXML
     AnchorPane pickerPane;
+
+    private List<ShoppingItemListener> listeners = new ArrayList<>();
 
     private Product product;
     private se.chalmers.cse.dat216.project.ShoppingItem item;
@@ -152,6 +159,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
             //Om stjärnan blir klickad när den är en favorit tas den bort
             IMat.getInstance().getFavorites().remove(product);
             System.out.println("Removed " + product.getName() + " From Favorites");
+            fireRemoveShoppingItem();
         } else {
             //Om stjärnan blir klickad när den inte är en favorit läggs den till
             IMat.getInstance().addFavorite(product);
@@ -166,6 +174,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
         String iconPathNoFavorite = "Model/resources/star-unchecked.png";
         Image icon;
 
+
         if (isFavorited()) {
             icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPathFavorite));
             starButton.setVisible(true);
@@ -174,6 +183,14 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
         }
 
         starImageview.setImage(icon);
+    }
+
+    public void fireRemoveShoppingItem() {
+        Iterator var4 = this.listeners.iterator();
+        while (var4.hasNext()) {
+            ShoppingItemListener ssl = (ShoppingItemListener) var4.next();
+            ssl.shoppingItemClicked(this);
+        }
     }
 
     private boolean isFavorited() {
@@ -206,6 +223,9 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
             }
 
         }
+    }
+    public void addShoppingItemListener(ShoppingItemListener sil) {
+        this.listeners.add(sil);
     }
 
 
