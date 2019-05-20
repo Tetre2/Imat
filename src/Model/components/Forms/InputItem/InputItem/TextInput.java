@@ -1,8 +1,6 @@
 package Model.components.Forms.InputItem.InputItem;
 
-import Model.IMat;
 import Model.components.Forms.Focusable;
-import Model.components.Forms.InputItem.isInputItem;
 import Model.components.Forms.NotValidInput;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -50,6 +48,12 @@ public class TextInput extends AnchorPane implements Focusable{
         textField.setPromptText(preVeiwText);
 
         addEventListeners();
+
+        if (invalidInput()) {
+            setErr();
+        } else {
+            setSuccess();
+        }
     }
 
     private void addEventListeners() {
@@ -57,8 +61,10 @@ public class TextInput extends AnchorPane implements Focusable{
         //upptäcker om man skrivigt något i rutan
         textField.focusedProperty().addListener((obs, wasFocused, isNowFocused) -> {
             if(wasFocused){
-                if(textField.getText().equals("") && needed){
+                if(invalidInput() && needed){
                     setErr();
+                } else if (!invalidInput()) {
+                    setSuccess();
                 }
             }
         });
@@ -66,12 +72,25 @@ public class TextInput extends AnchorPane implements Focusable{
         //för att man ska kunna trycka enter
         textField.setOnKeyPressed(ke -> {
             if (ke.getCode().equals(KeyCode.ENTER)) {
-                if(!textField.getText().equals("")) {
+                if(!invalidInput()) {
                     if(next != null){
                         next.setFocus();
                     }
                 }
-            }});
+            }
+        });
+
+        textField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (invalidInput()) {
+                setErr();
+            } else {
+                setSuccess();
+            }
+        });
+    }
+
+    private boolean invalidInput() {
+        return textField.getText().equals("");
     }
 
     public void setText(String s) {
@@ -103,7 +122,7 @@ public class TextInput extends AnchorPane implements Focusable{
     }
 
     public String getInput() throws NotValidInput {
-        if(textField.getText().equals("") && needed){
+        if(invalidInput() && needed){
             setErr();
             throw new NotValidInput();
         }else {
@@ -115,10 +134,10 @@ public class TextInput extends AnchorPane implements Focusable{
         setDefault();
         textField.getStyleClass().add("textBoxErr");
         error.setVisible(true);
-        errLabel.setText("Du har inte anget något i ett fällt som det är nödvändigt att fylla i");
+        errLabel.setText("Du har inte anget något i ett fällt som det är nödvändigt att fylla i.");
     }
 
-    public void setSaved(){
+    public void setSuccess(){
         setDefault();
         textField.getStyleClass().add("textBoxSaved");
         error.setVisible(false);

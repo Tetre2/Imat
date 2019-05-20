@@ -7,7 +7,6 @@ import Model.components.Forms.InputItem.KontrollSiffror.KontrolSiffror;
 import Model.components.Forms.InputItem.MonthYearInputItem.MonthYearInputItem;
 import Model.components.Forms.InputItem.KontoNummerInputItem.KontoNummerInputItem;
 import Model.components.Forms.NotValidInput;
-import com.sun.org.glassfish.gmbal.DescriptorFields;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -96,7 +95,7 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
         kontrollSiffror.setSaved();
         monthYearInputItem.setSaved();
         kontonummer.setSaved();
-        kontoAgare.setSaved();
+        kontoAgare.setSuccess();
     }
 
     private void showErr(){

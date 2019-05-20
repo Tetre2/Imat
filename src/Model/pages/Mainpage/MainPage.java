@@ -45,7 +45,7 @@ public class MainPage extends AnchorPane implements CategoryListener {
         tryToLoadFXML(fxmlLoader);
 
         //visa alla produkter
-        showAllItems();
+        //showAllItems();
 
         leftSidebar = new LeftSidebar();
         LeftNavBar.getChildren().add(leftSidebar);

@@ -28,11 +28,11 @@
 }
 
 .text-xs {
-    -fx-font-size: 10;
+    -fx-font-size: 14;
 }
 
 .text-sm {
-    -fx-font-size: 14;
+    -fx-font-size: 16;
 }
 
 .text-md {

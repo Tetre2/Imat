@@ -81,7 +81,7 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         Label postCode = previewLabel(customer.getPostCode());
         Label postAddress = previewLabel(customer.getPostAddress());
 
-        Label edit = previewLabel("Redigera uppgifter");
+        Label edit = previewLabel("Redigera");
         edit.getStyleClass().add("text-link");
         edit.setOnMouseClicked(e -> transitionToEditUI());
 
@@ -177,7 +177,7 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
 
     private void showSaved(){
         for (TextInput t : textInputs) {
-            t.setSaved();
+            t.setSuccess();
         }
     }
 
