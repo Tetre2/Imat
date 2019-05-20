@@ -19,6 +19,10 @@
     -fx-font-weight: bold;
 }
 
+.semi-bold {
+    -fx-font-weight: 600;
+}
+
 .text {
     -fx-font-family: "Avenir Book";
 }
@@ -41,6 +45,15 @@
 
 .text-xl {
     -fx-font-size: 32;
+}
+
+.text-link {
+    -fx-text-fill: "#4285F4";
+}
+
+.text-link:hover {
+    -fx-cursor: hand;
+    -fx-text-fill: "#4f8ef2";
 }
 
 .btn-primary {

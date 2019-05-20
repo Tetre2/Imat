@@ -6,27 +6,30 @@ import Model.components.Forms.InputItem.InputItem.TextInput;
 import Model.components.Forms.NotValidInput;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.VBox;
 import se.chalmers.cse.dat216.project.Customer;
 
-import javax.swing.text.html.ImageView;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PersonUppgifter extends AnchorPane implements Focusable{
 
+    @FXML private AnchorPane rootAnchorPane;
     @FXML
-    private FlowPane flowPane;
+    private VBox containerEditVBox;
     @FXML
     private Button save;
     @FXML
     private AnchorPane error;
     @FXML
     private Label errLabel;
+
+    private VBox containerDoneVBox;
 
     private TextInput postaddress;
     private TextInput postcode;
@@ -35,17 +38,75 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
     private TextInput phone;
     private TextInput lastname;
     private TextInput firstname;
+    private Label requiredDescriptionLabel;
 
     private Customer customer;
     private List<TextInput> textInputs;
 
     public PersonUppgifter() {
-        textInputs = new ArrayList<>();
         customer = IMat.getInstance().getCustomer();
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
         addEventListeners();
+
+        if (isUserVerified()) {
+            transitionToDoneUI();
+        } else {
+            initEditUI();
+        }
+
+        hideErr();
+
+    }
+
+    private void initDoneUI() {
+        rootAnchorPane.setPrefHeight(320.0);
+        rootAnchorPane.setMaxHeight(320.0);
+        containerEditVBox.setMaxHeight(320.0);
+
+        containerDoneVBox = new VBox();
+        containerDoneVBox.setSpacing(10.0);
+        containerDoneVBox.setAlignment(Pos.CENTER_LEFT);
+
+        Label contactHeaderLabel = previewLabel("Kontaktuppgifter");
+        contactHeaderLabel.getStyleClass().add("bold");
+        Label number = previewLabel(customer.getPhoneNumber());
+        Label mail = previewLabel(customer.getEmail());
+
+        Label deliveryHeaderLabel = previewLabel("Leveransuppgifter");
+        deliveryHeaderLabel.getStyleClass().add("bold");
+        Label name = previewLabel(customer.getFirstName() + " " + customer.getLastName());
+        Label address = previewLabel(customer.getAddress());
+        Label postCode = previewLabel(customer.getPostCode());
+        Label postAddress = previewLabel(customer.getPostAddress());
+
+        Label edit = previewLabel("Redigera uppgifter");
+        edit.getStyleClass().add("text-link");
+        edit.setOnMouseClicked(e -> transitionToEditUI());
+
+        containerDoneVBox.getChildren().addAll(contactHeaderLabel, number, mail, deliveryHeaderLabel, name, address, postCode, postAddress, edit);
+        containerEditVBox.getChildren().add(containerDoneVBox);
+    }
+
+    private void transitionToEditUI() {
+        containerEditVBox.getChildren().remove(containerDoneVBox);
+        initEditUI();
+    }
+
+    private Label previewLabel(String text) {
+        Label label = new Label(text);
+        label.getStyleClass().addAll("text", "text-md");
+        return label;
+    }
+
+    private boolean isUserVerified() {
+        // TODO: add logic to check if all fields are correctly filled out
+        return true;
+    }
+
+    private void initEditUI() {
+        textInputs = new ArrayList<>();
         postaddress = new TextInput("Postadress:", "Göteborg", "Ange din postadress *", null, true);
         postcode = new TextInput("Postnummer:", "123 45", "Ange ditt postnummer *", postaddress, true);
         address = new TextInput("Adress:", "Långgatan 6", "Ange din adress *", postcode, true);
@@ -54,16 +115,16 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         lastname = new TextInput("Efternamn:", "persson", "Ange ditt efternamn *", phone, true);
         firstname = new TextInput("Förnamn:", "Brit", "Ange ditt förnamn *", lastname, true);
 
-        Label label = new Label("Fält med * måste fyllas i");
+        requiredDescriptionLabel = new Label("Fält med * måste fyllas i");
 
-        flowPane.getChildren().add(label);
-        flowPane.getChildren().add(firstname);
-        flowPane.getChildren().add(lastname);
-        flowPane.getChildren().add(phone);
-        flowPane.getChildren().add(email);
-        flowPane.getChildren().add(address);
-        flowPane.getChildren().add(postcode);
-        flowPane.getChildren().add(postaddress);
+        containerEditVBox.getChildren().add(requiredDescriptionLabel);
+        containerEditVBox.getChildren().add(firstname);
+        containerEditVBox.getChildren().add(lastname);
+        containerEditVBox.getChildren().add(phone);
+        containerEditVBox.getChildren().add(email);
+        containerEditVBox.getChildren().add(address);
+        containerEditVBox.getChildren().add(postcode);
+        containerEditVBox.getChildren().add(postaddress);
 
         postaddress.setText(customer.getPostAddress());
         postcode.setText(customer.getPostCode());
@@ -72,7 +133,7 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         phone.setText(customer.getPhoneNumber());
         lastname.setText(customer.getLastName());
         firstname.setText(customer.getFirstName());
-        
+
         textInputs.add(firstname);
         textInputs.add(lastname);
         textInputs.add(phone);
@@ -81,8 +142,7 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         textInputs.add(postcode);
         textInputs.add(postaddress);
 
-        hideErr();
-
+        rootAnchorPane.getChildren().add(save);
     }
 
     private void addEventListeners() {
@@ -102,10 +162,17 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
             customer.setFirstName(firstname.getInput());
             save.setText("Sparad");
             showSaved();
+            transitionToDoneUI();
         } catch (NotValidInput notValidInput) {
             notValidInput.printStackTrace();
             showErr();
         }
+    }
+
+    private void transitionToDoneUI() {
+        rootAnchorPane.getChildren().remove(save);
+        containerEditVBox.getChildren().removeAll(firstname, lastname, phone, email, address, postcode, postaddress, requiredDescriptionLabel);
+        initDoneUI();
     }
 
     private void showSaved(){

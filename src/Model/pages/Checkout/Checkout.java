@@ -70,10 +70,10 @@ public class Checkout extends AnchorPane {
         makePaymentHBox.setAlignment(Pos.CENTER);
         makePaymentHBox.getChildren().add(makePaymentButton);
 
-        TitledSection titledSectionPerson = new TitledSection("Kontrollera dina personuppgifter");
+        TitledSection titledSectionPerson = new TitledSection("1. Kontrollera dina personuppgifter");
         titledSectionPerson.addNode(new PersonUppgifter());
 
-        TitledSection titledSectionKonto = new TitledSection("Gör din beställning");
+        TitledSection titledSectionKonto = new TitledSection("2. Gör din beställning");
         ShoppingCheckoutDetails details = new ShoppingCheckoutDetails();
         titledSectionKonto.addNode(details);
         titledSectionKonto.addNode(new KontoUppgifter());

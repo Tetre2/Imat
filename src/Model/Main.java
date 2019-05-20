@@ -102,6 +102,7 @@ public class Main extends Application {
 
     public static void setSceneToCheckout(){
         Group group = new Group();
+        checkout = new Checkout();
         group.getChildren().add(checkout);
         checkout.setNavBar(navbar);
         Scene scene = new Scene(group);
