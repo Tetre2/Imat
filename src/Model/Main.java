@@ -132,6 +132,10 @@ public class Main extends Application {
         window.setScene(scene);
     }
 
+    public static Historik getHistorik() {
+        return historik;
+    }
+
     public static MainPage getMainPage(){
         return mainPage;
     }

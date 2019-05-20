@@ -17,24 +17,35 @@ import se.chalmers.cse.dat216.project.ShoppingCartListener;
 import java.io.IOException;
 
 public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
-    @FXML AnchorPane rootPane;
-    @FXML ImageView image;
-    @FXML Label name;
-    @FXML Label price;
-    @FXML Label unit;
-    @FXML Label comparePrice;
-    @FXML Label comparePriceUnit;
-    @FXML Button addToCartButton;
-    @FXML ImageView starImageview;
-    @FXML Button starButton;
+    @FXML
+    AnchorPane rootPane;
+    @FXML
+    ImageView image;
+    @FXML
+    Label name;
+    @FXML
+    Label price;
+    @FXML
+    Label unit;
+    @FXML
+    Label comparePrice;
+    @FXML
+    Label comparePriceUnit;
+    @FXML
+    Button addToCartButton;
+    @FXML
+    ImageView starImageview;
+    @FXML
+    Button starButton;
 
-    @FXML AnchorPane pickerPane;
+    @FXML
+    AnchorPane pickerPane;
 
     private Product product;
     private se.chalmers.cse.dat216.project.ShoppingItem item;
     private Picker picker;
 
-    public ShoppingItem(Product p){
+    public ShoppingItem(Product p) {
         this.product = p;
         item = IMat.getInstance().getShoppingCartItem(product);
         picker = new Picker(item);
@@ -63,7 +74,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
         //sätter rätt stjärna
         updateStarButtonUI();
-        if(IMat.getInstance().shoppingCartContainsProduct(p)){
+        if (IMat.getInstance().shoppingCartContainsProduct(p)) {
             toggleItemIsSelected();
         }
 
@@ -100,7 +111,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
             starButton.setVisible(true);
         });
         rootPane.addEventFilter(MouseEvent.MOUSE_EXITED, e -> {
-            if(!isFavorited()){
+            if (!isFavorited()) {
                 starButton.setVisible(false);
             }
 
@@ -108,50 +119,40 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
     }
 
-    private void toggleItemIsSelected(){
+    private void toggleItemIsSelected() {
         rootPane.getStyleClass().add("selected");
         addToCartButton.setVisible(false);
         showPlusMinus();
     }
 
     private void onAddToCartButtonPressed() {
+
         //visar att varan är lagd i varukorgen
         toggleItemIsSelected();
-       // rootPane.setBackground(new Background(new BackgroundFill(Color.LIGHTGRAY, new CornerRadii(12), Insets.EMPTY)));
+        // rootPane.setBackground(new Background(new BackgroundFill(Color.LIGHTGRAY, new CornerRadii(12), Insets.EMPTY)));
 
         //lägger en utav varan i varukorgen
         item.setAmount(1);
         IMat.getInstance().getShoppingCart().addItem(item);
 
-        //debugging ändast
-        shopingDebugg();
-
         showPlusMinus();
-
-
     }
 
-    private void showPlusMinus(){
+    private void showPlusMinus() {
         pickerPane.setVisible(true);
     }
 
-    private void hidePlusMinus(){
+    private void hidePlusMinus() {
         item.setAmount(0);
         pickerPane.setVisible(false);
     }
 
-    private void shopingDebugg(){
-        System.out.println("Total cost: " + IMat.getInstance().getShoppingCart().getTotal());
-        System.out.println("Antal Varor: " + IMat.getInstance().getShoppingCart().getItems().size());
-        //System.out.println(Model.IMat.getInstance().getShoppingCart().getItems().get(0).getAmount());
-    }
-
     private void onStarButtonPressed() {
-        if(isFavorited()){
+        if (isFavorited()) {
             //Om stjärnan blir klickad när den är en favorit tas den bort
             IMat.getInstance().getFavorites().remove(product);
             System.out.println("Removed " + product.getName() + " From Favorites");
-        }else {
+        } else {
             //Om stjärnan blir klickad när den inte är en favorit läggs den till
             IMat.getInstance().addFavorite(product);
             System.out.println("Added " + product.getName() + " To Favorites");
@@ -175,32 +176,44 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
         starImageview.setImage(icon);
     }
 
-    private boolean isFavorited(){
+    private boolean isFavorited() {
         return IMat.getInstance().favoritesContainsProduct(product);
     }
 
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
+        if (cartEvent.isAddEvent()) {
 
-        if(item.getAmount() == 0 && pickerPane.isVisible() || pickerPane.isVisible() && !IMat.getInstance().getShoppingCartItems().contains(item)){
-        //Om den ligger kvar i varukorgen men är 0              Om den inte ligger i varukorgen men har mer än 0 i amount
-            hidePlusMinus();
-            rootPane.getStyleClass().clear();
-            rootPane.getStyleClass().add("anchor-container");
-            addToCartButton.setVisible(true);
+            if (cartEvent.getShoppingItem().equals(item)) {
+                System.out.println("ShoppingItem, HEJ " + cartEvent.getShoppingItem().getProduct().getName());
+                if (!IMat.getInstance().getShoppingCart().getItems().contains(item)) {
+                    hidePlusMinus();
+                    rootPane.getStyleClass().clear();
+                    rootPane.getStyleClass().add("anchor-container");
+                    addToCartButton.setVisible(true);
+                }
 
-            if(IMat.getInstance().getShoppingCartItems().contains(item)){
-                IMat.getInstance().getShoppingCart().removeItem(item);
+            /*if(item.getAmount() == 0 && pickerPane.isVisible()){
+                hidePlusMinus();
+                rootPane.getStyleClass().clear();
+                rootPane.getStyleClass().add("anchor-container");
+                addToCartButton.setVisible(true);
+
+                if(IMat.getInstance().getShoppingCartItems().contains(item)){
+                    IMat.getInstance().getShoppingCart().removeItem(item);
+                }
+            }*/
             }
+
         }
     }
 
 
-    public se.chalmers.cse.dat216.project.ShoppingItem getShoppingItem(){
+    public se.chalmers.cse.dat216.project.ShoppingItem getShoppingItem() {
         return item;
     }
 
-    public Product getProduct(){
+    public Product getProduct() {
         return product;
     }
 }

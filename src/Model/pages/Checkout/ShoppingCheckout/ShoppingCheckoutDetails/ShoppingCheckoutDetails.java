@@ -30,7 +30,7 @@ public class ShoppingCheckoutDetails extends AnchorPane implements ShoppingCartL
         Double foodPrice = IMat.getInstance().getShoppingCart().getTotal();
         transportPriceLabel.setText(Double.toString(TRANSPORT_PRICE));
         foodPriceLabel.setText(Double.toString(foodPrice));
-        System.out.println(Double.toString(foodPrice));
+        System.out.println("Ceckout, TotalPrice: " + Double.toString(foodPrice));
         totalPriceLabel.setText(Double.toString(foodPrice + TRANSPORT_PRICE));
     }
 

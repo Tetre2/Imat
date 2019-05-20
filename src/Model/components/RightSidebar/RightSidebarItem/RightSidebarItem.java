@@ -84,7 +84,6 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
         IMat.getInstance().getShoppingCart().removeItem(shoppingItem);
     }
 
-
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
 

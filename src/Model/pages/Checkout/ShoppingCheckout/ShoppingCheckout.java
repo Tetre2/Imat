@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.HBox;
 import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.ShoppingCartListener;
 import se.chalmers.cse.dat216.project.ShoppingItem;
@@ -29,7 +30,7 @@ public class ShoppingCheckout extends AnchorPane implements ShoppingCartListener
             centerContainerFlowPane.getChildren().add(varukorgItem);
         }
 
-        centerContainerFlowPane.getChildren().add(new ShoppingCheckoutDetails());
+        //centerContainerFlowPane.getChildren().add(new ShoppingCheckoutDetails());
 
         IMat.getInstance().getShoppingCart().addShoppingCartListener(this);
     }

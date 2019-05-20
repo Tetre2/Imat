@@ -1,6 +1,7 @@
 package Model.pages.Historik.Kvitto;
 
 import Model.IMat;
+import Model.Main;
 import Model.components.LeftSidebar.LeftSidebar;
 import Model.components.Navbar.Navbar;
 import Model.pages.Historik.Historik;
@@ -32,10 +33,12 @@ public class Kvitto extends AnchorPane {
 
     private ArrayList<ProductCategory> categories;
     private Historik parent;
+    private Order order;
 
     public Kvitto(Order order, Historik parent) {
         categories = new ArrayList();
         this.parent = parent;
+        this.order = order;
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
@@ -77,6 +80,14 @@ public class Kvitto extends AnchorPane {
 
     private void addEventListeners() {
         close.setOnAction(event -> parent.hideKvitto());
+        addToCartButton.setOnAction(event -> addToCart());
+    }
+
+    private void addToCart(){
+        for (ShoppingItem s : order.getItems()) {
+            IMat.getInstance().getShoppingCart().addItem(s);
+        }
+        Main.setSceneToMainPage();
     }
 
     private FXMLLoader initFXML() {

@@ -15,6 +15,7 @@ import se.chalmers.cse.dat216.project.ShoppingCartListener;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class RightSidebar extends AnchorPane implements ShoppingCartListener {
@@ -28,7 +29,6 @@ public class RightSidebar extends AnchorPane implements ShoppingCartListener {
     private Button pay;
     @FXML
     private Pane helpPane;
-
     @FXML
     private Hyperlink link;
 
@@ -60,19 +60,6 @@ public class RightSidebar extends AnchorPane implements ShoppingCartListener {
         }
     }
 
-    private void updateShoppingCart(){
-        inventory.getChildren().clear();
-        List<ShoppingItem> items = IMat.getInstance().getShoppingCart().getItems();
-        for (ShoppingItem si : items) {
-            System.out.println(si.getProduct().getName());
-            RightSidebarItem rightSidebarItem = new RightSidebarItem(si);
-            inventory.getChildren().add(rightSidebarItem);
-        }
-
-        //ta bort hjälp texten
-        helpPane.setVisible(items.size() == 0);
-        amaunt.setText(IMat.getInstance().getShoppingCart().getTotal() + " kr");
-    }
 
     private void addEventListeners() {
         pay.setOnAction(e -> onPayPressed());
@@ -86,6 +73,21 @@ public class RightSidebar extends AnchorPane implements ShoppingCartListener {
     private void onPayPressed(){
        IMat.getInstance().setSceneToCheckout();
        //IMat.getInstance().placeOrder();
+    }
+
+
+    private void updateShoppingCart(){
+        inventory.getChildren().clear();
+        List<ShoppingItem> items = IMat.getInstance().getShoppingCart().getItems();
+        for (ShoppingItem si : items) {
+            System.out.println("RightsideBar productName:  " + si.getProduct().getName());
+            RightSidebarItem rightSidebarItem = new RightSidebarItem(si);
+            inventory.getChildren().add(rightSidebarItem);
+        }
+
+        //ta bort hjälp texten
+        helpPane.setVisible(items.size() == 0);
+        amaunt.setText(IMat.getInstance().getShoppingCart().getTotal() + " kr");
     }
 
     @Override

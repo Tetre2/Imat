@@ -15,6 +15,7 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
+import se.chalmers.cse.dat216.project.Order;
 
 import javax.swing.text.html.ImageView;
 import java.io.IOException;
@@ -23,12 +24,12 @@ public class PaymentDoneBox extends AnchorPane {
     @FXML private Button shopMoreButton;
     @FXML private Button showReceiptButton;
 
-    public PaymentDoneBox(){
+    public PaymentDoneBox(Order order){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
         shopMoreButton.setOnAction(e -> Main.setSceneToMainPage());
-        showReceiptButton.setOnAction(e -> Main.setSceneToHistorik());
+        showReceiptButton.setOnAction(e -> showReceipt(order));
     }
 
     private FXMLLoader initFXML() {
@@ -45,4 +46,10 @@ public class PaymentDoneBox extends AnchorPane {
             throw new RuntimeException(exception);
         }
     }
+
+    private void showReceipt(Order order){
+        Main.setSceneToHistorik();
+        Main.getHistorik().showKvitto(order);
+    }
+
 }

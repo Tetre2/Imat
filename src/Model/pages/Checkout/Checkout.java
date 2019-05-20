@@ -15,6 +15,7 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
+import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
@@ -44,13 +45,13 @@ public class Checkout extends AnchorPane {
         //TopNav.getChildren().add(new Navbar());
         varukorgContainerAnchorPane.toFront();
 
-        createPaymentDoneUI();
+        //createPaymentDoneUI();
         createPaymentUI();
         createVarukorgUI();
     }
 
     private void createPaymentDoneUI() {
-        paymentDoneContainerVBox.getChildren().add(new PaymentDoneBox());
+        paymentDoneContainerVBox.getChildren().add(new PaymentDoneBox(null));
     }
 
     private void createPaymentUI() {
@@ -89,7 +90,9 @@ public class Checkout extends AnchorPane {
 
     private void makePaymentButtonPressed() {
         //IMat.getInstance().placeOrder(true);
-        IMat.getInstance().placeOrder(true);
+        Order order = IMat.getInstance().placeOrder();
+        paymentDoneContainerVBox.getChildren().clear();
+        paymentDoneContainerVBox.getChildren().add(new PaymentDoneBox(order));
         goToPaymentDoneStep();
     }
 
@@ -99,6 +102,7 @@ public class Checkout extends AnchorPane {
         ShoppingCheckout shoppingCheckout = new ShoppingCheckout();
 
         varukorgSection.addNode(shoppingCheckout);
+        varukorgSection.addNode(new ShoppingCheckoutDetails());
 
         Button continueShopping = new Button();
         continueShopping.setText("<-- Fortsätt Handla");
