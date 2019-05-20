@@ -77,18 +77,16 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
     private void onPlusButtonPressed(){
         shoppingItem.setAmount(shoppingItem.getAmount()+1);     //ökar varan med ett
         IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
-        shopingDebugg();
     }
 
     private void onMinusButtonPressed(){
         shoppingItem.setAmount(shoppingItem.getAmount()-1);     //minskar varan med ett
         IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
-        shopingDebugg();
     }
 
     private void shopingDebugg(){
-        System.out.println("Total cost: " + IMat.getInstance().getShoppingCart().getTotal());
-        System.out.println("Antal Varor: " + IMat.getInstance().getShoppingCart().getItems().size());
+        System.out.println("Picker, Total cost: " + IMat.getInstance().getShoppingCart().getTotal());
+        System.out.println("Picker, Antal Varor: " + IMat.getInstance().getShoppingCart().getItems().size());
         //System.out.println(Model.IMat.getInstance().getShoppingCart().getItems().get(0).getAmount());
     }
 

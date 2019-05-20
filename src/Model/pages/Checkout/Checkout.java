@@ -89,7 +89,7 @@ public class Checkout extends AnchorPane {
 
     private void makePaymentButtonPressed() {
         //IMat.getInstance().placeOrder(true);
-        IMat.getInstance().placeOrder(true);
+        IMat.getInstance().placeOrder();
         goToPaymentDoneStep();
     }
 

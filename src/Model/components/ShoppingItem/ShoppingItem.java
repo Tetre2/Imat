@@ -107,6 +107,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
     }
 
     private void onAddToCartButtonPressed() {
+
         //visar att varan är lagd i varukorgen
         toggleItemIsSelected();
        // rootPane.setBackground(new Background(new BackgroundFill(Color.LIGHTGRAY, new CornerRadii(12), Insets.EMPTY)));
@@ -115,12 +116,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
         item.setAmount(1);
         IMat.getInstance().getShoppingCart().addItem(item);
 
-        //debugging ändast
-        shopingDebugg();
-
         showPlusMinus();
-
-
     }
 
     private void showPlusMinus(){
@@ -130,12 +126,6 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
     private void hidePlusMinus(){
         item.setAmount(0);
         pickerPane.setVisible(false);
-    }
-
-    private void shopingDebugg(){
-        System.out.println("Total cost: " + IMat.getInstance().getShoppingCart().getTotal());
-        System.out.println("Antal Varor: " + IMat.getInstance().getShoppingCart().getItems().size());
-        //System.out.println(Model.IMat.getInstance().getShoppingCart().getItems().get(0).getAmount());
     }
 
     private void onStarButtonPressed() {
@@ -173,18 +163,31 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
+if(cartEvent.isAddEvent()) {
 
-        if(item.getAmount() == 0 && pickerPane.isVisible() || pickerPane.isVisible() && !IMat.getInstance().getShoppingCartItems().contains(item)){
-        //Om den ligger kvar i varukorgen men är 0              Om den inte ligger i varukorgen men har mer än 0 i amount
+
+    if (cartEvent.getShoppingItem().equals(item)) {
+        System.out.println("ShoppingItem, HEJ " + cartEvent.getShoppingItem().getProduct().getName());
+        if (!IMat.getInstance().getShoppingCart().getItems().contains(item)) {
             hidePlusMinus();
             rootPane.getStyleClass().clear();
             rootPane.getStyleClass().add("anchor-container");
             addToCartButton.setVisible(true);
-
-            if(IMat.getInstance().getShoppingCartItems().contains(item)){
-                IMat.getInstance().getShoppingCart().removeItem(item);
-            }
         }
+
+            /*if(item.getAmount() == 0 && pickerPane.isVisible()){
+                hidePlusMinus();
+                rootPane.getStyleClass().clear();
+                rootPane.getStyleClass().add("anchor-container");
+                addToCartButton.setVisible(true);
+
+                if(IMat.getInstance().getShoppingCartItems().contains(item)){
+                    IMat.getInstance().getShoppingCart().removeItem(item);
+                }
+            }*/
+    }
+
+}
     }
 
 
