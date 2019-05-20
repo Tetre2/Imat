@@ -15,6 +15,8 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
+import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 
@@ -71,7 +73,8 @@ public class Checkout extends AnchorPane {
         makePaymentHBox.getChildren().add(makePaymentButton);
 
         TitledSection titledSectionPerson = new TitledSection("1. Kontrollera dina personuppgifter");
-        titledSectionPerson.addNode(new PersonUppgifter());
+        PersonUppgifter personUppgifter = new PersonUppgifter();
+        titledSectionPerson.addNode(personUppgifter);
 
         TitledSection titledSectionKonto = new TitledSection("2. Gör din beställning");
         ShoppingCheckoutDetails details = new ShoppingCheckoutDetails();

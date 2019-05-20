@@ -136,6 +136,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
     }
 
     private void hidePlusMinus(){
+        item.setAmount(0);
         pickerPane.setVisible(false);
     }
 
@@ -181,8 +182,8 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
 
-        if(item.getAmount() == 0 && pickerPane.isVisible()){ //sker när man klickar på krysset från varukorgen
-
+        if(item.getAmount() == 0 && pickerPane.isVisible() || pickerPane.isVisible() && !IMat.getInstance().getShoppingCartItems().contains(item)){
+        //Om den ligger kvar i varukorgen men är 0              Om den inte ligger i varukorgen men har mer än 0 i amount
             hidePlusMinus();
             rootPane.getStyleClass().clear();
             rootPane.getStyleClass().add("anchor-container");
