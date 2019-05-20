@@ -210,7 +210,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
                     addToCartButton.setVisible(true);
                 }
 
-            /*if(item.getAmount() == 0 && pickerPane.isVisible()){
+            if(item.getAmount() == 0 && pickerPane.isVisible()){
                 hidePlusMinus();
                 rootPane.getStyleClass().clear();
                 rootPane.getStyleClass().add("anchor-container");
@@ -219,7 +219,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
                 if(IMat.getInstance().getShoppingCartItems().contains(item)){
                     IMat.getInstance().getShoppingCart().removeItem(item);
                 }
-            }*/
+            }
             }
 
         }
