@@ -99,6 +99,7 @@ public class Checkout extends AnchorPane {
         ShoppingCheckout shoppingCheckout = new ShoppingCheckout();
 
         varukorgSection.addNode(shoppingCheckout);
+        varukorgSection.addNode(new ShoppingCheckoutDetails());
 
         Button continueShopping = new Button();
         continueShopping.setText("<-- Fortsätt Handla");
