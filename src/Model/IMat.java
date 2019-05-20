@@ -156,12 +156,10 @@ public class IMat {
         return dataHandler.isFavorite(p);
     }
 
-    public void placeOrder(){
-        dataHandler.placeOrder();
-    }
-
     public void placeOrder(boolean clearCart){
         dataHandler.placeOrder(clearCart);
+        ShoppingItem shoppingItem = new ShoppingItem(new Product());
+        dataHandler.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
     }
 
     public boolean isFirstRun(){
