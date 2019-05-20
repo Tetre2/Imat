@@ -70,6 +70,7 @@ public class Main extends Application {
 
     public static void setSceneToMinaSidor(){
         Group group = new Group();
+        minaSidor = new MinaSidor();
         group.getChildren().add(minaSidor);
         minaSidor.setNavBar(navbar);
         Scene scene = new Scene(group);

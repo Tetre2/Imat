@@ -71,7 +71,8 @@ public class Checkout extends AnchorPane {
         makePaymentHBox.getChildren().add(makePaymentButton);
 
         TitledSection titledSectionPerson = new TitledSection("1. Kontrollera dina personuppgifter");
-        titledSectionPerson.addNode(new PersonUppgifter());
+        PersonUppgifter personUppgifter = new PersonUppgifter();
+        titledSectionPerson.addNode(personUppgifter);
 
         TitledSection titledSectionKonto = new TitledSection("2. Gör din beställning");
         ShoppingCheckoutDetails details = new ShoppingCheckoutDetails();

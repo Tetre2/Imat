@@ -77,6 +77,8 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
             creditCard.setCardNumber(kontonummer.getInput());
             creditCard.setHoldersName(kontoAgare.getInput());
             save.setText("Sparad");
+
+
             showSaved();
         } catch (NotValidInput notValidInput) {
             System.out.println("Input not Valid");

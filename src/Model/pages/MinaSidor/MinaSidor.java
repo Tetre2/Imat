@@ -23,6 +23,8 @@ public class MinaSidor extends AnchorPane {
     @FXML
     private ScrollPane scrollPane;
 
+    @FXML private PersonUppgifter personUppgifter;
+
     public MinaSidor(){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
@@ -34,8 +36,8 @@ public class MinaSidor extends AnchorPane {
         titledSectionKonto.addNode(tmpKonto);
 
         TitledSection titledSectionPerson = new TitledSection("Personuppgifter");
-        PersonUppgifter tmpUppgifter = new PersonUppgifter();
-        titledSectionPerson.addNode(tmpUppgifter);
+        personUppgifter = new PersonUppgifter();
+        titledSectionPerson.addNode(personUppgifter);
 
         vBox.getChildren().add(titledSectionPerson);
         vBox.getChildren().add(titledSectionKonto);
