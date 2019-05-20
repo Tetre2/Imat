@@ -1,9 +1,17 @@
 .HistorikItem{
-    -fx-background-color: white;
+    -fx-background-color: #dadada;
     -fx-border-style: solid;
-    -fx-border-color:  #535353;
-    -fx-border-width: 1;
+    -fx-border-color: #f3f3f3;
+    -fx-border-width: 2;
+    -fx-border-radius: 7;
+    -fx-background-radius: 7;
 }
+
+/*
+    -fx-padding: 5px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+ */
 
 .button{
     -fx-font-size: 20;

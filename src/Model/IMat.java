@@ -156,8 +156,8 @@ public class IMat {
         return dataHandler.isFavorite(p);
     }
 
-    public void placeOrder(){
-        dataHandler.placeOrder(true);
+    public Order placeOrder(){
+        return dataHandler.placeOrder(true);
 
         /*for (int i = 0; i < dataHandler.getShoppingCart().getItems().size(); i++) {
             ShoppingItem shoppingItem = dataHandler.getShoppingCart().getItems().get(i);
