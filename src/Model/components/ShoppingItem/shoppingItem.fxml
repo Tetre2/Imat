@@ -39,50 +39,29 @@
                   <Font name="Tahoma" size="12.0" />
                </font>
             </Label>
-            <HBox alignment="CENTER" maxHeight="30.0" maxWidth="99.0" minHeight="30.0" minWidth="30.0" prefHeight="30.0" prefWidth="99.0" spacing="4.0">
+            <HBox alignment="CENTER" maxHeight="30.0" maxWidth="196.0" minHeight="30.0" minWidth="30.0" prefHeight="30.0" prefWidth="196.0" spacing="4.0">
                <children>
-                  <Label fx:id="price" alignment="TOP_RIGHT" contentDisplay="RIGHT" maxHeight="30.0" maxWidth="89.0" minHeight="30.0" minWidth="30.0" prefHeight="30.0" prefWidth="89.0" text="23,9" textAlignment="RIGHT">
+                  <Label fx:id="price" alignment="TOP_RIGHT" contentDisplay="RIGHT" maxHeight="30.0" maxWidth="104.0" minHeight="30.0" minWidth="30.0" prefHeight="30.0" prefWidth="83.0" text="23,9" textAlignment="RIGHT">
                      <styleClass>
                         <String fx:value="text" />
                         <String fx:value="text-lg" />
                      </styleClass>
                   </Label>
-                  <Label fx:id="unit" prefHeight="35.0" prefWidth="50.0" text="/st" textAlignment="CENTER">
+                  <Label fx:id="unit" prefHeight="35.0" prefWidth="81.0" text="/st" textAlignment="CENTER">
                      <styleClass>
                         <String fx:value="text" />
-                        <String fx:value="text-xs" />
+                        <String fx:value="text-lg" />
                      </styleClass>
+                     <font>
+                        <Font size="1.0" />
+                     </font>
                   </Label>
                </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
             </HBox>
-            <HBox alignment="CENTER" maxHeight="120.0" minHeight="10.0" prefHeight="15.0" prefWidth="123.0">
-               <children>
-                  <Label text="jmf-pris ">
-                     <styleClass>
-                        <String fx:value="text" />
-                        <String fx:value="text-xs" />
-                     </styleClass>
-                  </Label>
-                  <Label fx:id="comparePrice" text="32,99">
-                     <styleClass>
-                        <String fx:value="text" />
-                        <String fx:value="text-xs" />
-                     </styleClass>
-                  </Label>
-                  <Label text="kr/">
-                     <styleClass>
-                        <String fx:value="text" />
-                        <String fx:value="text-xs" />
-                     </styleClass>
-                  </Label>
-                  <Label fx:id="comparePriceUnit" text="kg">
-                     <styleClass>
-                        <String fx:value="text" />
-                        <String fx:value="text-xs" />
-                     </styleClass>
-                  </Label>
-               </children>
-            </HBox>
+            <HBox alignment="CENTER" maxHeight="120.0" minHeight="10.0" prefHeight="15.0" prefWidth="123.0" />
          </children>
       </VBox>
       <Button fx:id="addToCartButton" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="230.0" maxHeight="10.0" maxWidth="10.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="150.0" text="Lägg i kundvagn">
