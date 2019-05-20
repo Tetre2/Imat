@@ -5,6 +5,7 @@ import Model.Main;
 import Model.components.Forms.Kontouppgifter.KontoUppgifter;
 import Model.components.Forms.PersonUppgifter.PersonUppgifter;
 import Model.components.Navbar.Navbar;
+import Model.pages.Checkout.Checkout;
 import Model.pages.Checkout.ShoppingCheckout.ShoppingCheckout;
 import Model.components.TitledSection.TitledSection;
 import Model.pages.Checkout.ShoppingCheckout.ShoppingCheckoutDetails.ShoppingCheckoutDetails;
@@ -24,7 +25,10 @@ public class PaymentDoneBox extends AnchorPane {
     @FXML private Button shopMoreButton;
     @FXML private Button showReceiptButton;
 
-    public PaymentDoneBox(Order order){
+    private Checkout parent;
+
+    public PaymentDoneBox(Order order, Checkout parent){
+        this.parent = parent;
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
@@ -48,7 +52,7 @@ public class PaymentDoneBox extends AnchorPane {
     }
 
     private void showReceipt(Order order){
-        Main.setSceneToHistorik();
+        parent.getNavBar().goToHistorik();
         Main.getHistorik().showKvitto(order);
     }
 

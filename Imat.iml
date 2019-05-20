@@ -12,5 +12,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="projectbackend" level="project" />
     <orderEntry type="library" name="fuzzywuzzy-1.2.0" level="project" />
+    <orderEntry type="library" name="fuzzywuzzy-1.2.0" level="project" />
   </component>
 </module>
