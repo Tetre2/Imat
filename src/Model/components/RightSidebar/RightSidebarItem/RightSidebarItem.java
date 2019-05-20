@@ -3,12 +3,10 @@ package Model.components.RightSidebar.RightSidebarItem;
 import Model.IMat;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.SpinnerValueFactory;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Font;
 import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.ShoppingCartListener;
 import se.chalmers.cse.dat216.project.ShoppingItem;
@@ -28,8 +26,14 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
     @FXML
     private Button close;
 
+    private ComboBox<String> fontFamilyField;
 
     public RightSidebarItem(ShoppingItem shoppingItem){
+
+
+
+
+
         this.shoppingItem = shoppingItem;
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
@@ -37,6 +41,7 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
         SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, (int)shoppingItem.getAmount());
 
         amount.setValueFactory(valueFactory);
+
 
         addEventListeners();
 

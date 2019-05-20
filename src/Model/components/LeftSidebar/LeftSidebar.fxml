@@ -10,6 +10,6 @@
       <URL value="@../../../styles.css" />
    </stylesheets>
    <children>
-      <FlowPane fx:id="categoryPane" layoutX="1.0" prefHeight="700.0" prefWidth="288.0" />
+      <FlowPane fx:id="categoryPane" layoutX="1.0" prefHeight="700.0" prefWidth="288.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="0.0" />
    </children>
 </fx:root>
