@@ -17,9 +17,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class LeftSidebar extends AnchorPane  {
-
-    @FXML
-    private Button testingButton;
+    
     @FXML
     private FlowPane categoryPane;
     private List<CategoryItem> categoryItems;
@@ -90,7 +88,6 @@ public class LeftSidebar extends AnchorPane  {
 
 
     private void addEventListeners() {
-        testingButton.setOnAction(e -> Main.setSceneToTesting());
 
     }
 

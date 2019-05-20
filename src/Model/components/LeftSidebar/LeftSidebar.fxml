@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 
@@ -11,7 +10,6 @@
       <URL value="@../../../styles.css" />
    </stylesheets>
    <children>
-      <Button fx:id="testingButton" layoutX="168.0" layoutY="574.0" mnemonicParsing="false" text="Testing" />
       <FlowPane fx:id="categoryPane" layoutX="1.0" prefHeight="700.0" prefWidth="288.0" />
    </children>
 </fx:root>

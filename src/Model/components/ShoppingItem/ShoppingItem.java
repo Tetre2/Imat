@@ -54,7 +54,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
         //sätter produktens värden
         name.setText(product.getName());
         price.setText(product.getPrice() + "");
-        unit.setText(product.getUnit());
+        unit.setText(getUnit());
         image.setImage(IMat.getInstance().getImage(product));
 
         //Jömmer det som inte ska synas från början
@@ -67,6 +67,14 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
             toggleItemIsSelected();
         }
 
+    }
+
+    private String getUnit(){
+        String unit = product.getUnit();
+        if(unit.length() > 6){
+            unit = "kr/st";
+        }
+        return unit;
     }
 
     private FXMLLoader initFXML() {
