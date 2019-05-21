@@ -10,7 +10,6 @@
 
 <fx:root prefHeight="900.0" prefWidth="1440.0" stylesheets="@../../../styles.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane fx:id="TopNav" prefHeight="100.0" prefWidth="1440.0" />
       <AnchorPane layoutX="109.0" layoutY="194.0" prefHeight="700.0" prefWidth="1222.0" style="-fx-background-color: white;">
          <children>
             <Label layoutX="9.0" layoutY="37.0" prefHeight="108.0" prefWidth="221.0" text="Klicka på stjärnan för att lägga till varan i favoritkategorin." wrapText="true">
@@ -95,5 +94,6 @@
             <String fx:value="bold" />
          </styleClass>
       </Label>
+      <AnchorPane fx:id="TopNav" prefHeight="100.0" prefWidth="1440.0" />
    </children>
 </fx:root>

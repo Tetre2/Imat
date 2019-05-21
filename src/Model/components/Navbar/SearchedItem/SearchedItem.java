@@ -2,6 +2,7 @@ package Model.components.Navbar.SearchedItem;
 
 import Model.IMat;
 import Model.Main;
+import Model.components.Navbar.Navbar;
 import Model.components.ShoppingItem.ShoppingItem;
 import Model.pages.Mainpage.MainPage;
 import javafx.fxml.FXML;
@@ -27,11 +28,11 @@ public class SearchedItem extends AnchorPane {
     private AnchorPane root;
 
     private Product product;
-    private static MainPage mainPage;
+    private Navbar parent;
 
-    public SearchedItem(Product product) {
+    public SearchedItem(Navbar parent, Product product) {
         this.product = product;
-        mainPage = Main.getMainPage();
+        this.parent = parent;
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
@@ -48,7 +49,9 @@ public class SearchedItem extends AnchorPane {
         root.setOnMouseClicked(event -> {
             List<Product> arr = new ArrayList<>();
             arr.add(product);
-            mainPage.showProductsToGrid(arr, product.getName());
+            Main.getMainPage().showProductsToGrid(arr, product.getName());
+            parent.goToMainPage();
+
         });
     }
 

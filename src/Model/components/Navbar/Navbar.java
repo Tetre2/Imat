@@ -125,7 +125,7 @@ public class Navbar extends AnchorPane {
         searchItems.setVisible(true);
         searchItems.getChildren().clear();
         for (Product p : searchedItems) {
-            searchItems.getChildren().add(new SearchedItem(p));
+            searchItems.getChildren().add(new SearchedItem(this, p));
         }
 
     }
