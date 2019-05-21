@@ -56,6 +56,7 @@ public class Main extends Application {
             navbar.goToHjalp();
         }else {
             navbar.goToMainPage();
+            mainPage.getLeftSidebar().fireCategoryChanged(MainCategory.FAVORIT);
         }
 
 
