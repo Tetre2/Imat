@@ -44,12 +44,11 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
     private Label mailLabel;
     private Label nameLabel;
     private Label addressLabel;
-    private Label postCodeLabel;
-    private Label postAddressLabel;
-
 
     private Customer customer;
     private List<TextInput> textInputs;
+
+    private final String indent = "    ";
 
     public PersonUppgifter() {
         customer = IMat.getInstance().getCustomer();
@@ -90,24 +89,20 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         deliveryHeaderLabel.getStyleClass().add("bold");
         nameLabel.getStyleClass().addAll("text", "text-md");
         addressLabel.getStyleClass().addAll("text", "text-md");
-        postCodeLabel.getStyleClass().addAll("text", "text-md");
-        postAddressLabel.getStyleClass().addAll("text", "text-md");
 
-        Label edit = previewLabel("Redigera");
+        Label edit = previewLabel(indent + "Redigera");
         edit.getStyleClass().add("text-link");
         edit.setOnMouseClicked(e -> transitionToEditUI());
 
-        containerDoneVBox.getChildren().addAll(contactHeaderLabel, numberLabel, mailLabel, deliveryHeaderLabel, nameLabel, addressLabel, postCodeLabel, postAddressLabel, edit);
+        containerDoneVBox.getChildren().addAll(contactHeaderLabel, numberLabel, mailLabel, deliveryHeaderLabel, nameLabel, addressLabel, edit);
         containerEditVBox.getChildren().add(containerDoneVBox);
     }
 
     private void updatePreviewLabels() {
-        numberLabel = new Label(customer.getPhoneNumber());
-        mailLabel = new Label (customer.getEmail());
-        nameLabel = new Label (customer.getFirstName() + " " + customer.getLastName());
-        addressLabel = new Label (customer.getAddress());
-        postCodeLabel = new Label (customer.getPostCode());
-        postAddressLabel = new Label (customer.getPostAddress());
+        numberLabel = new Label(indent + customer.getPhoneNumber());
+        mailLabel = new Label (indent + customer.getEmail());
+        nameLabel = new Label (indent + customer.getFirstName() + " " + customer.getLastName());
+        addressLabel = new Label (indent + customer.getAddress() + ", " + customer.getPostCode() + ", " + customer.getPostAddress());
     }
 
     private void transitionToEditUI() {
@@ -122,8 +117,7 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
     }
 
     private boolean isUserVerified() {
-        // TODO: add logic to check if all fields are correctly filled out
-        return true;
+        return IMat.getInstance().isCustomerComplete();
     }
 
     private void initEditUI() {
@@ -160,7 +154,9 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         textInputs.add(postcode);
         textInputs.add(postaddress);
 
-        rootAnchorPane.getChildren().add(save);
+        if (!rootAnchorPane.getChildren().contains(save)) {
+            rootAnchorPane.getChildren().add(save);
+        }
     }
 
     private void addEventListeners() {

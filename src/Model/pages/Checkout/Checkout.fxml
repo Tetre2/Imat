@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<fx:root prefHeight="900.0" prefWidth="1440.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="871.0" prefWidth="1440.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <StackPane fx:id="containerStackPane" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+      <StackPane fx:id="containerStackPane" layoutY="91.0" prefHeight="780.0" prefWidth="1440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
          <children>
             <AnchorPane fx:id="paymentDoneContainerAnchorPane" prefHeight="200.0" prefWidth="200.0">
                <children>
@@ -24,6 +24,9 @@
                      </content>
                   </ScrollPane>
                </children>
+               <StackPane.margin>
+                  <Insets top="20.0" />
+               </StackPane.margin>
             </AnchorPane>
             <AnchorPane fx:id="paymentContainerAnchorPane" prefHeight="200.0" prefWidth="200.0">
                <children>
@@ -37,6 +40,9 @@
                      </content>
                   </ScrollPane>
                </children>
+               <StackPane.margin>
+                  <Insets top="20.0" />
+               </StackPane.margin>
             </AnchorPane>
             <AnchorPane fx:id="varukorgContainerAnchorPane" prefHeight="200.0" prefWidth="200.0">
                <children>
@@ -54,6 +60,9 @@
                      </content>
                   </ScrollPane>
                </children>
+               <StackPane.margin>
+                  <Insets top="20.0" />
+               </StackPane.margin>
             </AnchorPane>
          </children>
       </StackPane>

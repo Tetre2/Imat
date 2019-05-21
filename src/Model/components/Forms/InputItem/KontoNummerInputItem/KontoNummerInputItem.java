@@ -108,7 +108,7 @@ public class KontoNummerInputItem extends AnchorPane implements ValidityCheckabl
     @Override
     public String getInput() throws NotValidInput {
         String input = "";
-        if (isValide()) {
+        if (isValid()) {
             for (LimitedTextField l : limitedTextFields) {
                 input += l.getInput();
             }
@@ -145,7 +145,7 @@ public class KontoNummerInputItem extends AnchorPane implements ValidityCheckabl
     }
 
     @Override
-    public boolean isValide() {
+    public boolean isValid() {
         boolean valid = true;
         for (LimitedTextField l : limitedTextFields) {
             if(!l.isValid()){

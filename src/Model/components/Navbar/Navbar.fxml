@@ -12,12 +12,12 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.text.Font?>
 
-<fx:root fx:id="root" prefHeight="156.0" prefWidth="1540.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="root" prefHeight="100.0" prefWidth="1540.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <javafx.scene.layout.AnchorPane fx:id="nav" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1540.0" stylesheets="@Navbar.css">
          <children>
             <HBox prefHeight="100.0" prefWidth="1440.0">
-               <children>
+               <children>  
                   <ToolBar accessibleText="fds" maxHeight="100.0" maxWidth="1540.0" minHeight="100.0" minWidth="1540.0" prefHeight="100.0" prefWidth="1540.0">
                      <items>
                         <ImageView fx:id="iMatLabel" fitHeight="59.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true">
@@ -63,6 +63,6 @@
             </HBox>
          </children>
       </javafx.scene.layout.AnchorPane>
-      <FlowPane fx:id="searchItems" layoutX="374.0" layoutY="100.0" prefHeight="69.0" prefWidth="630.0" />
+      <FlowPane fx:id="searchItems" layoutX="374.0" layoutY="100.0" prefHeight="0.0" prefWidth="630.0" />
    </children>
 </fx:root>

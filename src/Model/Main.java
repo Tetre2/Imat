@@ -38,7 +38,7 @@ public class Main extends Application {
 
         window = primaryStage;
 
-        //IMatDataHandler.getInstance().reset();
+        // IMatDataHandler.getInstance().reset();
         primaryStage.setTitle("IMat");
 
         mainPage = new MainPage();

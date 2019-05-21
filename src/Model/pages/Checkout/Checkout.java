@@ -77,15 +77,15 @@ public class Checkout extends AnchorPane {
         PersonUppgifter personUppgifter = new PersonUppgifter();
         titledSectionPerson.addNode(personUppgifter);
 
-        TitledSection titledSectionKonto = new TitledSection("2. Gör din beställning", "Fält med * måste fyllas i");
-        ShoppingCheckoutDetails details = new ShoppingCheckoutDetails();
-        titledSectionKonto.addNode(details);
+        TitledSection titledSectionKonto = new TitledSection("2. Kontrollera dina kontouppgifter", "Fält med * måste fyllas i");
         titledSectionKonto.addNode(new KontoUppgifter());
 
-        paymentContainerVBox.getChildren().add(goToVarukorgHBox);
-        paymentContainerVBox.getChildren().add(titledSectionPerson);
-        paymentContainerVBox.getChildren().add(titledSectionKonto);
-        paymentContainerVBox.getChildren().add(makePaymentHBox);
+        TitledSection titledSectionPay = new TitledSection("3. Slutför din order", null);
+        ShoppingCheckoutDetails details = new ShoppingCheckoutDetails();
+        titledSectionPay.addNode(details);
+        titledSectionPay.addNode(makePaymentHBox);
+
+        paymentContainerVBox.getChildren().addAll(goToVarukorgHBox, titledSectionPerson, titledSectionKonto, titledSectionPay);
     }
 
     private void makePaymentButtonPressed() {

@@ -9,18 +9,21 @@ import Model.components.Forms.InputItem.KontoNummerInputItem.KontoNummerInputIte
 import Model.components.Forms.NotValidInput;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.VBox;
 import se.chalmers.cse.dat216.project.CreditCard;
 
 import java.io.IOException;
 
 public class KontoUppgifter extends AnchorPane implements Focusable {
 
+    @FXML private AnchorPane rootAnchorPane;
     @FXML
-    private FlowPane flowPane;
+    private VBox containerEditVBox;
     @FXML
     private Button save;
     @FXML
@@ -28,33 +31,32 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
     @FXML
     private Label errLabel;
 
+    private VBox containerDoneVBox = new VBox();
+
     private CreditCard creditCard;
 
-    private KontrolSiffror kontrollSiffror;
-    private MonthYearInputItem monthYearInputItem;
-    private KontoNummerInputItem kontonummer;
-    private TextInput kontoAgare;
+    private KontrolSiffror kontrollSiffror = new KontrolSiffror(null);
+    private MonthYearInputItem monthYearInputItem = new MonthYearInputItem(kontrollSiffror);
+    private KontoNummerInputItem kontonummer = new KontoNummerInputItem(monthYearInputItem);
+    private TextInput kontoAgare = new TextInput("Ägarens förnamn:", "Britt", "Ange ägarens förnamn till kontokortet *", kontonummer.getLimitedTextFields().get(0), true);
+
+    private Label nameLabel = new Label();
+    private Label creditCardNumberLabel = new Label();
+    private Label experyDateLabel = new Label();
+    private Label controlNumberLabel = new Label();
+
+    private final String indent = "    ";
 
     public KontoUppgifter() {
         this.creditCard = IMat.getInstance().getCreditCard();
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
-        kontrollSiffror = new KontrolSiffror(null);
-        monthYearInputItem = new MonthYearInputItem(kontrollSiffror);
-        kontonummer = new KontoNummerInputItem(monthYearInputItem);
-        kontoAgare = new TextInput("Ägarens förnamn:", "Britt", "Ange ägarens förnamn till kontokortet *", kontonummer.getLimitedTextFields().get(0), true);
-
-        flowPane.getChildren().add(kontoAgare);
-        flowPane.getChildren().add(kontonummer);
-        flowPane.getChildren().add(monthYearInputItem);
-        flowPane.getChildren().add(kontrollSiffror);
-
-        kontrollSiffror.setKontrolKod(creditCard.getVerificationCode());
-        monthYearInputItem.setMonth(creditCard.getValidMonth() + "");
-        monthYearInputItem.setYear(creditCard.getValidYear() + "");
-        kontonummer.setCardNumber(creditCard.getCardNumber());
-        kontoAgare.setText(creditCard.getHoldersName());
+        if (isCreditCardComplete()) {
+            transitionToDoneUI();
+        } else {
+            transitionToEditUI();
+        }
 
         addEventListeners();
 
@@ -62,15 +64,100 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
 
     }
 
+    private void initDoneUI() {
+        containerDoneVBox = new VBox();
+        containerDoneVBox.setSpacing(10.0);
+        containerDoneVBox.setAlignment(Pos.CENTER_LEFT);
+
+        updatePreviewLabels();
+
+        Label contactHeaderLabel = new Label ("Kontouppgifter");
+        contactHeaderLabel.getStyleClass().addAll("text", "text-md");
+        contactHeaderLabel.getStyleClass().add("bold");
+        nameLabel.getStyleClass().addAll("text", "text-md");
+        creditCardNumberLabel.getStyleClass().addAll("text", "text-md");
+        experyDateLabel.getStyleClass().addAll("text", "text-md");
+        controlNumberLabel.getStyleClass().addAll("text", "text-md");
+
+        Label edit = previewLabel(indent + "Redigera");
+        edit.getStyleClass().add("text-link");
+        edit.setOnMouseClicked(e -> transitionToEditUI());
+
+        containerDoneVBox.getChildren().addAll(contactHeaderLabel, nameLabel, creditCardNumberLabel, experyDateLabel, controlNumberLabel, edit);
+        containerEditVBox.getChildren().add(containerDoneVBox);
+    }
+
+    private void transitionToEditUI() {
+        removeDoneUI();
+        initEditUI();
+    }
+
+    private void removeDoneUI() {
+        containerDoneVBox.getChildren().clear();
+    }
+
+    private void updatePreviewLabels() {
+        nameLabel = new Label(indent + "Kortägare: " + creditCard.getHoldersName());
+        creditCardNumberLabel = new Label (indent + "Kontonummer: " + creditCard.getCardNumber());
+        experyDateLabel= new Label (indent + "Utgångsdatum: " +creditCard.getValidMonth() + "/" + creditCard.getValidYear());
+        controlNumberLabel = new Label (indent + "CVC: " + creditCard.getVerificationCode());
+    }
+
+    private String getFormattedCardNumber() {
+        StringBuilder str = new StringBuilder();
+        int i = 0;
+        for (char c : creditCard.getCardNumber().toCharArray()) {
+            i++;
+
+            if (i % 4 == 1) {
+                str.append(" ");
+            } else {
+                str.append(c);
+            }
+        }
+        return str.toString();
+    }
+
+    private Label previewLabel(String text) {
+        Label label = new Label(text);
+        label.getStyleClass().addAll("text", "text-md");
+        return label;
+    }
+
+    private boolean isCreditCardComplete() {
+        return !creditCard.getCardNumber().equals("") && !Integer.toString(creditCard.getVerificationCode()).equals("") && !Integer.toString(creditCard.getValidYear()).equals("") && !Integer.toString(creditCard.getValidMonth()).equals("") && !creditCard.getHoldersName().equals("") && !creditCard.getCardType().equals("");
+    }
+
+    private void initEditUI() {
+        containerEditVBox.getChildren().add(kontoAgare);
+        containerEditVBox.getChildren().add(kontonummer);
+        containerEditVBox.getChildren().add(monthYearInputItem);
+        containerEditVBox.getChildren().add(kontrollSiffror);
+        containerEditVBox.getChildren().add(save);
+
+        kontrollSiffror.setKontrolKod(creditCard.getVerificationCode());
+        monthYearInputItem.setMonth(creditCard.getValidMonth() + "");
+        monthYearInputItem.setYear(creditCard.getValidYear() + "");
+        kontonummer.setCardNumber(creditCard.getCardNumber());
+        kontoAgare.setText(creditCard.getHoldersName());
+    }
+
     private void addEventListeners() {
         save.setOnAction(event -> saveInfo());
-
     }
 
     private void saveInfo(){
         hideErr();
         clearVisuals();
         try {
+            String cardType;
+            if (kontonummer.getInput().substring(0,1).equals("5")) {
+                cardType = "Master Card";
+            } else {
+                cardType = "Visa";
+            }
+
+            creditCard.setCardType(cardType);
             creditCard.setVerificationCode(kontrollSiffror.getInput());
             creditCard.setValidMonth(monthYearInputItem.getMonth());
             creditCard.setValidYear(monthYearInputItem.getYear());
@@ -78,12 +165,24 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
             creditCard.setHoldersName(kontoAgare.getInput());
             save.setText("Sparad");
 
-
             showSaved();
+            transitionToDoneUI();
+
+            System.out.println(isCreditCardComplete());
         } catch (NotValidInput notValidInput) {
             System.out.println("Input not Valid");
             showErr();
         }
+    }
+
+    private void transitionToDoneUI() {
+        removeEditUI();
+        initDoneUI();
+    }
+
+    private void removeEditUI() {
+        containerEditVBox.getChildren().clear();
+        rootAnchorPane.getChildren().remove(save);
     }
 
     private void clearVisuals(){
