@@ -204,6 +204,10 @@ public class MonthYearInputItem extends AnchorPane implements Focusable {
         return false;
     }
 
+    public boolean isValid() {
+        return isYearValide() && isMonthValide();
+    }
+
     @Override
     public void setFocus() {
         month.requestFocus();

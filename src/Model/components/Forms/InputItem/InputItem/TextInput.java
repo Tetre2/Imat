@@ -148,4 +148,8 @@ public class TextInput extends AnchorPane implements Focusable{
         textField.getStyleClass().addAll("text-field", "text-input");
     }
 
+    public boolean isValid() {
+        return !textField.getText().equals("");
+    }
+
 }

@@ -40,6 +40,27 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
+        if (isCreditCardComplete()) {
+            initDoneUI();
+        } else {
+            initEditUI();
+        }
+
+        addEventListeners();
+
+        hideErr();
+
+    }
+
+    private void initDoneUI() {
+
+    }
+
+    private boolean isCreditCardComplete() {
+        return kontonummer.isValid() && monthYearInputItem.isValid() && kontrollSiffror.isValid() && kontoAgare.isValid();
+    }
+
+    private void initEditUI() {
         kontrollSiffror = new KontrolSiffror(null);
         monthYearInputItem = new MonthYearInputItem(kontrollSiffror);
         kontonummer = new KontoNummerInputItem(monthYearInputItem);
@@ -55,11 +76,6 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
         monthYearInputItem.setYear(creditCard.getValidYear() + "");
         kontonummer.setCardNumber(creditCard.getCardNumber());
         kontoAgare.setText(creditCard.getHoldersName());
-
-        addEventListeners();
-
-        hideErr();
-
     }
 
     private void addEventListeners() {

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d94ad86-8790-4968-90d1-3cc3b9ff746a" name="Default Changelist" comment="" />
+    <list default="true" id="6d94ad86-8790-4968-90d1-3cc3b9ff746a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoNummerInputItem/KontoNummerInputItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoNummerInputItem/KontoNummerInputItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/Forms/InputItem/MonthYearInputItem/MonthYearInputItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Forms/InputItem/MonthYearInputItem/MonthYearInputItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/Forms/InputItem/isInputItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Forms/InputItem/isInputItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/components/Forms/Kontouppgifter/KontoUppgifter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/components/Forms/Kontouppgifter/KontoUppgifter.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,26 +21,26 @@
     <session id="1395913756">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="1" />
+          <entry key="class" value="3" />
           <entry key="css" value="1" />
-          <entry key="java" value="3" />
+          <entry key="java" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
+          <entry key="CLASS" value="3" />
           <entry key="CSS" value="1" />
-          <entry key="JAVA" value="3" />
+          <entry key="JAVA" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="48" />
+          <entry key="java" value="274" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="48" />
+          <entry key="JAVA" value="274" />
         </counts>
       </usages-collector>
     </session>
@@ -45,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/pages/Checkout/Checkout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="76" column="52" selection-start-line="76" selection-start-column="52" selection-end-line="76" selection-end-column="52" />
+            <state relative-caret-position="382">
+              <caret line="82" column="46" lean-forward="true" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
               <folding>
                 <element signature="e#1712#1713#0" expanded="true" />
                 <element signature="e#1796#1797#0" expanded="true" />
@@ -62,10 +67,44 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/Kontouppgifter/KontoUppgifter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="52" column="97" selection-start-line="52" selection-start-column="97" selection-end-line="52" selection-end-column="97" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/InputItem/MonthYearInputItem/MonthYearInputItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="207" column="49" selection-start-line="207" selection-start-column="49" selection-end-line="207" selection-end-column="49" />
+              <folding>
+                <element signature="e#5851#5852#0" expanded="true" />
+                <element signature="e#5906#5907#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoNummerInputItem/KontoNummerInputItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2244">
+              <caret line="149" column="54" lean-forward="true" selection-start-line="149" selection-start-column="54" selection-end-line="149" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/PersonUppgifter/PersonUppgifter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1722">
-              <caret line="166" column="51" selection-start-line="166" selection-start-column="51" selection-end-line="166" selection-end-column="51" />
+            <state relative-caret-position="-442">
+              <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4102#4103#0" expanded="true" />
@@ -77,6 +116,30 @@
                 <element signature="e#8193#8194#0" expanded="true" />
                 <element signature="e#8229#8230#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/IMat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="151" column="35" lean-forward="true" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
+              <folding>
+                <element signature="e#1540#1541#0" expanded="true" />
+                <element signature="e#1590#1591#0" expanded="true" />
+                <element signature="e#3472#3473#0" expanded="true" />
+                <element signature="e#3527#3528#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/projectbackend.jar!/se/chalmers/cse/dat216/project/IMatDataHandler.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -101,8 +164,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+            <state relative-caret-position="163">
+              <caret line="26" column="14" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -120,7 +183,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>flow</find>
       <find>save</find>
       <find>bold</find>
       <find>shutdo</find>
@@ -149,6 +211,7 @@
       <find>postaddress</find>
       <find>MINA</find>
       <find>kontrollera</find>
+      <find>font-f</find>
       <find>shoppingcheckout</find>
     </findStrings>
     <replaceStrings>
@@ -161,7 +224,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Model/pages/Historik/Historik.java" />
         <option value="$PROJECT_DIR$/src/Model/pages/Historik/Kvitto/KvittoProduct.fxml" />
         <option value="$PROJECT_DIR$/src/Model/pages/Historik/Kvitto/Kvitto.java" />
         <option value="$PROJECT_DIR$/src/Model/pages/Historik/Kvitto/KvittoProduct.java" />
@@ -189,7 +251,6 @@
         <option value="$PROJECT_DIR$/src/Model/components/Forms/InputItem/LimitedTextField/LimitedTextField.java" />
         <option value="$PROJECT_DIR$/src/Model/components/Forms/NotValidInput.java" />
         <option value="$PROJECT_DIR$/src/Model/components/Forms/InputItem/isInputItem.java" />
-        <option value="$PROJECT_DIR$/src/Model/components/Forms/InputItem/MonthYearInputItem/MonthYearInputItem.java" />
         <option value="$PROJECT_DIR$/src/Model/components/Forms/InputItem/InputItem/InputItem.java" />
         <option value="$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoInputItem/KontoInputItem.java" />
         <option value="$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontrollSiffror/KontrollSiffror.fxml" />
@@ -200,7 +261,6 @@
         <option value="$PROJECT_DIR$/src/Model/components/Forms/FormStyles.css" />
         <option value="$PROJECT_DIR$/src/Model/components/Forms/InputItem/InputItem/TextInput.java" />
         <option value="$PROJECT_DIR$/src/styles.css" />
-        <option value="$PROJECT_DIR$/src/Model/components/Forms/Kontouppgifter/KontoUppgifter.java" />
         <option value="$PROJECT_DIR$/src/Model/pages/Checkout/Checkout.java" />
         <option value="$PROJECT_DIR$/src/Model/pages/MinaSidor/MinaSidor.java" />
         <option value="$PROJECT_DIR$/src/Model/components/LeftSidebar/LeftSidebarCategory/MainCategory.java" />
@@ -210,8 +270,11 @@
         <option value="$PROJECT_DIR$/src/Model/pages/Mainpage/MainPage.java" />
         <option value="$PROJECT_DIR$/src/Model/components/Navbar/Navbar.java" />
         <option value="$PROJECT_DIR$/src/Model/components/Navbar/SearchedItem/SearchedItem.java" />
-        <option value="$PROJECT_DIR$/src/Model/components/Forms/PersonUppgifter/PersonUppgifter.java" />
         <option value="$PROJECT_DIR$/src/Model/Main.java" />
+        <option value="$PROJECT_DIR$/src/Model/components/Forms/PersonUppgifter/PersonUppgifter.java" />
+        <option value="$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoNummerInputItem/KontoNummerInputItem.java" />
+        <option value="$PROJECT_DIR$/src/Model/components/Forms/InputItem/MonthYearInputItem/MonthYearInputItem.java" />
+        <option value="$PROJECT_DIR$/src/Model/components/Forms/Kontouppgifter/KontoUppgifter.java" />
       </list>
     </option>
   </component>
@@ -347,7 +410,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558420773193" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558421435215" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -569,14 +632,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="kontouppgifter sparas" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Model/components/Picker/Picker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="104" column="23" selection-start-line="104" selection-start-column="23" selection-end-line="104" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/jre/lib/rt.jar!/sun/launcher/LauncherHelper.class" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/src.zip!/java/lang/Thread.java" />
     <entry file="file://$PROJECT_DIR$/src/Model/pages/Mainpage/mainPage.fxml">
@@ -713,16 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/Kontouppgifter/KontoUppgifter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="73" column="65" selection-start-line="73" selection-start-column="65" selection-end-line="73" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -869,23 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/pages/Checkout/Checkout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="76" column="52" selection-start-line="76" selection-start-column="52" selection-end-line="76" selection-end-column="52" />
-          <folding>
-            <element signature="e#1712#1713#0" expanded="true" />
-            <element signature="e#1796#1797#0" expanded="true" />
-            <element signature="e#5152#5153#0" expanded="true" />
-            <element signature="e#5208#5209#0" expanded="true" />
-            <element signature="e#5246#5247#0" expanded="true" />
-            <element signature="e#5298#5299#0" expanded="true" />
-            <element signature="e#5337#5338#0" expanded="true" />
-            <element signature="e#5390#5391#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/pages/Checkout/ShoppingCheckout/ShoppingCheckoutDetails/ShoppingCheckoutDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -893,23 +921,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/projectbackend.jar!/se/chalmers/cse/dat216/project/IMatDataHandler.class">
+    <entry file="file://$PROJECT_DIR$/src/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/IMat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="151" column="38" selection-start-line="151" selection-start-column="38" selection-end-line="151" selection-end-column="38" />
-          <folding>
-            <element signature="e#1540#1541#0" expanded="true" />
-            <element signature="e#1590#1591#0" expanded="true" />
-            <element signature="e#3472#3473#0" expanded="true" />
-            <element signature="e#3527#3528#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="163">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -928,17 +943,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles.css">
+    <entry file="file://$PROJECT_DIR$/src/Model/pages/Checkout/Checkout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        <state relative-caret-position="382">
+          <caret line="82" column="46" lean-forward="true" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
+          <folding>
+            <element signature="e#1712#1713#0" expanded="true" />
+            <element signature="e#1796#1797#0" expanded="true" />
+            <element signature="e#5152#5153#0" expanded="true" />
+            <element signature="e#5208#5209#0" expanded="true" />
+            <element signature="e#5246#5247#0" expanded="true" />
+            <element signature="e#5298#5299#0" expanded="true" />
+            <element signature="e#5337#5338#0" expanded="true" />
+            <element signature="e#5390#5391#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/PersonUppgifter/PersonUppgifter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1722">
-          <caret line="166" column="51" selection-start-line="166" selection-start-column="51" selection-end-line="166" selection-end-column="51" />
+        <state relative-caret-position="-442">
+          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4102#4103#0" expanded="true" />
@@ -949,6 +974,54 @@
             <element signature="e#7698#7699#0" expanded="true" />
             <element signature="e#8193#8194#0" expanded="true" />
             <element signature="e#8229#8230#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/IMat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="151" column="35" lean-forward="true" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
+          <folding>
+            <element signature="e#1540#1541#0" expanded="true" />
+            <element signature="e#1590#1591#0" expanded="true" />
+            <element signature="e#3472#3473#0" expanded="true" />
+            <element signature="e#3527#3528#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/projectbackend.jar!/se/chalmers/cse/dat216/project/IMatDataHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/InputItem/KontoNummerInputItem/KontoNummerInputItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2244">
+          <caret line="149" column="54" lean-forward="true" selection-start-line="149" selection-start-column="54" selection-end-line="149" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/InputItem/MonthYearInputItem/MonthYearInputItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="207" column="49" selection-start-line="207" selection-start-column="49" selection-end-line="207" selection-end-column="49" />
+          <folding>
+            <element signature="e#5851#5852#0" expanded="true" />
+            <element signature="e#5906#5907#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/components/Forms/Kontouppgifter/KontoUppgifter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="52" column="97" selection-start-line="52" selection-start-column="97" selection-end-line="52" selection-end-column="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
