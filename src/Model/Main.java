@@ -166,6 +166,7 @@ public class Main extends Application implements ShoppingCartListener {
     @Override
     public void stop(){
         IMat.getInstance().shutDown();
+        //IMatDataHandler.getInstance().reset();
     }
 
 

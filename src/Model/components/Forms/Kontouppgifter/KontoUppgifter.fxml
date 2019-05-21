@@ -5,28 +5,37 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<fx:root fx:id="rootAnchorPane" prefHeight="547.0" prefWidth="1000.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="rootAnchorPane" prefHeight="152.0" prefWidth="1000.0" stylesheets="@../../../../styles.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox fx:id="containerEditVBox" alignment="CENTER_LEFT" layoutX="-1.0" layoutY="60.0" prefHeight="561.0" prefWidth="696.0" spacing="10.0" />
-      <AnchorPane fx:id="error" layoutX="635.0" layoutY="447.0" prefHeight="70.0" prefWidth="307.0" style="-fx-border-width: 3; -fx-border-color: red; -fx-border-radius: 5;" visible="false">
+      <VBox fx:id="rootVBox" prefHeight="200.0" prefWidth="1000.0">
          <children>
-            <Label fx:id="errLabel" layoutX="5.0" layoutY="1.0" prefHeight="53.0" prefWidth="296.0" text="Label" wrapText="true" />
+            <FlowPane fx:id="containerEditFlowPane" prefHeight="200.0" prefWidth="200.0" />
+            <AnchorPane fx:id="rootButton" minHeight="80.0" prefHeight="80.0" prefWidth="1000.0" style="-fx-background-color: green;">
+               <children>
+                  <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" layoutX="118.0" layoutY="5.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="193.0" text="Spara">
+                     <styleClass>
+                        <String fx:value="btn-primary" />
+                        <String fx:value="bg-primary" />
+                     </styleClass>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <AnchorPane fx:id="error" layoutX="347.0" layoutY="5.0" prefHeight="70.0" prefWidth="307.0" style="-fx-border-width: 3; -fx-border-color: red; -fx-border-radius: 5;">
+                     <children>
+                        <Label fx:id="errLabel" layoutX="5.0" layoutY="1.0" prefHeight="53.0" prefWidth="296.0" text="Label" wrapText="true" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
          </children>
-      </AnchorPane>
-      <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" layoutX="404.0" layoutY="447.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="193.0" text="Spara">
-         <styleClass>
-            <String fx:value="btn-primary" />
-            <String fx:value="bg-primary" />
-         </styleClass>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Button>
+      </VBox>
    </children>
 </fx:root>

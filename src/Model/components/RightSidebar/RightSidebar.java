@@ -50,7 +50,7 @@ public class RightSidebar extends AnchorPane implements ShoppingCartListener {
     private void updateVarukorgButton() {
         if (IMat.getInstance().isShoppingCartEmpty()) {
             pay.setDisable(true);
-            pay.setText("Lägg till varor i varukorgen");
+            pay.setText("Lägg först till varor i varukorgen");
         } else {
             pay.setDisable(false);
             pay.setText("Gå till Kassan");
