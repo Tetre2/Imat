@@ -33,7 +33,7 @@
                   <String fx:value="bold" />
                </styleClass>
             </Label>
-            <Label prefHeight="27.0" prefWidth="67.0" text="Summa">
+            <Label prefHeight="27.0" prefWidth="72.0" text="Summa">
                <styleClass>
                   <String fx:value="text-md" />
                   <String fx:value="bold" />
