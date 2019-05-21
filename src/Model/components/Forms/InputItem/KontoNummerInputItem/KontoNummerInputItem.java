@@ -110,10 +110,10 @@ public class KontoNummerInputItem extends AnchorPane implements ValidityCheckabl
         String input = "";
         if (isValid()) {
             for (LimitedTextField l : limitedTextFields) {
-                input += l.getInput();
+                input += (" " + l.getInput());
             }
         }
-        if(input.length() == 16){
+        if(input.length() == 20){
             return input;
         }else {
             throw new NotValidInput();

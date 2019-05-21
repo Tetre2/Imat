@@ -27,6 +27,7 @@ public class TextInput extends AnchorPane implements Focusable{
 
     private Focusable next;
     private Boolean needed;
+    private boolean hasBinFocused = false;
 
     public TextInput(String label, String preVeiwText, String tooltip, Focusable next, Boolean needed) {
         this(label,preVeiwText,tooltip, 0, next, needed);
@@ -60,6 +61,7 @@ public class TextInput extends AnchorPane implements Focusable{
 
         //upptäcker om man skrivigt något i rutan
         textField.focusedProperty().addListener((obs, wasFocused, isNowFocused) -> {
+            hasBinFocused = true;
             if(wasFocused){
                 if(isValid()){
                     setSuccess();
@@ -127,16 +129,20 @@ public class TextInput extends AnchorPane implements Focusable{
     }
 
     public void setErr(){
-        setDefault();
-        textField.getStyleClass().add("textBoxErr");
-        error.setVisible(true);
-        errLabel.setText("Du har inte anget något i ett fällt som det är nödvändigt att fylla i.");
+        if(hasBinFocused){
+            setDefault();
+            textField.getStyleClass().add("textBoxErr");
+            error.setVisible(true);
+            errLabel.setText("Du har inte anget något i ett fällt som det är nödvändigt att fylla i.");
+        }
     }
 
     public void setSuccess(){
-        setDefault();
-        textField.getStyleClass().add("textBoxSaved");
-        error.setVisible(false);
+        if(hasBinFocused) {
+            setDefault();
+            textField.getStyleClass().add("textBoxSaved");
+            error.setVisible(false);
+        }
     }
 
     public void setDefault(){

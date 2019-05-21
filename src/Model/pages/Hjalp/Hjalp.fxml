@@ -53,25 +53,25 @@
                   <String fx:value="bold" />
                </styleClass>
             </Label>
-            <Label layoutX="661.0" layoutY="105.0" prefHeight="38.0" prefWidth="298.0" text="  1. Hitta varan du tänker köpa.">
+            <Label layoutX="661.0" layoutY="105.0" prefHeight="46.0" prefWidth="298.0" text="  1. Navigera till handla, det är kanppen bredvid sökfältet" wrapText="true">
                <styleClass>
                   <String fx:value="text" />
                   <String fx:value="text-md" />
                </styleClass>
             </Label>
-            <Label layoutX="661.0" layoutY="143.0" prefHeight="38.0" prefWidth="298.0" text="  2. Klicka på lägg till i varukorgen">
+            <Label layoutX="661.0" layoutY="179.0" prefHeight="38.0" prefWidth="298.0" text="  3. Klicka på lägg till i varukorgen">
                <styleClass>
                   <String fx:value="text" />
                   <String fx:value="text-md" />
                </styleClass>
             </Label>
-            <Label layoutX="661.0" layoutY="181.0" prefHeight="46.0" prefWidth="298.0" text="  3. Välj antalet utav varan du vill köpa" wrapText="true">
+            <Label layoutX="661.0" layoutY="217.0" prefHeight="46.0" prefWidth="298.0" text="  4. Välj antalet utav varan du vill köpa" wrapText="true">
                <styleClass>
                   <String fx:value="text" />
                   <String fx:value="text-md" />
                </styleClass>
             </Label>
-            <Label layoutX="661.0" layoutY="226.0" prefHeight="143.0" prefWidth="252.0" text="När du har hittat alla varor du vill köpa klickar du på &quot;Gå till kassan&quot;-knppen i varukorgen och följer anvisningarna där." wrapText="true">
+            <Label layoutX="661.0" layoutY="262.0" prefHeight="143.0" prefWidth="252.0" text="När du har hittat alla varor du vill köpa klickar du på &quot;Gå till kassan&quot;-knppen i varukorgen och följer anvisningarna där." wrapText="true">
                <styleClass>
                   <String fx:value="text" />
                   <String fx:value="text-md" />
@@ -82,6 +82,12 @@
                   <Image url="@../../resources/MattiasFörslag/varukorg.PNG" />
                </image>
             </ImageView>
+            <Label layoutX="661.0" layoutY="148.0" prefHeight="38.0" prefWidth="298.0" text="  2. Hitta varan du tänker köpa.">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-md" />
+               </styleClass>
+            </Label>
          </children>
       </AnchorPane>
       <Label layoutX="413.0" layoutY="125.0" stylesheets="@Hjalp.css" text="Välkommen till IMat">
