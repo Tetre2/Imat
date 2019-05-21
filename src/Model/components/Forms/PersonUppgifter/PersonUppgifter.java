@@ -45,9 +45,6 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
     private Label mailLabel;
     private Label nameLabel;
     private Label addressLabel;
-    private Label postCodeLabel;
-    private Label postAddressLabel;
-
 
     private Customer customer;
     private List<TextInput> textInputs;
@@ -91,14 +88,12 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         deliveryHeaderLabel.getStyleClass().add("bold");
         nameLabel.getStyleClass().addAll("text", "text-md");
         addressLabel.getStyleClass().addAll("text", "text-md");
-        postCodeLabel.getStyleClass().addAll("text", "text-md");
-        postAddressLabel.getStyleClass().addAll("text", "text-md");
 
         Label edit = previewLabel("Redigera");
         edit.getStyleClass().add("text-link");
         edit.setOnMouseClicked(e -> transitionToEditUI());
 
-        containerDoneVBox.getChildren().addAll(contactHeaderLabel, numberLabel, mailLabel, deliveryHeaderLabel, nameLabel, addressLabel, postCodeLabel, postAddressLabel, edit);
+        containerDoneVBox.getChildren().addAll(contactHeaderLabel, numberLabel, mailLabel, deliveryHeaderLabel, nameLabel, addressLabel, edit);
         containerEditVBox.getChildren().add(containerDoneVBox);
     }
 
@@ -106,9 +101,7 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         numberLabel = new Label(customer.getPhoneNumber());
         mailLabel = new Label (customer.getEmail());
         nameLabel = new Label (customer.getFirstName() + " " + customer.getLastName());
-        addressLabel = new Label (customer.getAddress());
-        postCodeLabel = new Label (customer.getPostCode());
-        postAddressLabel = new Label (customer.getPostAddress());
+        addressLabel = new Label (customer.getAddress() + ", " + customer.getPostCode() + ", " + customer.getPostAddress());
     }
 
     private void transitionToEditUI() {
