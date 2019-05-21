@@ -22,6 +22,7 @@ public class LeftSidebar extends AnchorPane  {
     private FlowPane categoryPane;
     private List<CategoryItem> categoryItems;
     private ArrayList<CategoryListener> listeners = new ArrayList();
+    private MainCategory currentCategory;
     public LeftSidebar(){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
@@ -40,6 +41,7 @@ public class LeftSidebar extends AnchorPane  {
     }
 
     public void fireCategoryChanged(MainCategory mainCategory) {
+        currentCategory = mainCategory;
         setMainCategoryFocused(mainCategory);
         Iterator var4 = this.listeners.iterator();
         while (var4.hasNext()) {
@@ -49,12 +51,10 @@ public class LeftSidebar extends AnchorPane  {
     }
 
 
-
-
-
     public void resetCategoryFocused(){
+        currentCategory = null;
         for(CategoryItem categoryItem: getCategories()){
-            System.out.println("removing style");
+            //System.out.println("removing style");
             categoryItem.getStyleClass().clear();
             //In this way you're sure you have no styles applied to your object button
             categoryItem.getStyleClass().add("anchor-container-normal");
@@ -63,7 +63,7 @@ public class LeftSidebar extends AnchorPane  {
     }
     public void setMainCategoryFocused(MainCategory selectedCategory){
         for(CategoryItem categoryItem: getCategories()){
-            System.out.println("removing style");
+            //System.out.println("removing style");
             categoryItem.getStyleClass().clear();
             //In this way you're sure you have no styles applied to your object button
             if(categoryItem.getCategory().equals(selectedCategory)){
@@ -118,7 +118,7 @@ public class LeftSidebar extends AnchorPane  {
     }
 
 
-
-
-
+    public MainCategory getCurrentCategory() {
+        return currentCategory;
+    }
 }

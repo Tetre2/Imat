@@ -45,7 +45,7 @@ public enum MainCategory {
             ProductCategory.NUTS_AND_SEEDS,
             ProductCategory.PASTA,
             ProductCategory.POTATO_RICE),
-    FAVORIT ("Favorit",
+    FAVORIT ("Favoriter",
             IMat.getInstance().getFavorites(), true);
 
 

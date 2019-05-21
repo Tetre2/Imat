@@ -35,6 +35,8 @@ public class MainPage extends AnchorPane implements CategoryListener, ShoppingIt
     AnchorPane topNavBar;
     @FXML
     Label currentCategoryLabel;
+    @FXML
+    AnchorPane noFavorites;
 
     private IMat iMat;
     private LeftSidebar leftSidebar;
@@ -148,6 +150,7 @@ public class MainPage extends AnchorPane implements CategoryListener, ShoppingIt
     }
 
     public void showProductsToGrid(List<Product> products, String currentCatigory){
+        leftSidebar.resetCategoryFocused();
         ArrayList<ShoppingItem> arr = new ArrayList<>();
 
         for (Product p : products) {//Hämtar shoppingitems för produkterna
@@ -167,6 +170,13 @@ public class MainPage extends AnchorPane implements CategoryListener, ShoppingIt
             grid.setConstraints(arr.get(i), i % 4, i / 4);
             grid.getChildren().add(arr.get(i));
         }
+
+        if(grid.getChildren().size() == 0 && leftSidebar.getCurrentCategory().equals(MainCategory.FAVORIT)){
+            noFavorites.setVisible(true);
+        }else {
+            noFavorites.setVisible(false);
+        }
+
     }
 
     public void showAllItems(){
@@ -200,5 +210,9 @@ public class MainPage extends AnchorPane implements CategoryListener, ShoppingIt
         if(grid.getChildren().contains(shoppingItem)){
             updateGrid(MainCategory.FAVORIT, MainCategory.FAVORIT.name());
         }
+    }
+
+    public LeftSidebar getLeftSidebar() {
+        return leftSidebar;
     }
 }
