@@ -108,7 +108,7 @@ public class Checkout extends AnchorPane {
     }
 
     private void createVarukorgUI() {
-        TitledSection varukorgSection = new TitledSection("Granska din varukorg", "Den här texten ska ändras till något bättre");//TODO sätt en "GOO text" här joel
+        TitledSection varukorgSection = new TitledSection("Granska din varukorg", "Få en överblick och lägg till eller ta bort varor. Gå sen vidare till kassan.");
 
         ShoppingCheckout shoppingCheckout = new ShoppingCheckout();
 
