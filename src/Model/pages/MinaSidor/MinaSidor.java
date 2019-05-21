@@ -1,5 +1,7 @@
 package Model.pages.MinaSidor;
 
+import Model.HelperClasses.UpdateButtonObservable;
+import Model.IMat;
 import Model.components.Forms.Kontouppgifter.KontoUppgifter;
 import Model.components.Forms.PersonUppgifter.PersonUppgifter;
 import Model.components.Navbar.Navbar;
@@ -13,7 +15,7 @@ import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 
-public class MinaSidor extends AnchorPane {
+public class MinaSidor extends AnchorPane implements UpdateButtonObservable {
 
 
     @FXML
@@ -32,11 +34,11 @@ public class MinaSidor extends AnchorPane {
         addEventListeners();
 
         TitledSection titledSectionKonto = new TitledSection("Kontouppgifter", "Fält med * måste fyllas i");
-        KontoUppgifter tmpKonto = new KontoUppgifter();
+        KontoUppgifter tmpKonto = new KontoUppgifter(this);
         titledSectionKonto.addNode(tmpKonto);
 
         TitledSection titledSectionPerson = new TitledSection("Personuppgifter", "Fält med * måste fyllas i");
-        personUppgifter = new PersonUppgifter();
+        personUppgifter = new PersonUppgifter(this);
         titledSectionPerson.addNode(personUppgifter);
 
         vBox.getChildren().add(titledSectionPerson);
@@ -68,4 +70,8 @@ public class MinaSidor extends AnchorPane {
         TopNav.getChildren().add(navBar);
     }
 
+    @Override
+    public void updateButton() {
+        // Mmmm beautiful code :)
+    }
 }

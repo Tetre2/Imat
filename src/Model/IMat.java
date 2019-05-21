@@ -152,6 +152,15 @@ public class IMat {
         return dataHandler.isCustomerComplete();
     }
 
+    public boolean isCreditCardComplete() {
+        return !dataHandler.getCreditCard().getCardNumber().equals("") &&
+                !Integer.toString(dataHandler.getCreditCard().getVerificationCode()).equals("") &&
+                !Integer.toString(dataHandler.getCreditCard().getValidYear()).equals("") &&
+                !Integer.toString(dataHandler.getCreditCard().getValidMonth()).equals("") &&
+                !dataHandler.getCreditCard().getHoldersName().equals("") &&
+                !dataHandler.getCreditCard().getCardType().equals("");
+    }
+
     public boolean isFavorite(Product p){
         return dataHandler.isFavorite(p);
     }

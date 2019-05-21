@@ -1,5 +1,6 @@
 package Model.components.Forms.Kontouppgifter;
 
+import Model.HelperClasses.UpdateButtonObservable;
 import Model.IMat;
 import Model.components.Forms.Focusable;
 import Model.components.Forms.InputItem.InputItem.TextInput;
@@ -51,13 +52,16 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
     private Label controlNumberLabel = new Label();
 
     private final String indent = "    ";
+    private final UpdateButtonObservable updateButtonObservable;
 
-    public KontoUppgifter() {
+
+    public KontoUppgifter(UpdateButtonObservable updateButtonObservable) {
+        this.updateButtonObservable = updateButtonObservable;
         this.creditCard = IMat.getInstance().getCreditCard();
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
-        if (isCreditCardComplete()) {
+        if (IMat.getInstance().isCreditCardComplete()) {
             transitionToDoneUI();
         } else {
             transitionToEditUI();
@@ -129,10 +133,6 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
         return label;
     }
 
-    private boolean isCreditCardComplete() {
-        return !creditCard.getCardNumber().equals("") && !Integer.toString(creditCard.getVerificationCode()).equals("") && !Integer.toString(creditCard.getValidYear()).equals("") && !Integer.toString(creditCard.getValidMonth()).equals("") && !creditCard.getHoldersName().equals("") && !creditCard.getCardType().equals("");
-    }
-
     private void initEditUI() {
         containerEditFlowPane.getChildren().clear();
         containerEditFlowPane.getChildren().add(kontoAgare);
@@ -177,8 +177,7 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
 
             showSaved();
             transitionToDoneUI();
-
-            System.out.println(isCreditCardComplete());
+            updateButtonObservable.updateButton();
         } catch (NotValidInput notValidInput) {
             System.out.println("Input not Valid");
             showErr();

@@ -1,5 +1,6 @@
 package Model.components.Forms.PersonUppgifter;
 
+import Model.HelperClasses.UpdateButtonObservable;
 import Model.IMat;
 import Model.components.Forms.Focusable;
 import Model.components.Forms.InputItem.InputItem.TextInput;
@@ -55,7 +56,10 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
 
     private final String indent = "    ";
 
-    public PersonUppgifter() {
+    private final UpdateButtonObservable updateButtonObservable;
+
+    public PersonUppgifter(UpdateButtonObservable updateButtonObservable) {
+        this.updateButtonObservable = updateButtonObservable;
         customer = IMat.getInstance().getCustomer();
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
@@ -180,6 +184,7 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
             save.setText("Sparad");
             showSaved();
             transitionToDoneUI();
+            updateButtonObservable.updateButton();
         } catch (NotValidInput notValidInput) {
             notValidInput.printStackTrace();
             showErr();

@@ -1,5 +1,6 @@
 package Model.pages.Checkout;
 
+import Model.HelperClasses.UpdateButtonObservable;
 import Model.IMat;
 import Model.components.Forms.Kontouppgifter.KontoUppgifter;
 import Model.components.Forms.PersonUppgifter.PersonUppgifter;
@@ -21,7 +22,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 
-public class Checkout extends AnchorPane {
+public class Checkout extends AnchorPane implements UpdateButtonObservable {
     @FXML private AnchorPane TopNav;
 
     @FXML private AnchorPane paymentContainerAnchorPane;
@@ -33,6 +34,8 @@ public class Checkout extends AnchorPane {
 
     @FXML private AnchorPane paymentDoneContainerAnchorPane;
     @FXML private VBox paymentDoneContainerVBox;
+
+    private Button makePaymentButton;
 
     public Checkout(){
         FXMLLoader fxmlLoader = initFXML();
@@ -65,20 +68,20 @@ public class Checkout extends AnchorPane {
         goToVarukorgHBox.setAlignment(Pos.CENTER_LEFT);
         goToVarukorgHBox.getChildren().add(goToVarukorgButton);
 
-        Button makePaymentButton = new Button();
-        makePaymentButton.setText("Betala");
+        makePaymentButton = new Button();
         makePaymentButton.getStyleClass().addAll("btn-lg", "btn-primary");
         makePaymentButton.setOnAction(e -> makePaymentButtonPressed());
+        disablePayButton();
         HBox makePaymentHBox = new HBox();
         makePaymentHBox.setAlignment(Pos.CENTER);
         makePaymentHBox.getChildren().add(makePaymentButton);
 
         TitledSection titledSectionPerson = new TitledSection("1. Kontrollera dina personuppgifter", "Fält med * måste fyllas i");
-        PersonUppgifter personUppgifter = new PersonUppgifter();
+        PersonUppgifter personUppgifter = new PersonUppgifter(this);
         titledSectionPerson.addNode(personUppgifter);
 
         TitledSection titledSectionKonto = new TitledSection("2. Kontrollera dina kontouppgifter", "Fält med * måste fyllas i");
-        titledSectionKonto.addNode(new KontoUppgifter());
+        titledSectionKonto.addNode(new KontoUppgifter(this));
 
         TitledSection titledSectionPay = new TitledSection("3. Slutför din order", null);
         ShoppingCheckoutDetails details = new ShoppingCheckoutDetails();
@@ -86,6 +89,25 @@ public class Checkout extends AnchorPane {
         titledSectionPay.addNode(makePaymentHBox);
 
         paymentContainerVBox.getChildren().addAll(goToVarukorgHBox, titledSectionPerson, titledSectionKonto, titledSectionPay);
+    }
+
+    @Override
+    public void updateButton() {
+        if (IMat.getInstance().isCustomerComplete() && IMat.getInstance().isCreditCardComplete()) {
+            enablePayButton();
+        } else {
+            disablePayButton();
+        }
+    }
+
+    private void enablePayButton() {
+        makePaymentButton.setDisable(false);
+        makePaymentButton.setText("Betala");
+    }
+
+    private void disablePayButton() {
+        makePaymentButton.setDisable(true);
+        makePaymentButton.setText("Fyll i all obligatorisk information");
     }
 
     private void makePaymentButtonPressed() {
