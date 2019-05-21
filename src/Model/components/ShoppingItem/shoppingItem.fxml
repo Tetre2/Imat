@@ -27,7 +27,7 @@
                   </ImageView>
                </children>
             </StackPane>
-            <Label fx:id="name" alignment="CENTER" prefHeight="27.0" prefWidth="124.0" text="Grovt bröd" textFill="#03a678">
+            <Label fx:id="name" alignment="CENTER" prefHeight="27.0" prefWidth="124.0" text="Grovt bröd" textFill="#189ad3">
                <styleClass>
                   <String fx:value="text" />
                   <String fx:value="text-md" />

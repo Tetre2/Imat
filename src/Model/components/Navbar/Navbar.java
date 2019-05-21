@@ -189,7 +189,7 @@ public class Navbar extends AnchorPane {
     }
 
     private void setActiveButton(Button b){
-        b.getStyleClass().add("selected");
+        b.getStyleClass().addAll("active-state-background", "btn-navbar-active");
     }
 
 }

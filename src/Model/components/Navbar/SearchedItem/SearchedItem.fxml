@@ -14,7 +14,7 @@
             <Image url="@../../../resources/product_1.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="name" layoutX="133.0" layoutY="21.0" prefHeight="58.0" prefWidth="290.0" text="Label" textFill="#03a678">
+      <Label fx:id="name" layoutX="133.0" layoutY="21.0" prefHeight="58.0" prefWidth="290.0" text="Label" textFill="#189ad3">
          <styleClass>
             <String fx:value="text" />
             <String fx:value="text-xl" />

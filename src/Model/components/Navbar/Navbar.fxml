@@ -12,9 +12,13 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.text.Font?>
 
+<?import java.net.URL?>
 <fx:root fx:id="root" prefHeight="100.0" prefWidth="1540.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <javafx.scene.layout.AnchorPane fx:id="nav" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1540.0" stylesheets="@Navbar.css">
+      <javafx.scene.layout.AnchorPane fx:id="nav" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1540.0">
+         <stylesheets>
+            <URL value="@../../../styles.css" />
+         </stylesheets>
          <children>
             <HBox prefHeight="100.0" prefWidth="1440.0">
                <children>  

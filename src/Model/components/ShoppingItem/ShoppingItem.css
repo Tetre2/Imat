@@ -11,12 +11,10 @@
     -fx-background-insets: 5px;
 }
 .selected {
-    -fx-background-color: #d2d2d2;
+    -fx-background-color: #EBEBEB;
     -fx-background-radius: 10;
     -fx-border-type: solid;
-    -fx-border-color: #03A678;
     -fx-border-width: 3;
-
 }
 
 .container {

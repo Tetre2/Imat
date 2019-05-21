@@ -127,7 +127,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
     }
 
     private void toggleItemIsSelected() {
-        rootPane.getStyleClass().add("selected");
+        rootPane.getStyleClass().addAll("selected", "active-state-border");
         addToCartButton.setVisible(false);
         showPlusMinus();
     }

@@ -14,7 +14,7 @@
         <URL value="@../../../../styles.css" />
     </stylesheets>
    <children>
-      <Label id="category_name" fx:id="categoryName" layoutX="20.0" layoutY="10.0" prefHeight="36.0" prefWidth="236.0" style="-fx-border-type: solid;" styleClass=".category_name" text="Favorit" textFill="#194b42">
+      <Label id="category_name" fx:id="categoryName" layoutX="20.0" layoutY="10.0" prefHeight="36.0" prefWidth="236.0" style="-fx-border-type: solid;" styleClass=".category_name" text="Favorit">
          <font>
             <Font name="Tahoma" size="55.0" />
          </font></Label>

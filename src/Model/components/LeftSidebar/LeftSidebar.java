@@ -67,7 +67,7 @@ public class LeftSidebar extends AnchorPane  {
             categoryItem.getStyleClass().clear();
             //In this way you're sure you have no styles applied to your object button
             if(categoryItem.getCategory().equals(selectedCategory)){
-                categoryItem.getStyleClass().add("anchor-container-focused");
+                categoryItem.getStyleClass().addAll("anchor-container-focused", "active-state-background");
                 categoryItem.getCategoryName().setTextFill(Paint.valueOf("white"));
 
             }else{
