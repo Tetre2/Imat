@@ -49,10 +49,10 @@ public class TextInput extends AnchorPane implements Focusable{
 
         addEventListeners();
 
-        if (invalidInput()) {
-            setErr();
-        } else {
+        if (isValid()) {
             setSuccess();
+        } else {
+            setErr();
         }
     }
 
@@ -61,10 +61,10 @@ public class TextInput extends AnchorPane implements Focusable{
         //upptäcker om man skrivigt något i rutan
         textField.focusedProperty().addListener((obs, wasFocused, isNowFocused) -> {
             if(wasFocused){
-                if(invalidInput() && needed){
-                    setErr();
-                } else if (!invalidInput()) {
+                if(isValid()){
                     setSuccess();
+                } else if (!isValid()) {
+                    setErr();
                 }
             }
         });
@@ -72,7 +72,7 @@ public class TextInput extends AnchorPane implements Focusable{
         //för att man ska kunna trycka enter
         textField.setOnKeyPressed(ke -> {
             if (ke.getCode().equals(KeyCode.ENTER)) {
-                if(!invalidInput()) {
+                if(isValid()) {
                     if(next != null){
                         next.setFocus();
                     }
@@ -81,16 +81,12 @@ public class TextInput extends AnchorPane implements Focusable{
         });
 
         textField.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (invalidInput()) {
-                setErr();
-            } else {
+            if (isValid()) {
                 setSuccess();
+            } else {
+                setErr();
             }
         });
-    }
-
-    private boolean invalidInput() {
-        return textField.getText().equals("");
     }
 
     public void setText(String s) {
@@ -122,11 +118,11 @@ public class TextInput extends AnchorPane implements Focusable{
     }
 
     public String getInput() throws NotValidInput {
-        if(invalidInput() && needed){
+        if(isValid()){
+            return textField.getText();
+        }else {
             setErr();
             throw new NotValidInput();
-        }else {
-            return textField.getText();
         }
     }
 
@@ -149,7 +145,12 @@ public class TextInput extends AnchorPane implements Focusable{
     }
 
     public boolean isValid() {
-        return !textField.getText().equals("");
+        if(needed){
+            return !textField.getText().equals("");
+        }else {
+            return true;
+        }
+
     }
 
 }

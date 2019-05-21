@@ -51,6 +51,7 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable {
         //createPaymentDoneUI();
         createPaymentUI();
         createVarukorgUI();
+        updateButton();
     }
 
     private void createPaymentDoneUI() {

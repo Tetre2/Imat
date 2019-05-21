@@ -149,7 +149,10 @@ public class IMat {
     }
 
     public boolean isCustomerComplete(){
-        return dataHandler.isCustomerComplete();
+
+        Customer customer = dataHandler.getCustomer();
+        return !customer.getFirstName().equals("") && !customer.getLastName().equals("") && !customer.getAddress().equals("") && !customer.getPostCode().equals("") && !customer.getPostAddress().equals("");
+
     }
 
     public boolean isCreditCardComplete() {
