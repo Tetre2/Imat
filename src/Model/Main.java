@@ -58,6 +58,8 @@ public class Main extends Application implements ShoppingCartListener {
 
         navbar = new Navbar();
 
+        removeEmptyProducts();
+
         if(IMat.getInstance().isFirstRun()){
             navbar.goToHjalp();
         }else {
@@ -173,7 +175,10 @@ public class Main extends Application implements ShoppingCartListener {
 
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
+        removeEmptyProducts();
+    }
 
+    private void removeEmptyProducts(){
         ArrayList<ShoppingItem> arr = new ArrayList();
 
         for (ShoppingItem s : IMat.getInstance().getShoppingCart().getItems()) {
@@ -185,8 +190,5 @@ public class Main extends Application implements ShoppingCartListener {
         for (ShoppingItem s : arr) {
             IMat.getInstance().getShoppingCart().removeItem(s);
         }
-
-
-
     }
 }
