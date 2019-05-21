@@ -7,6 +7,7 @@ import Model.pages.Mainpage.MainPage;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
+import javafx.scene.Cursor;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -14,6 +15,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import me.xdrop.fuzzywuzzy.FuzzySearch;
+import org.omg.CORBA.MARSHAL;
 import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
@@ -65,6 +67,8 @@ public class Navbar extends AnchorPane {
 
     private void addEventListeners(){
         iMatLabel.setOnMouseClicked(event -> goToMainPage());
+        iMatLabel.setOnMouseEntered(e -> Main.getCurrentScene().setCursor(Cursor.HAND));
+        iMatLabel.setOnMouseExited(e -> Main.getCurrentScene().setCursor(Cursor.DEFAULT));
         hjalp.setOnAction(e -> goToHjalp());
         kvitton.setOnAction(e -> goToHistorik());
         minaSidor.setOnAction(e -> goToMinaSidor());
