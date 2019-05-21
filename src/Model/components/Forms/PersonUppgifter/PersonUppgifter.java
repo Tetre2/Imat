@@ -123,8 +123,7 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
     }
 
     private boolean isUserVerified() {
-        // TODO: add logic to check if all fields are correctly filled out
-        return true;
+        return IMat.getInstance().isCustomerComplete();
     }
 
     private void initEditUI() {
@@ -164,7 +163,9 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         textInputs.add(postcode);
         textInputs.add(postaddress);
 
-        rootAnchorPane.getChildren().add(save);
+        if (!rootAnchorPane.getChildren().contains(save)) {
+            rootAnchorPane.getChildren().add(save);
+        }
     }
 
     private void addEventListeners() {
