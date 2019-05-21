@@ -4,7 +4,6 @@ import Model.IMat;
 import Model.components.Forms.Focusable;
 import Model.components.Forms.InputItem.InputItem.TextInput;
 import Model.components.Forms.NotValidInput;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
@@ -23,7 +22,7 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
 
     @FXML private AnchorPane rootAnchorPane;
     @FXML
-    private FlowPane containerEditVBox;
+    private FlowPane containerEditFlowPane;
     @FXML
     private Button save;
     @FXML
@@ -74,9 +73,6 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
     }
 
     private void initDoneUI() {
-        rootAnchorPane.setPrefHeight(320.0);
-        rootAnchorPane.setMaxHeight(320.0);
-        containerEditVBox.setMaxHeight(320.0);
 
         containerDoneVBox = new VBox();
         containerDoneVBox.setSpacing(10.0);
@@ -101,7 +97,7 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         edit.setOnMouseClicked(e -> transitionToEditUI());
 
         containerDoneVBox.getChildren().addAll(contactHeaderLabel, numberLabel, mailLabel, deliveryHeaderLabel, nameLabel, addressLabel, edit);
-        containerEditVBox.getChildren().add(containerDoneVBox);
+        containerEditFlowPane.getChildren().add(containerDoneVBox);
     }
 
     private void updatePreviewLabels() {
@@ -112,7 +108,7 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
     }
 
     private void transitionToEditUI() {
-        containerEditVBox.getChildren().remove(containerDoneVBox);
+        containerEditFlowPane.getChildren().clear();
         initEditUI();
     }
 
@@ -136,13 +132,13 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         lastname = new TextInput("Efternamn:", "persson", "Ange ditt efternamn *", phone, true);
         firstname = new TextInput("Förnamn:", "Brit", "Ange ditt förnamn *", lastname, true);
 
-        containerEditVBox.getChildren().add(firstname);
-        containerEditVBox.getChildren().add(lastname);
-        containerEditVBox.getChildren().add(phone);
-        containerEditVBox.getChildren().add(email);
-        containerEditVBox.getChildren().add(address);
-        containerEditVBox.getChildren().add(postcode);
-        containerEditVBox.getChildren().add(postaddress);
+        containerEditFlowPane.getChildren().add(firstname);
+        containerEditFlowPane.getChildren().add(lastname);
+        containerEditFlowPane.getChildren().add(phone);
+        containerEditFlowPane.getChildren().add(email);
+        containerEditFlowPane.getChildren().add(address);
+        containerEditFlowPane.getChildren().add(postcode);
+        containerEditFlowPane.getChildren().add(postaddress);
 
         postaddress.setText(customer.getPostAddress());
         postcode.setText(customer.getPostCode());
@@ -192,7 +188,7 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
 
     private void transitionToDoneUI() {
         rootVBox.getChildren().remove(rootButton);
-        containerEditVBox.getChildren().removeAll(firstname, lastname, phone, email, address, postcode, postaddress);
+        containerEditFlowPane.getChildren().clear();
         initDoneUI();
     }
 

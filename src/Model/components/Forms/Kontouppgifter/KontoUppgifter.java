@@ -21,15 +21,20 @@ import java.io.IOException;
 
 public class KontoUppgifter extends AnchorPane implements Focusable {
 
-    @FXML private AnchorPane rootAnchorPane;
     @FXML
-    private VBox containerEditVBox;
+    private AnchorPane rootAnchorPane;
+    @FXML
+    private FlowPane containerEditFlowPane;
     @FXML
     private Button save;
     @FXML
     private AnchorPane error;
     @FXML
     private Label errLabel;
+    @FXML
+    private AnchorPane rootButton;
+    @FXML
+    private VBox rootVBox;
 
     private VBox containerDoneVBox = new VBox();
 
@@ -84,7 +89,7 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
         edit.setOnMouseClicked(e -> transitionToEditUI());
 
         containerDoneVBox.getChildren().addAll(contactHeaderLabel, nameLabel, creditCardNumberLabel, experyDateLabel, controlNumberLabel, edit);
-        containerEditVBox.getChildren().add(containerDoneVBox);
+        containerEditFlowPane.getChildren().add(containerDoneVBox);
     }
 
     private void transitionToEditUI() {
@@ -93,7 +98,7 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
     }
 
     private void removeDoneUI() {
-        containerDoneVBox.getChildren().clear();
+        containerEditFlowPane.getChildren().clear();
     }
 
     private void updatePreviewLabels() {
@@ -129,17 +134,22 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
     }
 
     private void initEditUI() {
-        containerEditVBox.getChildren().add(kontoAgare);
-        containerEditVBox.getChildren().add(kontonummer);
-        containerEditVBox.getChildren().add(monthYearInputItem);
-        containerEditVBox.getChildren().add(kontrollSiffror);
-        containerEditVBox.getChildren().add(save);
+        containerEditFlowPane.getChildren().clear();
+        containerEditFlowPane.getChildren().add(kontoAgare);
+        containerEditFlowPane.getChildren().add(kontonummer);
+        containerEditFlowPane.getChildren().add(monthYearInputItem);
+        containerEditFlowPane.getChildren().add(kontrollSiffror);
+        containerEditFlowPane.getChildren().add(save);
 
         kontrollSiffror.setKontrolKod(creditCard.getVerificationCode());
         monthYearInputItem.setMonth(creditCard.getValidMonth() + "");
         monthYearInputItem.setYear(creditCard.getValidYear() + "");
         kontonummer.setCardNumber(creditCard.getCardNumber());
         kontoAgare.setText(creditCard.getHoldersName());
+
+        if (!rootVBox.getChildren().contains(rootButton)) {
+            rootVBox.getChildren().add(rootButton);
+        }
     }
 
     private void addEventListeners() {
@@ -181,8 +191,11 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
     }
 
     private void removeEditUI() {
-        containerEditVBox.getChildren().clear();
-        rootAnchorPane.getChildren().remove(save);
+
+
+        rootVBox.getChildren().remove(rootButton);
+        containerEditFlowPane.getChildren().clear();
+
     }
 
     private void clearVisuals(){
