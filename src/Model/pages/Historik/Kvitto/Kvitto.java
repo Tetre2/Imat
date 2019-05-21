@@ -6,6 +6,7 @@ import Model.components.LeftSidebar.LeftSidebar;
 import Model.components.Navbar.Navbar;
 import Model.pages.Historik.Historik;
 import Model.pages.Historik.HistorikItem.HistorikItem;
+import Model.pages.Mainpage.MainPage;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -90,6 +91,8 @@ public class Kvitto extends AnchorPane {
     }
 
     private void addToCart(){
+
+        MainPage mainPage = Main.getMainPage();
         for (ShoppingItem s : order.getItems()) {
             IMat.getInstance().getShoppingCart().addItem(s);
         }

@@ -202,22 +202,25 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
+
         if (cartEvent.isAddEvent()) {
 
             if (cartEvent.getShoppingItem().equals(item)) {
                 System.out.println("ShoppingItem, HEJ " + cartEvent.getShoppingItem().getProduct().getName());
                 if (!IMat.getInstance().getShoppingCart().getItems().contains(item)) {
                     hidePlusMinus();
+                }else {
+                    showPlusMinus();
                 }
 
             }
-            if(item.getAmount() == 0 && pickerPane.isVisible()){
+            /*if(item.getAmount() == 0 && pickerPane.isVisible()){
                 hidePlusMinus();
 
                 if(IMat.getInstance().getShoppingCartItems().contains(item)){
                     IMat.getInstance().getShoppingCart().removeItem(item);
                 }
-            }
+            }*/
         }
 
 

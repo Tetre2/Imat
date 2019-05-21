@@ -3,7 +3,6 @@ package Model;
 import Model.components.LeftSidebar.LeftSidebar;
 import Model.components.LeftSidebar.LeftSidebarCategory.MainCategory;
 import Model.components.Navbar.Navbar;
-import Model.components.ShoppingItem.ShoppingItem;
 import Model.pages.Checkout.Checkout;
 import Model.pages.Favoriter.Favoriter;
 import Model.pages.Historik.Historik;
@@ -16,12 +15,15 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
+import se.chalmers.cse.dat216.project.ShoppingCartListener;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main extends Application {
+public class Main extends Application implements ShoppingCartListener {
 
     private static Stage window;
 
@@ -169,4 +171,22 @@ public class Main extends Application {
         launch(args);
     }
 
+    @Override
+    public void shoppingCartChanged(CartEvent cartEvent) {
+
+        ArrayList<ShoppingItem> arr = new ArrayList();
+
+        for (ShoppingItem s : IMat.getInstance().getShoppingCart().getItems()) {
+            if(s.getAmount() == 0){
+                arr.add(s);
+            }
+        }
+
+        for (ShoppingItem s : arr) {
+            IMat.getInstance().getShoppingCart().removeItem(s);
+        }
+
+
+
+    }
 }

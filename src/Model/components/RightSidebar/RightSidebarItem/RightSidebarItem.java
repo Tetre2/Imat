@@ -29,11 +29,6 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
     private ComboBox<String> fontFamilyField;
 
     public RightSidebarItem(ShoppingItem shoppingItem){
-
-
-
-
-
         this.shoppingItem = shoppingItem;
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
@@ -41,7 +36,6 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
         SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, (int)shoppingItem.getAmount());
 
         amount.setValueFactory(valueFactory);
-
 
         addEventListeners();
 
@@ -75,13 +69,20 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
 
     private void setShoppingItemAmount(){
         shoppingItem.setAmount(amount.getValue());
+        if(amount.getValue() <= 0){
+            removeItem();
+        }
         IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+    }
+
+    private void removeItem(){
+        IMat.getInstance().getShoppingCart().removeItem(shoppingItem);
     }
 
     public void onClosePressed(){
         shoppingItem.setAmount(0);
-        //IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
         IMat.getInstance().getShoppingCart().removeItem(shoppingItem);
+        IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
     }
 
     @Override

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<fx:root maxWidth="380.0" minHeight="50.0" prefWidth="600.0" style="-fx-border-width: 2; -fx-border-color: #ebebeb;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxWidth="380.0" minHeight="50.0" prefWidth="600.0" style="-fx-border-width: 2; -fx-border-color: #ebebeb;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
          <children>
@@ -27,7 +27,7 @@
             <Spinner fx:id="amount" accessibleText="1" editable="true" prefHeight="63.0" prefWidth="89.0" style="-fx-font-size: 20;" />
             <Button fx:id="close" mnemonicParsing="false" styleClass="btn-nostyle">
                <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="closeImage" fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../resources/icon_close.png" />
                      </image>
