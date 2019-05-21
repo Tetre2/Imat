@@ -27,7 +27,7 @@
                   </ImageView>
                </children>
             </StackPane>
-            <Label fx:id="name" alignment="CENTER" prefHeight="27.0" prefWidth="124.0" text="Grovt bröd" textFill="#189ad3">
+            <Label fx:id="name" alignment="TOP_CENTER" minHeight="50.0" prefHeight="51.0" prefWidth="150.0" text="Ekologisk Brysselkål" textAlignment="CENTER" textFill="#189ad3" wrapText="true">
                <styleClass>
                   <String fx:value="text" />
                   <String fx:value="text-md" />
@@ -39,7 +39,7 @@
                   <Font name="Tahoma" size="12.0" />
                </font>
             </Label>
-            <HBox alignment="CENTER" maxHeight="30.0" maxWidth="196.0" minHeight="30.0" minWidth="30.0" prefHeight="30.0" prefWidth="196.0" spacing="4.0">
+            <HBox alignment="CENTER" maxHeight="30.0" maxWidth="196.0" minHeight="30.0" minWidth="30.0" prefHeight="30.0" prefWidth="196.0" spacing="4.0" translateY="-15.0">
                <children>
                   <Label fx:id="price" alignment="TOP_RIGHT" contentDisplay="RIGHT" maxHeight="30.0" maxWidth="104.0" minHeight="30.0" minWidth="30.0" prefHeight="30.0" prefWidth="83.0" text="23,9" textAlignment="RIGHT">
                      <styleClass>
