@@ -40,7 +40,6 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
     private TextInput lastname;
     private TextInput firstname;
 
-    private Label requiredDescriptionLabel;
     private Label numberLabel;
     private Label mailLabel;
     private Label nameLabel;
@@ -129,9 +128,6 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         lastname = new TextInput("Efternamn:", "persson", "Ange ditt efternamn *", phone, true);
         firstname = new TextInput("Förnamn:", "Brit", "Ange ditt förnamn *", lastname, true);
 
-        requiredDescriptionLabel = new Label("Fält med * måste fyllas i");
-
-        containerEditVBox.getChildren().add(requiredDescriptionLabel);
         containerEditVBox.getChildren().add(firstname);
         containerEditVBox.getChildren().add(lastname);
         containerEditVBox.getChildren().add(phone);
@@ -188,7 +184,7 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
 
     private void transitionToDoneUI() {
         rootAnchorPane.getChildren().remove(save);
-        containerEditVBox.getChildren().removeAll(firstname, lastname, phone, email, address, postcode, postaddress, requiredDescriptionLabel);
+        containerEditVBox.getChildren().removeAll(firstname, lastname, phone, email, address, postcode, postaddress);
         initDoneUI();
     }
 

@@ -15,12 +15,15 @@ public class TitledSection extends AnchorPane {
     Label titleLabel;
     @FXML
     FlowPane centerContainerFlowPane;
+    @FXML
+    private Label tooltipLabel;
 
-    public TitledSection(String title) {
+    public TitledSection(String title, String tooltipLabel) {
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
         titleLabel.setText(title);
+        this.tooltipLabel.setText(tooltipLabel);
         //centerContainerVBox.maxHeightProperty().bind(centerContainerVBox.heightProperty());
     }
 

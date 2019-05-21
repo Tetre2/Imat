@@ -73,11 +73,11 @@ public class Checkout extends AnchorPane {
         makePaymentHBox.setAlignment(Pos.CENTER);
         makePaymentHBox.getChildren().add(makePaymentButton);
 
-        TitledSection titledSectionPerson = new TitledSection("1. Kontrollera dina personuppgifter");
+        TitledSection titledSectionPerson = new TitledSection("1. Kontrollera dina personuppgifter", "Fält med * måste fyllas i");
         PersonUppgifter personUppgifter = new PersonUppgifter();
         titledSectionPerson.addNode(personUppgifter);
 
-        TitledSection titledSectionKonto = new TitledSection("2. Gör din beställning");
+        TitledSection titledSectionKonto = new TitledSection("2. Gör din beställning", "Fält med * måste fyllas i");
         ShoppingCheckoutDetails details = new ShoppingCheckoutDetails();
         titledSectionKonto.addNode(details);
         titledSectionKonto.addNode(new KontoUppgifter());
@@ -97,7 +97,7 @@ public class Checkout extends AnchorPane {
     }
 
     private void createVarukorgUI() {
-        TitledSection varukorgSection = new TitledSection("Granska din varukorg");
+        TitledSection varukorgSection = new TitledSection("Granska din varukorg", "Den här texten ska ändras till något bättre");//TODO sätt en "GOO text" här joel
 
         ShoppingCheckout shoppingCheckout = new ShoppingCheckout();
 

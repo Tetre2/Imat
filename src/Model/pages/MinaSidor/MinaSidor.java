@@ -31,11 +31,11 @@ public class MinaSidor extends AnchorPane {
 
         addEventListeners();
 
-        TitledSection titledSectionKonto = new TitledSection("Kontouppgifter");
+        TitledSection titledSectionKonto = new TitledSection("Kontouppgifter", "Fält med * måste fyllas i");
         KontoUppgifter tmpKonto = new KontoUppgifter();
         titledSectionKonto.addNode(tmpKonto);
 
-        TitledSection titledSectionPerson = new TitledSection("Personuppgifter");
+        TitledSection titledSectionPerson = new TitledSection("Personuppgifter", "Fält med * måste fyllas i");
         personUppgifter = new PersonUppgifter();
         titledSectionPerson.addNode(personUppgifter);
 
