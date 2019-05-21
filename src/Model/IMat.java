@@ -157,13 +157,11 @@ public class IMat {
     }
 
     public Order placeOrder(){
+
         Order order = dataHandler.placeOrder(true);
 
-        /*for (int i = 0; i < dataHandler.getShoppingCart().getItems().size(); i++) {
-            ShoppingItem shoppingItem = dataHandler.getShoppingCart().getItems().get(i);
-            shoppingItem.setAmount(0);
-            dataHandler.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
-        }*/
+        Main.getMainPage().clearAllProducts();
+
         return order;
     }
 

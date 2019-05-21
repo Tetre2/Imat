@@ -80,7 +80,7 @@ public class RightSidebar extends AnchorPane implements ShoppingCartListener {
         inventory.getChildren().clear();
         List<ShoppingItem> items = IMat.getInstance().getShoppingCart().getItems();
         for (ShoppingItem si : items) {
-            System.out.println("RightsideBar productName:  " + si.getProduct().getName());
+            //System.out.println("RightsideBar productName:  " + si.getProduct().getName());
             RightSidebarItem rightSidebarItem = new RightSidebarItem(si);
             inventory.getChildren().add(rightSidebarItem);
         }

@@ -3,6 +3,7 @@ package Model;
 import Model.components.LeftSidebar.LeftSidebar;
 import Model.components.LeftSidebar.LeftSidebarCategory.MainCategory;
 import Model.components.Navbar.Navbar;
+import Model.components.ShoppingItem.ShoppingItem;
 import Model.pages.Checkout.Checkout;
 import Model.pages.Favoriter.Favoriter;
 import Model.pages.Historik.Historik;
@@ -16,6 +17,9 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main extends Application {
 
@@ -154,8 +158,6 @@ public class Main extends Application {
     public static Scene getCurrentScene(){
         return window.getScene();
     }
-
-
 
     @Override
     public void stop(){

@@ -1,6 +1,7 @@
 package Model.components.ShoppingItem;
 
 import Model.IMat;
+import Model.Main;
 import Model.components.LeftSidebar.LeftSidebarCategory.CategoryListener;
 import Model.components.LeftSidebar.LeftSidebarCategory.MainCategory;
 import Model.components.Picker.Picker;
@@ -133,7 +134,6 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
     }
 
     private void onAddToCartButtonPressed() {
-
         //visar att varan är lagd i varukorgen
         toggleItemIsSelected();
         // rootPane.setBackground(new Background(new BackgroundFill(Color.LIGHTGRAY, new CornerRadii(12), Insets.EMPTY)));
@@ -152,6 +152,9 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
     private void hidePlusMinus() {
         item.setAmount(0);
         pickerPane.setVisible(false);
+        rootPane.getStyleClass().clear();
+        rootPane.getStyleClass().add("anchor-container");
+        addToCartButton.setVisible(true);
     }
 
     private void onStarButtonPressed() {
@@ -205,23 +208,18 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
                 System.out.println("ShoppingItem, HEJ " + cartEvent.getShoppingItem().getProduct().getName());
                 if (!IMat.getInstance().getShoppingCart().getItems().contains(item)) {
                     hidePlusMinus();
-                    rootPane.getStyleClass().clear();
-                    rootPane.getStyleClass().add("anchor-container");
-                    addToCartButton.setVisible(true);
                 }
 
             }
-        }
-        if(pickerPane.isVisible() && !IMat.getInstance().getShoppingCart().getItems().contains(item)){
-            hidePlusMinus();
-            rootPane.getStyleClass().clear();
-            rootPane.getStyleClass().add("anchor-container");
-            addToCartButton.setVisible(true);
+            if(item.getAmount() == 0 && pickerPane.isVisible()){
+                hidePlusMinus();
 
-            if(IMat.getInstance().getShoppingCartItems().contains(item)){
-                IMat.getInstance().getShoppingCart().removeItem(item);
+                if(IMat.getInstance().getShoppingCartItems().contains(item)){
+                    IMat.getInstance().getShoppingCart().removeItem(item);
+                }
             }
         }
+
 
     }
     public void addShoppingItemListener(ShoppingItemListener sil) {

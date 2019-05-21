@@ -83,6 +83,10 @@ public class MainPage extends AnchorPane implements CategoryListener, ShoppingIt
     //Creating new objects all the time consumes a high amount of ram because of the product-image.
     private Map<Product, ShoppingItem> cachedShoppingItems = new HashMap<>();
 
+    public void clearAllProducts() {
+        cachedShoppingItems.clear();
+        grid.getChildren().clear();
+    }
 
     /**
      * If a product already has a shoppingItem connected to itself - return that object

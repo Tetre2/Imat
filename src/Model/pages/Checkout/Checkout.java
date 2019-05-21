@@ -91,6 +91,17 @@ public class Checkout extends AnchorPane {
     private void makePaymentButtonPressed() {
         //IMat.getInstance().placeOrder(true);
         Order order = IMat.getInstance().placeOrder();
+
+
+        double d = 0;
+        for (ShoppingItem s : order.getItems()) {
+            d += s.getTotal();
+        }
+
+        System.out.println("--Checkout--");
+        System.out.println("Totalt pris: " + d);
+        System.out.println("Antal produkter: " + order.getItems().size());
+
         paymentDoneContainerVBox.getChildren().clear();
         paymentDoneContainerVBox.getChildren().add(new PaymentDoneBox(order));
         goToPaymentDoneStep();
