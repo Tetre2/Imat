@@ -4,6 +4,7 @@ import Model.IMat;
 import Model.components.LeftSidebar.LeftSidebar;
 import Model.components.Navbar.Navbar;
 import Model.pages.Historik.HistorikItem.HistorikItem;
+import Model.pages.Historik.Kvitto.KvittoItem.KvittoItem;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -30,10 +31,11 @@ public class KvittoProduct extends AnchorPane {
         addEventListeners();
 
         System.out.println(categoryName);
+        category.getStyleClass().addAll("text-lg", "bold");
         category.setText(categoryName);
 
         for (ShoppingItem s : products) {
-            vBox.getChildren().add(new Label((s.getProduct().getName() + ", " + s.getAmount() + " St, " + s.getTotal() + " Kr")));
+            vBox.getChildren().add(new KvittoItem(s));
         }
 
 
