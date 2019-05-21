@@ -193,10 +193,10 @@ public class MonthYearInputItem extends AnchorPane implements Focusable {
             showErr(this.year);
             return false;
         }
-        if(year > 2019 && year < 2026){
+        if(year > 2018 && year < 2026){
             clearErr(this.year);
             return true;
-        }else if(year > 19 && year < 26){
+        }else if(year > 18 && year < 26){
             clearErr(this.year);
             return true;
         }
