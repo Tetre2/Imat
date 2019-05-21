@@ -94,7 +94,17 @@ public class Kvitto extends AnchorPane {
 
         MainPage mainPage = Main.getMainPage();
         for (ShoppingItem s : order.getItems()) {
-            IMat.getInstance().getShoppingCart().addItem(s);
+            System.out.println("Kvitto, antal utav varorna: " + s.getAmount());
+            if(IMat.getInstance().getShoppingCart().getItems().contains(s)){
+                System.out.println("fdlksnflks");
+                List<ShoppingItem> shoppingItems = IMat.getInstance().getShoppingCart().getItems();
+                int i = shoppingItems.indexOf(s);
+                shoppingItems.get(i).setAmount(shoppingItems.get(i).getAmount() + s.getAmount());
+                IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItems.get(i), true);
+            }else {
+                IMat.getInstance().getShoppingCart().addItem(s);
+            }
+
         }
 
         Main.getNavbar().goToMainPage();
