@@ -63,7 +63,7 @@
             </Label>
             <Button fx:id="deleteButton" mnemonicParsing="false" styleClass="btn-nostyle">
                <graphic>
-                  <ImageView fx:id="deleteImageView" fitHeight="150.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="deleteImageView" fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../resources/icon_close.png" />
                      </image>

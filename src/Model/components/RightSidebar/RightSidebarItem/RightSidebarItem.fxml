@@ -27,7 +27,7 @@
             <Spinner fx:id="amount" accessibleText="1" editable="true" prefHeight="63.0" prefWidth="95.0" style="-fx-font-size: 20;" />
             <Button fx:id="close" mnemonicParsing="false" styleClass="btn-nostyle">
                <graphic>
-                  <ImageView fx:id="closeImage" fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="closeImage" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../resources/icon_close.png" />
                      </image>

@@ -44,7 +44,17 @@ public class RightSidebar extends AnchorPane implements ShoppingCartListener {
         addEventListeners();
         updateShoppingCart();
 
+        updateVarukorgButton();
+    }
 
+    private void updateVarukorgButton() {
+        if (IMat.getInstance().isShoppingCartEmpty()) {
+            pay.setDisable(true);
+            pay.setText("Lägg till varor i varukorgen");
+        } else {
+            pay.setDisable(false);
+            pay.setText("Gå till Kassan");
+        }
     }
 
 
@@ -96,6 +106,7 @@ public class RightSidebar extends AnchorPane implements ShoppingCartListener {
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
         updateShoppingCart();
+        updateVarukorgButton();
     }
 
 }

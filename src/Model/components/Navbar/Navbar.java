@@ -24,6 +24,7 @@ import java.util.List;
 
 public class Navbar extends AnchorPane {
 
+    @FXML private Button SearchButton;
     @FXML
     private ImageView iMatLabel;
     @FXML
@@ -70,9 +71,21 @@ public class Navbar extends AnchorPane {
         iMatLabel.setOnMouseEntered(e -> Main.getCurrentScene().setCursor(Cursor.HAND));
         iMatLabel.setOnMouseExited(e -> Main.getCurrentScene().setCursor(Cursor.DEFAULT));
         hjalp.setOnAction(e -> goToHjalp());
+        hjalp.setOnMouseEntered(e -> Main.getCurrentScene().setCursor(Cursor.HAND));
+        hjalp.setOnMouseExited(e -> Main.getCurrentScene().setCursor(Cursor.DEFAULT));
         kvitton.setOnAction(e -> goToHistorik());
+        kvitton.setOnMouseEntered(e -> Main.getCurrentScene().setCursor(Cursor.HAND));
+        kvitton.setOnMouseExited(e -> Main.getCurrentScene().setCursor(Cursor.DEFAULT));
         minaSidor.setOnAction(e -> goToMinaSidor());
+        minaSidor.setOnMouseEntered(e -> Main.getCurrentScene().setCursor(Cursor.HAND));
+        minaSidor.setOnMouseExited(e -> Main.getCurrentScene().setCursor(Cursor.DEFAULT));
         handla.setOnAction(event -> goToMainPage());
+        handla.setOnMouseEntered(e -> Main.getCurrentScene().setCursor(Cursor.HAND));
+        handla.setOnMouseExited(e -> Main.getCurrentScene().setCursor(Cursor.DEFAULT));
+
+        SearchButton.setOnMouseEntered(e -> Main.getCurrentScene().setCursor(Cursor.HAND));
+        SearchButton.setOnMouseExited(e -> Main.getCurrentScene().setCursor(Cursor.DEFAULT));
+
         nav.setOnMouseClicked(event -> event.consume());
         root.setOnMouseClicked(event -> hideSearchedItems());
 
