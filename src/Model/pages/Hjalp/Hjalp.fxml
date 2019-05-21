@@ -1,10 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.text.Text?>
 
 <fx:root prefHeight="900.0" prefWidth="1440.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane fx:id="TopNav" prefHeight="100.0" prefWidth="1440.0" />
+      <AnchorPane layoutX="109.0" layoutY="194.0" prefHeight="700.0" prefWidth="1222.0" style="-fx-background-color: white;" stylesheets="@../../../styles.css">
+         <children>
+            <Label layoutX="9.0" layoutY="37.0" prefHeight="108.0" prefWidth="221.0" text="Klicka på stjärnan för att lägga till varan i favoritkategorin." wrapText="true">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-md" />
+               </styleClass>
+            </Label>
+            <Text layoutX="9.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klicka på &quot;Lägg i kundvagn&quot;-Knappen för att lägga till varan i varukorgen." wrappingWidth="221.00003242492676">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-md" />
+               </styleClass>
+            </Text>
+            <ImageView fitHeight="280.0" fitWidth="283.0" layoutX="24.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/MattiasFörslag/Vara.PNG" />
+               </image>
+            </ImageView>
+            <Text layoutX="308.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="När du klickat på Lägg i varukorgen läggs en utav varan i varukogen. Vill du ha fler eller färre klicka du på + eller - eller så kan du skriva in antalet i ruta mellan + och -." wrappingWidth="298.34479093551636">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-md" />
+               </styleClass>
+            </Text>
+            <ImageView fitHeight="280.0" fitWidth="283.0" layoutX="363.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/MattiasFörslag/VaraVald.PNG" />
+               </image>
+            </ImageView>
+            <Label layoutX="315.0" layoutY="51.0" prefHeight="108.0" prefWidth="285.0" text="En gul stjärna bettyder att den är tillagd i favoriter. Om du inte lägnre vill ha en vara i favoriter är det bara att klicka på den igen." wrapText="true">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-md" />
+               </styleClass>
+            </Label>
+            <Label layoutX="661.0" layoutY="77.0" prefHeight="28.0" prefWidth="298.0" text="Genomför ditt första köp">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-md" />
+                  <String fx:value="bold" />
+               </styleClass>
+            </Label>
+            <Label layoutX="661.0" layoutY="105.0" prefHeight="38.0" prefWidth="298.0" text="  1. Hitta varan du tänker köpa.">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-md" />
+               </styleClass>
+            </Label>
+            <Label layoutX="661.0" layoutY="143.0" prefHeight="38.0" prefWidth="298.0" text="  2. Klicka på lägg till i varukorgen">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-md" />
+               </styleClass>
+            </Label>
+            <Label layoutX="661.0" layoutY="181.0" prefHeight="46.0" prefWidth="298.0" text="  3. Välj antalet utav varan du vill köpa" wrapText="true">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-md" />
+               </styleClass>
+            </Label>
+            <Label layoutX="661.0" layoutY="226.0" prefHeight="143.0" prefWidth="252.0" text="När du har hittat alla varor du vill köpa klickar du på &quot;Gå till kassan&quot;-knppen i varukorgen och följer anvisningarna där." wrapText="true">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-md" />
+               </styleClass>
+            </Label>
+            <ImageView fitHeight="546.0" fitWidth="329.0" layoutX="954.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/MattiasFörslag/varukorg.PNG" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </fx:root>

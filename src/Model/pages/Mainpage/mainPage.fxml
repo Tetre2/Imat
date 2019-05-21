@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1540.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1540.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane fx:id="LeftNavBar" layoutY="200.0" maxWidth="300.0" minWidth="300.0" prefHeight="700.0" prefWidth="300.0" />
       <AnchorPane fx:id="varukorg" layoutX="1129.0" layoutY="200.0" maxWidth="410.0" minWidth="388.0" prefHeight="700.0" prefWidth="400.0" AnchorPane.rightAnchor="0.0" />
@@ -27,12 +27,11 @@
             </GridPane>
          </content>
       </ScrollPane>
-      <Label fx:id="currentCategoryLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="310.0" layoutY="100.0" prefHeight="100.0" prefWidth="800.0" text="Alla varor" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="currentCategoryLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="310.0" layoutY="100.0" prefHeight="100.0" prefWidth="800.0" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="57.0" />
          </font>
       </Label>
-      <AnchorPane fx:id="topNavBar" prefHeight="100.0" prefWidth="1540.0" />
       <Label fx:id="currentCategoryLabel1" alignment="CENTER" contentDisplay="CENTER" layoutX="1113.0" layoutY="100.0" prefHeight="100.0" prefWidth="427.0" text="Varukorg" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="57.0" />
@@ -43,5 +42,6 @@
             <Font size="57.0" />
          </font>
       </Label>
+      <AnchorPane fx:id="topNavBar" prefHeight="100.0" prefWidth="1540.0" />
    </children>
 </fx:root>
