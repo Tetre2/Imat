@@ -167,6 +167,16 @@ public class IMat {
 
     public Order placeOrder(){
 
+        /*List<ShoppingItem> shoppingItems = dataHandler.getShoppingCart().getItems();
+
+        dataHandler.getShoppingCart().clear();
+
+        for (ShoppingItem s : shoppingItems) {
+            ShoppingItem shoppingItem = new ShoppingItem(s.getProduct());
+            System.out.println(shoppingItem.toString());
+            IMat.getInstance().getShoppingCart().addItem(shoppingItem);
+        }*/
+
         Order order = dataHandler.placeOrder(true);
 
         Main.getMainPage().clearAllProducts();
