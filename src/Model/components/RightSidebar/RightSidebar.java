@@ -1,12 +1,15 @@
 package Model.components.RightSidebar;
 
 import Model.IMat;
+import Model.Main;
 import Model.components.RightSidebar.RightSidebarItem.RightSidebarItem;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Cursor;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
@@ -41,7 +44,17 @@ public class RightSidebar extends AnchorPane implements ShoppingCartListener {
         addEventListeners();
         updateShoppingCart();
 
+        updateVarukorgButton();
+    }
 
+    private void updateVarukorgButton() {
+        if (IMat.getInstance().isShoppingCartEmpty()) {
+            pay.setDisable(true);
+            pay.setText("Lägg först till varor i varukorgen");
+        } else {
+            pay.setDisable(false);
+            pay.setText("Gå till Kassan");
+        }
     }
 
 
@@ -59,7 +72,6 @@ public class RightSidebar extends AnchorPane implements ShoppingCartListener {
             throw new RuntimeException(exception);
         }
     }
-
 
     private void addEventListeners() {
         pay.setOnAction(e -> onPayPressed());
@@ -94,6 +106,7 @@ public class RightSidebar extends AnchorPane implements ShoppingCartListener {
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
         updateShoppingCart();
+        updateVarukorgButton();
     }
 
 }

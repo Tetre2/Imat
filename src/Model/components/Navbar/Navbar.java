@@ -7,6 +7,7 @@ import Model.pages.Mainpage.MainPage;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
+import javafx.scene.Cursor;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -14,6 +15,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import me.xdrop.fuzzywuzzy.FuzzySearch;
+import org.omg.CORBA.MARSHAL;
 import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
@@ -22,6 +24,7 @@ import java.util.List;
 
 public class Navbar extends AnchorPane {
 
+    @FXML private Button SearchButton;
     @FXML
     private ImageView iMatLabel;
     @FXML
@@ -65,10 +68,24 @@ public class Navbar extends AnchorPane {
 
     private void addEventListeners(){
         iMatLabel.setOnMouseClicked(event -> goToMainPage());
+        iMatLabel.setOnMouseEntered(e -> Main.getCurrentScene().setCursor(Cursor.HAND));
+        iMatLabel.setOnMouseExited(e -> Main.getCurrentScene().setCursor(Cursor.DEFAULT));
         hjalp.setOnAction(e -> goToHjalp());
+        hjalp.setOnMouseEntered(e -> Main.getCurrentScene().setCursor(Cursor.HAND));
+        hjalp.setOnMouseExited(e -> Main.getCurrentScene().setCursor(Cursor.DEFAULT));
         kvitton.setOnAction(e -> goToHistorik());
+        kvitton.setOnMouseEntered(e -> Main.getCurrentScene().setCursor(Cursor.HAND));
+        kvitton.setOnMouseExited(e -> Main.getCurrentScene().setCursor(Cursor.DEFAULT));
         minaSidor.setOnAction(e -> goToMinaSidor());
+        minaSidor.setOnMouseEntered(e -> Main.getCurrentScene().setCursor(Cursor.HAND));
+        minaSidor.setOnMouseExited(e -> Main.getCurrentScene().setCursor(Cursor.DEFAULT));
         handla.setOnAction(event -> goToMainPage());
+        handla.setOnMouseEntered(e -> Main.getCurrentScene().setCursor(Cursor.HAND));
+        handla.setOnMouseExited(e -> Main.getCurrentScene().setCursor(Cursor.DEFAULT));
+
+        SearchButton.setOnMouseEntered(e -> Main.getCurrentScene().setCursor(Cursor.HAND));
+        SearchButton.setOnMouseExited(e -> Main.getCurrentScene().setCursor(Cursor.DEFAULT));
+
         nav.setOnMouseClicked(event -> event.consume());
         root.setOnMouseClicked(event -> hideSearchedItems());
 

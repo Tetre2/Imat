@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public enum MainCategory {
+    FAVORIT ("Favoriter",
+            IMat.getInstance().getFavorites(), true),
     ALLA_VAROR ("Alla varor",
             ProductCategory.BREAD,
             ProductCategory.HOT_DRINKS,
@@ -44,9 +46,7 @@ public enum MainCategory {
             ProductCategory.FLOUR_SUGAR_SALT,
             ProductCategory.NUTS_AND_SEEDS,
             ProductCategory.PASTA,
-            ProductCategory.POTATO_RICE),
-    FAVORIT ("Favoriter",
-            IMat.getInstance().getFavorites(), true);
+            ProductCategory.POTATO_RICE);
 
 
 

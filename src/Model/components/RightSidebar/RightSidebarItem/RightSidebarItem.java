@@ -1,9 +1,12 @@
 package Model.components.RightSidebar.RightSidebarItem;
 
 import Model.IMat;
+import Model.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Cursor;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
@@ -25,6 +28,7 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
     private Spinner<Integer> amount;
     @FXML
     private Button close;
+    @FXML private ImageView closeImage;
 
     private ComboBox<String> fontFamilyField;
 
@@ -60,11 +64,34 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
     }
 
 
+    @FXML
+    public void closeButtonMouseEntered(){
+        Main.getCurrentScene().setCursor(Cursor.HAND);
+        closeImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "Model/resources/icon_close_hover.png")));
+    }
+
+    @FXML
+    public void closeButtonMousePressed(){
+        closeImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "Model/resources/icon_close_pressed.png")));
+    }
+
+    @FXML
+    public void closeButtonMouseExited(){
+        Main.getCurrentScene().setCursor(Cursor.DEFAULT);
+        closeImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "Model/resources/icon_close.png")));
+    }
+
+
     private void addEventListeners() {
         close.setOnAction(e -> onClosePressed());
 
         amount.valueProperty().addListener((obs, oldValue, newValue) -> setShoppingItemAmount());
-
+        close.setOnMouseEntered(e -> closeButtonMouseEntered());
+        close.setOnMousePressed(e -> closeButtonMousePressed());
+        close.setOnMouseExited(e -> closeButtonMouseExited());
     }
 
     private void setShoppingItemAmount(){

@@ -91,6 +91,10 @@ secondary: #107dac
     -fx-cursor: hand;
 }
 
+.btn-primary:disabled {
+     -fx-background-color: #A2A2A2;
+}
+
 .btn-secondary {
     -fx-background-radius: 8;
     -fx-background-insets: -2;
