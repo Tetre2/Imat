@@ -44,6 +44,7 @@ public class Kvitto extends AnchorPane {
 
         addEventListeners();
 
+
         date.setText(parent.getDate(order.getDate()));
 
         double calcPrice = 0;
@@ -75,6 +76,11 @@ public class Kvitto extends AnchorPane {
             grid.setConstraints(kvittoProduct, 0, i);
             grid.getChildren().add(kvittoProduct);
         }
+
+
+        System.out.println("--KVITTO--");
+        System.out.println("Totalt pris: " + calcPrice);
+        System.out.println("Antal produkter: " + order.getItems().size());
 
     }
 
