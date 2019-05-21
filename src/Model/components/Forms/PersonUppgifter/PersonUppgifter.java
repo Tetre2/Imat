@@ -11,6 +11,7 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 import se.chalmers.cse.dat216.project.Customer;
 
@@ -22,13 +23,18 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
 
     @FXML private AnchorPane rootAnchorPane;
     @FXML
-    private VBox containerEditVBox;
+    private FlowPane containerEditVBox;
     @FXML
     private Button save;
     @FXML
     private AnchorPane error;
     @FXML
     private Label errLabel;
+    @FXML
+    private AnchorPane rootButton;
+    @FXML
+    private VBox rootVBox;
+
 
     private VBox containerDoneVBox;
 
@@ -154,8 +160,8 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         textInputs.add(postcode);
         textInputs.add(postaddress);
 
-        if (!rootAnchorPane.getChildren().contains(save)) {
-            rootAnchorPane.getChildren().add(save);
+        if (!rootVBox.getChildren().contains(rootButton)) {
+            rootVBox.getChildren().add(rootButton);
         }
     }
 
@@ -185,7 +191,7 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
     }
 
     private void transitionToDoneUI() {
-        rootAnchorPane.getChildren().remove(save);
+        rootVBox.getChildren().remove(rootButton);
         containerEditVBox.getChildren().removeAll(firstname, lastname, phone, email, address, postcode, postaddress);
         initDoneUI();
     }

@@ -31,6 +31,12 @@ public class TitledSection extends AnchorPane {
         centerContainerFlowPane.getChildren().add(node);
     }
 
+    public void removeNode(Node node) {
+        centerContainerFlowPane.getChildren().remove(node);
+    }
+
+
+
     private FXMLLoader initFXML() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Model/components/TitledSection/TitledSection.fxml"));
         fxmlLoader.setRoot(this);
