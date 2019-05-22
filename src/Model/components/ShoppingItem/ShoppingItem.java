@@ -214,13 +214,13 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
                 }
 
             }
-            /*if(item.getAmount() == 0 && pickerPane.isVisible()){
+            if(item.getAmount() == 0 && pickerPane.isVisible()){
                 hidePlusMinus();
 
                 if(IMat.getInstance().getShoppingCartItems().contains(item)){
                     IMat.getInstance().getShoppingCart().removeItem(item);
                 }
-            }*/
+            }
         }
 
 
