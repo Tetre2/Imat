@@ -66,6 +66,10 @@ secondary: #107dac
     -fx-font-size: 32;
 }
 
+.text-xxl {
+    -fx-font-size: 52;
+}
+
 .text-link {
     -fx-text-fill: "#4285F4";
 }
@@ -89,6 +93,18 @@ secondary: #107dac
     -fx-text-fill: white;
     -fx-font-size: 16;
     -fx-background-color: #189ad3;
+}
+.btn-checkout {
+    -fx-background-radius: 8;
+    -fx-background-insets: -2;
+    -fx-text-fill: white;
+    -fx-font-size: 24;
+    -fx-background-color: #189ad3;
+}
+.btn-checkout:hover {
+    -fx-background-color: #2ca1d3;
+    -fx-cursor: hand;
+
 }
 
 .btn-primary-alternative-2  {

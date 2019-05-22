@@ -175,7 +175,7 @@ public class MainPage extends AnchorPane implements CategoryListener, ShoppingIt
             grid.getChildren().add(arr.get(i));
         }
 
-        if(grid.getChildren().size() == 0 && leftSidebar.getCurrentCategory().equals(MainCategory.FAVORIT)){
+        if(grid.getChildren().size() == 0 && leftSidebar.getCurrentCategory() != null && leftSidebar.getCurrentCategory().equals(MainCategory.FAVORIT)){
             noFavorites.setVisible(true);
         }else {
             noFavorites.setVisible(false);

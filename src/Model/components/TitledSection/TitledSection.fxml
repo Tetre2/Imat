@@ -48,9 +48,9 @@
             </HBox>
             <VBox layoutX="4.0" layoutY="74.0" prefHeight="150.0" prefWidth="1096.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="72.0">
                <children>
-                  <Pane prefHeight="50.0" prefWidth="1096.0" />
+                  <Pane minHeight="16.0" prefHeight="50.0" prefWidth="1096.0" />
                   <FlowPane fx:id="centerContainerFlowPane" prefHeight="312.0" prefWidth="1096.0" />
-                  <Pane prefHeight="50.0" prefWidth="1096.0" />
+                  <Pane minHeight="16.0" prefHeight="50.0" prefWidth="1096.0" />
                </children>
             </VBox>
          </children>
