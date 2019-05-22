@@ -8,20 +8,20 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<fx:root id="titledSectionRootAnchorPane" fx:id="rootPane" maxWidth="500.0" prefHeight="350.0" prefWidth="500.0" styleClass="payment-container" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root id="titledSectionRootAnchorPane" fx:id="rootPane" maxWidth="785.0" prefHeight="571.0" prefWidth="785.0" styleClass="payment-container" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <stylesheets>
         <URL value="@../../../../styles.css" />
         <URL value="@./PaymentDoneBox.css" />
     </stylesheets>
    <children>
-      <VBox alignment="CENTER" prefHeight="350.0" prefWidth="500.0" spacing="20.0">
+      <VBox alignment="CENTER" layoutX="-2.0" layoutY="-2.0" prefHeight="571.0" prefWidth="786.0" spacing="20.0">
          <children>
-            <Label styleClass="text-xl" text="Tack för ditt köp" />
-            <Label alignment="CENTER" prefHeight="111.0" prefWidth="328.0" styleClass="text-md" text="Köpet har gått igenom och du kommer få dina produkter inom kort." textAlignment="CENTER" wrapText="true" />
+            <Label styleClass="text-xxl" text="Tack för ditt köp" />
+            <Label alignment="CENTER" prefHeight="135.0" prefWidth="356.0" styleClass="text-xl" text="Köpet har gått igenom och du kommer få dina produkter inom kort." textAlignment="CENTER" wrapText="true" />
             <HBox alignment="CENTER" maxWidth="500.0" prefHeight="75.0" prefWidth="500.0" spacing="30.0">
                <children>
-                  <Button fx:id="shopMoreButton" mnemonicParsing="false" prefHeight="49.0" prefWidth="129.0" styleClass="btn-primary" text="Handla mer" />
-                  <Button fx:id="showReceiptButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="119.0" styleClass="btn-secondary" text="Se Kvittot" />
+                  <Button fx:id="shopMoreButton" mnemonicParsing="false" prefHeight="82.0" prefWidth="162.0" styleClass="btn-checkout" text="Handla mer" />
+                  <Button fx:id="showReceiptButton" mnemonicParsing="false" prefHeight="78.0" prefWidth="166.0" styleClass="btn-checkout" text="Se Kvittot" />
                </children>
             </HBox>
          </children>
