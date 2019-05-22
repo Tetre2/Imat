@@ -162,14 +162,15 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
             //Om stjärnan blir klickad när den är en favorit tas den bort
             IMat.getInstance().getFavorites().remove(product);
             System.out.println("Removed " + product.getName() + " From Favorites");
+            updateStarButtonUI();
             fireRemoveShoppingItem();
+
         } else {
             //Om stjärnan blir klickad när den inte är en favorit läggs den till
             IMat.getInstance().addFavorite(product);
             System.out.println("Added " + product.getName() + " To Favorites");
+            updateStarButtonUI();
         }
-
-        updateStarButtonUI();
     }
 
     private void updateStarButtonUI() {
@@ -179,10 +180,11 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
 
         if (isFavorited()) {
-            icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPathFavorite));
+            icon = IMat.getInstance().getImage(iconPathFavorite);
             starButton.setVisible(true);
         } else {
-            icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPathNoFavorite));
+            icon = IMat.getInstance().getImage(iconPathNoFavorite);
+            starButton.setVisible(false);
         }
 
         starImageview.setImage(icon);

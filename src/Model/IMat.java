@@ -54,7 +54,7 @@ public class IMat {
         Main.setSceneToHjalp();
     }
 
-    Map<Product, Image> images = new HashMap<>();
+    Map<Object, Image> images = new HashMap<>();
 
 
     public Image getImage(Product p){
@@ -62,6 +62,15 @@ public class IMat {
             return images.get(p);
         }
         Image image = dataHandler.getFXImage(p);
+        images.put(p, image);
+        return image;
+    }
+
+    public Image getImage(String p){
+        if(images.containsKey(p)){
+            return images.get(p);
+        }
+        Image image = new Image(getClass().getClassLoader().getResourceAsStream(p));
         images.put(p, image);
         return image;
     }

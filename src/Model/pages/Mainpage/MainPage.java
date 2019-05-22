@@ -210,9 +210,8 @@ public class MainPage extends AnchorPane implements CategoryListener, ShoppingIt
 
     @Override
     public void shoppingItemClicked(ShoppingItem shoppingItem) {
-        System.out.println("HELLOOO, item was clicked");
         if(grid.getChildren().contains(shoppingItem)){
-            updateGrid(MainCategory.FAVORIT, MainCategory.FAVORIT.name());
+            updateGrid(leftSidebar.getCurrentCategory(), leftSidebar.getCurrentCategory().toString());
         }
     }
 
