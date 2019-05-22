@@ -72,7 +72,7 @@ public class LeftSidebar extends AnchorPane  {
 
             }else{
                 categoryItem.getStyleClass().add("anchor-container-normal");
-                categoryItem.getCategoryName().setTextFill(Paint.valueOf("#194b42"));
+                categoryItem.getCategoryName().setTextFill(Paint.valueOf("black"));
             }
 
             //then you specify the class you would give to the button

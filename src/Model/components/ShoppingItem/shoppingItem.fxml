@@ -64,11 +64,7 @@
             <HBox alignment="CENTER" maxHeight="120.0" minHeight="10.0" prefHeight="15.0" prefWidth="123.0" />
          </children>
       </VBox>
-      <Button fx:id="addToCartButton" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="230.0" maxHeight="10.0" maxWidth="10.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="150.0" text="Lägg i kundvagn">
-         <styleClass>
-            <String fx:value="btn-primary" />
-            <String fx:value="bg-primary" />
-         </styleClass>
+      <Button fx:id="addToCartButton" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="230.0" maxHeight="10.0" maxWidth="10.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="150.0" styleClass="btn-primary-alternative-2" text="Lägg i kundvagn">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

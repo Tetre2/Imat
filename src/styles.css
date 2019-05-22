@@ -29,6 +29,11 @@ secondary: #107dac
     -fx-background-color: #107dac;
 }
 
+.bg-primary-alternative-2 {
+    -fx-background-color: #3d8027;
+}
+
+
 .bold {
     -fx-font-weight: bold;
 }
@@ -78,13 +83,22 @@ secondary: #107dac
     -fx-text-fill: white;
 }
 
-.btn-primary {
+.btn-primary{
     -fx-background-radius: 8;
     -fx-background-insets: -2;
     -fx-text-fill: white;
     -fx-font-size: 16;
     -fx-background-color: #189ad3;
 }
+
+.btn-primary-alternative-2  {
+    -fx-background-radius: 8;
+    -fx-background-insets: -2;
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-background-color: #5baa5f;
+}
+
 
 .btn-primary:hover {
     -fx-background-color: #2ca1d3;

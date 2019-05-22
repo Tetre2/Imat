@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="400.0" maxWidth="375.0" minHeight="670.0" minWidth="400.0" prefHeight="720.0" prefWidth="400.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="400.0" maxWidth="375.0" minHeight="700.0" minWidth="400.0" prefHeight="720.0" prefWidth="400.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox alignment="TOP_CENTER" maxWidth="400.0" minWidth="400.0" prefHeight="670.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -25,14 +25,14 @@
                   <FlowPane fx:id="inventory" maxWidth="392.0" minWidth="372.0" prefHeight="610.0" prefWidth="535.0" />
                </content>
             </ScrollPane>
-            <VBox prefHeight="96.0" prefWidth="410.0">
+            <VBox prefHeight="140.0" prefWidth="400.0">
                <children>
                   <HBox prefHeight="18.0" prefWidth="400.0">
                      <children>
                         <Label text="Totalt:">
                            <styleClass>
                               <String fx:value="text" />
-                              <String fx:value="text-lg" />
+                              <String fx:value="text-xl" />
                            </styleClass>
                            <font>
                               <Font name="System Bold" size="12.0" />
@@ -41,7 +41,7 @@
                         <Label fx:id="amaunt" prefHeight="35.0" prefWidth="261.0" text="23,99 kr">
                            <styleClass>
                               <String fx:value="text" />
-                              <String fx:value="text-lg" />
+                              <String fx:value="text-xl" />
                            </styleClass>
                            <HBox.margin>
                               <Insets left="10.0" />
@@ -52,13 +52,16 @@
                         <Insets left="10.0" />
                      </VBox.margin>
                   </HBox>
-                  <Button fx:id="pay" alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="37.0" prefWidth="380.0" styleClass="btn-primary" text="Gå Till Kassan">
+                  <Button fx:id="pay" alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="57.0" prefWidth="380.0" styleClass="btn-checkout" text="Gå Till Kassan">
                      <VBox.margin>
-                        <Insets left="10.0" top="10.0" />
+                        <Insets top="5.0" />
                      </VBox.margin>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
                   </Button>
                </children>
                <padding>

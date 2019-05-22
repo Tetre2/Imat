@@ -32,3 +32,11 @@
 .text-area .scroll-pane .content{
     -fx-background-color: transparent;
 }
+
+.btn-checkout{
+    -fx-background-radius: 8;
+    -fx-background-insets: -2;
+    -fx-text-fill: white;
+    -fx-font-size: 30;
+    -fx-background-color: #189ad3;
+}
