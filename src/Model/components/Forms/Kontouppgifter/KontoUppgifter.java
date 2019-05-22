@@ -139,7 +139,7 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
         containerEditFlowPane.getChildren().add(kontonummer);
         containerEditFlowPane.getChildren().add(monthYearInputItem);
         containerEditFlowPane.getChildren().add(kontrollSiffror);
-        containerEditFlowPane.getChildren().add(save);
+        //containerEditFlowPane.getChildren().add(save);
 
         kontrollSiffror.setKontrolKod(creditCard.getVerificationCode());
         monthYearInputItem.setMonth(creditCard.getValidMonth() + "");

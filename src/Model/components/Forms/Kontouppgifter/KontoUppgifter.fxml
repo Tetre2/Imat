@@ -14,9 +14,9 @@
       <VBox fx:id="rootVBox" prefHeight="200.0" prefWidth="1000.0">
          <children>
             <FlowPane fx:id="containerEditFlowPane" prefHeight="200.0" prefWidth="200.0" />
-            <AnchorPane fx:id="rootButton" minHeight="80.0" prefHeight="80.0" prefWidth="1000.0" style="-fx-background-color: green;">
+            <AnchorPane fx:id="rootButton" minHeight="80.0" prefHeight="80.0" prefWidth="1000.0">
                <children>
-                  <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" layoutX="118.0" layoutY="5.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="193.0" text="Spara">
+                  <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="5.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="193.0" text="Spara">
                      <styleClass>
                         <String fx:value="btn-primary" />
                         <String fx:value="bg-primary" />
@@ -28,7 +28,7 @@
                         <Font size="24.0" />
                      </font>
                   </Button>
-                  <AnchorPane fx:id="error" layoutX="347.0" layoutY="5.0" prefHeight="70.0" prefWidth="307.0" style="-fx-border-width: 3; -fx-border-color: red; -fx-border-radius: 5;">
+                  <AnchorPane fx:id="error" layoutX="429.0" layoutY="5.0" prefHeight="70.0" prefWidth="307.0" style="-fx-border-width: 3; -fx-border-color: red; -fx-border-radius: 5;">
                      <children>
                         <Label fx:id="errLabel" layoutX="5.0" layoutY="1.0" prefHeight="53.0" prefWidth="296.0" text="Label" wrapText="true" />
                      </children>

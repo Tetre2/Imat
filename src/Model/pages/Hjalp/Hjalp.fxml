@@ -53,13 +53,13 @@
                   <String fx:value="bold" />
                </styleClass>
             </Label>
-            <Label layoutX="661.0" layoutY="105.0" prefHeight="46.0" prefWidth="298.0" text="  1. Navigera till handla, det är kanppen bredvid sökfältet" wrapText="true">
+            <Label layoutX="661.0" layoutY="105.0" prefHeight="46.0" prefWidth="298.0" text="  1. Navigera till handla, det är knappen bredvid sökfältet" wrapText="true">
                <styleClass>
                   <String fx:value="text" />
                   <String fx:value="text-md" />
                </styleClass>
             </Label>
-            <Label layoutX="661.0" layoutY="179.0" prefHeight="38.0" prefWidth="298.0" text="  3. Klicka på lägg till i varukorgen">
+            <Label layoutX="661.0" layoutY="179.0" prefHeight="38.0" prefWidth="298.0" text="  3. Klicka på lägg till i kundvagn">
                <styleClass>
                   <String fx:value="text" />
                   <String fx:value="text-md" />
