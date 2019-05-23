@@ -16,15 +16,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
-import se.chalmers.cse.dat216.project.Order;
-import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ShoppingItem;
+import se.chalmers.cse.dat216.project.*;
 
+import java.awt.*;
 import java.io.IOException;
 
-public class Checkout extends AnchorPane implements UpdateButtonObservable {
+public class Checkout extends AnchorPane implements UpdateButtonObservable, ShoppingCartListener {
     @FXML private AnchorPane TopNav;
 
     @FXML private AnchorPane paymentContainerAnchorPane;
@@ -39,9 +39,12 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable {
 
     private Button makePaymentButton;
 
+    private Label totalPriceLabel;
+
     public Checkout(){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
+        IMat.getInstance().getShoppingCart().addShoppingCartListener(this);
 
         initUI();
     }
@@ -49,6 +52,7 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable {
     public void initUI() {
         //TopNav.getChildren().add(new Navbar());
         varukorgContainerAnchorPane.toFront();
+
 
         //createPaymentDoneUI();
         createPaymentUI();
@@ -146,10 +150,9 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable {
         ShoppingCheckout shoppingCheckout = new ShoppingCheckout();
 
         varukorgSection.addNode(shoppingCheckout);
-        varukorgSection.addNode(new ShoppingCheckoutDetails());
 
         Button continueShopping = new Button();
-        continueShopping.setText("<-- Fortsätt Handla");
+        continueShopping.setText("<-- Handla mer");
         continueShopping.getStyleClass().add("btn-primary");
         continueShopping.setOnAction(e -> IMat.getInstance().setSceneToMainPage());
         SequenceMap sequenceMap = new SequenceMap();
@@ -159,12 +162,17 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable {
         continueShoppingHBox.getChildren().addAll(continueShopping, sequenceMap);
 
         Button goToPaymentButton = new Button();
+        Label totalLabel = new Label("Totalt pris: ");
+        totalLabel.getStyleClass().add("text-lg");
+        totalPriceLabel = new Label(Double.toString(IMat.getInstance().getShoppingCart().getTotal()) + " kr   ");
+        totalPriceLabel.getStyleClass().addAll("text-lg", "bold");
         goToPaymentButton.setText("Gå till Kassan -->");
-        goToPaymentButton.getStyleClass().add("btn-primary");
+        goToPaymentButton.getStyleClass().addAll("btn-primary", "btn-lg");
         goToPaymentButton.setOnAction(e -> goToPaymentStep());
         HBox goToPaymentHBox = new HBox();
+        goToPaymentHBox.setSpacing(5);
         goToPaymentHBox.setAlignment(Pos.CENTER_RIGHT);
-        goToPaymentHBox.getChildren().add(goToPaymentButton);
+        goToPaymentHBox.getChildren().addAll(totalLabel, totalPriceLabel, goToPaymentButton);
 
         varukorgContainerVBox.getChildren().add(continueShoppingHBox);
         varukorgContainerVBox.getChildren().add(varukorgSection);
@@ -202,5 +210,11 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable {
     public void setNavBar(Navbar navBar){
         if(!TopNav.getChildren().contains(navBar))
         TopNav.getChildren().add(navBar);
+    }
+
+    @Override
+    public void shoppingCartChanged(CartEvent cartEvent) {
+        System.out.println("here******************************");
+        totalPriceLabel.setText(Double.toString(IMat.getInstance().getShoppingCart().getTotal()) + " kr");
     }
 }
