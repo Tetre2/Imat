@@ -34,7 +34,7 @@
                       <Circle fill="WHITE" radius="33.0" stroke="#49b1dd" strokeType="INSIDE" strokeWidth="4.0" />
                   <Label styleClass="text-lg" text="2" translateX="-55.0" />
                   <Line endX="29.578582763671875" endY="-1.5688793791923672E-4" startX="-100.0" stroke="#dddddd" strokeLineJoin="ROUND" strokeWidth="3.0" translateX="-28.0" />
-                  <Circle fill="WHITE" radius="33.0" stroke="#dddddd" strokeType="INSIDE" strokeWidth="4.0" translateX="-21.0" />
+                  <Circle fx:id="payCircle" fill="WHITE" radius="33.0" stroke="#dddddd" strokeType="INSIDE" strokeWidth="4.0" translateX="-21.0" />
                   <Label styleClass="text-lg" text="3" translateX="-76.0" />
                   </children>
               </HBox>

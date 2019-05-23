@@ -90,8 +90,14 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable {
 
         TitledSection titledSectionPay = new TitledSection("3. Slutför din order", null);
         ShoppingCheckoutDetails details = new ShoppingCheckoutDetails();
-        titledSectionPay.addNode(details);
-        titledSectionPay.addNode(makePaymentHBox);
+        HBox hContainer = new HBox();
+        hContainer.setAlignment(Pos.CENTER);
+        VBox container = new VBox();
+        container.setSpacing(25);
+        container.setAlignment(Pos.CENTER);
+        container.getChildren().addAll(details, makePaymentHBox);
+        hContainer.getChildren().add(container);
+        titledSectionPay.addNode(hContainer);
 
         paymentContainerVBox.getChildren().addAll(goToVarukorgHBox, titledSectionPerson, titledSectionKonto, titledSectionPay);
     }

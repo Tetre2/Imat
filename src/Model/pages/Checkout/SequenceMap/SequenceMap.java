@@ -17,6 +17,7 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
+import javafx.scene.shape.Circle;
 import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
@@ -26,6 +27,7 @@ import java.io.IOException;
 public class SequenceMap extends AnchorPane {
     @FXML private Button handlaButton;
     @FXML private Button handlaButton2;
+    @FXML private Circle payCircle;
 
     public SequenceMap(){
         FXMLLoader fxmlLoader = initFXML();
