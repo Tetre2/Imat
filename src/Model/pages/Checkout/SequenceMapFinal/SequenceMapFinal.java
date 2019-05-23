@@ -1,4 +1,4 @@
-package Model.pages.Checkout.SequenceMap;
+package Model.pages.Checkout.SequenceMapFinal;
 
 import Model.IMat;
 import Model.Main;
@@ -17,17 +17,20 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
+import javafx.scene.shape.Circle;
 import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import javax.swing.text.html.ImageView;
 import java.io.IOException;
 
-public class SequenceMap extends AnchorPane {
+public class SequenceMapFinal extends AnchorPane {
     @FXML private Button handlaButton;
     @FXML private Button handlaButton2;
+    @FXML private Button varukorgButton;
+    @FXML private Button varukorgButton2;
 
-    public SequenceMap(){
+    public SequenceMapFinal(){
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
@@ -35,10 +38,15 @@ public class SequenceMap extends AnchorPane {
         handlaButton2.setOnAction(e -> IMat.getInstance().setSceneToMainPage());
         handlaButton.getStyleClass().add("btn-hover");
         handlaButton2.getStyleClass().add("btn-hover");
+
+        varukorgButton.setOnAction(e -> IMat.getInstance().setSceneToCheckout());
+        varukorgButton2.setOnAction(e -> IMat.getInstance().setSceneToCheckout());
+        varukorgButton.getStyleClass().add("btn-hover");
+        varukorgButton2.getStyleClass().add("btn-hover");
     }
 
     private FXMLLoader initFXML() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SequenceMap.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SequenceMapFinal.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         return fxmlLoader;

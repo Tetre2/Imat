@@ -6,6 +6,8 @@ import Model.components.Forms.Kontouppgifter.KontoUppgifter;
 import Model.components.Forms.PersonUppgifter.PersonUppgifter;
 import Model.components.Navbar.Navbar;
 import Model.pages.Checkout.PaymentDoneBox.PaymentDoneBox;
+import Model.pages.Checkout.SequenceMap.SequenceMap;
+import Model.pages.Checkout.SequenceMapFinal.SequenceMapFinal;
 import Model.pages.Checkout.ShoppingCheckout.ShoppingCheckout;
 import Model.components.TitledSection.TitledSection;
 import Model.pages.Checkout.ShoppingCheckout.ShoppingCheckoutDetails.ShoppingCheckoutDetails;
@@ -65,9 +67,11 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable {
         goToVarukorgButton.setText("<-- Gå Tillbaka till Varukorgen");
         goToVarukorgButton.getStyleClass().add("btn-primary");
         goToVarukorgButton.setOnAction(e -> goToVarukorgStep());
+        SequenceMapFinal sequenceMapFinal = new SequenceMapFinal();
         HBox goToVarukorgHBox = new HBox();
         goToVarukorgHBox.setAlignment(Pos.CENTER_LEFT);
-        goToVarukorgHBox.getChildren().add(goToVarukorgButton);
+        goToVarukorgHBox.setSpacing(55);
+        goToVarukorgHBox.getChildren().addAll(goToVarukorgButton, sequenceMapFinal);
 
         makePaymentButton = new Button();
         makePaymentButton.getStyleClass().addAll("btn-lg", "btn-primary");
@@ -142,9 +146,11 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable {
         continueShopping.setText("<-- Fortsätt Handla");
         continueShopping.getStyleClass().add("btn-primary");
         continueShopping.setOnAction(e -> IMat.getInstance().setSceneToMainPage());
+        SequenceMap sequenceMap = new SequenceMap();
         HBox continueShoppingHBox = new HBox();
         continueShoppingHBox.setAlignment(Pos.CENTER_LEFT);
-        continueShoppingHBox.getChildren().add(continueShopping);
+        continueShoppingHBox.setSpacing(90);
+        continueShoppingHBox.getChildren().addAll(continueShopping, sequenceMap);
 
         Button goToPaymentButton = new Button();
         goToPaymentButton.setText("Gå till Kassan -->");

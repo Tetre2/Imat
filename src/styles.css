@@ -5,6 +5,10 @@ lighter primary: #2ca1d3
 anything that has active state: #49b1dd
 secondary: #107dac
 */
+.btn-hover {
+    -fx-cursor: hand;
+}
+
 .active-state-background {
     -fx-background-color: #49b1dd;
 }
