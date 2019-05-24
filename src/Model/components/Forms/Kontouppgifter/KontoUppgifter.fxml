@@ -28,9 +28,9 @@
                         <Font size="24.0" />
                      </font>
                   </Button>
-                  <AnchorPane fx:id="error" layoutX="429.0" layoutY="5.0" prefHeight="70.0" prefWidth="307.0" style="-fx-border-width: 3; -fx-border-color: red; -fx-border-radius: 5;">
+                  <AnchorPane fx:id="error" layoutX="429.0" layoutY="5.0" prefHeight="70.0" prefWidth="307.0" visible="false">
                      <children>
-                        <Label fx:id="errLabel" layoutX="5.0" layoutY="1.0" prefHeight="53.0" prefWidth="296.0" text="Label" wrapText="true" />
+                        <Label fx:id="errLabel" layoutX="5.0" layoutY="1.0" prefHeight="53.0" prefWidth="296.0" text="Label" textFill="RED" wrapText="true" />
                      </children>
                   </AnchorPane>
                </children>

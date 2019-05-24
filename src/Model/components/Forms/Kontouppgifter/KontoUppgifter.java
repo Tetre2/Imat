@@ -197,6 +197,7 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
         }
 
         try {
+            kontoAgare.setHasBinFocused(true);
             creditCard.setHoldersName(kontoAgare.getInput());
         }catch (Exception e){
             isValid = false;
