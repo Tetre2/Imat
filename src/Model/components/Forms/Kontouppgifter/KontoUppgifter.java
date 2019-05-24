@@ -44,7 +44,7 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
     private KontrolSiffror kontrollSiffror = new KontrolSiffror(null);
     private MonthYearInputItem monthYearInputItem = new MonthYearInputItem(kontrollSiffror);
     private KontoNummerInputItem kontonummer = new KontoNummerInputItem(monthYearInputItem);
-    private TextInput kontoAgare = new TextInput("Ägarens förnamn:", "Britt", "Ange ägarens förnamn till kontokortet *", kontonummer.getLimitedTextFields().get(0), true);
+    private TextInput kontoAgare = new TextInput("Ägarens förnamn:", "Britt", "Ange ägarens förnamn till kontokortet", kontonummer.getLimitedTextFields().get(0), true);
 
     private Label nameLabel = new Label();
     private Label creditCardNumberLabel = new Label();

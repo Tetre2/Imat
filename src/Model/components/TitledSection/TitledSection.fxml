@@ -22,14 +22,14 @@
                <children>
                   <VBox prefHeight="72.0" prefWidth="594.0">
                      <children>
-                        <Label fx:id="titleLabel" text="Granska din Varukorg">
+                        <Label fx:id="titleLabel" prefHeight="23.0" prefWidth="497.0" text="Granska din Varukorg">
                            <styleClass>
                               <String fx:value="text" />
                               <String fx:value="text-md" />
                               <String fx:value="bold" />
                            </styleClass>
                            <VBox.margin>
-                              <Insets top="15.0" />
+                              <Insets top="20.0" />
                            </VBox.margin>
                         </Label>
                         <Label fx:id="tooltipLabel" prefHeight="25.0" prefWidth="527.0" text="Label">

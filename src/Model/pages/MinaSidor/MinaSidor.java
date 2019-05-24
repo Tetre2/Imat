@@ -33,11 +33,11 @@ public class MinaSidor extends AnchorPane implements UpdateButtonObservable {
 
         addEventListeners();
 
-        TitledSection titledSectionKonto = new TitledSection("Kontouppgifter", "Fält med * måste fyllas i");
+        TitledSection titledSectionKonto = new TitledSection("Kontouppgifter", "");
         KontoUppgifter tmpKonto = new KontoUppgifter(this);
         titledSectionKonto.addNode(tmpKonto);
 
-        TitledSection titledSectionPerson = new TitledSection("Personuppgifter", "Fält med * måste fyllas i");
+        TitledSection titledSectionPerson = new TitledSection("Personuppgifter", "");
         personUppgifter = new PersonUppgifter(this);
         titledSectionPerson.addNode(personUppgifter);
 

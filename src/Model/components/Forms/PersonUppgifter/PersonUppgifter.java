@@ -128,13 +128,13 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
 
     private void initEditUI() {
         textInputs = new ArrayList<>();
-        postaddress = new TextInput("Postadress:", "Göteborg", "Ange din postadress *", null, true);
-        postcode = new TextInput("Postnummer:", "123 45", "Ange ditt postnummer *", postaddress, true);
-        address = new TextInput("Adress:", "Långgatan 6", "Ange din adress *", postcode, true);
-        email = new TextInput("Mail:", "exempel@email.com", "Ange din mejl *", address, true);
+        postaddress = new TextInput("Postadress:", "Göteborg", "Ange din postadress", null, true);
+        postcode = new TextInput("Postnummer:", "123 45", "Ange ditt postnummer", postaddress, true);
+        address = new TextInput("Adress:", "Långgatan 6", "Ange din adress", postcode, true);
+        email = new TextInput("Mail:", "exempel@email.com", "Ange din mejl", address, true);
         phone = new TextInput("Telefonnummer:", "123456789", "Ange ditt telefonnummer", email, false);
-        lastname = new TextInput("Efternamn:", "persson", "Ange ditt efternamn *", phone, true);
-        firstname = new TextInput("Förnamn:", "Brit", "Ange ditt förnamn *", lastname, true);
+        lastname = new TextInput("Efternamn:", "persson", "Ange ditt efternamn", phone, true);
+        firstname = new TextInput("Förnamn:", "Brit", "Ange ditt förnamn", lastname, true);
 
         containerEditFlowPane.getChildren().add(firstname);
         containerEditFlowPane.getChildren().add(lastname);

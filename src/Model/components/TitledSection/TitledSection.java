@@ -23,7 +23,11 @@ public class TitledSection extends AnchorPane {
         tryToLoadFXML(fxmlLoader);
 
         titleLabel.setText(title);
-        this.tooltipLabel.setText(tooltipLabel);
+        if(tooltipLabel == null){
+            this.tooltipLabel = null;
+        }else {
+            this.tooltipLabel.setText(tooltipLabel);
+        }
         //centerContainerVBox.maxHeightProperty().bind(centerContainerVBox.heightProperty());
     }
 

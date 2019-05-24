@@ -17,7 +17,7 @@
             <FlowPane fx:id="containerEditFlowPane" prefHeight="620.0" prefWidth="1000.0" />
             <AnchorPane fx:id="rootButton" minHeight="80.0" prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" layoutX="208.0" layoutY="5.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="193.0" text="Fortsätt">
+                  <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" layoutX="208.0" layoutY="5.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="193.0" text="Spara">
                      <styleClass>
                         <String fx:value="btn-primary" />
                         <String fx:value="bg-primary" />
