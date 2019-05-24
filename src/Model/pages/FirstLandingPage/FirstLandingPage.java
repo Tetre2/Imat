@@ -25,8 +25,8 @@ public class FirstLandingPage extends AnchorPane {
     }
 
     private void addLisners(){
-        handla.setOnAction(event -> Main.setSceneToMainPage());
-        hjalp.setOnAction(event -> Main.setSceneToHjalp());
+        handla.setOnAction(event -> Main.getNavbar().goToMainPage());
+        hjalp.setOnAction(event -> Main.getNavbar().goToHjalp());
     }
 
 

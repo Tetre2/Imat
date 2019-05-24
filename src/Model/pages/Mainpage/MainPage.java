@@ -56,7 +56,9 @@ public class MainPage extends AnchorPane implements CategoryListener, ShoppingIt
         RightSidebar rightSidebar = new RightSidebar();
         varukorg.getChildren().add(rightSidebar);
 
-        Navbar navbar = new Navbar();
+
+        leftSidebar.fireCategoryChanged(MainCategory.FAVORIT);
+
         //topNavBar.getChildren().add(navbar);
 
     }
