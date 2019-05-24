@@ -44,7 +44,7 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
     private KontrolSiffror kontrollSiffror = new KontrolSiffror(null);
     private MonthYearInputItem monthYearInputItem = new MonthYearInputItem(kontrollSiffror);
     private KontoNummerInputItem kontonummer = new KontoNummerInputItem(monthYearInputItem);
-    private TextInput kontoAgare = new TextInput("Ägarens förnamn:", "Britt", "Ange ägarens förnamn till kontokortet", kontonummer.getLimitedTextFields().get(0), true);
+    private TextInput kontoAgare = new TextInput("Ägarens förnamn:", "", "Ange ägarens förnamn till kontokortet ex. Brit", kontonummer.getLimitedTextFields().get(0), true);
 
     private Label nameLabel = new Label();
     private Label creditCardNumberLabel = new Label();
@@ -70,6 +70,9 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
         addEventListeners();
 
         hideErr();
+
+
+        save.setText("Spara");
 
     }
 
@@ -159,7 +162,10 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
     private void saveInfo(){
         hideErr();
         clearVisuals();
+        boolean isValid = true;
+
         try {
+            creditCard.setCardNumber(kontonummer.getInput());
             String cardType;
             if (kontonummer.getInput().substring(0,1).equals("5")) {
                 cardType = "Master Card";
@@ -168,20 +174,44 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
             }
 
             creditCard.setCardType(cardType);
-            creditCard.setVerificationCode(kontrollSiffror.getInput());
-            creditCard.setValidMonth(monthYearInputItem.getMonth());
-            creditCard.setValidYear(monthYearInputItem.getYear());
-            creditCard.setCardNumber(kontonummer.getInput());
-            creditCard.setHoldersName(kontoAgare.getInput());
-            save.setText("Sparad");
+        }catch (Exception e){
+            isValid = false;
+        }
 
+        try {
+            creditCard.setVerificationCode(kontrollSiffror.getInput());
+        }catch (Exception e){
+            isValid = false;
+        }
+
+        try {
+            creditCard.setValidMonth(monthYearInputItem.getMonth());
+        }catch (Exception e){
+            isValid = false;
+        }
+
+        try {
+            creditCard.setValidYear(monthYearInputItem.getYear());
+        }catch (Exception e){
+            isValid = false;
+        }
+
+        try {
+            creditCard.setHoldersName(kontoAgare.getInput());
+        }catch (Exception e){
+            isValid = false;
+        }
+
+
+        if(isValid){
+            save.setText("Sparad");
             showSaved();
             transitionToDoneUI();
             updateButtonObservable.updateButton();
-        } catch (NotValidInput notValidInput) {
-            System.out.println("Input not Valid");
+        }else {
             showErr();
         }
+
     }
 
     private void transitionToDoneUI() {

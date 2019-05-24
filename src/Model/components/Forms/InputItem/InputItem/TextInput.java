@@ -133,16 +133,14 @@ public class TextInput extends AnchorPane implements Focusable{
             setDefault();
             textField.getStyleClass().add("textBoxErr");
             error.setVisible(true);
-            errLabel.setText("Du har inte anget något i ett fällt som det är nödvändigt att fylla i.");
+            errLabel.setText("Du har inte fyllt i något.");
         }
     }
 
     public void setSuccess(){
-        if(hasBinFocused) {
             setDefault();
             textField.getStyleClass().add("textBoxSaved");
             error.setVisible(false);
-        }
     }
 
     public void setDefault(){
@@ -159,4 +157,7 @@ public class TextInput extends AnchorPane implements Focusable{
 
     }
 
+    public void setHasBinFocused(boolean hasBinFocused) {
+        this.hasBinFocused = hasBinFocused;
+    }
 }

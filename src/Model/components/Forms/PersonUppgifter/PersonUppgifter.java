@@ -128,13 +128,13 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
 
     private void initEditUI() {
         textInputs = new ArrayList<>();
-        postaddress = new TextInput("Postadress:", "Göteborg", "Ange din postadress", null, true);
-        postcode = new TextInput("Postnummer:", "123 45", "Ange ditt postnummer", postaddress, true);
-        address = new TextInput("Adress:", "Långgatan 6", "Ange din adress", postcode, true);
-        email = new TextInput("Mail:", "exempel@email.com", "Ange din mejl", address, true);
-        phone = new TextInput("Telefonnummer:", "123456789", "Ange ditt telefonnummer", email, false);
-        lastname = new TextInput("Efternamn:", "persson", "Ange ditt efternamn", phone, true);
-        firstname = new TextInput("Förnamn:", "Brit", "Ange ditt förnamn", lastname, true);
+        postaddress = new TextInput("Postadress:", "", "Ange din postadress ex. Göteborg", null, true);
+        postcode = new TextInput("Postnummer:", "", "Ange ditt postnummer ex. 654 23", postaddress, true);
+        address = new TextInput("Adress:", "", "Ange din adress ex. Långgatan 6", postcode, true);
+        email = new TextInput("Mail:", "", "Ange din mail ex. brit@email.com", address, true);
+        phone = new TextInput("Telefonnummer:", "", "Ange ditt telefonnummer ex. 031458295", email, true);
+        lastname = new TextInput("Efternamn:", "", "Ange ditt efternamn ex. Person", phone, true);
+        firstname = new TextInput("Förnamn:", "", "Ange ditt förnamn ex. Brit", lastname, true);
 
         containerEditFlowPane.getChildren().add(firstname);
         containerEditFlowPane.getChildren().add(lastname);
@@ -160,6 +160,8 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         textInputs.add(postcode);
         textInputs.add(postaddress);
 
+        save.setText("Spara");
+
         if (!rootVBox.getChildren().contains(rootButton)) {
             rootVBox.getChildren().add(rootButton);
         }
@@ -172,23 +174,68 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
     private void save(){
         hideErr();
         clearVisuals();
-        try {
-            customer.setPostAddress(postaddress.getInput());
-            customer.setPostCode(postcode.getInput());
-            customer.setAddress(address.getInput());
-            customer.setEmail(email.getInput());
-            customer.setPhoneNumber(phone.getInput());
-            customer.setLastName(lastname.getInput());
-            customer.setFirstName(firstname.getInput());
 
+        boolean isValied = true;
+
+        try {
+            firstname.setHasBinFocused(true);
+            customer.setFirstName(firstname.getInput());
+        }catch (Exception e){
+            isValied = false;
+        }
+
+        try {
+            lastname.setHasBinFocused(true);
+            customer.setLastName(lastname.getInput());
+        }catch (Exception e){
+            isValied = false;
+        }
+
+        try {
+            phone.setHasBinFocused(true);
+            customer.setPhoneNumber(phone.getInput());
+        }catch (Exception e){
+            isValied = false;
+        }
+
+        try {
+            email.setHasBinFocused(true);
+            customer.setEmail(email.getInput());
+        }catch (Exception e){
+            isValied = false;
+        }
+
+        try {
+            address.setHasBinFocused(true);
+            customer.setAddress(address.getInput());
+        }catch (Exception e){
+            isValied = false;
+        }
+
+        try {
+            postcode.setHasBinFocused(true);
+            customer.setPostCode(postcode.getInput());
+        }catch (Exception e){
+            isValied = false;
+        }
+
+        try {
+            postaddress.setHasBinFocused(true);
+            customer.setPostAddress(postaddress.getInput());
+
+        } catch (NotValidInput notValidInput) {
+            isValied = false;
+        }
+
+        if(isValied){
             save.setText("Sparad");
             showSaved();
             transitionToDoneUI();
             updateButtonObservable.updateButton();
-        } catch (NotValidInput notValidInput) {
-            notValidInput.printStackTrace();
+        }else {
             showErr();
         }
+
     }
 
     private void transitionToDoneUI() {
