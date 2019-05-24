@@ -113,7 +113,7 @@ public class Navbar extends AnchorPane {
             if (ke.getCode().equals(KeyCode.ENTER)) {
                 searchedItems.clear();
                 searchedItems.addAll(getProductsFromSearch(searchBar.getText()));
-                mainPage.showProductsToGrid(searchedItems, " Resultat utav sökning: \""+ searchBar.getText() + "\"");
+                mainPage.showProductsToGrid(searchedItems, "Resultat utav sökning: \""+ searchBar.getText() + "\"");
                 hideSearchedItems();
             }});
 

@@ -49,7 +49,7 @@ public class SearchedItem extends AnchorPane {
         root.setOnMouseClicked(event -> {
             List<Product> arr = new ArrayList<>();
             arr.add(product);
-            Main.getMainPage().showProductsToGrid(arr, product.getName());
+            Main.getMainPage().showProductsToGrid(arr, "Sökresultat: " + product.getName());
             parent.goToMainPage();
 
         });
