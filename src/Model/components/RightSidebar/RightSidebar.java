@@ -79,7 +79,7 @@ public class RightSidebar extends AnchorPane implements ShoppingCartListener {
     }
 
     private void onLinkPressed(){
-        IMat.getInstance().setSceneToHelp();
+        Main.getNavbar().goToHjalp();
     }
 
     private void onPayPressed(){
