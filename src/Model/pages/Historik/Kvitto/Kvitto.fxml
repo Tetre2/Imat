@@ -71,7 +71,7 @@
             </HBox>
          </content>
       </ScrollPane>
-      <Button fx:id="close" layoutX="629.0" layoutY="6.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="63.0">
+      <Button fx:id="close" layoutX="629.0" layoutY="6.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="63.0" styleClass="btn-nostyle">
          <graphic>
             <ImageView fitHeight="50.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                <image>
