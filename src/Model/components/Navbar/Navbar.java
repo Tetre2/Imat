@@ -115,6 +115,7 @@ public class Navbar extends AnchorPane {
                 searchedItems.addAll(getProductsFromSearch(searchBar.getText()));
                 mainPage.showProductsToGrid(searchedItems, "Resultat utav sökning: \""+ searchBar.getText() + "\"");
                 hideSearchedItems();
+                goToMainPage();
             }});
 
     }
