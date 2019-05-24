@@ -111,6 +111,8 @@ public class Navbar extends AnchorPane {
         //för att man ska kunna trycka enter
         searchBar.setOnKeyPressed(ke -> {
             if (ke.getCode().equals(KeyCode.ENTER)) {
+                searchedItems.clear();
+                searchedItems.addAll(getProductsFromSearch(searchBar.getText()));
                 mainPage.showProductsToGrid(searchedItems, " Resultat utav sökning: \""+ searchBar.getText() + "\"");
                 hideSearchedItems();
             }});
