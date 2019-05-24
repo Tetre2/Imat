@@ -5,6 +5,7 @@ import Model.components.LeftSidebar.LeftSidebarCategory.MainCategory;
 import Model.components.Navbar.Navbar;
 import Model.pages.Checkout.Checkout;
 import Model.pages.Favoriter.Favoriter;
+import Model.pages.FirstLandingPage.FirstLandingPage;
 import Model.pages.Historik.Historik;
 import Model.pages.Hjalp.Hjalp;
 import Model.pages.Mainpage.MainPage;
@@ -35,6 +36,7 @@ public class Main extends Application implements ShoppingCartListener {
     private static MinaSidor minaSidor;
     private static Hjalp hjalp;
     private static Favoriter favoriter;
+    private static FirstLandingPage firstLandingPage;
 
     private static Navbar navbar;
 
@@ -55,13 +57,14 @@ public class Main extends Application implements ShoppingCartListener {
         minaSidor = new MinaSidor();
         hjalp = new Hjalp();
         favoriter = new Favoriter();
+        firstLandingPage = new FirstLandingPage();
 
         navbar = new Navbar();
 
         removeEmptyProducts();
 
         if(IMat.getInstance().isFirstRun()){
-            navbar.goToHjalp();
+            setSceneToFirstLandingPage();
         }else {
             navbar.goToMainPage();
             mainPage.getLeftSidebar().fireCategoryChanged(MainCategory.FAVORIT);
@@ -81,7 +84,12 @@ public class Main extends Application implements ShoppingCartListener {
         mainPage.categoryChanged(mc);
     }
 
-
+    public static void setSceneToFirstLandingPage(){
+        Group group = new Group();
+        group.getChildren().add(firstLandingPage);
+        Scene scene = new Scene(group);
+        window.setScene(scene);
+    }
 
     public static void setSceneToMinaSidor(){
         Group group = new Group();

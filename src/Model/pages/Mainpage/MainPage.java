@@ -49,7 +49,7 @@ public class MainPage extends AnchorPane implements CategoryListener, ShoppingIt
 
         //visa alla produkter
         //showAllItems();
-
+        preloadShoppingItems();
         leftSidebar = new LeftSidebar();
         LeftNavBar.getChildren().add(leftSidebar);
         leftSidebar.addCategoryListener(this);

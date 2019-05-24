@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<fx:root prefHeight="900.0" prefWidth="1540.0" stylesheets="@../../../styles.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="546.0" layoutY="119.0" text="Välkommen till IMat">
+         <styleClass>
+            <String fx:value="text" />
+            <String fx:value="text-xxl" />
+         </styleClass>
+      </Label>
+      <Label layoutX="546.0" layoutY="259.0" />
+      <TextArea editable="false" layoutX="448.0" layoutY="210.0" prefHeight="200.0" prefWidth="645.0" style="-fx-background-color: none;" text="IMat är en enkel matvarubutik på nätet för dig som tycker att det ska vara lätt att handla mat. &#10;&#10;Om du redan vet hur du använder IMat och vill börja handla kan du klicka på &quot;Börja handla&quot;.&#10;&#10;Om du aldrig använt IMat förut kan du klicka på &quot;Få hjälp&quot; för att få en intruduktion till hur du kan använda IMat." wrapText="true">
+         <styleClass>
+            <String fx:value="btn-nostyle" />
+            <String fx:value="text" />
+            <String fx:value="text-md" />
+         </styleClass>
+      </TextArea>
+      <Button fx:id="handla" layoutX="448.0" layoutY="537.0" mnemonicParsing="false" text="Börja handla">
+         <styleClass>
+            <String fx:value="btn-lg" />
+            <String fx:value="btn-checkout" />
+         </styleClass>
+      </Button>
+      <Button fx:id="hjalp" layoutX="965.0" layoutY="537.0" mnemonicParsing="false" text="Få hjälp">
+         <styleClass>
+            <String fx:value="btn-checkout" />
+            <String fx:value="btn-lg" />
+         </styleClass>
+      </Button>
+   </children>
+</fx:root>
