@@ -210,7 +210,7 @@ public class MainPage extends AnchorPane implements CategoryListener, ShoppingIt
 
     @Override
     public void shoppingItemClicked(ShoppingItem shoppingItem) {
-        if(grid.getChildren().contains(shoppingItem)){
+        if(leftSidebar.getCurrentCategory() == MainCategory.FAVORIT){//ifall vi befinner oss på favoritsidan och tar bot ett item ska sidan uppdateras
             updateGrid(leftSidebar.getCurrentCategory(), leftSidebar.getCurrentCategory().toString());
         }
     }
