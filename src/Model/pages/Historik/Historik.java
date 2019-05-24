@@ -1,11 +1,13 @@
 package Model.pages.Historik;
 
 import Model.IMat;
+import Model.Main;
 import Model.components.Navbar.Navbar;
 import Model.pages.Historik.HistorikItem.HistorikItem;
 import Model.pages.Historik.Kvitto.Kvitto;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import se.chalmers.cse.dat216.project.Order;
@@ -23,6 +25,10 @@ public class Historik extends AnchorPane {
     private AnchorPane kvittoOverlay;
     @FXML
     private AnchorPane kvittoGray;
+    @FXML
+    private AnchorPane noOrders;
+    @FXML
+    private Button shop;
 
     public Historik(){
         FXMLLoader fxmlLoader = initFXML();
@@ -31,11 +37,14 @@ public class Historik extends AnchorPane {
         addEventListeners();
         hideKvitto();
 
+
+
     }
 
     private void addEventListeners(){
         kvittoGray.setOnMouseClicked(event -> hideKvitto());
         kvittoOverlay.setOnMouseClicked(event -> event.consume());
+        shop.setOnAction(event -> Main.getNavbar().goToMainPage());
     }
 
     private FXMLLoader initFXML() {
@@ -54,6 +63,13 @@ public class Historik extends AnchorPane {
     }
 
     private void loadOrders(){
+
+        if(IMat.getInstance().getOrders().size() == 0){
+            noOrders.setVisible(true);
+        }else {
+            noOrders.setVisible(false);
+        }
+
         for (int i = 0; i < IMat.getInstance().getOrders().size(); i++) {
             HistorikItem historikItem = new HistorikItem(IMat.getInstance().getOrders().get(i), this);
             gridPane.setConstraints(historikItem, 0, i);

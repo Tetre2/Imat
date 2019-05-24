@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -36,6 +38,29 @@
             </VBox>
          </content>
       </ScrollPane>
+      <AnchorPane fx:id="noOrders" layoutX="430.0" layoutY="420.0" prefHeight="268.0" prefWidth="680.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="157.0" layoutY="33.0" text="Du har inte gjort några köp än">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-lg" />
+                  <String fx:value="bold" />
+               </styleClass>
+            </Label>
+            <Label layoutX="147.0" layoutY="91.0" prefHeight="51.0" prefWidth="414.0" text="När du har handlar kommer dina köp samlas här. Tryck på knappen för att börja handla" wrapText="true">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-md" />
+               </styleClass>
+            </Label>
+            <Button fx:id="shop" layoutX="282.0" layoutY="177.0" mnemonicParsing="false" text="Handla">
+               <styleClass>
+                  <String fx:value="btn-primary" />
+                  <String fx:value="btn-lg" />
+               </styleClass>
+            </Button>
+         </children>
+      </AnchorPane>
       <AnchorPane layoutY="100.0" prefHeight="200.0" prefWidth="1540.0" style="-fx-background-color: white;">
          <children>
             <Label layoutX="272.0" layoutY="60.0" prefHeight="65.0" prefWidth="1130.0" styleClass="bold" text="Mina Beställningar">
