@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -9,8 +10,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.TextFlow?>
 
-<fx:root maxWidth="380.0" minHeight="50.0" prefWidth="600.0" style="-fx-border-width: 2; -fx-border-color: #ebebeb;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxWidth="380.0" minHeight="50.0" prefWidth="600.0" style="-fx-border-width: 2; -fx-border-color: #ebebeb;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
          <children>
@@ -19,11 +21,20 @@
                   <Image url="@../../../resources/product_8.jpg" />
                </image>
             </ImageView>
-            <Label fx:id="name" prefHeight="91.0" prefWidth="110.0" styleClass="text-sm" text="Grovt Bröd" wrapText="true">
+            <TextFlow prefHeight="80.0" prefWidth="98.0">
+               <children>
+                  <Label fx:id="name" alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="52.0" prefWidth="103.0" styleClass="text-sm" text="Grovt Bröd" wrapText="true" />
+                  <Label fx:id="price" alignment="BOTTOM_LEFT" contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="33.0" prefWidth="98.0" text="22.99 Kr">
+                     <styleClass>
+                        <String fx:value="text" />
+                        <String fx:value="text-sm" />
+                     </styleClass>
+                  </Label>
+               </children>
                <HBox.margin>
-                  <Insets left="10.0" />
+                  <Insets left="5.0" />
                </HBox.margin>
-            </Label>
+            </TextFlow>
             <Spinner fx:id="amount" accessibleText="1" editable="true" prefHeight="63.0" prefWidth="95.0" style="-fx-font-size: 20;" />
             <Button fx:id="close" mnemonicParsing="false" styleClass="btn-nostyle">
                <graphic>

@@ -25,10 +25,13 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
     @FXML
     private Label name;
     @FXML
+    private Label price;
+    @FXML
     private Spinner<Integer> amount;
     @FXML
     private Button close;
-    @FXML private ImageView closeImage;
+    @FXML
+    private ImageView closeImage;
 
     private ComboBox<String> fontFamilyField;
 
@@ -42,6 +45,10 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
         amount.setValueFactory(valueFactory);
 
         addEventListeners();
+
+
+        String s = String.format("%.2f", shoppingItem.getTotal());
+        price.setText(s + " Kr");
 
         name.setText(shoppingItem.getProduct().getName());
         image.setImage(IMat.getInstance().getImage(shoppingItem.getProduct()));
