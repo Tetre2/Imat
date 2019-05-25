@@ -28,7 +28,7 @@
             <HBox alignment="CENTER" maxWidth="500.0" prefHeight="75.0" prefWidth="500.0" spacing="30.0">
                <children>
                   <Button fx:id="shopMoreButton" mnemonicParsing="false" prefHeight="82.0" prefWidth="162.0" styleClass="btn-checkout" text="Handla mer" />
-                  <Button fx:id="showReceiptButton" mnemonicParsing="false" prefHeight="78.0" prefWidth="166.0" styleClass="btn-checkout" text="Se Kvittot" />
+                  <Button fx:id="showReceiptButton" mnemonicParsing="false" prefHeight="78.0" prefWidth="166.0" styleClass="btn-checkout-secondary" text="Se Kvittot" />
                </children>
             </HBox>
          </children>

@@ -105,6 +105,16 @@ secondary: #107dac
     -fx-font-size: 24;
     -fx-background-color: #189ad3;
 }
+
+.btn-checkout-secondary
+{
+    -fx-background-radius: 8;
+    -fx-background-insets: -2;
+    -fx-text-fill: white;
+    -fx-font-size: 24;
+    -fx-background-color: #107dac;
+
+}
 .btn-checkout:hover {
     -fx-background-color: #2ca1d3;
     -fx-cursor: hand;
