@@ -4,6 +4,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -16,6 +18,11 @@
    <children>
       <VBox alignment="CENTER" layoutX="-2.0" layoutY="-2.0" prefHeight="571.0" prefWidth="786.0" spacing="20.0">
          <children>
+            <ImageView fitHeight="150.0" fitWidth="666.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../resources/SM.PNG" />
+               </image>
+            </ImageView>
             <Label styleClass="text-xxl" text="Tack för ditt köp" />
             <Label alignment="CENTER" prefHeight="135.0" prefWidth="356.0" styleClass="text-xl" text="Köpet har gått igenom och du kommer få dina produkter inom kort." textAlignment="CENTER" wrapText="true" />
             <HBox alignment="CENTER" maxWidth="500.0" prefHeight="75.0" prefWidth="500.0" spacing="30.0">
