@@ -55,6 +55,8 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
     private List<TextInput> textInputs;
 
     private final String indent = "    ";
+    private final String indent2 = "          ";
+    private final String indent4 = "                  ";
 
     private final UpdateButtonObservable updateButtonObservable;
 
@@ -84,19 +86,19 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
 
         updatePreviewLabels();
 
-        Label contactHeaderLabel = new Label ("Kontaktuppgifter");
+        Label contactHeaderLabel = new Label (indent2 + "Kontaktuppgifter");
         contactHeaderLabel.getStyleClass().addAll("text", "text-md");
         contactHeaderLabel.getStyleClass().add("bold");
         numberLabel.getStyleClass().addAll("text", "text-md");
         mailLabel.getStyleClass().addAll("text", "text-md");
 
-        Label deliveryHeaderLabel = new Label ("Leveransuppgifter");
+        Label deliveryHeaderLabel = new Label (indent2 + "Leveransuppgifter");
         deliveryHeaderLabel.getStyleClass().addAll("text", "text-md");
         deliveryHeaderLabel.getStyleClass().add("bold");
         nameLabel.getStyleClass().addAll("text", "text-md");
         addressLabel.getStyleClass().addAll("text", "text-md");
 
-        Label edit = previewLabel(indent + "Redigera");
+        Label edit = previewLabel(indent4 + "Redigera");
         edit.getStyleClass().add("text-link");
         edit.setOnMouseClicked(e -> transitionToEditUI());
 
@@ -105,10 +107,10 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
     }
 
     private void updatePreviewLabels() {
-        numberLabel = new Label(indent + customer.getPhoneNumber());
-        mailLabel = new Label (indent + customer.getEmail());
-        nameLabel = new Label (indent + customer.getFirstName() + " " + customer.getLastName());
-        addressLabel = new Label (indent + customer.getAddress() + ", " + customer.getPostCode() + ", " + customer.getPostAddress());
+        numberLabel = new Label(indent4 + customer.getPhoneNumber());
+        mailLabel = new Label (indent4 + customer.getEmail());
+        nameLabel = new Label (indent4 + customer.getFirstName() + " " + customer.getLastName());
+        addressLabel = new Label (indent4 + customer.getAddress() + ", " + customer.getPostCode() + ", " + customer.getPostAddress());
     }
 
     private void transitionToEditUI() {

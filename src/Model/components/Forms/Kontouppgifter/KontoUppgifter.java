@@ -52,6 +52,8 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
     private Label controlNumberLabel = new Label();
 
     private final String indent = "    ";
+    private final String indent2 = "          ";
+    private final String indent4 = "                  ";
     private final UpdateButtonObservable updateButtonObservable;
 
 
@@ -83,7 +85,7 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
 
         updatePreviewLabels();
 
-        Label contactHeaderLabel = new Label ("Kontouppgifter");
+        Label contactHeaderLabel = new Label (indent2 + "Kontouppgifter");
         contactHeaderLabel.getStyleClass().addAll("text", "text-md");
         contactHeaderLabel.getStyleClass().add("bold");
         nameLabel.getStyleClass().addAll("text", "text-md");
@@ -91,9 +93,10 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
         experyDateLabel.getStyleClass().addAll("text", "text-md");
         controlNumberLabel.getStyleClass().addAll("text", "text-md");
 
-        Label edit = previewLabel(indent + "Redigera");
+        Label edit = previewLabel(indent4 + "Redigera");
         edit.getStyleClass().add("text-link");
         edit.setOnMouseClicked(e -> transitionToEditUI());
+
 
         containerDoneVBox.getChildren().addAll(contactHeaderLabel, nameLabel, creditCardNumberLabel, experyDateLabel, controlNumberLabel, edit);
         containerEditFlowPane.getChildren().add(containerDoneVBox);
@@ -109,10 +112,10 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
     }
 
     private void updatePreviewLabels() {
-        nameLabel = new Label(indent + "Kortägare: " + creditCard.getHoldersName());
-        creditCardNumberLabel = new Label (indent + "Kontonummer: " + creditCard.getCardNumber());
-        experyDateLabel= new Label (indent + "Utgångsdatum: " +creditCard.getValidMonth() + "/" + creditCard.getValidYear());
-        controlNumberLabel = new Label (indent + "CVC: " + creditCard.getVerificationCode());
+        nameLabel = new Label(indent4 + "Kortägare: " + creditCard.getHoldersName());
+        creditCardNumberLabel = new Label (indent4 + "Kontonummer: " + creditCard.getCardNumber());
+        experyDateLabel= new Label (indent4 + "Utgångsdatum: " +creditCard.getValidMonth() + "/" + creditCard.getValidYear());
+        controlNumberLabel = new Label (indent4 + "CVC: " + creditCard.getVerificationCode());
     }
 
     private String getFormattedCardNumber() {
