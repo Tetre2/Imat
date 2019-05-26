@@ -9,14 +9,14 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 
-<fx:root id="titledSectionRootAnchorPane" fx:id="rootPane" minHeight="400.0" minWidth="1092.0" prefHeight="400.0" prefWidth="1098.0" style="-fx-background-color: FFFFFF;" type="javafx.scene.layout.AnchorPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root id="titledSectionRootAnchorPane" fx:id="rootPane" minHeight="400.0" minWidth="1092.0" prefHeight="400.0" prefWidth="1095.0" style="-fx-background-color: FFFFFF;" type="javafx.scene.layout.AnchorPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
     <stylesheets>
         <URL value="@../../../../styles.css" />
     </stylesheets>
     <children>
       <ScrollPane layoutY="26.0" prefHeight="374.0" prefWidth="1094.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0">
          <content>
-            <FlowPane fx:id="centerContainerFlowPane" prefHeight="399.0" prefWidth="1079.0" />
+            <FlowPane fx:id="centerContainerFlowPane" prefHeight="399.0" prefWidth="1076.0" />
          </content>
       </ScrollPane>
       <HBox alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="1030.0" spacing="100.0">

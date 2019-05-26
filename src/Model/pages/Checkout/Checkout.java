@@ -36,6 +36,7 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable, Shop
 
     @FXML private AnchorPane paymentDoneContainerAnchorPane;
     @FXML private VBox paymentDoneContainerVBox;
+    @FXML private ScrollPane paymentDoneScrollPane;
 
     private Button makePaymentButton;
 
@@ -45,6 +46,9 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable, Shop
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
         IMat.getInstance().getShoppingCart().addShoppingCartListener(this);
+
+        paymentScrollPane.getStyleClass().clear();
+        paymentDoneScrollPane.getStyleClass().clear();
 
         initUI();
     }
