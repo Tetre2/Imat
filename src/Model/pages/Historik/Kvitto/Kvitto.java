@@ -9,8 +9,11 @@ import Model.pages.Historik.HistorikItem.HistorikItem;
 import Model.pages.Mainpage.MainPage;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Cursor;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import se.chalmers.cse.dat216.project.*;
@@ -31,6 +34,8 @@ public class Kvitto extends AnchorPane {
     private GridPane grid;
     @FXML
     private Button close;
+    @FXML
+    private ImageView closeImage;
 
     private ArrayList<ProductCategory> categories;
     private Historik parent;
@@ -53,7 +58,7 @@ public class Kvitto extends AnchorPane {
         for (ShoppingItem shoppingItem : order.getItems()) {
             calcPrice += shoppingItem.getTotal();//ger totala kostnaden
 
-            if(!categories.contains(shoppingItem.getProduct().getCategory())){//om categorin inte finns i listan läggs den till
+            if (!categories.contains(shoppingItem.getProduct().getCategory())) {//om categorin inte finns i listan läggs den till
                 System.out.println("added category");
                 categories.add(shoppingItem.getProduct().getCategory());
             }
@@ -67,7 +72,7 @@ public class Kvitto extends AnchorPane {
             List<ShoppingItem> arr = new ArrayList<>();
 
             for (ShoppingItem shoppingItem : order.getItems()) {//lägger till alla produkter som har en kategori som finns i categories
-                if(categories.get(i).equals(shoppingItem.getProduct().getCategory())){
+                if (categories.get(i).equals(shoppingItem.getProduct().getCategory())) {
                     arr.add(shoppingItem);
                 }
             }
@@ -85,23 +90,38 @@ public class Kvitto extends AnchorPane {
 
     }
 
+
+    public void closeButtonMouseEntered() {
+        closeImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "Model/resources/icon_close_hover.png")));
+    }
+
+    public void closeButtonMouseExited() {
+        closeImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "Model/resources/icon_close.png")));
+    }
+
+
     private void addEventListeners() {
         close.setOnAction(event -> parent.hideKvitto());
+        close.setOnMouseEntered(e -> closeButtonMouseEntered());
+        close.setOnMouseExited(e -> closeButtonMouseExited());
+
         addToCartButton.setOnAction(event -> addToCart());
     }
 
-    private void addToCart(){
+    private void addToCart() {
 
         MainPage mainPage = Main.getMainPage();
         for (ShoppingItem s : order.getItems()) {
             System.out.println("Kvitto, antal utav varorna: " + s.getAmount());
-            if(IMat.getInstance().getShoppingCart().getItems().contains(s)){
+            if (IMat.getInstance().getShoppingCart().getItems().contains(s)) {
                 System.out.println("fdlksnflks");
                 List<ShoppingItem> shoppingItems = IMat.getInstance().getShoppingCart().getItems();
                 int i = shoppingItems.indexOf(s);
                 shoppingItems.get(i).setAmount(shoppingItems.get(i).getAmount() + s.getAmount());
                 IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItems.get(i), true);
-            }else {
+            } else {
                 IMat.getInstance().getShoppingCart().addItem(s);
             }
 

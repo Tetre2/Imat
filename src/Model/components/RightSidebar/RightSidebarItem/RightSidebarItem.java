@@ -79,12 +79,6 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
     }
 
     @FXML
-    public void closeButtonMousePressed(){
-        closeImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
-                "Model/resources/icon_close_pressed.png")));
-    }
-
-    @FXML
     public void closeButtonMouseExited(){
         Main.getCurrentScene().setCursor(Cursor.DEFAULT);
         closeImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
@@ -94,11 +88,10 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
 
     private void addEventListeners() {
         close.setOnAction(e -> onClosePressed());
+        close.setOnMouseEntered(e -> closeButtonMouseEntered());
+        close.setOnMouseExited(e -> closeButtonMouseExited());
 
         amount.valueProperty().addListener((obs, oldValue, newValue) -> setShoppingItemAmount());
-        close.setOnMouseEntered(e -> closeButtonMouseEntered());
-        close.setOnMousePressed(e -> closeButtonMousePressed());
-        close.setOnMouseExited(e -> closeButtonMouseExited());
     }
 
     private void setShoppingItemAmount(){

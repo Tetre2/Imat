@@ -73,12 +73,18 @@
       </ScrollPane>
       <Button fx:id="close" layoutX="629.0" layoutY="6.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="63.0" styleClass="btn-nostyle">
          <graphic>
-            <ImageView fitHeight="50.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="closeImage" fitHeight="50.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../resources/icon_close.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
             </ImageView>
          </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
    </children>
 </fx:root>
