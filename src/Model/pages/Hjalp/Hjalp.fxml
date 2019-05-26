@@ -14,44 +14,75 @@
    <children>
       <AnchorPane layoutY="194.0" prefHeight="706.0" prefWidth="1440.0" style="-fx-background-color: white;">
          <children>
-            <ScrollPane layoutX="-1.0" prefHeight="706.0" prefWidth="1540.0">
+            <ScrollPane layoutX="-1.0" prefHeight="2000.0" prefWidth="1540.0">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1834.0" prefWidth="1521.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="1521.0">
                      <children>
-                        <ImageView fitHeight="546.0" fitWidth="329.0" layoutX="316.0" layoutY="1122.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="546.0" fitWidth="329.0" layoutX="305.0" layoutY="917.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../resources/MattiasFörslag/varukorg.PNG" />
+                              <Image url="@../../resources/MattiasFörslag/Varukorg.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="373.0" layoutY="57.0" prefHeight="83.0" prefWidth="221.0" text="Klicka på stjärnan för att lägga till varan i favoritkategorin." wrapText="true">
+                        <Label layoutX="333.0" layoutY="1584.0" prefHeight="83.0" prefWidth="221.0" text="Klicka på stjärnan för att lägga till varan i favoritkategorin." wrapText="true">
                            <styleClass>
                               <String fx:value="text" />
                               <String fx:value="text-md" />
                            </styleClass>
                         </Label>
-                        <Text layoutX="358.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klicka på &quot;Lägg i kundvagn&quot;-Knappen för att lägga till varan i varukorgen." wrappingWidth="221.00003242492676">
+                        <Text layoutX="357.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="För att lägga till en vara i varukorgen klickar du på &quot;Lägg i kundvagn&quot;-Knappen." wrappingWidth="221.00003242492676">
                            <styleClass>
                               <String fx:value="text" />
                               <String fx:value="text-md" />
                            </styleClass>
                         </Text>
-                        <ImageView fitHeight="280.0" fitWidth="283.0" layoutX="374.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="280.0" fitWidth="283.0" layoutX="328.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../resources/MattiasFörslag/Vara.PNG" />
+                              <Image url="@../../resources/MattiasFörslag/varukorgKnapp.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="280.0" fitWidth="283.0" layoutX="374.0" layoutY="660.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="280.0" fitWidth="283.0" layoutX="316.0" layoutY="564.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../resources/MattiasFörslag/VaraVald.PNG" />
+                              <Image url="@../../resources/MattiasFörslag/plusMinus.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="341.0" layoutY="553.0" prefHeight="108.0" prefWidth="285.0" text="En gul stjärna bettyder att den är tillagd i favoriter. Om du inte lägnre vill ha en vara i favoriter är det bara att klicka på den igen." wrapText="true">
+                        <Label layoutX="315.0" layoutY="456.0" prefHeight="108.0" prefWidth="285.0" text="Med hjälp utav pluss och minus knapparna kan du välga hur många utav varna du vill köpa" wrapText="true">
                            <styleClass>
                               <String fx:value="text" />
                               <String fx:value="text-md" />
                            </styleClass>
                         </Label>
-                        <Label layoutX="358.0" layoutY="940.0" prefHeight="143.0" prefWidth="252.0" text="När du har hittat alla varor du vill köpa klickar du på &quot;Gå till kassan&quot;-knppen i varukorgen och följer anvisningarna där." wrapText="true">
+                        <Label layoutX="332.0" layoutY="751.0" prefHeight="143.0" prefWidth="252.0" text="I Varukorgen kan du se alla dina varor, hur många du har och vad de kostar. För att betala klickar du på &quot;Gå till kassan&quot;-knappen under din varukorg." wrapText="true">
+                           <styleClass>
+                              <String fx:value="text" />
+                              <String fx:value="text-md" />
+                           </styleClass>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="344.0" layoutY="1667.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/MattiasFörslag/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="343.0" layoutY="1882.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/MattiasFörslag/Favorite.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="116.0" layoutY="175.0" prefHeight="124.0" prefWidth="70.0" style="-fx-font-size: 96;" text="1">
+                           <font>
+                              <Font size="96.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="116.0" layoutY="545.0" prefHeight="124.0" prefWidth="70.0" style="-fx-font-size: 96;" text="2">
+                           <font>
+                              <Font size="96.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="116.0" layoutY="934.0" prefHeight="124.0" prefWidth="70.0" style="-fx-font-size: 96;" text="3">
+                           <font>
+                              <Font size="96.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="332.0" layoutY="1776.0" prefHeight="106.0" prefWidth="231.0" text="Du kan se på stjärnan att varan är tillagd som favorit när den är gulmarkerad och ifyld" wrapText="true">
                            <styleClass>
                               <String fx:value="text" />
                               <String fx:value="text-md" />
@@ -61,7 +92,7 @@
                   </AnchorPane>
               </content>
             </ScrollPane>
-            <TextArea editable="false" layoutX="876.0" layoutY="212.0" prefHeight="369.0" prefWidth="492.0" text="Genomför ditt första köp&#10;&#10;  1. Navigera till handla, det är knappen bredvid sökfältet&#10;&#10;  2. Hitta varan du tänker köpa.&#10;&#10;  3. Klicka på lägg till i kundvagn&#10;&#10;  4. Välj antalet utav varan du vill köpa&#10;&#10;När du klickat på Lägg i varukorgen läggs en utav varan i varukogen. Vill du ha fler eller färre klicka du på + eller - eller så kan du skriva in antalet i ruta mellan + och -." wrapText="true">
+            <TextArea fx:id="textArea" editable="false" layoutX="876.0" layoutY="212.0" prefHeight="369.0" prefWidth="492.0" text="Genomför ditt första köp&#10;Navigera till handla, det är knappen bredvid sökfältet&#10;&#10;  1. Hitta varan du tänker köpa. Klicka på lägg till i &#10;      kundvagn. När du klickat på Lägg i varukorgen läggs&#10;      en utav varan i varukogen.&#10;&#10;  2. Välj antalet utav varan du vill köpa med hjälp utav&#10;      pluss och minuss knapparna.&#10;&#10;  3.  När du är nöjd med dina varor klickar du på &quot;Gå till&#10;       kassan&quot;-knappen. Den tar dig till en ny sida bör du&#10;       benofö betalningen." wrapText="true">
                <styleClass>
                   <String fx:value="text" />
                   <String fx:value="text-md" />
