@@ -4,6 +4,7 @@ import Model.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -15,10 +16,14 @@ public class FirstLandingPage extends AnchorPane {
     private Button handla;
     @FXML
     private Button hjalp;
+    @FXML
+    private TextArea textArea;
 
     public FirstLandingPage() {
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
+
+        textArea.getStyleClass().remove("text-input");
 
         addLisners();
 

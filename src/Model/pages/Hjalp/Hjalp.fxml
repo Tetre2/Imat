@@ -14,7 +14,7 @@
    <children>
       <AnchorPane layoutY="194.0" prefHeight="706.0" prefWidth="1440.0" style="-fx-background-color: white;">
          <children>
-            <ScrollPane layoutX="-1.0" prefHeight="2000.0" prefWidth="1540.0">
+            <ScrollPane layoutX="-1.0" prefHeight="706.0" prefWidth="1540.0">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="1521.0">
                      <children>
@@ -92,7 +92,7 @@
                   </AnchorPane>
               </content>
             </ScrollPane>
-            <TextArea fx:id="textArea" editable="false" layoutX="876.0" layoutY="212.0" prefHeight="369.0" prefWidth="492.0" text="Genomför ditt första köp&#10;Navigera till handla, det är knappen bredvid sökfältet&#10;&#10;  1. Hitta varan du tänker köpa. Klicka på lägg till i &#10;      kundvagn. När du klickat på Lägg i varukorgen läggs&#10;      en utav varan i varukogen.&#10;&#10;  2. Välj antalet utav varan du vill köpa med hjälp utav&#10;      pluss och minuss knapparna.&#10;&#10;  3.  När du är nöjd med dina varor klickar du på &quot;Gå till&#10;       kassan&quot;-knappen. Den tar dig till en ny sida bör du&#10;       benofö betalningen." wrapText="true">
+            <TextArea fx:id="textArea" editable="false" layoutX="876.0" layoutY="212.0" prefHeight="369.0" prefWidth="492.0" style="-fx-border-width: 4;" text=" Genomför ditt första köp&#10; Navigera till handla, det är knappen bredvid sökfältet&#10;&#10;   1. Hitta varan du tänker köpa. Klicka på lägg till i &#10;       kundvagn. När du klickat på Lägg i varukorgen läggs&#10;       en utav varan i varukogen.&#10;&#10;   2. Välj antalet utav varan du vill köpa med hjälp utav&#10;       pluss och minuss knapparna.&#10;&#10;   3.  När du är nöjd med dina varor klickar du på &quot;Gå till&#10;        kassan&quot;-knappen. Den tar dig till en ny sida bör du&#10;        benofö betalningen." wrapText="true">
                <styleClass>
                   <String fx:value="text" />
                   <String fx:value="text-md" />
