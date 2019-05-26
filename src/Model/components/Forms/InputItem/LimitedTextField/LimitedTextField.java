@@ -84,6 +84,7 @@ public class LimitedTextField extends AnchorPane implements Focusable {
 
         if (parent.checkValidity(textField.getText())) {
             clearErr();
+            textField.getStyleClass().add("textBoxSaved");
             return true;
         }
 

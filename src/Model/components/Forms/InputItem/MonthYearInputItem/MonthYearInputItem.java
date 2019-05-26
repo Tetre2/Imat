@@ -133,6 +133,11 @@ public class MonthYearInputItem extends AnchorPane implements Focusable {
         year.getStyleClass().addAll("text-field", "text-input");
     }
 
+    private void showSeucsses(TextField textField){
+        clearErr(textField);
+        textField.getStyleClass().add("textBoxSaved");
+    }
+
     private void showErr(TextField textField) {
         textField.getStyleClass().add("textBoxErr");
         error.setVisible(true);
@@ -179,6 +184,7 @@ public class MonthYearInputItem extends AnchorPane implements Focusable {
         }
         if(month < 13 && month > 0) {
             clearErr(this.month);
+            showSeucsses(this.month);
             return true;
         }
         showErr(this.month);
@@ -194,10 +200,10 @@ public class MonthYearInputItem extends AnchorPane implements Focusable {
             return false;
         }
         if(year > 2018 && year < 2026){
-            clearErr(this.year);
+            showSeucsses(this.year);
             return true;
         }else if(year > 18 && year < 26){
-            clearErr(this.year);
+            showSeucsses(this.year);
             return true;
         }
         showErr(this.year);

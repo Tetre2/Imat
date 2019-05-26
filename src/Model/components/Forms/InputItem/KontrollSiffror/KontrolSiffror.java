@@ -87,6 +87,7 @@ public class KontrolSiffror extends AnchorPane implements Focusable{
     public boolean isValid() {
         try {
             Integer.parseInt(textField.getText());
+            showSucsses();
             return true;
         }catch (Exception e){
             showErr();
@@ -109,6 +110,11 @@ public class KontrolSiffror extends AnchorPane implements Focusable{
         textField.getStyleClass().add("textBoxErr");
         error.setVisible(true);
         errLabel.setText(textField.getText() + " Är inte giltliga kontrollsiffror");
+    }
+
+    private void showSucsses(){
+        setDefault();
+        textField.getStyleClass().add("textBoxSaved");
     }
 
     @Override
