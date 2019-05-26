@@ -26,13 +26,6 @@ public enum MainCategory {
             ProductCategory.NUTS_AND_SEEDS,
             ProductCategory.PASTA,
             ProductCategory.POTATO_RICE),
-    BRÖD_OCH_KAKOR("Bröd & Kakor",
-            ProductCategory.BREAD),
-    DRYCK("Dryck",
-            ProductCategory.HOT_DRINKS,
-            ProductCategory.COLD_DRINKS),
-    FISK("Fisk",
-            ProductCategory.FISH),
     FRUKT_OCH_GRÖNT("Frukt & Grönt",
             ProductCategory.CABBAGE, ProductCategory.FRUIT,
             ProductCategory.MELONS, ProductCategory.VEGETABLE_FRUIT,
@@ -40,13 +33,20 @@ public enum MainCategory {
             ProductCategory.ROOT_VEGETABLE, ProductCategory.EXOTIC_FRUIT),
     KÖTT("Kött",
             ProductCategory.MEAT),
+    FISK("Fisk",
+            ProductCategory.FISH),
+    BRÖD_OCH_KAKOR("Bröd & Kakor",
+            ProductCategory.BREAD),
     MEJERI("Mejeri",
             ProductCategory.DAIRIES),
     SKAFFERI("Skafferi",
             ProductCategory.FLOUR_SUGAR_SALT,
             ProductCategory.NUTS_AND_SEEDS,
             ProductCategory.PASTA,
-            ProductCategory.POTATO_RICE);
+            ProductCategory.POTATO_RICE),
+    DRYCK("Dryck",
+            ProductCategory.HOT_DRINKS,
+            ProductCategory.COLD_DRINKS);
 
 
 
