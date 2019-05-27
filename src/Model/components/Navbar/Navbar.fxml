@@ -45,7 +45,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Region prefHeight="100.0" prefWidth="68.0" />
+                        <Region prefHeight="100.0" prefWidth="28.0" />
                         <Button fx:id="handla" mnemonicParsing="false" prefHeight="52.0" prefWidth="98.0" style="-fx-font-size: 18;" text="Handla">
                            <font>
                               <Font size="18.0" />
@@ -54,13 +54,14 @@
                            <font>
                               <Font size="18.0" />
                            </font></Button>
-                        <Button fx:id="hjalp" mnemonicParsing="false" prefHeight="52.0" prefWidth="86.0" style="-fx-font-size: 18;" text="Hjälp">
-                           <font>
-                              <Font size="18.0" />
-                           </font></Button>
                         <Button fx:id="minaSidor" mnemonicParsing="false" prefHeight="52.0" prefWidth="98.0" style="-fx-font-size: 18;" text="Mina sidor" textOverrun="CLIP">
                            <font>
                               <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                        <Region prefHeight="100.0" prefWidth="27.0" />
+                        <Button fx:id="hjalp" mnemonicParsing="false" prefHeight="52.0" prefWidth="86.0" style="-fx-font-size: 18;" text="Hjälp">
+                           <font>
+                              <Font size="18.0" />
                            </font></Button>
                      </items>
                      <padding>

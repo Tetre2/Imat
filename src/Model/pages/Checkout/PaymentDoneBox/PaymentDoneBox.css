@@ -1,6 +1,4 @@
 .payment-container {
-    -fx-border-width: 4;
-    -fx-border-color: #189ad3;
-    -fx-border-radius: 8;
+    -fx-border-width: 0;
     -fx-background-color: #FFFFFF;
 }

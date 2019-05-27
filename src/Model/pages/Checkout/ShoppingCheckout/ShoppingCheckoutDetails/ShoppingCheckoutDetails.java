@@ -13,8 +13,6 @@ import java.io.IOException;
 public class ShoppingCheckoutDetails extends AnchorPane implements ShoppingCartListener {
     private static final Double TRANSPORT_PRICE = 50.0;
 
-    @FXML private Label foodPriceLabel;
-    @FXML private Label transportPriceLabel;
     @FXML private Label totalPriceLabel;
 
     public ShoppingCheckoutDetails() {
@@ -28,9 +26,7 @@ public class ShoppingCheckoutDetails extends AnchorPane implements ShoppingCartL
 
     private void updateLabels() {
         Double foodPrice = IMat.getInstance().getShoppingCart().getTotal();
-        transportPriceLabel.setText(Double.toString(TRANSPORT_PRICE));
         String price = String.format("%.2f", foodPrice);
-        foodPriceLabel.setText(price);
         System.out.println("Ceckout, TotalPrice: " + price);
 
         price = String.format("%.2f", foodPrice + TRANSPORT_PRICE);

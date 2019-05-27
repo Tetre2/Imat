@@ -98,7 +98,7 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         nameLabel.getStyleClass().addAll("text", "text-md");
         addressLabel.getStyleClass().addAll("text", "text-md");
 
-        Label edit = previewLabel(indent4 + "Redigera");
+        Label edit = previewLabel(indent2 + "Redigera");
         edit.getStyleClass().add("text-link");
         edit.setOnMouseClicked(e -> transitionToEditUI());
 
@@ -107,10 +107,10 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
     }
 
     private void updatePreviewLabels() {
-        numberLabel = new Label(indent4 + customer.getPhoneNumber());
-        mailLabel = new Label (indent4 + customer.getEmail());
-        nameLabel = new Label (indent4 + customer.getFirstName() + " " + customer.getLastName());
-        addressLabel = new Label (indent4 + customer.getAddress() + ", " + customer.getPostCode() + ", " + customer.getPostAddress());
+        numberLabel = new Label(indent2 + customer.getPhoneNumber());
+        mailLabel = new Label (indent2 + customer.getEmail());
+        nameLabel = new Label (indent2 + customer.getFirstName() + " " + customer.getLastName());
+        addressLabel = new Label (indent2 + customer.getAddress() + ", " + customer.getPostCode() + ", " + customer.getPostAddress());
     }
 
     private void transitionToEditUI() {

@@ -93,7 +93,7 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
         experyDateLabel.getStyleClass().addAll("text", "text-md");
         controlNumberLabel.getStyleClass().addAll("text", "text-md");
 
-        Label edit = previewLabel(indent4 + "Redigera");
+        Label edit = previewLabel(indent2 + "Redigera");
         edit.getStyleClass().add("text-link");
         edit.setOnMouseClicked(e -> transitionToEditUI());
 
@@ -112,10 +112,10 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
     }
 
     private void updatePreviewLabels() {
-        nameLabel = new Label(indent4 + "Kortägare: " + creditCard.getHoldersName());
-        creditCardNumberLabel = new Label (indent4 + "Kontonummer: " + creditCard.getCardNumber());
-        experyDateLabel= new Label (indent4 + "Utgångsdatum: " +creditCard.getValidMonth() + "/" + creditCard.getValidYear());
-        controlNumberLabel = new Label (indent4 + "CVC: " + creditCard.getVerificationCode());
+        nameLabel = new Label(indent2 + "Kortägare: " + creditCard.getHoldersName());
+        creditCardNumberLabel = new Label (indent2 + "Kontonummer: " + creditCard.getCardNumber());
+        experyDateLabel= new Label (indent2 + "Utgångsdatum: " +creditCard.getValidMonth() + "/" + creditCard.getValidYear());
+        controlNumberLabel = new Label (indent2 + "CVC: " + creditCard.getVerificationCode());
     }
 
     private String getFormattedCardNumber() {
