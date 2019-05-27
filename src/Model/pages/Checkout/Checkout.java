@@ -221,6 +221,6 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable, Shop
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
         System.out.println("here******************************");
-        totalPriceLabel.setText(Double.toString(IMat.getInstance().getShoppingCart().getTotal()) + " kr");
+        totalPriceLabel.setText(Double.toString(IMat.getInstance().getShoppingCart().getTotal()) + " kr   ");
     }
 }
