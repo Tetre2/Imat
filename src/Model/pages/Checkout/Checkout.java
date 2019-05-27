@@ -21,6 +21,8 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import se.chalmers.cse.dat216.project.*;
 
 import java.awt.*;
@@ -102,17 +104,27 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable, Shop
 
         //TitledSection titledSectionPay = new TitledSection("3. Slutför din order", null);
         ShoppingCheckoutDetails details = new ShoppingCheckoutDetails();
+
+        HBox detailsHBox = new HBox();
+        detailsHBox.setPrefWidth(1100);
+        detailsHBox.setAlignment(Pos.CENTER);
+        detailsHBox.setTranslateX(detailsHBox.getTranslateX() - 55);
+        detailsHBox.getChildren().add(details);
+
         HBox hContainer = new HBox();
         hContainer.setTranslateX(hContainer.getTranslateX() + 50);
         hContainer.setAlignment(Pos.CENTER);
         VBox container = new VBox();
         container.setSpacing(25);
         container.setAlignment(Pos.CENTER);
-        container.getChildren().addAll(details, makePaymentHBox);
+        container.getChildren().addAll(detailsHBox, makePaymentHBox);
         hContainer.getChildren().add(container);
-        //titledSectionPay.addNode(hContainer);
 
-        paymentContainerVBox.getChildren().addAll(goToVarukorgHBox, titledSectionPerson, titledSectionKonto, hContainer);
+
+        Rectangle padding = new Rectangle(10, 20);
+        padding.setFill(Color.TRANSPARENT);
+
+        paymentContainerVBox.getChildren().addAll(goToVarukorgHBox, titledSectionPerson, titledSectionKonto, hContainer, padding);
     }
 
     @Override
