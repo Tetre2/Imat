@@ -88,13 +88,9 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
         Label contactHeaderLabel = new Label (indent2 + "Kontouppgifter");
         contactHeaderLabel.getStyleClass().addAll("text", "text-md");
         contactHeaderLabel.getStyleClass().add("bold");
-        nameLabel.getStyleClass().addAll("text", "text-md");
-        creditCardNumberLabel.getStyleClass().addAll("text", "text-md");
-        experyDateLabel.getStyleClass().addAll("text", "text-md");
-        controlNumberLabel.getStyleClass().addAll("text", "text-md");
 
         Label edit = previewLabel(indent2 + "Redigera");
-        edit.getStyleClass().add("text-link");
+        edit.getStyleClass().addAll("text-link", "text-md");
         edit.setOnMouseClicked(e -> transitionToEditUI());
 
 
@@ -113,9 +109,16 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
 
     private void updatePreviewLabels() {
         nameLabel = new Label(indent2 + "Kortägare: " + creditCard.getHoldersName());
+        nameLabel.getStyleClass().add("text-md");
+
         creditCardNumberLabel = new Label (indent2 + "Kontonummer: " + creditCard.getCardNumber());
+        creditCardNumberLabel.getStyleClass().add("text-md");
+
         experyDateLabel= new Label (indent2 + "Utgångsdatum: " +creditCard.getValidMonth() + "/" + creditCard.getValidYear());
+        experyDateLabel.getStyleClass().add("text-md");
+
         controlNumberLabel = new Label (indent2 + "CVC: " + creditCard.getVerificationCode());
+        controlNumberLabel.getStyleClass().add("text-md");
     }
 
     private String getFormattedCardNumber() {

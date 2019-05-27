@@ -6,7 +6,7 @@
 
 <fx:root prefHeight="105.0" prefWidth="730.0" stylesheets="@../../../../../styles.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField fx:id="textField" layoutX="220.0" layoutY="6.0" prefHeight="60.0" prefWidth="82.0" promptText="XXX" styleClass="text-md" stylesheets="@../../FormStyles.css" />
+      <TextField fx:id="textField" layoutX="220.0" layoutY="6.0" prefHeight="60.0" prefWidth="82.0" promptText="XXX" style="-fx-font-size: 18;" styleClass="text-md" stylesheets="@../../FormStyles.css" />
       <Label fx:id="tooltip" layoutX="223.0" layoutY="66.0" styleClass="text-md" text="Ange det tre kontrollsiffrorna" />
       <Label fx:id="label" alignment="TOP_RIGHT" contentDisplay="TOP" layoutY="22.0" prefHeight="21.0" prefWidth="200.0" styleClass="text-lg" text="Kontrollsiffror:" />
       <AnchorPane fx:id="error" layoutX="437.0" layoutY="29.0" prefHeight="60.0" prefWidth="281.0" visible="false">
