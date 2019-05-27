@@ -121,6 +121,7 @@ public class TextInput extends AnchorPane implements Focusable{
 
     public String getInput() throws NotValidInput {
         if(isValid()){
+            setSuccess();
             return textField.getText();
         }else {
             setErr();

@@ -84,10 +84,12 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable, Shop
 
         makePaymentButton = new Button();
         makePaymentButton.getStyleClass().addAll("btn-lg", "btn-primary");
-        makePaymentButton.setPrefWidth(400);
+        makePaymentButton.setPrefWidth(paymentContainerVBox.getPrefWidth() - 55);
+        makePaymentButton.setTranslateX( makePaymentButton.getTranslateX()-45);
         makePaymentButton.setOnAction(e -> makePaymentButtonPressed());
         disablePayButton();
         HBox makePaymentHBox = new HBox();
+        makePaymentHBox.setPrefWidth(makePaymentButton.getPrefWidth());
         makePaymentHBox.setAlignment(Pos.CENTER);
         makePaymentHBox.getChildren().add(makePaymentButton);
 
@@ -98,7 +100,7 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable, Shop
         TitledSection titledSectionKonto = new TitledSection("2. Kontrollera dina kontouppgifter", "");
         titledSectionKonto.addNode(new KontoUppgifter(this));
 
-        TitledSection titledSectionPay = new TitledSection("3. Slutför din order", null);
+        //TitledSection titledSectionPay = new TitledSection("3. Slutför din order", null);
         ShoppingCheckoutDetails details = new ShoppingCheckoutDetails();
         HBox hContainer = new HBox();
         hContainer.setTranslateX(hContainer.getTranslateX() + 50);
@@ -108,9 +110,9 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable, Shop
         container.setAlignment(Pos.CENTER);
         container.getChildren().addAll(details, makePaymentHBox);
         hContainer.getChildren().add(container);
-        titledSectionPay.addNode(hContainer);
+        //titledSectionPay.addNode(hContainer);
 
-        paymentContainerVBox.getChildren().addAll(goToVarukorgHBox, titledSectionPerson, titledSectionKonto, titledSectionPay);
+        paymentContainerVBox.getChildren().addAll(goToVarukorgHBox, titledSectionPerson, titledSectionKonto, hContainer);
     }
 
     @Override
