@@ -2,6 +2,7 @@ package Model.pages.Checkout;
 
 import Model.HelperClasses.UpdateButtonObservable;
 import Model.IMat;
+import Model.Main;
 import Model.components.Forms.Kontouppgifter.KontoUppgifter;
 import Model.components.Forms.PersonUppgifter.PersonUppgifter;
 import Model.components.Navbar.Navbar;
@@ -16,6 +17,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
@@ -70,16 +72,15 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable, Shop
 
     private void createPaymentUI() {
         paymentContainerVBox.setSpacing(20.0);
+        Hyperlink goTovarukorgLink = new Hyperlink("<-- Gå Tillbaka till Varukorgen");
+        goTovarukorgLink.getStyleClass().add("text-md");
+        goTovarukorgLink.setOnAction(event -> goToVarukorgStep());
 
-        Button goToVarukorgButton = new Button();
-        goToVarukorgButton.setText("<-- Gå Tillbaka till Varukorgen");
-        goToVarukorgButton.getStyleClass().add("btn-primary");
-        goToVarukorgButton.setOnAction(e -> goToVarukorgStep());
         SequenceMapFinal sequenceMapFinal = new SequenceMapFinal();
         HBox goToVarukorgHBox = new HBox();
         goToVarukorgHBox.setAlignment(Pos.CENTER_LEFT);
         goToVarukorgHBox.setSpacing(55);
-        goToVarukorgHBox.getChildren().addAll(goToVarukorgButton, sequenceMapFinal);
+        goToVarukorgHBox.getChildren().addAll(goTovarukorgLink, sequenceMapFinal);
 
         makePaymentButton = new Button();
         makePaymentButton.getStyleClass().addAll("btn-lg", "btn-primary");
@@ -156,16 +157,15 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable, Shop
         ShoppingCheckout shoppingCheckout = new ShoppingCheckout();
 
         varukorgSection.addNode(shoppingCheckout);
+        Hyperlink continueShoppingHyperlink = new Hyperlink("<-- Handla mer");
+        continueShoppingHyperlink.getStyleClass().add("text-md");
+        continueShoppingHyperlink.setOnAction(event -> Main.getNavbar().goToMainPage());
 
-        Button continueShopping = new Button();
-        continueShopping.setText("<-- Handla mer");
-        continueShopping.getStyleClass().add("btn-primary");
-        continueShopping.setOnAction(e -> IMat.getInstance().setSceneToMainPage());
         SequenceMap sequenceMap = new SequenceMap();
         HBox continueShoppingHBox = new HBox();
         continueShoppingHBox.setAlignment(Pos.CENTER_LEFT);
         continueShoppingHBox.setSpacing(90);
-        continueShoppingHBox.getChildren().addAll(continueShopping, sequenceMap);
+        continueShoppingHBox.getChildren().addAll(continueShoppingHyperlink, sequenceMap);
 
         Button goToPaymentButton = new Button();
         Label totalLabel = new Label("Totalt pris: ");
