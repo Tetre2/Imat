@@ -17,16 +17,16 @@
          <children>
               <VBox layoutY="-13.0" maxWidth="300.0" prefHeight="53.0" prefWidth="300.0">
                   <children>
-                      <HBox alignment="CENTER_LEFT" maxWidth="300.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="54.0" prefWidth="300.0" style="-fx-border-width: 1; -fx-border-color: #A2A2A2;">
+                      <HBox alignment="CENTER_LEFT" maxWidth="300.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="54.0" prefWidth="300.0" style=": #A2A2A2;">
                           <children>
-                              <Label styleClass="text-md" text="Total Kostnad:">
+                              <Label styleClass="text-lg" text="Total Kostnad:">
                                   <HBox.margin>
                                       <Insets left="10.0" />
                                   </HBox.margin>
                               </Label>
                               <Region prefHeight="100.0" prefWidth="41.0" HBox.hgrow="ALWAYS" />
-                              <Label fx:id="totalPriceLabel" styleClass="text-md" text="170" />
-                              <Label styleClass="text-md" text=" kr">
+                              <Label fx:id="totalPriceLabel" styleClass="text-lg" text="170" />
+                              <Label styleClass="text-lg" text=" kr">
                                   <HBox.margin>
                                       <Insets right="10.0" />
                                   </HBox.margin>
