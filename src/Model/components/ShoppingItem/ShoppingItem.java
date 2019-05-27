@@ -78,7 +78,9 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
         //Jömmer det som inte ska synas från början
         starButton.setVisible(false);
-        hidePlusMinus();
+        if(!IMat.getInstance().getShoppingCart().getItems().contains(item)){
+            hidePlusMinus();
+        }
 
         //sätter rätt stjärna
         updateStarButtonUI();
