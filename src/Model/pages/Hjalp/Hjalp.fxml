@@ -10,13 +10,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<fx:root maxHeight="900.0" prefHeight="900.0" prefWidth="1540.0" stylesheets="@../../../styles.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="900.0" prefHeight="900.0" prefWidth="1540.0" stylesheets="@../../../styles.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutY="194.0" prefHeight="706.0" prefWidth="1440.0" style="-fx-background-color: white;">
          <children>
             <ScrollPane layoutX="-1.0" prefHeight="706.0" prefWidth="1540.0">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="1521.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="1521.0" style="-fx-background-color: FFFFFF;">
                      <children>
                         <ImageView fitHeight="546.0" fitWidth="329.0" layoutX="305.0" layoutY="917.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -96,6 +96,7 @@
                <styleClass>
                   <String fx:value="text" />
                   <String fx:value="text-md" />
+                  <String fx:value="text-area" />
                </styleClass>
             </TextArea>
             <Label layoutX="876.0" layoutY="171.0" text="Genomför ditt första köp">

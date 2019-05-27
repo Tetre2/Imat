@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<fx:root id="titledSectionRootAnchorPane" fx:id="rootPane" maxWidth="785.0" prefHeight="571.0" prefWidth="785.0" styleClass="payment-container" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root id="titledSectionRootAnchorPane" fx:id="rootPane" maxWidth="785.0" prefHeight="571.0" prefWidth="785.0" styleClass="payment-container" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <stylesheets>
         <URL value="@../../../../styles.css" />
         <URL value="@./PaymentDoneBox.css" />
@@ -28,11 +28,11 @@
             <Label alignment="CENTER" prefHeight="135.0" prefWidth="356.0" styleClass="text-xl" text="Köpet har gått igenom och du kommer få dina produkter inom kort." textAlignment="CENTER" wrapText="true" />
             <HBox alignment="CENTER" maxWidth="500.0" prefHeight="75.0" prefWidth="500.0" spacing="30.0">
                <children>
-                  <Button fx:id="shopMoreButton" mnemonicParsing="false" prefHeight="82.0" prefWidth="162.0" styleClass="btn-checkout" text="Handla mer">
+                  <Button fx:id="shopMoreButton" mnemonicParsing="false" prefHeight="82.0" prefWidth="162.0" styleClass="btn-checkout" stylesheets="@../CheckoutStyle.css" text="Handla mer">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
-                  <Button fx:id="showReceiptButton" mnemonicParsing="false" prefHeight="78.0" prefWidth="166.0" styleClass="btn-checkout-secondary" text="Se Kvittot">
+                  <Button fx:id="showReceiptButton" mnemonicParsing="false" prefHeight="78.0" prefWidth="166.0" styleClass="btn-checkout-secondary" stylesheets="@../CheckoutStyle.css" text="Se Kvittot">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
