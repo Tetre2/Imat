@@ -96,30 +96,9 @@ secondary: #107dac
     -fx-background-insets: -2;
     -fx-text-fill: white;
     -fx-font-size: 16;
-    -fx-background-color: #189ad3;
-}
-.btn-checkout {
-    -fx-background-radius: 8;
-    -fx-background-insets: -2;
-    -fx-text-fill: white;
-    -fx-font-size: 24;
-    -fx-background-color: #189ad3;
+    -fx-background-color: #189ad3; /*189ad3 */
 }
 
-.btn-checkout-secondary
-{
-    -fx-background-radius: 8;
-    -fx-background-insets: -2;
-    -fx-text-fill: white;
-    -fx-font-size: 24;
-    -fx-background-color: #107dac;
-
-}
-.btn-checkout:hover {
-    -fx-background-color: #2ca1d3;
-    -fx-cursor: hand;
-
-}
 
 .btn-primary-alternative-2  {
     -fx-background-radius: 8;
@@ -161,5 +140,22 @@ secondary: #107dac
     -fx-border-color: transparent;
     -fx-border-width: 0;
     -fx-background-radius: 0;
+    -fx-background-color: transparent;
+}
+
+.text-area {
+    -fx-background-color: rgba(255,255,255,1);
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+
+.text-area .scroll-pane .content{
     -fx-background-color: transparent;
 }
