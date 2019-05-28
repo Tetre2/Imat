@@ -25,7 +25,7 @@
                         <Label fx:id="titleLabel" prefHeight="23.0" prefWidth="497.0" text="Granska din Varukorg">
                            <styleClass>
                               <String fx:value="text" />
-                              <String fx:value="text-md" />
+                              <String fx:value="text-lg" />
                               <String fx:value="bold" />
                            </styleClass>
                            <VBox.margin>
@@ -34,7 +34,7 @@
                         </Label>
                         <Label fx:id="tooltipLabel" prefHeight="25.0" prefWidth="527.0">
                            <styleClass>
-                              <String fx:value="text-sm" />
+                              <String fx:value="text-md" />
                               <String fx:value="text" />
                               <String fx:value="darkerText" />
                            </styleClass>

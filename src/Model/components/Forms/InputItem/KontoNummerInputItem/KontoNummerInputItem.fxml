@@ -7,9 +7,9 @@
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="104.0" prefWidth="977.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="label" alignment="TOP_RIGHT" contentDisplay="TOP" layoutY="35.0" prefHeight="21.0" prefWidth="181.0" styleClass="text-md" text="Kortnummer:" />
-      <Label fx:id="tooltip" layoutX="203.0" layoutY="75.0" prefHeight="21.0" prefWidth="417.0" text="Label" />
-      <FlowPane fx:id="flowPane" layoutX="200.0" layoutY="-1.0" prefHeight="71.0" prefWidth="446.0" />
+      <Label fx:id="label" alignment="TOP_RIGHT" contentDisplay="TOP" layoutY="35.0" prefHeight="21.0" prefWidth="200.0" styleClass="text-lg" text="Kortnummer:" />
+      <Label fx:id="tooltip" layoutX="223.0" layoutY="75.0" prefHeight="21.0" prefWidth="417.0" styleClass="text-md" text="Label" />
+      <FlowPane fx:id="flowPane" layoutX="220.0" layoutY="-1.0" prefHeight="71.0" prefWidth="446.0" />
       <AnchorPane fx:id="error" layoutX="656.0" layoutY="13.0" prefHeight="60.0" prefWidth="293.0" visible="false">
          <children>
             <Label fx:id="errLabel" layoutX="5.0" layoutY="1.0" prefHeight="53.0" prefWidth="296.0" text="Label" textFill="RED" wrapText="true" />

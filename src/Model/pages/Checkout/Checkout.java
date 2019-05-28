@@ -21,6 +21,8 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import se.chalmers.cse.dat216.project.*;
 
 import java.awt.*;
@@ -84,10 +86,12 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable, Shop
 
         makePaymentButton = new Button();
         makePaymentButton.getStyleClass().addAll("btn-lg", "btn-primary");
-        makePaymentButton.setPrefWidth(400);
+        makePaymentButton.setPrefWidth(paymentContainerVBox.getPrefWidth() - 55);
+        makePaymentButton.setTranslateX( makePaymentButton.getTranslateX()-45);
         makePaymentButton.setOnAction(e -> makePaymentButtonPressed());
         disablePayButton();
         HBox makePaymentHBox = new HBox();
+        makePaymentHBox.setPrefWidth(makePaymentButton.getPrefWidth());
         makePaymentHBox.setAlignment(Pos.CENTER);
         makePaymentHBox.getChildren().add(makePaymentButton);
 
@@ -98,19 +102,29 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable, Shop
         TitledSection titledSectionKonto = new TitledSection("2. Kontrollera dina kontouppgifter", "");
         titledSectionKonto.addNode(new KontoUppgifter(this));
 
-        TitledSection titledSectionPay = new TitledSection("3. Slutför din order", null);
+        //TitledSection titledSectionPay = new TitledSection("3. Slutför din order", null);
         ShoppingCheckoutDetails details = new ShoppingCheckoutDetails();
+
+        HBox detailsHBox = new HBox();
+        detailsHBox.setPrefWidth(1100);
+        detailsHBox.setAlignment(Pos.CENTER);
+        detailsHBox.setTranslateX(detailsHBox.getTranslateX() - 55);
+        detailsHBox.getChildren().add(details);
+
         HBox hContainer = new HBox();
         hContainer.setTranslateX(hContainer.getTranslateX() + 50);
         hContainer.setAlignment(Pos.CENTER);
         VBox container = new VBox();
         container.setSpacing(25);
         container.setAlignment(Pos.CENTER);
-        container.getChildren().addAll(details, makePaymentHBox);
+        container.getChildren().addAll(detailsHBox, makePaymentHBox);
         hContainer.getChildren().add(container);
-        titledSectionPay.addNode(hContainer);
 
-        paymentContainerVBox.getChildren().addAll(goToVarukorgHBox, titledSectionPerson, titledSectionKonto, titledSectionPay);
+
+        Rectangle padding = new Rectangle(10, 20);
+        padding.setFill(Color.TRANSPARENT);
+
+        paymentContainerVBox.getChildren().addAll(goToVarukorgHBox, titledSectionPerson, titledSectionKonto, hContainer, padding);
     }
 
     @Override

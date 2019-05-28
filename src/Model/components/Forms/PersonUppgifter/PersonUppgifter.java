@@ -89,17 +89,13 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         Label contactHeaderLabel = new Label (indent2 + "Kontaktuppgifter");
         contactHeaderLabel.getStyleClass().addAll("text", "text-md");
         contactHeaderLabel.getStyleClass().add("bold");
-        numberLabel.getStyleClass().addAll("text", "text-md");
-        mailLabel.getStyleClass().addAll("text", "text-md");
 
         Label deliveryHeaderLabel = new Label (indent2 + "Leveransuppgifter");
         deliveryHeaderLabel.getStyleClass().addAll("text", "text-md");
         deliveryHeaderLabel.getStyleClass().add("bold");
-        nameLabel.getStyleClass().addAll("text", "text-md");
-        addressLabel.getStyleClass().addAll("text", "text-md");
 
         Label edit = previewLabel(indent2 + "Redigera");
-        edit.getStyleClass().add("text-link");
+        edit.getStyleClass().addAll("text-link", "text-md");
         edit.setOnMouseClicked(e -> transitionToEditUI());
 
         containerDoneVBox.getChildren().addAll(contactHeaderLabel, numberLabel, mailLabel, deliveryHeaderLabel, nameLabel, addressLabel, edit);
@@ -108,9 +104,16 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
 
     private void updatePreviewLabels() {
         numberLabel = new Label(indent2 + customer.getPhoneNumber());
+        numberLabel.getStyleClass().add("text-md");
+
         mailLabel = new Label (indent2 + customer.getEmail());
+        mailLabel.getStyleClass().add("text-md");
+
         nameLabel = new Label (indent2 + customer.getFirstName() + " " + customer.getLastName());
+        nameLabel.getStyleClass().add("text-md");
+
         addressLabel = new Label (indent2 + customer.getAddress() + ", " + customer.getPostCode() + ", " + customer.getPostAddress());
+        addressLabel.getStyleClass().add("text-md");
     }
 
     private void transitionToEditUI() {

@@ -34,6 +34,8 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
         IMat.getInstance().getShoppingCart().addShoppingCartListener(this);
         addEventListeners();
 
+        System.out.println("Picker, " + shoppingItem.getProduct().getName() + " amount: " + shoppingItem.getAmount());
+
         updatePickerText();
     }
 
@@ -43,17 +45,21 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
 
         //upptäcker om man skrivigt något i rutan
         amount.focusedProperty().addListener((obs, wasFocused, isNowFocused) -> {
+
+            if(isNowFocused){
+                amount.setText("");
+            }
+
             if(wasFocused){
                 int i = (int) shoppingItem.getAmount();
                 try {
                     i = Integer.parseInt(amount.getText());
                     shoppingItem.setAmount(i);
-                    amount.setPromptText(i+"");
-                    amount.setText("");
+                    amount.setText(i+"");
                     IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
                 }catch (Exception e){
                     System.out.println( i + " is not defined");
-                    amount.setText("");
+                    updatePickerText();
                 }
             }
         });
@@ -80,7 +86,11 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
     }
 
     private void onMinusButtonPressed(){
+        System.out.println("Picker, " + amount.getText() + " | " + shoppingItem.getAmount());
         shoppingItem.setAmount(shoppingItem.getAmount()-1);     //minskar varan med ett
+        if(shoppingItem.getAmount() <= 0){
+            IMat.getInstance().getShoppingCart().removeItem(shoppingItem);
+        }
         IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
     }
 
@@ -112,6 +122,7 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
     }
 
     private void updatePickerText() {
-        amount.setPromptText((int) shoppingItem.getAmount() +"");
+        amount.setText((int) shoppingItem.getAmount() +"");
+        //amount.setPromptText((int) shoppingItem.getAmount() +"");
     }
 }
