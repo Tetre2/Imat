@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1100.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1100.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane id="titledSectionRootAnchorPane" fx:id="rootPane" layoutY="15.0" prefHeight="190.0" prefWidth="1100.0" style="-fx-border-color: #EBEBEB; -fx-border-width: 2;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
          <stylesheets>
@@ -20,7 +20,7 @@
          <children>
             <HBox alignment="CENTER_LEFT" layoutX="4.0" prefHeight="72.0" prefWidth="1096.0" style="-fx-background-color: #EBEBEB;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <children>
-                  <VBox prefHeight="72.0" prefWidth="594.0">
+                  <VBox prefHeight="74.0" prefWidth="1045.0">
                      <children>
                         <Label fx:id="titleLabel" prefHeight="23.0" prefWidth="497.0" text="Granska din Varukorg">
                            <styleClass>
@@ -32,7 +32,7 @@
                               <Insets top="20.0" />
                            </VBox.margin>
                         </Label>
-                        <Label fx:id="tooltipLabel" prefHeight="25.0" prefWidth="527.0">
+                        <Label fx:id="tooltipLabel" prefHeight="23.0" prefWidth="1042.0">
                            <styleClass>
                               <String fx:value="text-md" />
                               <String fx:value="text" />
