@@ -40,3 +40,7 @@
     -fx-font-size: 30;
     -fx-background-color: #189ad3;
 }
+
+.btn-checkout:hover{
+    -fx-background-color: #107dac;
+}

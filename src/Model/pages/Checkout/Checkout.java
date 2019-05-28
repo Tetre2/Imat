@@ -27,6 +27,8 @@ import se.chalmers.cse.dat216.project.*;
 
 import java.awt.*;
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class Checkout extends AnchorPane implements UpdateButtonObservable, ShoppingCartListener {
     @FXML private AnchorPane TopNav;
@@ -181,10 +183,11 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable, Shop
         continueShoppingHBox.setSpacing(90);
         continueShoppingHBox.getChildren().addAll(continueShoppingHyperlink, sequenceMap);
 
+        double totalPrice = round(IMat.getInstance().getShoppingCart().getTotal(), 2);
         Button goToPaymentButton = new Button();
         Label totalLabel = new Label("Totalt pris: ");
         totalLabel.getStyleClass().add("text-lg");
-        totalPriceLabel = new Label(Double.toString(IMat.getInstance().getShoppingCart().getTotal()) + " kr   ");
+        totalPriceLabel = new Label(Double.toString(totalPrice) + " kr   ");
         totalPriceLabel.getStyleClass().addAll("text-lg", "bold");
         goToPaymentButton.setText("Gå till Kassan -->");
         goToPaymentButton.getStyleClass().addAll("btn-primary", "btn-lg");
@@ -197,6 +200,14 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable, Shop
         varukorgContainerVBox.getChildren().add(continueShoppingHBox);
         varukorgContainerVBox.getChildren().add(varukorgSection);
         varukorgContainerVBox.getChildren().add(goToPaymentHBox);
+    }
+
+    public static double round(double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+
+        BigDecimal bd = new BigDecimal(value);
+        bd = bd.setScale(places, RoundingMode.HALF_UP);
+        return bd.doubleValue();
     }
 
     private void goToPaymentDoneStep() {

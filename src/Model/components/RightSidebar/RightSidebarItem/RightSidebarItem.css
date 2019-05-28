@@ -2,10 +2,3 @@
     -fx-border-width: 2;
     -fx-border-color: #EBEBEB;
 }
-
-.spinner .increment-arrow-button{
-    -fx-body-color: lime;
-}
-.spinner .decrement-arrow-button {
-    -fx-body-color: red;
-}
