@@ -182,6 +182,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
 
         if (isFavorited()) {
             icon = IMat.getInstance().getImage(iconPathFavorite);
+            starButton.setVisible(true);
         } else {
             icon = IMat.getInstance().getImage(iconPathNoFavorite);
         }
