@@ -37,8 +37,9 @@
     -fx-background-radius: 8;
     -fx-background-insets: -2;
     -fx-text-fill: white;
-    -fx-font-size: 30;
+    -fx-font-size: 24;
     -fx-background-color: #189ad3;
+    -fx-alignment: center;
 }
 
 .btn-checkout:hover{
