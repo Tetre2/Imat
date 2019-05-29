@@ -23,7 +23,12 @@ public class KvittoItem extends AnchorPane {
         tryToLoadFXML(fxmlLoader);
 
         titleLabel.setText(shoppingItem.getProduct().getName());
-        amountLabel.setText(Double.toString(Math.floor(shoppingItem.getAmount())) + " " + shoppingItem.getProduct().getUnit());
+        String[] s = shoppingItem.getProduct().getUnit().split("/");
+        int i = (int)(Math.floor(shoppingItem.getAmount()));
+
+
+        amountLabel.setText( i+ " " + s[1]);
+
         priceLabel.setText(Double.toString(shoppingItem.getTotal()) + "kr");
     }
 
