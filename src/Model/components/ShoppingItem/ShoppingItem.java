@@ -77,7 +77,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
         image.setImage(IMat.getInstance().getImage(product));
 
         //Jömmer det som inte ska synas från början
-        //starButton.setVisible(false);
+        starButton.setVisible(true);
         if(!IMat.getInstance().getShoppingCart().getItems().contains(item)){
             hidePlusMinus();
         }
