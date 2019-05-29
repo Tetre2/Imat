@@ -38,7 +38,7 @@
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
                               </ImageView>
-                              <Label alignment="CENTER" prefHeight="30.0" prefWidth="174.0" styleClass="text-lg" text="Gå till startsida" />
+                              <Label prefHeight="30.0" prefWidth="174.0" styleClass="text-lg" text="Gå till startsida" textFill="#6f6d6d" />
                               <Region prefHeight="200.0" prefWidth="200.0" />
                            </children>
                         </VBox>
