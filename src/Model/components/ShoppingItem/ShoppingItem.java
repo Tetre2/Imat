@@ -77,7 +77,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
         image.setImage(IMat.getInstance().getImage(product));
 
         //Jömmer det som inte ska synas från början
-        starButton.setVisible(false);
+        //starButton.setVisible(false);
         if(!IMat.getInstance().getShoppingCart().getItems().contains(item)){
             hidePlusMinus();
         }
@@ -117,7 +117,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
         starButton.setOnAction(e -> onStarButtonPressed());
         addToCartButton.setOnAction(e -> onAddToCartButtonPressed());
 
-        rootPane.addEventFilter(MouseEvent.MOUSE_ENTERED, e -> {
+        /*rootPane.addEventFilter(MouseEvent.MOUSE_ENTERED, e -> {
             starButton.setVisible(true);
         });
         rootPane.addEventFilter(MouseEvent.MOUSE_EXITED, e -> {
@@ -125,7 +125,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
                 starButton.setVisible(false);
             }
 
-        });
+        });*/
 
     }
 
@@ -185,6 +185,7 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
             starButton.setVisible(true);
         } else {
             icon = IMat.getInstance().getImage(iconPathNoFavorite);
+            starButton.setVisible(true);
         }
 
         starImageview.setImage(icon);
