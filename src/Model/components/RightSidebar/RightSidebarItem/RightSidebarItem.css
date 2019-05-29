@@ -2,3 +2,10 @@
     -fx-border-width: 2;
     -fx-border-color: #EBEBEB;
 }
+
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    /* interpolate color between yellow and red based on first color brightness */
+    /*-fx-body-color: ladder(#444, yellow 0%, red 100%);*/
+    -fx-cursor: hand;
+}
