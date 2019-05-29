@@ -14,11 +14,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<fx:root id="recipeRootAnchorPane" fx:id="rootPane" maxHeight="280.0" maxWidth="300.0" minHeight="280.0" minWidth="193.0" prefHeight="280.0" prefWidth="193.0" styleClass="anchor-container" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root id="recipeRootAnchorPane" fx:id="rootPane" maxHeight="280.0" maxWidth="300.0" minHeight="280.0" minWidth="193.0" prefHeight="280.0" prefWidth="193.0" styleClass="anchor-container" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox alignment="TOP_CENTER" layoutX="16.0" layoutY="39.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="155.0" prefWidth="158.0" styleClass="container">
+      <VBox alignment="TOP_CENTER" layoutX="16.0" layoutY="33.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="211.0" prefWidth="158.0" styleClass="container">
          <children>
-            <StackPane maxWidth="150.0" prefHeight="105.0" prefWidth="142.0" styleClass="image">
+            <StackPane maxWidth="150.0" prefHeight="88.0" prefWidth="150.0" styleClass="image">
                <children>
                   <ImageView fx:id="image" fitHeight="142.0" fitWidth="147.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -27,10 +27,10 @@
                   </ImageView>
                </children>
             </StackPane>
-            <Label fx:id="name" alignment="TOP_CENTER" minHeight="50.0" prefHeight="51.0" prefWidth="150.0" text="Ekologisk Brysselkål" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="name" alignment="TOP_CENTER" minHeight="50.0" prefHeight="78.0" prefWidth="158.0" style="-fx-font-size: 22;" text="Ekologisk Brysselkål" textAlignment="CENTER" wrapText="true">
                <styleClass>
                   <String fx:value="text" />
-                  <String fx:value="text-md" />
+                  <String fx:value="text-lg" />
                </styleClass>
                <VBox.margin>
                   <Insets top="4.0" />
@@ -39,7 +39,7 @@
                   <Font name="Tahoma" size="12.0" />
                </font>
             </Label>
-            <HBox alignment="CENTER" maxHeight="30.0" maxWidth="196.0" minHeight="30.0" minWidth="30.0" prefHeight="30.0" prefWidth="196.0" spacing="4.0" translateY="-15.0">
+            <HBox alignment="CENTER" maxHeight="30.0" maxWidth="196.0" minHeight="22.0" minWidth="30.0" prefHeight="22.0" prefWidth="158.0" spacing="4.0" translateY="-15.0">
                <children>
                   <Label fx:id="price" alignment="TOP_RIGHT" contentDisplay="RIGHT" maxHeight="30.0" maxWidth="104.0" minHeight="30.0" minWidth="30.0" prefHeight="30.0" prefWidth="83.0" text="23,9" textAlignment="RIGHT">
                      <styleClass>
