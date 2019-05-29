@@ -201,7 +201,7 @@ public class MainPage extends AnchorPane implements CategoryListener, ShoppingIt
     @Override
     public void categoryChanged(MainCategory mainCategory) {
             System.out.println("category: " + mainCategory.toString() + " was clicked");
-            updateGrid(mainCategory, mainCategory.toString());
+            updateGrid(mainCategory, mainCategory.getCategoryName());
             //currentCategoryLabel.setText(mainCategory.toString());
     }
 
