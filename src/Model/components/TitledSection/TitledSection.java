@@ -59,9 +59,4 @@ public class TitledSection extends AnchorPane {
         }
     }
 
-    public void changeToolTip(String s)
-    {
-        titleLabel.setText(s);
-    }
-
 }
