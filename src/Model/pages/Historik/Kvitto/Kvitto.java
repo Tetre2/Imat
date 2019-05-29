@@ -78,7 +78,9 @@ public class Kvitto extends AnchorPane {
             }
 
 
-            KvittoProduct kvittoProduct = new KvittoProduct(categories.get(i).name(), arr);
+            String s = Main.getCategory(categories.get(i)).getCategoryName();
+
+            KvittoProduct kvittoProduct = new KvittoProduct(s, arr);
             grid.setConstraints(kvittoProduct, 0, i);
             grid.getChildren().add(kvittoProduct);
         }
@@ -116,11 +118,12 @@ public class Kvitto extends AnchorPane {
         for (ShoppingItem s : order.getItems()) {
             System.out.println("Kvitto, antal utav varorna: " + s.getAmount());
             if (IMat.getInstance().getShoppingCart().getItems().contains(s)) {
-                System.out.println("fdlksnflks");
+
                 List<ShoppingItem> shoppingItems = IMat.getInstance().getShoppingCart().getItems();
                 int i = shoppingItems.indexOf(s);
                 shoppingItems.get(i).setAmount(shoppingItems.get(i).getAmount() + s.getAmount());
                 IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItems.get(i), true);
+
             } else {
                 IMat.getInstance().getShoppingCart().addItem(s);
             }

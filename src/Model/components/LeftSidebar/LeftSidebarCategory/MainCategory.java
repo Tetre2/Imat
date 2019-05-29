@@ -88,11 +88,22 @@ public enum MainCategory {
         return products;
     }
 
+    public boolean contains(ProductCategory productCategory){
+
+        for (Product p : getProducts()) {
+            if(p.getCategory().equals(productCategory)){
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public boolean shouldUsePicture(){
         return usePicture;
     }
 
-    public String toString(){
+    public String getCategoryName(){
         return name;
     }
 }

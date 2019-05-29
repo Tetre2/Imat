@@ -16,10 +16,7 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import se.chalmers.cse.dat216.project.CartEvent;
-import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.ShoppingCartListener;
-import se.chalmers.cse.dat216.project.ShoppingItem;
+import se.chalmers.cse.dat216.project.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -169,6 +166,17 @@ public class Main extends Application implements ShoppingCartListener {
 
     public static Scene getCurrentScene(){
         return window.getScene();
+    }
+
+    public static MainCategory getCategory(ProductCategory productCategory){
+        for (MainCategory category: MainCategory.values()) {
+            if(category.equals(MainCategory.FAVORIT) || category.equals(MainCategory.ALLA_VAROR))
+                continue;
+            if(category.contains(productCategory)){
+                return category;
+            }
+        }
+        return null;
     }
 
     @Override
