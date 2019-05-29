@@ -27,10 +27,11 @@ public class ShoppingCheckoutDetails extends AnchorPane implements ShoppingCartL
     private void updateLabels() {
         Double foodPrice = IMat.getInstance().getShoppingCart().getTotal();
         String price = String.format("%.2f", foodPrice);
-        System.out.println("Ceckout, TotalPrice: " + price);
 
         price = String.format("%.2f", foodPrice + TRANSPORT_PRICE);
-        totalPriceLabel.setText(price);
+        totalPriceLabel.setText(price + " Kr");
+        totalPriceLabel.getStyleClass().addAll("text-lg", "bold");
+
     }
 
     private FXMLLoader initFXML() {
