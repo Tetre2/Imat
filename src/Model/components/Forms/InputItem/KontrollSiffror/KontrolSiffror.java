@@ -86,11 +86,12 @@ public class KontrolSiffror extends AnchorPane implements Focusable{
 
     public boolean isValid() {
         try {
-            Integer.parseInt(textField.getText());
-            showSucsses();
-            return true;
+            int i = Integer.parseInt(textField.getText());
+            if(i >= 100){
+                showSucsses();
+                return true;
+            }
         }catch (Exception e){
-            showErr();
         }
         showErr();
         return false;
