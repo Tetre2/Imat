@@ -5,6 +5,7 @@ import Model.IMat;
 import Model.components.Forms.Focusable;
 import Model.components.Forms.InputItem.InputItem.TextInput;
 import Model.components.Forms.NotValidInput;
+import Model.components.TitledSection.TitledSection;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
@@ -60,8 +61,11 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
 
     private final UpdateButtonObservable updateButtonObservable;
 
-    public PersonUppgifter(UpdateButtonObservable updateButtonObservable) {
+    private TitledSection parent;
+
+    public PersonUppgifter(UpdateButtonObservable updateButtonObservable, TitledSection parent) {
         this.updateButtonObservable = updateButtonObservable;
+        this.parent = parent;
         customer = IMat.getInstance().getCustomer();
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
@@ -83,6 +87,8 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         containerDoneVBox = new VBox();
         containerDoneVBox.setSpacing(10.0);
         containerDoneVBox.setAlignment(Pos.CENTER_LEFT);
+
+        parent.setTooltip("Kontrollera dina uppgifter");
 
         updatePreviewLabels();
 
@@ -140,6 +146,9 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         phone = new TextInput("Telefonnummer:", "", "Ange ditt telefonnummer ex. 031458295", email, true);
         lastname = new TextInput("Efternamn:", "", "Ange ditt efternamn ex. Person", phone, true);
         firstname = new TextInput("Förnamn:", "", "Ange ditt förnamn ex. Brit", lastname, true);
+
+        parent.setTooltip("Skriv in dina uppgifter");
+
 
         containerEditFlowPane.getChildren().add(firstname);
         containerEditFlowPane.getChildren().add(lastname);

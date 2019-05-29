@@ -8,6 +8,7 @@ import Model.components.Forms.InputItem.KontrollSiffror.KontrolSiffror;
 import Model.components.Forms.InputItem.MonthYearInputItem.MonthYearInputItem;
 import Model.components.Forms.InputItem.KontoNummerInputItem.KontoNummerInputItem;
 import Model.components.Forms.NotValidInput;
+import Model.components.TitledSection.TitledSection;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
@@ -56,9 +57,12 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
     private final String indent4 = "                  ";
     private final UpdateButtonObservable updateButtonObservable;
 
+    private TitledSection parent;
 
-    public KontoUppgifter(UpdateButtonObservable updateButtonObservable) {
+
+    public KontoUppgifter(UpdateButtonObservable updateButtonObservable, TitledSection parent) {
         this.updateButtonObservable = updateButtonObservable;
+        this.parent = parent;
         this.creditCard = IMat.getInstance().getCreditCard();
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
@@ -82,6 +86,7 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
         containerDoneVBox = new VBox();
         containerDoneVBox.setSpacing(10.0);
         containerDoneVBox.setAlignment(Pos.CENTER_LEFT);
+        parent.setTooltip("Kontrollera dina uppgifter");
 
         updatePreviewLabels();
 
@@ -149,6 +154,8 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
         containerEditFlowPane.getChildren().add(monthYearInputItem);
         containerEditFlowPane.getChildren().add(kontrollSiffror);
         //containerEditFlowPane.getChildren().add(save);
+
+        parent.setTooltip("Skriv in dina uppgifter");
 
         kontrollSiffror.setKontrolKod(creditCard.getVerificationCode());
         monthYearInputItem.setMonth(creditCard.getValidMonth() + "");

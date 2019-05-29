@@ -98,11 +98,11 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable, Shop
         makePaymentHBox.getChildren().add(makePaymentButton);
 
         TitledSection titledSectionPerson = new TitledSection("1. Kontrollera dina personuppgifter", "");
-        PersonUppgifter personUppgifter = new PersonUppgifter(this);
+        PersonUppgifter personUppgifter = new PersonUppgifter(this, titledSectionPerson);
         titledSectionPerson.addNode(personUppgifter);
 
         TitledSection titledSectionKonto = new TitledSection("2. Kontrollera dina kontouppgifter", "");
-        titledSectionKonto.addNode(new KontoUppgifter(this));
+        titledSectionKonto.addNode(new KontoUppgifter(this, titledSectionKonto));
 
         //TitledSection titledSectionPay = new TitledSection("3. Slutför din order", null);
         ShoppingCheckoutDetails details = new ShoppingCheckoutDetails();
