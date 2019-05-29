@@ -34,11 +34,11 @@ public class MinaSidor extends AnchorPane implements UpdateButtonObservable {
         addEventListeners();
 
         TitledSection titledSectionKonto = new TitledSection("Kontouppgifter", "");
-        KontoUppgifter tmpKonto = new KontoUppgifter(this);
+        KontoUppgifter tmpKonto = new KontoUppgifter(this, titledSectionKonto);
         titledSectionKonto.addNode(tmpKonto);
 
         TitledSection titledSectionPerson = new TitledSection("Personuppgifter", "");
-        personUppgifter = new PersonUppgifter(this);
+        personUppgifter = new PersonUppgifter(this, titledSectionPerson);
         titledSectionPerson.addNode(personUppgifter);
 
         vBox.getChildren().add(titledSectionPerson);

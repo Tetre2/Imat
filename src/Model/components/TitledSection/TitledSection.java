@@ -39,6 +39,9 @@ public class TitledSection extends AnchorPane {
         centerContainerFlowPane.getChildren().remove(node);
     }
 
+    public void setTooltip(String s){
+        tooltipLabel.setText(s);
+    }
 
 
     private FXMLLoader initFXML() {
