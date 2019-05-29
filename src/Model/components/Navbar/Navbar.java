@@ -14,6 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.VBox;
 import me.xdrop.fuzzywuzzy.FuzzySearch;
 import org.omg.CORBA.MARSHAL;
 import se.chalmers.cse.dat216.project.Product;
@@ -26,7 +27,7 @@ public class Navbar extends AnchorPane {
 
     @FXML private Button SearchButton;
     @FXML
-    private ImageView iMatLabel;
+    private VBox iMatLabel;
     @FXML
     private Button hjalp;
     @FXML
