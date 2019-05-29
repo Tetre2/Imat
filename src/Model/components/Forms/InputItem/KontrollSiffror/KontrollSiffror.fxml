@@ -9,7 +9,7 @@
       <TextField fx:id="textField" layoutX="220.0" layoutY="6.0" prefHeight="60.0" prefWidth="82.0" promptText="XXX" style="-fx-font-size: 18;" styleClass="text-md" stylesheets="@../../FormStyles.css" />
       <Label fx:id="tooltip" layoutX="223.0" layoutY="66.0" styleClass="text-md" text="Ange det tre kontrollsiffrorna" />
       <Label fx:id="label" alignment="TOP_RIGHT" contentDisplay="TOP" layoutY="22.0" prefHeight="21.0" prefWidth="200.0" styleClass="text-lg" text="Kontrollsiffror:" />
-      <AnchorPane fx:id="error" layoutX="437.0" layoutY="29.0" prefHeight="60.0" prefWidth="281.0" visible="false">
+      <AnchorPane fx:id="error" layoutX="460.0" layoutY="7.0" prefHeight="60.0" prefWidth="281.0" visible="false">
          <children>
             <Label fx:id="errLabel" layoutX="5.0" prefHeight="53.0" prefWidth="270.0" text="Label" textFill="RED" />
          </children>
