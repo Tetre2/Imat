@@ -65,7 +65,7 @@ public class Kvitto extends AnchorPane {
 
         }
         String totPrice = String.format("%.2f", calcPrice);
-        price.setText(totPrice + " Kr");
+        price.setText(totPrice + " kr");
 
         for (int i = 0; i < categories.size(); i++) {
 

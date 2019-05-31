@@ -26,6 +26,10 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
     private Button plus;
     @FXML
     private TextField amount;
+    @FXML
+    private ImageView minusImage;
+    @FXML
+    private ImageView plusImage;
 
     public Picker(ShoppingItem shoppingItem){
         this.shoppingItem = shoppingItem;
@@ -34,7 +38,9 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
         IMat.getInstance().getShoppingCart().addShoppingCartListener(this);
         addEventListeners();
 
-        //System.out.println("Picker, " + shoppingItem.getProduct().getName() + " amount: " + shoppingItem.getAmount());
+        System.out.println("Picker, " + shoppingItem.getProduct().getName() + " amount: " + shoppingItem.getAmount());
+        minusImage.setImage(IMat.getInstance().getImage("Model/resources/minus.png"));
+        plusImage.setImage(IMat.getInstance().getImage("Model/resources/plus.png"));
 
         updatePickerText();
     }

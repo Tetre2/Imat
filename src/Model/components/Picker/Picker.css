@@ -3,7 +3,15 @@
     -fx-background-color: #F25757;
 }
 
+.minus:hover {
+    -fx-background-color: #ff6450;
+}
+
 .plus {
     -fx-border-radius: 8;
     -fx-background-color: #4CD04C;
+}
+
+.plus:hover {
+    -fx-background-color: #59e659;
 }

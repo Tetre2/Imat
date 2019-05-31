@@ -48,7 +48,7 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
 
 
         String s = String.format("%.2f", shoppingItem.getTotal());
-        price.setText(s + " Kr");
+        price.setText(s + " kr");
 
         name.setText(shoppingItem.getProduct().getName());
         image.setImage(IMat.getInstance().getImage(shoppingItem.getProduct()));
