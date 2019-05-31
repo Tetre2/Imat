@@ -15,9 +15,9 @@
             <Font size="58.0" />
          </font>
       </Label>
-      <Label fx:id="tooltip" layoutX="223.0" layoutY="68.0" styleClass="text-md" text="Månad (i siffror)" />
+      <Label fx:id="tooltip" layoutX="223.0" layoutY="68.0" styleClass="text-md" text="Månad (i siffror)" textFill="#6f6d6d" />
       <TextField fx:id="year" layoutX="349.0" layoutY="9.0" prefHeight="60.0" prefWidth="82.0" promptText="XXXX" style="-fx-font-size: 18;" styleClass="text-md" stylesheets="@../../FormStyles.css" text="År" />
-      <Label fx:id="tooltip1" layoutX="355.0" layoutY="68.0" styleClass="text-md" text="År (i siffror)" />
+      <Label fx:id="tooltip1" layoutX="355.0" layoutY="68.0" styleClass="text-md" text="År (i siffror)" textFill="#6f6d6d" />
       <AnchorPane fx:id="error" layoutX="470.0" layoutY="9.0" prefHeight="60.0" prefWidth="281.0" visible="false">
          <children>
             <Label fx:id="errLabel" layoutX="5.0" prefHeight="53.0" prefWidth="270.0" text="Label" textFill="RED" />

@@ -13,6 +13,6 @@
             <Font size="58.0" />
          </font>
       </Label>
-      <Label fx:id="tooltip" layoutY="75.0" text="Label" />
+      <Label fx:id="tooltip" layoutY="75.0" text="Label" textFill="#6f6d6d" />
    </children>
 </fx:root>
