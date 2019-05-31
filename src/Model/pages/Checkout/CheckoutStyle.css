@@ -6,6 +6,11 @@
     -fx-background-color: #189ad3;
 }
 
+.btn-checkout-text{
+    -fx-text-fill: white;
+    -fx-font-size: 10;
+}
+
 .btn-checkout-secondary
 {
     -fx-background-radius: 8;

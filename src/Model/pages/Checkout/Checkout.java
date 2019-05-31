@@ -21,12 +21,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import se.chalmers.cse.dat216.project.*;
 
-import java.awt.*;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -193,7 +194,20 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable, Shop
 
         totalPriceLabel = new Label(totPrice+ " kr   ");
         totalPriceLabel.getStyleClass().addAll("text-lg", "bold");
-        goToPaymentButton.setText("Gå till Kassan -->");
+
+        HBox btnHBox = new HBox();
+        btnHBox.setAlignment(Pos.CENTER);
+        Label l = new Label("Gå till Kassan ");
+        l.setTextFill(Color.WHITE);
+        btnHBox.getChildren().add(l);
+        ImageView imageView = new ImageView( new Image("Model/resources/MattiasFörslag/long-arrow-alt-right-solid.png"));
+        imageView.setPreserveRatio(true);
+        imageView.setFitWidth(60);
+        imageView.setFitHeight(150);
+
+        btnHBox.getChildren().add(imageView);
+        goToPaymentButton.setGraphic(btnHBox);
+
         goToPaymentButton.getStyleClass().addAll("btn-primary", "btn-lg");
         goToPaymentButton.setOnAction(e -> goToPaymentStep());
         HBox goToPaymentHBox = new HBox();

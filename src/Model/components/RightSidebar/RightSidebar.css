@@ -42,6 +42,11 @@
     -fx-alignment: center;
 }
 
+.btn-checkout-text{
+    -fx-text-fill: white;
+    -fx-font-size: 24;
+}
+
 .btn-checkout:hover{
     -fx-background-color: #107dac;
 }

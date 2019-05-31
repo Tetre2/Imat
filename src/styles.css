@@ -99,6 +99,11 @@ secondary: #107dac
     -fx-background-color: #189ad3; /*189ad3 */
 }
 
+-btn-primary-text{
+    -fx-text-fill: white;
+    -fx-font-size: 10;
+}
+
 
 .btn-primary-alternative-2  {
     -fx-background-radius: 8;
