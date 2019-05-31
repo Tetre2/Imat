@@ -45,7 +45,7 @@
                         <Region prefHeight="100.0" prefWidth="115.0" />
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <TextField fx:id="searchBar" layoutY="17.0" prefHeight="66.0" prefWidth="700.0" promptText="Sök efter produkter här" style="-fx-font-size: 30;" />
+                              <TextField fx:id="searchBar" layoutY="17.0" prefHeight="66.0" prefWidth="692.0" promptText="Sök efter produkter här" style="-fx-font-size: 30;" />
                               <Button fx:id="SearchButton" layoutX="639.0" layoutY="17.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="50.0">
                                  <graphic>
                                     <ImageView fitHeight="55.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
