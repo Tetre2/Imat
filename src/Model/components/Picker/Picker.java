@@ -34,7 +34,7 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
         IMat.getInstance().getShoppingCart().addShoppingCartListener(this);
         addEventListeners();
 
-        System.out.println("Picker, " + shoppingItem.getProduct().getName() + " amount: " + shoppingItem.getAmount());
+        //System.out.println("Picker, " + shoppingItem.getProduct().getName() + " amount: " + shoppingItem.getAmount());
 
         updatePickerText();
     }
@@ -54,9 +54,13 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
                 int i = (int) shoppingItem.getAmount();
                 try {
                     i = Integer.parseInt(amount.getText());
-                    shoppingItem.setAmount(i);
-                    amount.setText(i+"");
-                    IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+                    if( i > 0){
+                        shoppingItem.setAmount(i);
+                        amount.setText(i+"");
+                        IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+                    }else {
+                        amount.setText(((int )shoppingItem.getAmount())+ "");
+                    }
                 }catch (Exception e){
                     System.out.println( i + " is not defined");
                     updatePickerText();
@@ -70,8 +74,12 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
                 int i = (int) shoppingItem.getAmount();
                 try {
                     i = Integer.parseInt(amount.getText());
-                    shoppingItem.setAmount(i);
-                    IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+                    if(i > 0 ){
+                        shoppingItem.setAmount(i);
+                        IMat.getInstance().getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+                    }else {
+                        amount.setText(((int )shoppingItem.getAmount())+ "");
+                    }
                 }catch (Exception e){
                     System.out.println( i + " is not defined");
                     amount.setText("");
