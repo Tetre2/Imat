@@ -88,7 +88,8 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         containerDoneVBox.setSpacing(10.0);
         containerDoneVBox.setAlignment(Pos.CENTER_LEFT);
 
-        parent.setTooltip("Kontrollera dina uppgifter");
+        parent.setTitle("1. Kontrollera dina uppgifter");
+        //parent.setTooltip("Kontrollera dina uppgifter");
 
         updatePreviewLabels();
 
@@ -147,7 +148,8 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         lastname = new TextInput("Efternamn:", "", "Ange ditt efternamn ex. Person", phone, true);
         firstname = new TextInput("Förnamn:", "", "Ange ditt förnamn ex. Brit", lastname, true);
 
-        parent.setTooltip("Skriv in dina uppgifter");
+        parent.setTitle("1. Skriv in dina uppgifter");
+        //parent.setTooltip("Skriv in dina uppgifter");
 
 
         containerEditFlowPane.getChildren().add(firstname);

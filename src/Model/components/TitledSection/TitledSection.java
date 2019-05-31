@@ -44,6 +44,10 @@ public class TitledSection extends AnchorPane {
     }
 
 
+    public void setTitle(String s) {
+        this.titleLabel.setText(s);
+    }
+
     private FXMLLoader initFXML() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Model/components/TitledSection/TitledSection.fxml"));
         fxmlLoader.setRoot(this);

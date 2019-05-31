@@ -86,7 +86,8 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
         containerDoneVBox = new VBox();
         containerDoneVBox.setSpacing(10.0);
         containerDoneVBox.setAlignment(Pos.CENTER_LEFT);
-        parent.setTooltip("Kontrollera dina uppgifter");
+        parent.setTitle("2. Kontrollera dina uppgifter");
+        //parent.setTooltip("Kontrollera dina uppgifter");
 
         updatePreviewLabels();
 
@@ -155,7 +156,8 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
         containerEditFlowPane.getChildren().add(kontrollSiffror);
         //containerEditFlowPane.getChildren().add(save);
 
-        parent.setTooltip("Skriv in dina uppgifter");
+        parent.setTitle("2. Skriv in dina uppgifter");
+        //parent.setTooltip("Skriv in dina uppgifter");
 
         kontrollSiffror.setKontrolKod(creditCard.getVerificationCode());
         monthYearInputItem.setMonth(creditCard.getValidMonth() + "");
