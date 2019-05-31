@@ -50,6 +50,7 @@ public class VarukorgItem extends AnchorPane implements ShoppingCartListener {
         deleteButton.setOnMouseEntered(e -> closeButtonMouseEntered());
         deleteButton.setOnMousePressed(e -> closeButtonMousePressed());
         deleteButton.setOnMouseExited(e -> closeButtonMouseExited());
+        System.out.println("NYTT ITEM");
     }
 
     private void updatePriceLabels() {

@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -26,6 +27,10 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
     private Button plus;
     @FXML
     private TextField amount;
+    @FXML
+    private ImageView minusImage;
+    @FXML
+    private ImageView plusImage;
 
     public Picker(ShoppingItem shoppingItem){
         this.shoppingItem = shoppingItem;
@@ -35,6 +40,8 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
         addEventListeners();
 
         System.out.println("Picker, " + shoppingItem.getProduct().getName() + " amount: " + shoppingItem.getAmount());
+        minusImage.setImage(IMat.getInstance().getImage("Model/resources/minus.png"));
+        plusImage.setImage(IMat.getInstance().getImage("Model/resources/plus.png"));
 
         updatePickerText();
     }

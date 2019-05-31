@@ -100,7 +100,7 @@ public class Navbar extends AnchorPane {
         });
 
         searchBar.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (searchBar.getText().length() >= 3) {
+            if (searchBar.getText().length() >= 1) {
                 searchedItems.clear();
                 searchedItems.addAll(getProductsFromSearch(searchBar.getText()));
                 showSearchedItems();
