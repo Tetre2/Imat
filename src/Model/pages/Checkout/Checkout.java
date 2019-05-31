@@ -1,6 +1,7 @@
 package Model.pages.Checkout;
 
 import Model.HelperClasses.UpdateButtonObservable;
+import Model.HelperClasses.UpdateGoToPaymentButtonObservable;
 import Model.IMat;
 import Model.Main;
 import Model.components.Forms.Kontouppgifter.KontoUppgifter;
@@ -30,7 +31,7 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class Checkout extends AnchorPane implements UpdateButtonObservable, ShoppingCartListener {
+public class Checkout extends AnchorPane implements UpdateButtonObservable, ShoppingCartListener, UpdateGoToPaymentButtonObservable {
     @FXML private AnchorPane TopNav;
 
     @FXML private AnchorPane paymentContainerAnchorPane;
@@ -45,6 +46,7 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable, Shop
     @FXML private ScrollPane paymentDoneScrollPane;
 
     private Button makePaymentButton;
+    private Button goToPaymentButton;
 
     private Label totalPriceLabel;
 
@@ -169,8 +171,8 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable, Shop
 
     private void createVarukorgUI() {
         TitledSection varukorgSection = new TitledSection("Granska din varukorg", "Få en överblick och lägg till eller ta bort varor. Gå sen vidare till kassan.");
-
-        ShoppingCheckout shoppingCheckout = new ShoppingCheckout();
+        goToPaymentButton = new Button();
+        ShoppingCheckout shoppingCheckout = new ShoppingCheckout(this);
 
         varukorgSection.addNode(shoppingCheckout);
         Hyperlink continueShoppingHyperlink = new Hyperlink("<-- Handla mer");
@@ -183,7 +185,7 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable, Shop
         continueShoppingHBox.setSpacing(90);
         continueShoppingHBox.getChildren().addAll(continueShoppingHyperlink, sequenceMap);
 
-        Button goToPaymentButton = new Button();
+
         Label totalLabel = new Label("Totalt pris: ");
         totalLabel.getStyleClass().add("text-lg");
         double totalPrice = IMat.getInstance().getShoppingCart().getTotal();
@@ -248,5 +250,10 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable, Shop
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
         totalPriceLabel.setText(Double.toString(IMat.getInstance().getShoppingCart().getTotal()) + " kr   ");
+    }
+
+    @Override
+    public void setGoToPaymentButtonDisable(boolean disable) {
+        goToPaymentButton.setDisable(disable);
     }
 }

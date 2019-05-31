@@ -1,14 +1,13 @@
 package Model.pages.Checkout.ShoppingCheckout;
 
+import Model.HelperClasses.UpdateGoToPaymentButtonObservable;
 import Model.IMat;
 import Model.pages.Checkout.ShoppingCartIsEmpty.ShoppingCartIsEmpty;
-import Model.pages.Checkout.ShoppingCheckout.ShoppingCheckoutDetails.ShoppingCheckoutDetails;
 import Model.pages.Checkout.VarukorgItem.VarukorgItem;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.HBox;
 import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.ShoppingCartListener;
 import se.chalmers.cse.dat216.project.ShoppingItem;
@@ -19,7 +18,10 @@ import java.util.List;
 public class ShoppingCheckout extends AnchorPane implements ShoppingCartListener {
     @FXML private FlowPane centerContainerFlowPane;
 
-    public ShoppingCheckout() {
+    private UpdateGoToPaymentButtonObservable parent;
+
+    public ShoppingCheckout(UpdateGoToPaymentButtonObservable parent) {
+        this.parent = parent;
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
@@ -28,6 +30,12 @@ public class ShoppingCheckout extends AnchorPane implements ShoppingCartListener
             ShoppingItem s = products.get(i);
             VarukorgItem varukorgItem = new VarukorgItem(s, this);
             centerContainerFlowPane.getChildren().add(varukorgItem);
+        }
+
+        if(products.size() <= 0){
+            parent.setGoToPaymentButtonDisable(true);
+        }else {
+            parent.setGoToPaymentButtonDisable(false);
         }
 
         //centerContainerFlowPane.getChildren().add(new ShoppingCheckoutDetails());
@@ -59,6 +67,7 @@ public class ShoppingCheckout extends AnchorPane implements ShoppingCartListener
         if (IMat.getInstance().isShoppingCartEmpty()) {
             centerContainerFlowPane.getChildren().clear();
             centerContainerFlowPane.getChildren().add(new ShoppingCartIsEmpty());
+            parent.setGoToPaymentButtonDisable(true);
         }
     }
 }
