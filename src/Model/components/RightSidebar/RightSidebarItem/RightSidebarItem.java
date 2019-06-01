@@ -52,6 +52,7 @@ public class RightSidebarItem extends AnchorPane implements ShoppingCartListener
 
         name.setText(shoppingItem.getProduct().getName());
         image.setImage(IMat.getInstance().getImage(shoppingItem.getProduct()));
+        closeImage.setImage(IMat.getInstance().getImage("Model/resources/icon_close.png"));
 
     }
 

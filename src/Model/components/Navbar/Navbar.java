@@ -68,7 +68,7 @@ public class Navbar extends AnchorPane {
     }
 
     private void addEventListeners(){
-        iMatLabel.setOnMouseClicked(event -> goToMainPage());
+        iMatLabel.setOnMouseClicked(event -> goToMainPage(true));
         iMatLabel.setOnMouseEntered(e -> Main.getCurrentScene().setCursor(Cursor.HAND));
         iMatLabel.setOnMouseExited(e -> Main.getCurrentScene().setCursor(Cursor.DEFAULT));
         hjalp.setOnAction(e -> goToHjalp());
@@ -80,7 +80,7 @@ public class Navbar extends AnchorPane {
         minaSidor.setOnAction(e -> goToMinaSidor());
         minaSidor.setOnMouseEntered(e -> Main.getCurrentScene().setCursor(Cursor.HAND));
         minaSidor.setOnMouseExited(e -> Main.getCurrentScene().setCursor(Cursor.DEFAULT));
-        handla.setOnAction(event -> goToMainPage());
+        handla.setOnAction(event -> goToMainPage(true));
         handla.setOnMouseEntered(e -> Main.getCurrentScene().setCursor(Cursor.HAND));
         handla.setOnMouseExited(e -> Main.getCurrentScene().setCursor(Cursor.DEFAULT));
 
@@ -116,7 +116,7 @@ public class Navbar extends AnchorPane {
                 searchedItems.addAll(getProductsFromSearch(searchBar.getText()));
                 mainPage.showProductsToGrid(searchedItems, "Resultat utav sökning: \""+ searchBar.getText() + "\"");
                 hideSearchedItems();
-                goToMainPage();
+                goToMainPage(false);
             }});
 
     }
@@ -177,6 +177,11 @@ public class Navbar extends AnchorPane {
 
     }
 
+    public void goToMainPage(boolean updateGrid){
+        clearAllButtonStyles();
+        setActiveButton(handla);
+        Main.setSceneToMainPage(updateGrid);
+    }
     public void goToMainPage(){
         clearAllButtonStyles();
         setActiveButton(handla);

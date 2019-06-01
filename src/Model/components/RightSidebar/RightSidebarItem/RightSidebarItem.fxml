@@ -18,7 +18,6 @@
          <children>
             <ImageView fx:id="image" fitHeight="150.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../resources/product_8.jpg" />
                </image>
             </ImageView>
             <TextFlow prefHeight="80.0" prefWidth="98.0">
@@ -39,9 +38,7 @@
             <Button fx:id="close" mnemonicParsing="false" styleClass="btn-nostyle">
                <graphic>
                   <ImageView fx:id="closeImage" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../resources/icon_close.png" />
-                     </image>
+
                   </ImageView>
                </graphic>
                <HBox.margin>

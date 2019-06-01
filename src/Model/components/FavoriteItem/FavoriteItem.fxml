@@ -21,18 +21,14 @@
             <Button mnemonicParsing="false" styleClass="btn-nostyle">
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../resources/star-checked.png" />
-                     </image>
+
                   </ImageView>
                </graphic>
             </Button>
             <Button mnemonicParsing="false" styleClass="btn-nostyle">
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../resources/product_8.jpg" />
-                     </image>
+
                   </ImageView>
                </graphic>
             </Button>

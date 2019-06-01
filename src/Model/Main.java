@@ -144,7 +144,15 @@ public class Main extends Application implements ShoppingCartListener {
         window.setScene(scene);
     }
 
+    public static void setSceneToMainPage(boolean updateGrid){
+        //uppdatera grid om handla klickas på efter köp är slutfört
+        if(updateGrid){
+            mainPage.updateGrid();
+        }
+        setSceneToMainPage();
+    }
     public static void setSceneToMainPage(){
+
         Group group = new Group();
         group.getChildren().add(mainPage);
         mainPage.setNavBar(navbar);

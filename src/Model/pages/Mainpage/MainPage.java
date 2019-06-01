@@ -39,6 +39,7 @@ public class MainPage extends AnchorPane implements CategoryListener, ShoppingIt
     AnchorPane noFavorites;
     @FXML
     AnchorPane noResults;
+    MainCategory currentCategory = null;
 
     private IMat iMat;
     private LeftSidebar leftSidebar;
@@ -155,6 +156,17 @@ public class MainPage extends AnchorPane implements CategoryListener, ShoppingIt
 
         //Display shopping items
         showShoppingItemToGrid(shoppingItems, currentCatigory);
+        this.currentCategory = mainCategory;
+    }
+
+    public void updateGrid(){
+        if(currentCategory != null) {
+            //Get shopping items, either from cache or generate from scratch.
+            List<ShoppingItem> shoppingItems = getShoppingItems(currentCategory);
+
+            //Display shopping items
+            showShoppingItemToGrid(shoppingItems, currentCategory.getCategoryName());
+        }
     }
 
     public void showProductsToGrid(List<Product> products, String currentCatigory){
@@ -166,6 +178,8 @@ public class MainPage extends AnchorPane implements CategoryListener, ShoppingIt
         }
             showShoppingItemToGrid(arr, currentCatigory);
     }
+
+
 
 
     private void showShoppingItemToGrid(List<ShoppingItem> arr, String currentCatigory){

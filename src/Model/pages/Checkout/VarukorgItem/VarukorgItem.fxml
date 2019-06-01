@@ -21,7 +21,6 @@
          <children>
             <ImageView fx:id="productImageView" fitHeight="55.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../resources/product_8.jpg" />
                </image>
             </ImageView>
             <Label fx:id="productNameLabel" prefHeight="20.0" prefWidth="451.0" text="Grovt Bröd">
@@ -64,9 +63,7 @@
             <Button fx:id="deleteButton" mnemonicParsing="false" styleClass="btn-nostyle">
                <graphic>
                   <ImageView fx:id="deleteImageView" fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../resources/icon_close.png" />
-                     </image>
+
                   </ImageView>
                </graphic>
             </Button>
