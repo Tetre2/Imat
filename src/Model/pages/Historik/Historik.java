@@ -30,7 +30,7 @@ public class Historik extends AnchorPane {
     @FXML
     private Button shop;
 
-    public Historik(){
+    public Historik() {
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
@@ -38,10 +38,9 @@ public class Historik extends AnchorPane {
         hideKvitto();
 
 
-
     }
 
-    private void addEventListeners(){
+    private void addEventListeners() {
         kvittoGray.setOnMouseClicked(event -> hideKvitto());
         kvittoOverlay.setOnMouseClicked(event -> event.consume());
         shop.setOnAction(event -> Main.getNavbar().goToMainPage());
@@ -62,11 +61,11 @@ public class Historik extends AnchorPane {
         }
     }
 
-    private void loadOrders(){
+    private void loadOrders() {
 
-        if(IMat.getInstance().getOrders().size() == 0){
+        if (IMat.getInstance().getOrders().size() == 0) {
             noOrders.setVisible(true);
-        }else {
+        } else {
             noOrders.setVisible(false);
         }
 
@@ -77,28 +76,45 @@ public class Historik extends AnchorPane {
         }
     }
 
-    public void showKvitto(Order order){
+    public void showKvitto(Order order) {
         kvittoGray.setVisible(true);
         kvittoOverlay.getChildren().clear();
         Kvitto kvitto = new Kvitto(order, this);
         kvittoOverlay.getChildren().add(kvitto);
     }
 
-    public void hideKvitto(){
+    public void hideKvitto() {
         kvittoOverlay.getChildren().clear();
         kvittoGray.setVisible(false);
     }
 
-    public void setNavBar(Navbar navBar){
-        if(!TopNav.getChildren().contains(navBar))
-        TopNav.getChildren().add(navBar);
+    public void setNavBar(Navbar navBar) {
+        if (!TopNav.getChildren().contains(navBar))
+            TopNav.getChildren().add(navBar);
 
         loadOrders();
     }
 
-    public String getDate(Date d){
+    public String getDate(Date d) {
         String[] date = d.toString().split(" ");
-        return date[2] + " " + date[1];
+
+        String s = convertDate(date[1]);
+
+        return date[2] + " " + s;
+    }
+
+    private String convertDate(String s) {
+        s = s.toLowerCase();
+        switch (s) {
+            case "may":
+                return "Maj";
+            case "jun":
+                return "Juni";
+            default:
+                return s;
+        }
+
+
     }
 
 }
