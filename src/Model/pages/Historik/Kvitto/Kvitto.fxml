@@ -37,10 +37,14 @@
                   <Font size="40.0" />
                </font>
             </Label>
-            <Label fx:id="price" alignment="CENTER" styleClass="text-lg" text="200 kr">
+            <Label fx:id="price" alignment="CENTER" text="200 kr">
                <font>
                   <Font size="40.0" />
                </font>
+               <styleClass>
+                  <String fx:value="text-lg" />
+                  <String fx:value="bold" />
+               </styleClass>
             </Label>
          </children>
       </HBox>
