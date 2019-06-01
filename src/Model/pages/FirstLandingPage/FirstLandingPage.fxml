@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<fx:root prefHeight="900.0" prefWidth="1540.0" stylesheets="@../../../styles.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="900.0" prefWidth="1540.0" stylesheets="@../../../styles.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="546.0" layoutY="119.0" text="Välkommen till IMat">
          <styleClass>
@@ -22,14 +22,14 @@
             <String fx:value="text-area" />
          </styleClass>
       </TextArea>
-      <Button fx:id="handla" layoutX="448.0" layoutY="489.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="243.0" text="Börja handla">
+      <Button fx:id="handla" layoutX="468.0" layoutY="489.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="243.0" text="Börja handla">
          <styleClass>
             <String fx:value="btn-lg" />
             <String fx:value="btn-checkout" />
             <String fx:value="btn-secondary" />
          </styleClass>
       </Button>
-      <Button fx:id="hjalp" layoutX="849.0" layoutY="489.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="243.0" text="Få hjälp">
+      <Button fx:id="hjalp" layoutX="829.0" layoutY="489.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="243.0" text="Få hjälp">
          <styleClass>
             <String fx:value="btn-checkout" />
             <String fx:value="btn-lg" />

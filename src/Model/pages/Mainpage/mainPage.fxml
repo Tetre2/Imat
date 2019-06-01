@@ -45,6 +45,23 @@
             </Label>
          </children>
       </AnchorPane>
+      <AnchorPane fx:id="noResults" layoutX="310.0" layoutY="198.0" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: white;" stylesheets="@../../../styles.css" visible="false">
+         <children>
+            <Label alignment="CENTER" layoutX="82.0" layoutY="42.0" prefHeight="40.0" prefWidth="682.0" text="Inga varor hittades">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="bold" />
+                  <String fx:value="text-xl" />
+               </styleClass>
+            </Label>
+            <Label layoutX="118.0" layoutY="89.0" prefHeight="124.0" prefWidth="565.0" text="Det verkar som vi inte har varan du letar efter. Du kan hitta andra varor i kategorilistan till vänster. Eller så kan du söka efter dem i sökfältet längst upp på sidan." wrapText="true">
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="text-md" />
+               </styleClass>
+            </Label>
+         </children>
+      </AnchorPane>
       <Label fx:id="currentCategoryLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="310.0" layoutY="100.0" prefHeight="100.0" prefWidth="800.0" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="57.0" />

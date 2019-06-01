@@ -37,6 +37,8 @@ public class MainPage extends AnchorPane implements CategoryListener, ShoppingIt
     Label currentCategoryLabel;
     @FXML
     AnchorPane noFavorites;
+    @FXML
+    AnchorPane noResults;
 
     private IMat iMat;
     private LeftSidebar leftSidebar;
@@ -177,10 +179,19 @@ public class MainPage extends AnchorPane implements CategoryListener, ShoppingIt
             grid.getChildren().add(arr.get(i));
         }
 
-        if(grid.getChildren().size() == 0 && leftSidebar.getCurrentCategory() != null && leftSidebar.getCurrentCategory().equals(MainCategory.FAVORIT)){
-            noFavorites.setVisible(true);
-        }else {
+        if(arr.size() > 0 ){
             noFavorites.setVisible(false);
+            noResults.setVisible(false);
+
+        }else {
+
+            if(grid.getChildren().size() == 0 && leftSidebar.getCurrentCategory() != null && leftSidebar.getCurrentCategory().equals(MainCategory.FAVORIT)){
+                noFavorites.setVisible(true);
+                noResults.setVisible(false);
+            }else {
+                noResults.setVisible(true);
+                noFavorites.setVisible(false);
+            }
         }
 
     }
@@ -196,6 +207,10 @@ public class MainPage extends AnchorPane implements CategoryListener, ShoppingIt
             }
         }
         currentCategoryLabel.setText("Alla varor");
+    }
+
+    public void showNoResults(){
+        noResults.setVisible(true);
     }
 
     @Override

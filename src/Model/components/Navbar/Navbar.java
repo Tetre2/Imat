@@ -142,7 +142,6 @@ public class Navbar extends AnchorPane {
     }
 
     private void showSearchedItems(){
-        System.out.println("SHOWING");
         searchItems.setVisible(true);
         searchItems.getChildren().clear();
         for (Product p : searchedItems) {
