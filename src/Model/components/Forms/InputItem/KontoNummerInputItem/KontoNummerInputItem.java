@@ -37,6 +37,8 @@ public class KontoNummerInputItem extends AnchorPane implements ValidityCheckabl
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
+        errLabel.getStyleClass().add("text-md");
+
         this.label.setText("Kontonummer:");
         this.tooltip.setText("Ange kontokortets kontonummer");
 

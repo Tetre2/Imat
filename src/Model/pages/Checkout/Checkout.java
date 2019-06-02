@@ -90,6 +90,7 @@ public class Checkout extends AnchorPane implements UpdateButtonObservable, Shop
         goToVarukorgHBox.getChildren().addAll(goTovarukorgLink, sequenceMapFinal);
 
         makePaymentButton = new Button();
+        makePaymentButton.setStyle("-fx-font-size: 32px;");
         makePaymentButton.getStyleClass().addAll("btn-lg", "btn-primary");
         makePaymentButton.setPrefWidth(paymentContainerVBox.getPrefWidth() - 55);
         makePaymentButton.setTranslateX( makePaymentButton.getTranslateX()-45);

@@ -67,6 +67,9 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
+        save.getStyleClass().add("text-md");
+        errLabel.getStyleClass().add("text-md");
+
         if (IMat.getInstance().isCreditCardComplete()) {
             transitionToDoneUI();
         } else {
@@ -220,7 +223,7 @@ public class KontoUppgifter extends AnchorPane implements Focusable {
 
 
         if(isValid){
-            save.setText("Sparad");
+            save.setText("Spara");
             showSaved();
             transitionToDoneUI();
             updateButtonObservable.updateButton();

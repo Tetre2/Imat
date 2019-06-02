@@ -10,14 +10,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<fx:root fx:id="rootAnchorPane" prefHeight="217.0" prefWidth="1000.0" stylesheets="@../../../../styles.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="rootAnchorPane" prefHeight="217.0" prefWidth="1000.0" stylesheets="@../../../../styles.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox fx:id="rootVBox" prefHeight="217.0" prefWidth="1000.0">
          <children>
             <FlowPane fx:id="containerEditFlowPane" prefHeight="620.0" prefWidth="1000.0" />
             <AnchorPane fx:id="rootButton" minHeight="80.0" prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="5.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="193.0" text="Spara">
+                  <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="5.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="193.0" style="-fx-font-size: 24;" text="Spara">
                      <styleClass>
                         <String fx:value="btn-primary" />
                         <String fx:value="bg-primary" />
@@ -31,7 +31,7 @@
                   </Button>
                   <AnchorPane fx:id="error" layoutX="449.0" layoutY="5.0" prefHeight="70.0" prefWidth="307.0" visible="false">
                      <children>
-                        <Label fx:id="errLabel" prefHeight="53.0" prefWidth="296.0" text="Label" textFill="RED" wrapText="true" />
+                        <Label fx:id="errLabel" prefHeight="70.0" prefWidth="335.0" text="Label" textFill="RED" wrapText="true" />
                      </children>
                   </AnchorPane>
                </children>

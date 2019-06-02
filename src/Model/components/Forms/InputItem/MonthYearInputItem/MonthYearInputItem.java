@@ -29,6 +29,8 @@ public class MonthYearInputItem extends AnchorPane implements Focusable {
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
+        errLabel.getStyleClass().add("text-md");
+
         addEventListeners();
 
         error.setVisible(false);

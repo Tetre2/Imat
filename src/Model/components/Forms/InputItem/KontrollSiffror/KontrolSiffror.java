@@ -26,6 +26,8 @@ public class KontrolSiffror extends AnchorPane implements Focusable{
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
+        errLabel.getStyleClass().add("text-md");
+
         addEventListeners();
 
     }

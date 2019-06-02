@@ -40,6 +40,8 @@ public class TextInput extends AnchorPane implements Focusable{
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
+        errLabel.getStyleClass().add("text-md");
+
         if(width != 0){
             textField.setMaxWidth(width);
         }

@@ -70,6 +70,9 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         FXMLLoader fxmlLoader = initFXML();
         tryToLoadFXML(fxmlLoader);
 
+        save.getStyleClass().add("text-md");
+        errLabel.getStyleClass().add("text-md");
+
         addEventListeners();
 
         if (isUserVerified()) {
@@ -244,7 +247,7 @@ public class PersonUppgifter extends AnchorPane implements Focusable{
         }
 
         if(isValied){
-            save.setText("Sparad");
+            save.setText("Spara");
             showSaved();
             transitionToDoneUI();
             updateButtonObservable.updateButton();
