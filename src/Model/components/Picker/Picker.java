@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -32,6 +33,12 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
     @FXML
     private ImageView plusImage;
 
+    private static Image imageMinusHover = IMat.getInstance().getImage("Model/resources/minusHover.png");
+    private static Image imageMinus = IMat.getInstance().getImage("Model/resources/minus.png");
+
+    private static Image imagePlusHover = IMat.getInstance().getImage("Model/resources/plusHover.png");
+    private static Image imagePlus = IMat.getInstance().getImage("Model/resources/plus.png");
+
     public Picker(ShoppingItem shoppingItem){
         this.shoppingItem = shoppingItem;
         FXMLLoader fxmlLoader = initFXML();
@@ -40,11 +47,12 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
         addEventListeners();
 
         System.out.println("Picker, " + shoppingItem.getProduct().getName() + " amount: " + shoppingItem.getAmount());
-        minusImage.setImage(IMat.getInstance().getImage("Model/resources/minus.png"));
-        plusImage.setImage(IMat.getInstance().getImage("Model/resources/plus.png"));
+        minusImage.setImage(imageMinus);
+        plusImage.setImage(imagePlus);
 
         updatePickerText();
     }
+
 
     private void addEventListeners() {
         plus.setOnAction(e -> onPlusButtonPressed());
@@ -92,6 +100,25 @@ public class Picker extends AnchorPane implements ShoppingCartListener {
                     amount.setText("");
             }
         }});
+
+        minus.setOnMouseEntered(event -> {
+            minusImage.setImage(imageMinusHover);
+        });
+
+        minus.setOnMouseExited(event -> {
+            minusImage.setImage(imageMinus);
+        });
+
+        plus.setOnMouseEntered(event -> {
+            plusImage.setImage(imagePlusHover);
+        });
+
+        plus.setOnMouseExited(event -> {
+            plusImage.setImage(imagePlus);
+        });
+
+
+
 
     }
 
