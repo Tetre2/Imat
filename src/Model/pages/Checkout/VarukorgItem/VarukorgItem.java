@@ -13,6 +13,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.shape.Rectangle;
 import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingCartListener;
@@ -42,7 +43,17 @@ public class VarukorgItem extends AnchorPane implements ShoppingCartListener {
         Product p = shoppingItem.getProduct();
         productNameLabel.setText(p.getName());
         updatePriceLabels();
+
         productImageView.setImage(IMat.getInstance().getImage(p));
+        //rundade hörn på bilden
+        Rectangle clip = new Rectangle(
+                productImageView.getFitWidth(), productImageView.getFitHeight()-5
+        );
+        clip.setArcWidth(20);
+        clip.setArcHeight(20);
+        productImageView.setClip(clip);
+
+
         pickerPane.getChildren().add(new Picker(shoppingItem));
 
         IMat.getInstance().getShoppingCart().addShoppingCartListener(this);

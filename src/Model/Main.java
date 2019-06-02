@@ -43,7 +43,7 @@ public class Main extends Application implements ShoppingCartListener {
 
         window = primaryStage;
 
-        IMatDataHandler.getInstance().reset();
+        //IMatDataHandler.getInstance().reset();
         primaryStage.setTitle("IMat");
 
         mainPage = new MainPage();
