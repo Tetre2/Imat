@@ -13,6 +13,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Rectangle;
 import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingCartListener;
@@ -74,7 +75,22 @@ public class ShoppingItem extends AnchorPane implements ShoppingCartListener {
         name.setText(product.getName());
         price.setText(product.getPrice() + "");
         unit.setText(getUnit());
+
+
+
+
         image.setImage(IMat.getInstance().getImage(product));
+
+        //rundade hörn på bilden
+        Rectangle clip = new Rectangle(
+                image.getFitWidth(), image.getFitHeight()-35
+        );
+        clip.setArcWidth(20);
+        clip.setArcHeight(20);
+        image.setClip(clip);
+
+
+
 
         //Jömmer det som inte ska synas från början
         starButton.setVisible(true);
